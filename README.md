@@ -1,6 +1,6 @@
 # L10n-swift
 
-[![CI Status](https://travis-ci.org/Decybel07/L10n-swift.svg?style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
+[![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/L10n-swift.svg=flat)](http://cocoapods.org/pods/L10n-swift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
