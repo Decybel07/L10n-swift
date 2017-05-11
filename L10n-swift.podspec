@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
   s.name             = 'L10n-swift'
   s.module_name      = 'L10n'
-  s.version          = '2.0.0'
+  s.version          = '2.0.1'
   s.summary          = 'Localization of the application with ability to change language "on the fly" and support for plural form in any language.'
 
   s.description      = <<-DESC
