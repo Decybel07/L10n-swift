@@ -10,5 +10,5 @@ import PackageDescription
 let package = Package(
     name: "L10n-swift",
     dependencies : [],
-    exclude: ["Tests"]
+    exclude: ["Example"]
 )
