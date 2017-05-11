@@ -86,7 +86,7 @@ github "Decybel07/L10n-swift", ~> 2.0
  
 ### Get plural
 
-Add `.l10(_ args: CVarArg...)` or `.l10(_ args: [CVarArg])` following any `String` object you want translated with plurals:
+Add `.l10(_ args: CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
  textLabel.text = "numberOfApples".l10n(10)
  textLabel.text = "numberOfApples".l10n([10])
