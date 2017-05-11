@@ -14,12 +14,12 @@ Pod::Spec.new do |s|
       * Use .l10n() to localized any string, int and double
                        DESC
 
-  s.homepage         = 'https://Decybel07.github.io/L10n-swift'
+  s.homepage         = 'https://Decybel07.github.io/L10n-swift/'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
   s.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => s.version }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
   s.osx.deployment_target = '10.10'
   s.tvos.deployment_target = '9.0'
   s.watchos.deployment_target = '2.0'
