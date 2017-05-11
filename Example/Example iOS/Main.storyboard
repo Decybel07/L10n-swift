@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Example_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mpN-HH-p2t">
+                                <rect key="frame" x="16" y="56" width="343" height="29"/>
+                                <segments>
+                                    <segment title="English"/>
+                                    <segment title="Polish"/>
+                                    <segment title="Spanish"/>
+                                    <segment title="Japanese"/>
+                                </segments>
+                                <connections>
+                                    <action selector="onLanguageChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6nP-uN-yVI"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gGd-Jm-ZMd">
+                                <rect key="frame" x="122.5" y="134" width="130" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Language" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84l-Er-hkA">
+                                <rect key="frame" x="143" y="30" width="89.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zero apples" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TLP-Ua-Tuz">
+                                <rect key="frame" x="16" y="215.5" width="106" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="OyY-nw-lpf">
+                                <rect key="frame" x="265" y="213" width="94" height="29"/>
+                                <connections>
+                                    <action selector="onNumberOfCountChnaged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Rjr-al-fVk"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="84l-Er-hkA" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="1L3-b5-6Il"/>
+                            <constraint firstItem="OyY-nw-lpf" firstAttribute="top" secondItem="gGd-Jm-ZMd" secondAttribute="bottom" constant="50" id="1f3-qy-v71"/>
+                            <constraint firstItem="OyY-nw-lpf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="TLP-Ua-Tuz" secondAttribute="trailing" constant="10" id="BoD-td-12W"/>
+                            <constraint firstItem="TLP-Ua-Tuz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="JT7-Lh-2k2"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mpN-HH-p2t" secondAttribute="trailing" id="XJ2-qP-d9f"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OyY-nw-lpf" secondAttribute="trailing" id="bCK-cY-AVj"/>
+                            <constraint firstItem="mpN-HH-p2t" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="mFC-OK-RhB"/>
+                            <constraint firstItem="gGd-Jm-ZMd" firstAttribute="top" secondItem="mpN-HH-p2t" secondAttribute="bottom" constant="50" id="mzO-xy-hS0"/>
+                            <constraint firstItem="mpN-HH-p2t" firstAttribute="top" secondItem="84l-Er-hkA" secondAttribute="bottom" constant="2" id="ppn-7m-RDk"/>
+                            <constraint firstItem="gGd-Jm-ZMd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tSS-Er-umY"/>
+                            <constraint firstItem="TLP-Ua-Tuz" firstAttribute="centerY" secondItem="OyY-nw-lpf" secondAttribute="centerY" id="vFq-il-LqW"/>
+                            <constraint firstItem="84l-Er-hkA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="veu-4h-6Wb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="appleStepper" destination="OyY-nw-lpf" id="Daq-Yx-VLJ"/>
+                        <outlet property="helloWorldLabel" destination="gGd-Jm-ZMd" id="DNQ-Zs-Xlr"/>
+                        <outlet property="languageLabel" destination="84l-Er-hkA" id="aAR-r2-Ruw"/>
+                        <outlet property="languageSegmentedContrlo" destination="mpN-HH-p2t" id="Jyp-VL-tZC"/>
+                        <outlet property="numberOfApplesLabel" destination="TLP-Ua-Tuz" id="k9F-O9-xgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="111.99400299850076"/>
+        </scene>
+    </scenes>
+</document>

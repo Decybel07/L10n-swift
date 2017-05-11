@@ -1,0 +1,66 @@
+# references:
+# * http://www.objc.io/issue-6/travis-ci.html
+# * https://github.com/supermarin/xcpretty#usage
+
+osx_image: xcode8.3
+language: objective-c
+
+env:
+  global:
+  - LC_CTYPE=en_US.UTF-8
+  - LANG=en_US.UTF-8
+  - WORKSPACE=L10n.xcworkspace
+  - FRAMEWORK_IOS_SCHEME="L10n iOS"
+  - FRAMEWORK_MACOS_SCHEME="L10n macOS"
+  - FRAMEWORK_TVOS_SCHEME="L10n tvOS"
+  - FRAMEWORK_WATCHOS_SCHEME="L10n watchOS"
+  - EXAMPLE_IOS_SCHEME="Example iOS"
+  - EXAMPLE_MACOS_SCHEME="Example macOS"
+  - EXAMPLE_TVOS_SCHEME="Example tvOS"
+  - EXAMPLE_WATCHOS_SCHEME="Example watchOS"
+
+  matrix:
+    - DESTINATION="OS=10.3,name=iPhone 7 Plus"     FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="YES"
+    - DESTINATION="OS=9.0,name=iPhone 6"           FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
+    - DESTINATION="OS=8.1,name=iPhone 4S"          FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="NO"
+
+    - DESTINATION="OS=10.2,name=Apple TV 1080p"    FRAMEWORK_SCHEME="$FRAMEWORK_TVOS_SCHEME"    EXAMPLE_SCHEME="$EXAMPLE_TVOS_SCHEME"  RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+    - DESTINATION="OS=9.0,name=Apple TV 1080p"     FRAMEWORK_SCHEME="$FRAMEWORK_TVOS_SCHEME"    EXAMPLE_SCHEME="$EXAMPLE_TVOS_SCHEME"  RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+
+    - DESTINATION="arch=x86_64"                    FRAMEWORK_SCHEME="$FRAMEWORK_MACOS_SCHEME"   EXAMPLE_SCHEME="$EXAMPLE_MACOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+
+script:
+  - set -o pipefail
+  - xcodebuild -version
+  - xcodebuild -showsdks
+
+  # Build Framework in Debug
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+
+  # Build Framework in Release
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+
+  # Build Example in Debug if specified
+  - if [ $BUILD_EXAMPLE == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+    
+    # Build Example in Debug if specified
+  - if [ $BUILD_EXAMPLE == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
+    fi
+    
+    # Build Example in Debug and Run Tests if specified
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    fi
+    
+    # Build Example in Release and Run Tests if specified
+  - if [ $RUN_TESTS == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+    fi
+
+  # Run `pod lib lint` if specified
+  - if [ $POD_LINT == "YES" ]; then
+      pod lib lint;
+    fi
