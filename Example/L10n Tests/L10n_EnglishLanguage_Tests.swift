@@ -78,4 +78,20 @@ class L10n_EnglishLanguage_Tests: XCTestCase {
         XCTAssertEqual(key.l10n(15), key)
     }
 
+    func testInt() {
+        XCTAssertEqual(0.l10n(), "0")
+        XCTAssertEqual(1.l10n(), "1")
+        XCTAssertEqual(15.l10n(), "15")
+        XCTAssertEqual(7215633.l10n(), "7,215,633")
+    }
+
+    func testDouble() {
+        XCTAssertEqual(0.0.l10n(), "0.0000")
+        XCTAssertEqual(3.14.l10n(), "3.1400")
+        XCTAssertEqual(4.651273.l10n(), "4.6513")
+        XCTAssertEqual(4.651273.l10n(fractionDigits: 0), "5")
+        XCTAssertEqual(4.651273.l10n(fractionDigits: 1), "4.7")
+        XCTAssertEqual(4.651273.l10n(fractionDigits: 2), "4.65")
+        XCTAssertEqual(4.651273.l10n(fractionDigits: 3), "4.651")
+    }
 }
