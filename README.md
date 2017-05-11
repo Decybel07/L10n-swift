@@ -1,10 +1,10 @@
 # L10n-swift
 
-[![CI Status](https://travis-ci.org/CodingLifestyleProjects/L10n-swift.svg?style=flat)](https://travis-ci.org/CodingLifestyleProjects/L10n-swift)
+[![CI Status](https://travis-ci.org/Decybel07/L10n-swift.svg?style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/L10n-swift.svg=flat)](http://cocoapods.org/pods/L10n-swift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
-[![Swift3 Compatible](https://img.shields.io/badge/swift-3-orange.svg?style=flat)](https://developer.apple.com/swift/) 
+[![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 
@@ -49,25 +49,25 @@ pod try L10n-swift
 ### Setting up with [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 1.4'
+ pod 'L10n-swift', '~> 2.0'
  ```
  
  or alternative
  
  ```ruby
- pod 'L10n-swift', :git => 'https://github.com/CodingLifestyleProjects/L10n-swift.git'
+ pod 'L10n-swift', :git => 'https://github.com/Decybel07/L10n-swift.git'
  ```
  
 ### Setting up with [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "CodingLifestyleProjects/L10n-swift", ~> 1.4
+github "Decybel07/L10n-swift", ~> 2.0
 ```
 
 ### Setting up with [Package Manager](https://swift.org/package-manager/)
 
 ```swift
-.Package(url: "https://github.com/CodingLifestyleProjects/L10n-swift.git", majorVersion: 1)
+.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 2)
 ```
 
 ## Usage
