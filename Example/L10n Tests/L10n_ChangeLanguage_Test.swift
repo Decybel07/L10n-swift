@@ -16,14 +16,14 @@ class L10n_ChangeLanguage_Test: XCTestCase {
     override func setUp() {
         super.setUp()
 
-        L10n.shared.language = defaultLanguage
+        L10n.shared.language = self.defaultLanguage
     }
 
     func testChangeToTheSameLanguage() {
 
         L10n.shared.language = defaultLanguage
 
-        XCTAssertEqual(L10n.shared.language, defaultLanguage)
+        XCTAssertEqual(L10n.shared.language, self.defaultLanguage)
     }
 
     func testChangeToUnsupportedLanguage() {

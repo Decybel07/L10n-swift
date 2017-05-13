@@ -154,42 +154,42 @@ public class L10n {
         }
         return nil
     }
-    
+
     private func languageChanged() {
         guard L10n.supportedLanguages.contains(self.language) else {
-            
+
             #if DEBUG
                 print("[ERROR] L10n - List of supported languages does not contain \"\(self.language)\"")
             #endif
-            
+
             return
         }
-        
+
         self.locale = self.createLocale()
         self.bundle = self.createBundle()
         self.stringsdict = self.createStringsdict()
         self.plist = self.createPlist()
     }
-    
+
     private func createLocale() -> Locale? {
         return Locale(identifier: self.language)
     }
-    
+
     private func createBundle() -> Bundle? {
         guard let path = Bundle.main.path(forResource: self.language, ofType: "lproj") else {
             return nil
         }
         return Bundle(path: path)
     }
-    
+
     private func createPlist() -> NSDictionary? {
         return self.createDictionary(type: "plist")
     }
-    
+
     private func createStringsdict() -> NSDictionary? {
         return self.createDictionary(type: "stringsdict")
     }
-    
+
     private func createDictionary(type: String) -> NSDictionary? {
         guard let path = self.bundle?.path(forResource: "Localizable", ofType: type) else {
             return nil
