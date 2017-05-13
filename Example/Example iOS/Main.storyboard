@@ -79,7 +79,7 @@
                         <outlet property="appleStepper" destination="OyY-nw-lpf" id="Daq-Yx-VLJ"/>
                         <outlet property="helloWorldLabel" destination="gGd-Jm-ZMd" id="DNQ-Zs-Xlr"/>
                         <outlet property="languageLabel" destination="84l-Er-hkA" id="aAR-r2-Ruw"/>
-                        <outlet property="languageSegmentedContrlo" destination="mpN-HH-p2t" id="Jyp-VL-tZC"/>
+                        <outlet property="languageSegmentedControl" destination="mpN-HH-p2t" id="hCp-P8-8Nh"/>
                         <outlet property="numberOfApplesLabel" destination="TLP-Ua-Tuz" id="k9F-O9-xgm"/>
                     </connections>
                 </viewController>

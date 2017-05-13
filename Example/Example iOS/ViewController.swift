@@ -12,7 +12,7 @@ import L10n
 class ViewController: UIViewController {
 
     @IBOutlet weak var languageLabel: UILabel!
-    @IBOutlet weak var languageSegmentedContrlo: UISegmentedControl!
+    @IBOutlet weak var languageSegmentedControl: UISegmentedControl!
 
     @IBOutlet weak var helloWorldLabel: UILabel!
 
@@ -28,10 +28,14 @@ class ViewController: UIViewController {
         self.helloWorldLabel.text = "HelloWorld".l10n()
         self.languageLabel.text = "language".l10n()
 
-        self.languageSegmentedContrlo.setTitle("language.english".l10n(), forSegmentAt: 0)
-        self.languageSegmentedContrlo.setTitle("language.polish".l10n(), forSegmentAt: 1)
-        self.languageSegmentedContrlo.setTitle("language.spanish".l10n(), forSegmentAt: 2)
-        self.languageSegmentedContrlo.setTitle("language.japanese".l10n(), forSegmentAt: 3)
+        [
+            "language.english",
+            "language.polish",
+            "language.spanish",
+            "language.japanese",
+        ].enumerated().forEach { index, key in
+                self.languageSegmentedControl.setTitle(key.l10n(), forSegmentAt: index)
+        }
 
         self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(self.appleStepper.value))
     }
