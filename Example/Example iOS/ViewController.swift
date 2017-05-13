@@ -34,7 +34,7 @@ class ViewController: UIViewController {
             "language.spanish",
             "language.japanese",
         ].enumerated().forEach { index, key in
-                self.languageSegmentedControl.setTitle(key.l10n(), forSegmentAt: index)
+            self.languageSegmentedControl.setTitle(key.l10n(), forSegmentAt: index)
         }
 
         self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(self.appleStepper.value))
