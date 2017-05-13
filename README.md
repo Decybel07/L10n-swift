@@ -1,5 +1,6 @@
 # L10n-swift
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift?utm_source=github.com&utm_medium=referral&utm_content=Decybel07/L10n-swift&utm_campaign=badger)
 [![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
