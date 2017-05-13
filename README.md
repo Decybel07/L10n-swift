@@ -1,13 +1,19 @@
 # L10n-swift
 
-[![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
-[![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
+[![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
+[![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
+
+<div style="display: inline;">
+[![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)
+</div>
+<div style="display: inline;">
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/L10n-swift.svg=flat)](http://cocoapods.org/pods/L10n-swift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
-[![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
+</div>
 
 L10n is a simple framework that improves localization in swift apps - providing cleaner syntax and in-app language switching.
 
