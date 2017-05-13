@@ -32,7 +32,7 @@ class L10n_ChangeLanguage_Test: XCTestCase {
 
         L10n.shared.language = newLanguage
 
-        XCTAssertNotEqual(L10n.shared.language, self.defaultLanguage)
+        XCTAssertNotEqual(L10n.shared.language, defaultLanguage)
         XCTAssertEqual(L10n.shared.language, newLanguage)
         XCTAssertNil(L10n.shared.locale)
     }
@@ -43,7 +43,7 @@ class L10n_ChangeLanguage_Test: XCTestCase {
 
         L10n.shared.language = newLanguage
 
-        XCTAssertNotEqual(L10n.shared.language, self.defaultLanguage)
+        XCTAssertNotEqual(L10n.shared.language, defaultLanguage)
         XCTAssertEqual(L10n.shared.language, newLanguage)
         XCTAssertNotNil(L10n.shared.locale)
     }

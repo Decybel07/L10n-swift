@@ -59,17 +59,17 @@ class L10n_PolishLanguage_Tests: XCTestCase {
         XCTAssertEqual(key.l10n(5), "5 jabłek")
         XCTAssertEqual(key.l10n(124), "124 jabłka")
     }
-    
+
     func testDefinedPlural_tooManyParameters() {
         let key = "numberOfApples"
-        
-        XCTAssertEqual(key.l10n(0,4,3,1), "Zero jabłek")
-        XCTAssertEqual(key.l10n(1,23), "Jedno jabłko")
-        XCTAssertEqual(key.l10n(2,56), "2 jabłka")
+
+        XCTAssertEqual(key.l10n(0, 4, 3, 1), "Zero jabłek")
+        XCTAssertEqual(key.l10n(1, 23), "Jedno jabłko")
+        XCTAssertEqual(key.l10n(2, 56), "2 jabłka")
         XCTAssertEqual(key.l10n(5), "5 jabłek")
         XCTAssertEqual(key.l10n(124), "124 jabłka")
     }
-    
+
     func testUndefinedPlural() {
         let key = "anyUndefinedPlural"
 
@@ -82,7 +82,7 @@ class L10n_PolishLanguage_Tests: XCTestCase {
         XCTAssertEqual(0.l10n(), "0")
         XCTAssertEqual(1.l10n(), "1")
         XCTAssertEqual(15.l10n(), "15")
-        XCTAssertEqual(7215633.l10n(), "7 215 633")
+        XCTAssertEqual(7_215_633.l10n(), "7 215 633")
     }
 
     func testDouble() {

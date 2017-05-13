@@ -67,9 +67,9 @@ class L10n_UnsupportedLanguage_Tests: XCTestCase {
         XCTAssertEqual(0.l10n(), "0")
         XCTAssertEqual(1.l10n(), "1")
         XCTAssertEqual(15.l10n(), "15")
-        XCTAssertEqual(7215633.l10n(), "7215633")
+        XCTAssertEqual(7_215_633.l10n(), "7215633")
     }
-    
+
     func testDouble() {
         XCTAssertEqual(0.0.l10n(), "0.0000")
         XCTAssertEqual(3.14.l10n(), "3.1400")

@@ -82,7 +82,7 @@ class L10n_EnglishLanguage_Tests: XCTestCase {
         XCTAssertEqual(0.l10n(), "0")
         XCTAssertEqual(1.l10n(), "1")
         XCTAssertEqual(15.l10n(), "15")
-        XCTAssertEqual(7215633.l10n(), "7,215,633")
+        XCTAssertEqual(7_215_633.l10n(), "7,215,633")
     }
 
     func testDouble() {

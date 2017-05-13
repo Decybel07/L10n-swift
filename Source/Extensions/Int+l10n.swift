@@ -10,11 +10,10 @@ extension Int {
 
     /**
      Returns a localized self description value.
-     
+
      - returns: A localized self description value.
      */
     public func l10n() -> String {
         return L10n.shared.string(format: "%d", self)
     }
-
 }

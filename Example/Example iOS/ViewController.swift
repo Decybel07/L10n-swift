@@ -21,29 +21,27 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.l10n()
+        l10n()
     }
 
     func l10n() {
-        self.helloWorldLabel.text = "HelloWorld".l10n()
-        self.languageLabel.text = "language".l10n()
+        helloWorldLabel.text = "HelloWorld".l10n()
+        languageLabel.text = "language".l10n()
 
-        self.languageSegmentedContrlo.setTitle("language.english".l10n(), forSegmentAt: 0)
-        self.languageSegmentedContrlo.setTitle("language.polish".l10n(), forSegmentAt: 1)
-        self.languageSegmentedContrlo.setTitle("language.spanish".l10n(), forSegmentAt: 2)
-        self.languageSegmentedContrlo.setTitle("language.japanese".l10n(), forSegmentAt: 3)
+        languageSegmentedContrlo.setTitle("language.english".l10n(), forSegmentAt: 0)
+        languageSegmentedContrlo.setTitle("language.polish".l10n(), forSegmentAt: 1)
+        languageSegmentedContrlo.setTitle("language.spanish".l10n(), forSegmentAt: 2)
+        languageSegmentedContrlo.setTitle("language.japanese".l10n(), forSegmentAt: 3)
 
-        self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(self.appleStepper.value))
+        numberOfApplesLabel.text = "numberOfApples".l10n(Int(appleStepper.value))
     }
 
     @IBAction func onLanguageChanged(_ sender: UISegmentedControl) {
         L10n.shared.language = ["en", "pl", "es", "ja"][sender.selectedSegmentIndex]
-        self.l10n()
+        l10n()
     }
 
     @IBAction func onNumberOfCountChnaged(_ sender: UIStepper) {
-        self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(sender.value))
+        numberOfApplesLabel.text = "numberOfApples".l10n(Int(sender.value))
     }
-
 }
-
