@@ -1,12 +1,13 @@
 # L10n-swift
 
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
+[![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
+[![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
+[![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/L10n-swift.svg=flat)](http://cocoapods.org/pods/L10n-swift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/SPM-compatible-4BC51D.svg?style=flat)](https://github.com/apple/swift-package-manager)
-[![Swift3 Compatible](https://img.shields.io/badge/swift-3-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
-[![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 
 L10n is a simple framework that improves localization in swift apps - providing cleaner syntax and in-app language switching.
 
@@ -89,7 +90,6 @@ github "Decybel07/L10n-swift", ~> 2.0
 Add `.l10(_ args: CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
  textLabel.text = "numberOfApples".l10n(10)
- textLabel.text = "numberOfApples".l10n([10])
  ```
  
 ### Set current language
