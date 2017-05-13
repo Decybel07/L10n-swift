@@ -25,7 +25,7 @@ extension String {
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
     public func l10n(_ args: CVarArg...) -> String {
-        return l10n(args)
+        return self.l10n(args)
     }
 
     /**

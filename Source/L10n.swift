@@ -16,7 +16,7 @@ public class L10n {
 
     /// A preferred language contained in the main bundle.
     public static var preferredLanguage: String {
-        return supportedLanguages.first ?? "UNDEFINED"
+        return self.supportedLanguages.first ?? "UNDEFINED"
     }
 
     /// An ordered list of preferred languages contained in the main bundle.
@@ -32,18 +32,22 @@ public class L10n {
     /// Current language code.
     public var language: String {
         didSet {
-            guard language != oldValue else {
+            guard self.language != oldValue else {
                 return
             }
-            languageChanged()
+            self.locale = nil
+            self.bundle = nil
+            self.stringsdict = nil
+            self.plist = nil
+            self.languageChanged()
         }
     }
 
     /// Current locale.
-    fileprivate(set) public var locale: Locale?
-    fileprivate var stringsdict: NSDictionary?
-    fileprivate var plist: NSDictionary?
-    fileprivate var bundle: Bundle?
+    private(set) public var locale: Locale?
+    private var stringsdict: NSDictionary?
+    private var plist: NSDictionary?
+    private var bundle: Bundle?
 
     /**
      Returns a localized version of the string designated by the specified key and residing in loaded *Localizable* files.
@@ -53,9 +57,9 @@ public class L10n {
      - returns: A localized version of the string designated by key. This method returns key when key not found.
      */
     public func string(for key: String) -> String {
-        let value = stringFromDictionary(stringsdict, for: key)
-            ?? stringFromDictionary(plist, for: key)
-            ?? stringFromBundle(for: key)
+        let value = self.stringFromDictionary(stringsdict, for: key)
+            ?? self.stringFromDictionary(plist, for: key)
+            ?? self.stringFromBundle(for: key)
 
         guard let text = value else {
 
@@ -77,7 +81,7 @@ public class L10n {
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
     public func string(format: String, _ args: CVarArg...) -> String {
-        return string(format: format, args)
+        return self.string(format: format, args)
     }
 
     /**
@@ -89,7 +93,7 @@ public class L10n {
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
     public func string(format: String, _ args: [CVarArg]) -> String {
-        return String(format: format, locale: locale, arguments: args)
+        return String(format: format, locale: self.locale, arguments: args)
     }
 
     /**
@@ -101,7 +105,7 @@ public class L10n {
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
     public func plural(for key: String, _ args: CVarArg...) -> String {
-        return plural(for: key, args)
+        return self.plural(for: key, args)
     }
 
     /**
@@ -113,7 +117,7 @@ public class L10n {
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
     public func plural(for key: String, _ args: [CVarArg]) -> String {
-        return string(format: string(for: key), args)
+        return self.string(format: self.string(for: key), args)
     }
 
     /**
@@ -125,7 +129,7 @@ public class L10n {
      */
     public init(language: String) {
         self.language = language
-        languageChanged()
+        self.languageChanged()
     }
 
     private convenience init() {
@@ -133,7 +137,7 @@ public class L10n {
     }
 
     private func stringFromBundle(for key: String) -> String? {
-        guard let text = bundle?.localizedString(forKey: key, value: nil, table: nil), !text.isEmpty else {
+        guard let text = self.bundle?.localizedString(forKey: key, value: nil, table: nil), !text.isEmpty else {
             return nil
         }
         return text
@@ -150,57 +154,42 @@ public class L10n {
         }
         return nil
     }
-}
-
-extension L10n {
-
-    fileprivate func languageChanged() {
+    
+    private func languageChanged() {
         guard L10n.supportedLanguages.contains(self.language) else {
-            self.clearLanguage()
-
+            
             #if DEBUG
                 print("[ERROR] L10n - List of supported languages does not contain \"\(self.language)\"")
             #endif
-
+            
             return
         }
-
-        self.initLanguage()
-    }
-
-    private func clearLanguage() {
-        self.locale = nil
-        self.bundle = nil
-        self.stringsdict = nil
-        self.plist = nil
-    }
-
-    private func initLanguage() {
+        
         self.locale = self.createLocale()
         self.bundle = self.createBundle()
         self.stringsdict = self.createStringsdict()
         self.plist = self.createPlist()
     }
-
+    
     private func createLocale() -> Locale? {
         return Locale(identifier: self.language)
     }
-
+    
     private func createBundle() -> Bundle? {
         guard let path = Bundle.main.path(forResource: self.language, ofType: "lproj") else {
             return nil
         }
         return Bundle(path: path)
     }
-
+    
     private func createPlist() -> NSDictionary? {
         return self.createDictionary(type: "plist")
     }
-
+    
     private func createStringsdict() -> NSDictionary? {
         return self.createDictionary(type: "stringsdict")
     }
-
+    
     private func createDictionary(type: String) -> NSDictionary? {
         guard let path = self.bundle?.path(forResource: "Localizable", ofType: type) else {
             return nil
