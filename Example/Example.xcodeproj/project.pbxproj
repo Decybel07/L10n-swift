@@ -73,6 +73,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		2D15A2791EC73FD800FD4AC8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DC33A101EC4209C00196573 /* L10n.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2D1D71131EB7B24400A9849E;
+			remoteInfo = "L10n watchOS";
+		};
 		2DC339011EC3B07D00196573 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 2D1D71421EB7B71F00A9849E /* Project object */;
@@ -573,6 +580,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				2D15A27A1EC73FD800FD4AC8 /* PBXTargetDependency */,
 			);
 			name = "Example watchOS Extension";
 			productName = "Example watchOS Extension";
@@ -865,6 +873,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		2D15A27A1EC73FD800FD4AC8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "L10n watchOS";
+			targetProxy = 2D15A2791EC73FD800FD4AC8 /* PBXContainerItemProxy */;
+		};
 		2DC339021EC3B07D00196573 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 2DC338EF1EC3B07D00196573 /* Example macOS */;
