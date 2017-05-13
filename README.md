@@ -5,8 +5,9 @@
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/L10n-swift.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
+[![Doc percent](https://img.shields.io/cocoapods/metrics/doc-percent/L10n-swift.svg)](http://cocoapods.org/pods/L10n-swift)
 
-[![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-compatible-green.svg?style=flat)](http://cocoapods.org)
+[![CocoaPods Compatible](https://img.shields.io/badge/CocoaPods-L10n--swift-green.svg?style=flat)](http://cocoapods.org/pods/L10n-swift)
 [![Carthage Compatible](https://img.shields.io/badge/Carthage-compatible-green.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager Compatible](https://img.shields.io/badge/Package%20Manager-compatible-green.svg?style=flat)](https://github.com/apple/swift-package-manager)
 
