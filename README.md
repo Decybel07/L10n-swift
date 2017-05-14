@@ -3,8 +3,8 @@
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/L10n-swift.svg?style=flat&label=version)](http://cocoapods.org/pods/L10n-swift)
 [![Language Swift3](https://img.shields.io/badge/languages-Swift%203.0+-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
-[![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n.svg?style=flat&label=platform)](http://cocoapods.org/pods/L10n-swift)
-[![CocoaPods License](https://img.shields.io/cocoapods/l/L10n.svg?style=flat&label=license)](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE)
+[![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n-swift.svg?style=flat&label=platform)](http://cocoapods.org/pods/L10n-swift)
+[![CocoaPods License](https://img.shields.io/cocoapods/l/L10n-swift.svg?style=flat&label=license)](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE)
 [![Docs percent](https://img.shields.io/cocoapods/metrics/doc-percent/L10n-swift.svg?style=flat&label=docs)](http://cocoadocs.org/docsets/L10n-swift/)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
 [![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
@@ -135,4 +135,4 @@ Adrian Bobrowski, adrian071993@gmail.com
 
 ## 🔑 License
 
-L10n is available under the MIT license. See the LICENSE file for more info.
+L10n-swift is available under the MIT license. See the [LICENSE](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE) file for more info.
