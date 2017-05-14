@@ -77,9 +77,16 @@ github "Decybel07/L10n-swift", ~> 2.0
  import L10n
  ```
  
-### Get translated text
+### Get localized text
 
- Add `.l10()` following any `String` object you want translated:
+ Add `.l10()` following any `String` object you want localized:
+ ```swift
+ textLabel.text = "HelloWorld".l10n()
+ ```
+ 
+### Get localized number
+
+ Add `.l10()` following any `Int` or `Double` object you want localized using the number format for the current language:
  ```swift
  textLabel.text = "HelloWorld".l10n()
  ```
