@@ -48,19 +48,19 @@ pod try L10n-swift
 
 ## 📗 Installation
 
-### Setting up with [CocoaPods](http://cocoapods.org)
+### [CocoaPods](http://cocoapods.org)
  
  ```ruby
  pod 'L10n-swift', '~> 2.0'
  ```
  
-### Setting up with [Carthage](https://github.com/Carthage/Carthage)
+### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
 github "Decybel07/L10n-swift", ~> 2.0
 ```
 
-### Setting up with [Package Manager](https://swift.org/package-manager/)
+### [Swift Package Manager](https://swift.org/package-manager/)
 
 ```swift
 .Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 2)
