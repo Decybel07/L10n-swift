@@ -84,7 +84,9 @@ github "Decybel07/L10n-swift", ~> 2.0
 
  Add `.l10()` following any `Int` or `Double` object you want localized using the number format for the current language:
  ```swift
- textLabel.text = "HelloWorld".l10n()
+ textLabel.text = 24.l10n()
+ textLabel.text = 1.61803.l10n()
+ textLabel.text = 2.71828.l10n(fractionDigits: 2)
  ```
  
 ### Get plural
@@ -94,7 +96,7 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
  textLabel.text = "numberOfApples".l10n(10)
  ```
  
-### Set current language
+### Set language
 
  ```swift
  L10n.shared.language = "en"
@@ -105,6 +107,12 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
 
  ```swift
  L10n.shared.language //  "en"
+ ```
+ 
+### Get locale for current language
+
+ ```swift
+ L10n.shared.locale
  ```
 
 ### Get list of supported languages
