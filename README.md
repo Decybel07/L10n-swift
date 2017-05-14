@@ -14,7 +14,7 @@
 [![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)
 
-L10n is a simple framework that improves localization in swift apps - providing cleaner syntax and in-app language switching.
+L10n-swift is a simple framework that improves localization in swift app, providing cleaner syntax and in-app language switching.
 
 ## Overview
 
@@ -31,7 +31,7 @@ L10n is a simple framework that improves localization in swift apps - providing 
  - Support for stantard localization key (Localizable.strings)
  - Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
  - Supports plural form in any language (Localizable.stringsdict)
- - Use .l10n() to localized any string
+ - Use .l10n() to localized any string, int and double
 
 ## Demo
 
@@ -56,12 +56,6 @@ pod try L10n-swift
  
  ```ruby
  pod 'L10n-swift', '~> 2.0'
- ```
- 
- or alternative
- 
- ```ruby
- pod 'L10n-swift', :git => 'https://github.com/Decybel07/L10n-swift.git'
  ```
  
 ### Setting up with [Carthage](https://github.com/Carthage/Carthage)
@@ -117,12 +111,12 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
  ```
  A list of all the languages contained in the main bundle.
 
-### Get preferred languages
+### Get preferred language
 
  ```swift
  L10n.preferredLanguage // "en"
  ```
- An ordered list of preferred languages contained in the main bundle
+ A preferred language contained in the main bundle
 
 ## Author
 
