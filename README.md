@@ -16,7 +16,7 @@
 
 L10n-swift is a simple framework that improves localization in swift app, providing cleaner syntax and in-app language switching.
 
-## Overview
+##  Overview
 
 <table align="center"><tr>
  <td rowspan="2"><img src="Screenshots/L10n-swift.gif?raw=true" alt="L10n-swift"/></td>
@@ -25,32 +25,32 @@ L10n-swift is a simple framework that improves localization in swift app, provid
  <td><img src="Screenshots/stringsdict.png?raw=true" alt="Stringsdict"/></td>
 </tr></table>
 
-## Features
+## 🌟 Features
  
- - Change the language of your apps "on the fly".
- - Support for stantard localization key (Localizable.strings)
- - Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
- - Supports plural form in any language (Localizable.stringsdict)
- - Use .l10n() to localized any string, int and double
+- [x] Change the language of your apps "on the fly".
+- [x] Support for stantard localization key (Localizable.strings)
+- [x] Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
+- [x] Supports plural form in any language (Localizable.stringsdict)
+- [x] Use .l10n() to localized any string, int and double
 
-## Demo
+## 💻 Demo
 
 ```ruby
 pod try L10n-swift
 ```
 
-## Requirements
+## ⚠️ Requirements
  
  - iOS 9.0+ | macOS 10.10+ | tvOS 9.0+ | watchOS 2.0+
  - Swift 3.0+
 
-## Communication
+## 👥 Communication
 
  - If you **found a bug**, open an issue.
  - If you **have a feature request**, open an issue.
  - If you **want to contribute**, submit a pull request.
 
-## Installation
+## 📗 Installation
 
 ### Setting up with [CocoaPods](http://cocoapods.org)
  
@@ -70,7 +70,7 @@ github "Decybel07/L10n-swift", ~> 2.0
 .Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 2)
 ```
 
-## Usage
+## 📘 Usage
 
  Import L10n at the top of each Swift file that will use framework.
  ```swift
@@ -125,10 +125,10 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
  ```
  A preferred language contained in the main bundle
 
-## Author
+## 🤓 Author
 
 Adrian Bobrowski, adrian071993@gmail.com
 
-## License
+## 🔑 License
 
 L10n is available under the MIT license. See the LICENSE file for more info.
