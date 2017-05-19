@@ -15,10 +15,10 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 ##  Overview
 
 <table align="center"><tr>
- <td rowspan="2"><img src="Screenshots/L10n-swift.gif?raw=true" alt="L10n-swift"/></td>
- <td><img src="Screenshots/plist.png?raw=true" alt="Plist"/></td>
+ <td rowspan="2"><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Screenshots/L10n-swift.gif" alt="L10n-swift"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Screenshots/plist.png?raw=true" alt="Plist"/></td>
 </tr><tr>
- <td><img src="Screenshots/stringsdict.png?raw=true" alt="Stringsdict"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Screenshots/stringsdict.png?raw=true" alt="Stringsdict"/></td>
 </tr></table>
 
 ## 🌟 Features
@@ -66,7 +66,7 @@ github "Decybel07/L10n-swift", ~> 2.0
 .Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 2)
 ```
 
-## 📘 Usage
+## 📘 [Usage](http://cocoadocs.org/docsets/L10n-swift/2.0.2/)
 
  Import L10n at the top of each Swift file that will use framework.
  ```swift
@@ -131,7 +131,7 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
 
 ## 🤓 Author
 
-Adrian Bobrowski, adrian071993@gmail.com
+Adrian Bobrowski ([Decybel07](https://github.com/Decybel07)), adrian071993@gmail.com
 
 ## 🔑 License
 
