@@ -66,7 +66,7 @@ github "Decybel07/L10n-swift", ~> 2.0
 .Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 2)
 ```
 
-## 📘 [Usage](http://cocoadocs.org/docsets/L10n-swift/2.0.2/)
+## 📘 [Usage](http://cocoadocs.org/docsets/L10n-swift/)
 
  Import L10n at the top of each Swift file that will use framework.
  ```swift
