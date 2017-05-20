@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
       * Use .l10n() to localized any string, int and double
                        DESC
 
-  s.homepage         = 'https://Decybel07.github.io/L10n-swift/'
+  s.homepage         = 'https://github.com/Decybel07/L10n-swift'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
   s.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => s.version }

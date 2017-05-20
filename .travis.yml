@@ -38,7 +38,7 @@ script:
   - xcodebuild -workspace "$WORKSPACE" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
 
   # Build Framework in Release
-  - xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+  - xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
 
   # Build Example in Debug if specified
   - if [ $BUILD_EXAMPLE == "YES" ]; then
