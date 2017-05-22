@@ -24,9 +24,9 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 ## 🌟 Features
  
 - [x] Change the language of your apps "on the fly".
-- [x] Support for stantard localization key (Localizable.strings)
+- [x] Support for stantard localization keys (Localizable.strings)
 - [x] Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
-- [x] Supports plural form in any language (Localizable.stringsdict)
+- [x] Supports plural forms in any language (Localizable.stringsdict)
 - [x] Use .l10n() to localized any string, int and double
 
 ## 💻 Demo
