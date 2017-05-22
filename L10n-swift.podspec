@@ -3,14 +3,14 @@ Pod::Spec.new do |s|
   s.name             = 'L10n-swift'
   s.module_name      = 'L10n'
   s.version          = '2.0.3'
-  s.summary          = 'Localization of the application with ability to change language "on the fly" and support for plural form in any language.'
+  s.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   s.description      = <<-DESC
-    L10n is a pod to support for localization
+    L10n is a pod that adds easier localization support for your app
       * Change the language of your apps "on the fly".
-      * Support for stantard localization key (Localizable.strings)
+      * Support for stantard localization keys (Localizable.strings)
       * Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
-      * Supports plural form in any language (Localizable.stringsdict)
+      * Supports plural forms in any language (Localizable.stringsdict)
       * Use .l10n() to localized any string, int and double
                        DESC
 
