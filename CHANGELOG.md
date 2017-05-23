@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [2.0.5](https://github.com/Decybel07/L10n-swift/tree/2.0.5) (2017-05-23)
+* Bugfixing - display integer as long
+
 ## [2.0.4](https://github.com/Decybel07/L10n-swift/tree/2.0.4) (2017-05-23)
 * Support for display integer with leading zeros
 
