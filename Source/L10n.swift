@@ -16,7 +16,7 @@ public class L10n {
 
     /// A preferred language contained in the main bundle.
     public static var preferredLanguage: String {
-        return self.supportedLanguages.first ?? "UNDEFINED"
+        return self.preferredLanguages.first ?? "UNDEFINED"
     }
 
     /// An ordered list of preferred languages contained in the main bundle.
