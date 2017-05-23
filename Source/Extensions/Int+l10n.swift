@@ -14,7 +14,7 @@ extension Int {
      - returns: A localized self description value.
      */
     public func l10n() -> String {
-        return L10n.shared.string(format: "%d", self)
+        return L10n.shared.string(format: "%ld", self)
     }
 
     /**
@@ -23,6 +23,6 @@ extension Int {
      - returns: A localized self description value with leading zeros.
      */
     public func l10n(minIntegerDigits: Int) -> String {
-        return L10n.shared.string(format: "%0\(minIntegerDigits)d", self)
+        return L10n.shared.string(format: "%0\(minIntegerDigits)ld", self)
     }
 }
