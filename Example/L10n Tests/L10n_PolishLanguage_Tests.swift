@@ -83,6 +83,10 @@ class L10n_PolishLanguage_Tests: XCTestCase {
         XCTAssertEqual(1.l10n(), "1")
         XCTAssertEqual(15.l10n(), "15")
         XCTAssertEqual(7_215_633.l10n(), "7 215 633")
+        
+        XCTAssertEqual(0.l10n(minIntegerDigits: 3), "000")
+        XCTAssertEqual(1.l10n(minIntegerDigits: 2), "01")
+        XCTAssertEqual(15.l10n(minIntegerDigits: 1), "15")
     }
 
     func testDouble() {
