@@ -23,6 +23,9 @@ extension Int {
      - returns: A localized self description value with leading zeros.
      */
     public func l10n(minIntegerDigits: Int) -> String {
-        return L10n.shared.string(format: "%0\(minIntegerDigits)ld", self)
+        let formatter = NumberFormatter()
+        formatter.minimumIntegerDigits = minIntegerDigits
+        formatter.locale = L10n.shared.locale
+        return formatter.string(from: self as NSNumber)!
     }
 }

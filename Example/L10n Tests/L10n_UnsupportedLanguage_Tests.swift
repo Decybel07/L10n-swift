@@ -97,8 +97,7 @@ class L10n_UnsupportedLanguage_Tests: XCTestCase {
         XCTAssertEqual((-1).l10n(), "-1")
         XCTAssertEqual((-15).l10n(), "-15")
         XCTAssertEqual((-7_215_633).l10n(), "-7215633")
-        XCTAssertEqual((-1).l10n(minIntegerDigits: 2), "-1")
-        XCTAssertEqual((-1).l10n(minIntegerDigits: 3), "-01")
+        XCTAssertEqual((-1).l10n(minIntegerDigits: 2), "-01")
         XCTAssertEqual((-15).l10n(minIntegerDigits: 1), "-15")
     }
     
