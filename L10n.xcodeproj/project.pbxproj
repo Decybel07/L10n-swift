@@ -31,6 +31,10 @@
 		2D1D71DA1EB7C2FE00A9849E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D71371EB7B3BC00A9849E /* Info.plist */; };
 		2D1D71DB1EB7C2FE00A9849E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D71371EB7B3BC00A9849E /* Info.plist */; };
 		2D1D71DC1EB7C2FE00A9849E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D1D71371EB7B3BC00A9849E /* Info.plist */; };
+		2D747A3F1EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
+		2D747A401EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
+		2D747A411EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
+		2D747A421EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +48,7 @@
 		2D1D71371EB7B3BC00A9849E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		2D1D71381EB7B3BC00A9849E /* L10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = L10n.h; path = Source/L10n.h; sourceTree = "<group>"; };
 		2D1D71391EB7B3BC00A9849E /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = Source/L10n.swift; sourceTree = "<group>"; };
+		2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+l10n.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 				2D1BA6921EC0E52D0073392A /* Int+l10n.swift */,
 				2D1BA69C1EC0E8200073392A /* Double+l10n.swift */,
 				2D1BA6931EC0E52D0073392A /* String+l10n.swift */,
+				2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */,
 			);
 			name = Extensions;
 			path = Source/Extensions;
@@ -317,6 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D747A3F1EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6941EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA6981EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D713D1EB7B3BC00A9849E /* L10n.swift in Sources */,
@@ -328,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D747A401EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6951EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA6991EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D31EB7C2DC00A9849E /* L10n.swift in Sources */,
@@ -339,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D747A411EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6961EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA69A1EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D51EB7C2DE00A9849E /* L10n.swift in Sources */,
@@ -350,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D747A421EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6971EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA69B1EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D61EB7C2DE00A9849E /* L10n.swift in Sources */,
