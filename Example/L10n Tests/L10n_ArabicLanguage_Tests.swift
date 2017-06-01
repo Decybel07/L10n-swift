@@ -62,9 +62,9 @@ class L10n_ArabicLanguage_Tests: XCTestCase {
     }
     
     func testDouble() {
-        XCTAssertEqual(0.0.l10n(), "٠٫٠٠٠٠")
-        XCTAssertEqual(3.14.l10n(), "٣٫١٤٠٠")
-        XCTAssertEqual(4.651273.l10n(), "٤٫٦٥١٣")
+        XCTAssertEqual(0.0.l10n(), "٠")
+        XCTAssertEqual(3.14.l10n(), "٣٫١٤")
+        XCTAssertEqual(4.651273.l10n(), "٤٫٦٥١٢٧٣")
         XCTAssertEqual(4.651273.l10n(fractionDigits: 0), "٥")
         XCTAssertEqual(4.651273.l10n(fractionDigits: 1), "٤٫٧")
         XCTAssertEqual(4.651273.l10n(fractionDigits: 2), "٤٫٦٥")
@@ -89,8 +89,8 @@ class L10n_ArabicLanguage_Tests: XCTestCase {
     }
     
     func testNegativeDouble() {
-        XCTAssertEqual((-3.14).l10n(), "‏-٣٫١٤٠٠")
-        XCTAssertEqual((-4.651273).l10n(), "‏-٤٫٦٥١٣")
+        XCTAssertEqual((-3.14).l10n(), "‏-٣٫١٤")
+        XCTAssertEqual((-4.651273).l10n(), "‏-٤٫٦٥١٢٧٣")
         XCTAssertEqual((-4.651273).l10n(fractionDigits: 0), "‏-٥")
         XCTAssertEqual((-4.651273).l10n(fractionDigits: 1), "‏-٤٫٧")
         XCTAssertEqual((-4.651273).l10n(fractionDigits: 2), "‏-٤٫٦٥")

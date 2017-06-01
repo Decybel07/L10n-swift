@@ -88,8 +88,8 @@
 			children = (
 				2D1BA6921EC0E52D0073392A /* Int+l10n.swift */,
 				2D1BA69C1EC0E8200073392A /* Double+l10n.swift */,
-				2D1BA6931EC0E52D0073392A /* String+l10n.swift */,
 				2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */,
+				2D1BA6931EC0E52D0073392A /* String+l10n.swift */,
 			);
 			name = Extensions;
 			path = Source/Extensions;

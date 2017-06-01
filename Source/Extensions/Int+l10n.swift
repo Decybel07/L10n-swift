@@ -14,7 +14,7 @@ extension Int {
      - returns: A localized self description value.
      */
     public func l10n() -> String {
-        return L10n.shared.string(format: "%ld", self)
+        return (self as NSNumber).l10n()
     }
 
     /**
