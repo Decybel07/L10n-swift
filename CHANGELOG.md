@@ -1,11 +1,14 @@
 
 # Change Log
 
+## [2.1.0](https://github.com/Decybel07/L10n-swift/tree/2.1.0) (2017-06-01)
+* Support for localized NSNumber
+
 ## [2.0.5](https://github.com/Decybel07/L10n-swift/tree/2.0.5) (2017-05-23)
-* Bugfixing - display integer as long
+* Bugfixing - localized integer as long integer
 
 ## [2.0.4](https://github.com/Decybel07/L10n-swift/tree/2.0.4) (2017-05-23)
-* Support for display integer with leading zeros
+* Support for localized integer with leading zeros
 
 ## [2.0.3](https://github.com/Decybel07/L10n-swift/tree/2.0.3) (2017-05-20)
 * Create example for mac
