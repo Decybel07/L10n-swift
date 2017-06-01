@@ -5,15 +5,17 @@
 	<key>language</key>
 	<dict>
 		<key>value</key>
-		<string>Language</string>
+		<string>لغة</string>
 		<key>english</key>
-		<string>English</string>
+		<string>الإنجليزية</string>
 		<key>polish</key>
-		<string>Polish</string>
+		<string>البولندي</string>
 		<key>japanese</key>
-		<string>Japanese</string>
+		<string>اليابانية</string>
 		<key>spanish</key>
-		<string>Spanish</string>
+		<string>الأسبانية</string>
+		<key>arabic</key>
+		<string>عربى</string>
 	</dict>
 </dict>
 </plist>

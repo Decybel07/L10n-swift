@@ -13,6 +13,9 @@
 		2D15A2541EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A2531EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift */; };
 		2D15A2551EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A2531EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift */; };
 		2D15A2561EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D15A2531EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift */; };
+		2D747A4C1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A4B1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift */; };
+		2D747A4D1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A4B1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift */; };
+		2D747A4E1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A4B1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift */; };
 		2DC338F31EC3B07D00196573 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC338F21EC3B07D00196573 /* AppDelegate.swift */; };
 		2DC338F51EC3B07D00196573 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC338F41EC3B07D00196573 /* ViewController.swift */; };
 		2DC338F71EC3B07D00196573 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC338F61EC3B07D00196573 /* Assets.xcassets */; };
@@ -194,6 +197,9 @@
 /* Begin PBXFileReference section */
 		2D15A24F1EC4CA6600FD4AC8 /* L10n_PolishLanguage_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n_PolishLanguage_Tests.swift; sourceTree = "<group>"; };
 		2D15A2531EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n_EnglishLanguage_Tests.swift; sourceTree = "<group>"; };
+		2D747A491EE0640C003802FE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D747A4B1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n_ArabicLanguage_Tests.swift; sourceTree = "<group>"; };
+		2D747A4F1EE06BA6003802FE /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ar; path = ar.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2DC338F01EC3B07D00196573 /* Example macOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example macOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC338F21EC3B07D00196573 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DC338F41EC3B07D00196573 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -423,6 +429,7 @@
 				2DC339EF1EC3C0F800196573 /* L10n_UnsupportedLanguage_Tests.swift */,
 				2D15A24F1EC4CA6600FD4AC8 /* L10n_PolishLanguage_Tests.swift */,
 				2D15A2531EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift */,
+				2D747A4B1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift */,
 				2DC339E81EC3BF4A00196573 /* Info.plist */,
 			);
 			path = "L10n Tests";
@@ -645,6 +652,7 @@
 				pl,
 				es,
 				Base,
+				ar,
 			);
 			mainGroup = 2D1D71411EB7B71F00A9849E;
 			productRefGroup = 2D1D714B1EB7B71F00A9849E /* Products */;
@@ -814,6 +822,7 @@
 				2D15A2501EC4CA6600FD4AC8 /* L10n_PolishLanguage_Tests.swift in Sources */,
 				2DC339F01EC3C0F800196573 /* L10n_UnsupportedLanguage_Tests.swift in Sources */,
 				2DC339E91EC3BF4A00196573 /* L10n_Static_Tests.swift in Sources */,
+				2D747A4C1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */,
 				2D15A2541EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -835,6 +844,7 @@
 				2D15A2511EC4CA6600FD4AC8 /* L10n_PolishLanguage_Tests.swift in Sources */,
 				2DC339F11EC3C0F800196573 /* L10n_UnsupportedLanguage_Tests.swift in Sources */,
 				2DC339EA1EC3BF4A00196573 /* L10n_Static_Tests.swift in Sources */,
+				2D747A4D1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */,
 				2D15A2551EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -856,6 +866,7 @@
 				2D15A2521EC4CA6600FD4AC8 /* L10n_PolishLanguage_Tests.swift in Sources */,
 				2DC339F21EC3C0F800196573 /* L10n_UnsupportedLanguage_Tests.swift in Sources */,
 				2DC339EB1EC3BF4A00196573 /* L10n_Static_Tests.swift in Sources */,
+				2D747A4E1EE06460003802FE /* L10n_ArabicLanguage_Tests.swift in Sources */,
 				2D15A2561EC4CF0900FD4AC8 /* L10n_EnglishLanguage_Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -928,6 +939,7 @@
 				2DC339821EC3B30E00196573 /* es */,
 				2DC339851EC3B30E00196573 /* ja */,
 				2DC339881EC3B30E00196573 /* pl */,
+				2D747A4F1EE06BA6003802FE /* ar */,
 			);
 			name = Localizable.plist;
 			sourceTree = "<group>";
@@ -939,6 +951,7 @@
 				2DC339831EC3B30E00196573 /* es */,
 				2DC339861EC3B30E00196573 /* ja */,
 				2DC339891EC3B30E00196573 /* pl */,
+				2D747A491EE0640C003802FE /* ar */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
