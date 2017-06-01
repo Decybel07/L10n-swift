@@ -1,0 +1,9 @@
+/* 
+  Localizable.strings
+  Example
+
+  Created by Adrian Bobrowski on 30.04.2017.
+  Copyright © 2017 Coding lifestyle. All rights reserved.
+*/
+
+"HelloWorld" = "Hello World!";

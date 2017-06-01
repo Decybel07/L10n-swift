@@ -98,4 +98,37 @@ class L10n_EnglishLanguage_Tests: XCTestCase {
         XCTAssertEqual(4.651273.l10n(fractionDigits: 2), "4.65")
         XCTAssertEqual(4.651273.l10n(fractionDigits: 3), "4.651")
     }
+    
+    func testNSNumber() {
+        XCTAssertEqual((0 as NSNumber).l10n(), "0")
+        XCTAssertEqual((0.0 as NSNumber).l10n(), "0")
+        XCTAssertEqual((3 as NSNumber).l10n(), "3")
+        XCTAssertEqual((4123 as NSNumber).l10n(), "4,123")
+        XCTAssertEqual((3.14 as NSNumber).l10n(), "3.14")
+        XCTAssertEqual((4.651273 as NSNumber).l10n(), "4.651273")
+    }
+    
+    func testNegativeInt() {
+        XCTAssertEqual((-1).l10n(), "-1")
+        XCTAssertEqual((-15).l10n(), "-15")
+        XCTAssertEqual((-7_215_633).l10n(), "-7,215,633")
+        XCTAssertEqual((-1).l10n(minIntegerDigits: 2), "-01")
+        XCTAssertEqual((-15).l10n(minIntegerDigits: 1), "-15")
+    }
+    
+    func testNegativeDouble() {
+        XCTAssertEqual((-3.14).l10n(), "-3.1400")
+        XCTAssertEqual((-4.651273).l10n(), "-4.6513")
+        XCTAssertEqual((-4.651273).l10n(fractionDigits: 0), "-5")
+        XCTAssertEqual((-4.651273).l10n(fractionDigits: 1), "-4.7")
+        XCTAssertEqual((-4.651273).l10n(fractionDigits: 2), "-4.65")
+        XCTAssertEqual((-4.651273).l10n(fractionDigits: 3), "-4.651")
+    }
+    
+    func testNegativeNSNumber() {
+        XCTAssertEqual((-3 as NSNumber).l10n(), "-3")
+        XCTAssertEqual((-4_123 as NSNumber).l10n(), "-4,123")
+        XCTAssertEqual((-3.14 as NSNumber).l10n(), "-3.14")
+        XCTAssertEqual((-4.651273 as NSNumber).l10n(), "-4.651273")
+    }
 }
