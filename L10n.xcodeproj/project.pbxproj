@@ -35,10 +35,10 @@
 		2D747A401EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
 		2D747A411EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
 		2D747A421EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */; };
-		2DB89C981EE31D48008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C971EE31D48008FF3A1 /* Localizable.swift */; };
-		2DB89C991EE31D48008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C971EE31D48008FF3A1 /* Localizable.swift */; };
-		2DB89C9A1EE31D48008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C971EE31D48008FF3A1 /* Localizable.swift */; };
-		2DB89C9B1EE31D48008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C971EE31D48008FF3A1 /* Localizable.swift */; };
+		2DB89C9D1EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
+		2DB89C9E1EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
+		2DB89C9F1EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
+		2DB89CA01EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,7 +53,7 @@
 		2D1D71381EB7B3BC00A9849E /* L10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = L10n.h; path = Source/L10n.h; sourceTree = "<group>"; };
 		2D1D71391EB7B3BC00A9849E /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = Source/L10n.swift; sourceTree = "<group>"; };
 		2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+l10n.swift"; sourceTree = "<group>"; };
-		2DB89C971EE31D48008FF3A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localizable.swift; path = Source/Localizable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,7 +125,7 @@
 				2D1D71371EB7B3BC00A9849E /* Info.plist */,
 				2D1D71381EB7B3BC00A9849E /* L10n.h */,
 				2D1D71391EB7B3BC00A9849E /* L10n.swift */,
-				2DB89C971EE31D48008FF3A1 /* Localizable.swift */,
+				2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */,
 				2D1BA6911EC0E52D0073392A /* Extensions */,
 			);
 			name = Source;
@@ -333,7 +333,7 @@
 				2D1BA6941EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA6981EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D713D1EB7B3BC00A9849E /* L10n.swift in Sources */,
-				2DB89C981EE31D48008FF3A1 /* Localizable.swift in Sources */,
+				2DB89C9D1EE334E2008FF3A1 /* Localizable.swift in Sources */,
 				2D1BA69D1EC0E8200073392A /* Double+l10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -346,7 +346,7 @@
 				2D1BA6951EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA6991EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D31EB7C2DC00A9849E /* L10n.swift in Sources */,
-				2DB89C991EE31D48008FF3A1 /* Localizable.swift in Sources */,
+				2DB89C9E1EE334E2008FF3A1 /* Localizable.swift in Sources */,
 				2D1BA69E1EC0E8200073392A /* Double+l10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +359,7 @@
 				2D1BA6961EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA69A1EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D51EB7C2DE00A9849E /* L10n.swift in Sources */,
-				2DB89C9A1EE31D48008FF3A1 /* Localizable.swift in Sources */,
+				2DB89C9F1EE334E2008FF3A1 /* Localizable.swift in Sources */,
 				2D1BA69F1EC0E8200073392A /* Double+l10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -372,7 +372,7 @@
 				2D1BA6971EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2D1BA69B1EC0E52D0073392A /* String+l10n.swift in Sources */,
 				2D1D71D61EB7C2DE00A9849E /* L10n.swift in Sources */,
-				2DB89C9B1EE31D48008FF3A1 /* Localizable.swift in Sources */,
+				2DB89CA01EE334E2008FF3A1 /* Localizable.swift in Sources */,
 				2D1BA6A01EC0E8200073392A /* Double+l10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
