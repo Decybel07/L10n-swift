@@ -1,6 +1,10 @@
 
 # Change Log
 
+## [2.1.1](https://github.com/Decybel07/L10n-swift/tree/2.1.1) (2017-06-03)
+* Create `Localizable` protocol
+* add attention in documentation
+
 ## [2.1.0](https://github.com/Decybel07/L10n-swift/tree/2.1.0) (2017-06-01)
 * Support for localized NSNumber
 
