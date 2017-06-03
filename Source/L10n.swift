@@ -80,7 +80,7 @@ public class L10n {
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    public func string(format: String, _ args: CVarArg...) -> String {
+    public func string(format: String, _ args: Localizable...) -> String {
         return self.string(format: format, args)
     }
 
@@ -92,7 +92,7 @@ public class L10n {
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    public func string(format: String, _ args: [CVarArg]) -> String {
+    public func string(format: String, _ args: [Localizable]) -> String {
         return String(format: format, locale: self.locale, arguments: args)
     }
 
@@ -104,7 +104,7 @@ public class L10n {
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    public func plural(for key: String, _ args: CVarArg...) -> String {
+    public func plural(for key: String, _ args: NSNumber...) -> String {
         return self.plural(for: key, args)
     }
 
@@ -116,7 +116,7 @@ public class L10n {
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    public func plural(for key: String, _ args: [CVarArg]) -> String {
+    public func plural(for key: String, _ args: [NSNumber]) -> String {
         return self.string(format: self.string(for: key), args)
     }
 

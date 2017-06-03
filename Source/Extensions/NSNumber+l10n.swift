@@ -6,12 +6,12 @@
 //  Copyright © 2017 Coding lifestyle. All rights reserved.
 //
 
-extension NSNumber {
+extension NSNumber: Localizable {
 
     /**
-     Returns a localized self description value.
+     Returns a string that represents the localized contents of the number object.
 
-     - returns: A localized self description value.
+     - returns: A string that represents the localized contents of the number object.
      */
     public func l10n() -> String {
         return self.description(withLocale: L10n.shared.locale)

@@ -6,7 +6,7 @@
 //  Copyright © 2017 Coding lifestyle. All rights reserved.
 //
 
-extension String {
+extension String: Localizable {
 
     /**
      Returns a localized version of the string designated by **self**.
@@ -24,7 +24,7 @@ extension String {
 
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
-    public func l10n(_ args: CVarArg...) -> String {
+    public func l10n(_ args: NSNumber...) -> String {
         return self.l10n(args)
     }
 
@@ -35,7 +35,7 @@ extension String {
 
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
-    public func l10n(_ args: [CVarArg]) -> String {
+    public func l10n(_ args: [NSNumber]) -> String {
         return L10n.shared.plural(for: self, args)
     }
 }

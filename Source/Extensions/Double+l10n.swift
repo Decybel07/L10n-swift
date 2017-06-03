@@ -6,23 +6,23 @@
 //  Copyright © 2017 Coding lifestyle. All rights reserved.
 //
 
-extension Double {
+extension Double: Localizable {
 
     /**
-     Returns a localized self description value.
+     Returns a localized **self** description value.
 
-     - returns: A localized self description value.
+     - returns: A localized **self** description value.
      */
     public func l10n() -> String {
         return (self as NSNumber).l10n()
     }
 
     /**
-     Returns a localized self description value.
+     Returns a localized **self** description value with defined number of fractionDigits.
 
      - parameter fractionDigits: The number of fraction digits.
 
-     - returns: A localized self description value.
+     - returns: A localized **self** description value with defined number of fractionDigits.
      */
     public func l10n(fractionDigits: Int) -> String {
         let formatter = NumberFormatter()
