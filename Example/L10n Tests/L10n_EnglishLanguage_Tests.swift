@@ -53,7 +53,7 @@ class L10n_EnglishLanguage_Tests: XCTestCase {
     func testDefinedPlural() {
         let key = "numberOfApples"
 
-        XCTAssertEqual(key.l10n(0), "Zero apples")
+        XCTAssertEqual(key.l10n(0,2), "Zero apples")
         XCTAssertEqual(key.l10n(1), "One apple")
         XCTAssertEqual(key.l10n(2), "2 apples")
         XCTAssertEqual(key.l10n(5), "5 apples")
