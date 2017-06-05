@@ -26,10 +26,10 @@ extension Double: Localizable {
      */
     public func l10n(fractionDigits: Int) -> String {
         let formatter = NumberFormatter()
+        formatter.locale = L10n.shared.locale
         formatter.minimumIntegerDigits = 1
         formatter.minimumFractionDigits = fractionDigits
         formatter.maximumFractionDigits = fractionDigits
-        formatter.locale = L10n.shared.locale
         return formatter.string(from: self as NSNumber)!
     }
 }

@@ -24,8 +24,8 @@ extension Int: Localizable {
      */
     public func l10n(minIntegerDigits: Int) -> String {
         let formatter = NumberFormatter()
-        formatter.minimumIntegerDigits = minIntegerDigits
         formatter.locale = L10n.shared.locale
+        formatter.minimumIntegerDigits = minIntegerDigits
         return formatter.string(from: self as NSNumber)!
     }
 }

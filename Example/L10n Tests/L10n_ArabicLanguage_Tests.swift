@@ -63,6 +63,7 @@ class L10n_ArabicLanguage_Tests: XCTestCase {
     
     func testDouble() {
         XCTAssertEqual(0.0.l10n(), "٠")
+        XCTAssertEqual(0.01.l10n(), "٠٫٠١")
         XCTAssertEqual(3.14.l10n(), "٣٫١٤")
         XCTAssertEqual(4.651273.l10n(), "٤٫٦٥١٢٧٣")
         XCTAssertEqual(4.651273.l10n(fractionDigits: 0), "٥")

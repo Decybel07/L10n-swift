@@ -75,56 +75,48 @@ public class L10n {
     /**
      Returns a localized by using `format` as a template into which the remaining argument values are substituted.
 
-     - Attention: **Never use NSNumber as argument in args!**
-
      - parameter format: The template for arguments.
      - parameter args: The values used in the template.
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    public func string(format: String, _ args: Localizable...) -> String {
+    public func string(format: String, _ args: CVarArg...) -> String {
         return self.string(format: format, args)
     }
 
     /**
      Returns a localized by using `format` as a template into which the remaining argument values are substituted.
 
-     - Attention: **Never use NSNumber as argument in args!**
-
      - parameter format: The template for arguments.
      - parameter args: The values used in the template.
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    public func string(format: String, _ args: [Localizable]) -> String {
+    public func string(format: String, _ args: [CVarArg]) -> String {
         return String(format: format, locale: self.locale, arguments: args)
     }
 
     /**
      Returns a localized plural version of the string designated by the specified key and residing in loaded *Localizable* files.
 
-     - Attention: **Never use NSNumber as argument in args!**
-
      - parameter key: The key for a string in "Localizable" files.
      - parameter args: The values for which the appropriate plural form is selected.
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    public func plural(for key: String, _ args: Localizable...) -> String {
+    public func plural(for key: String, _ args: CVarArg...) -> String {
         return self.plural(for: key, args)
     }
 
     /**
      Returns a localized plural version of the string designated by the specified key and residing in loaded *Localizable* files.
 
-     - Attention: **Never use NSNumber as argument in args!**
-
      - parameter key: The key for a string in "Localizable" files.
      - parameter args: The values for which the appropriate plural form is selected.
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    public func plural(for key: String, _ args: [Localizable]) -> String {
+    public func plural(for key: String, _ args: [CVarArg]) -> String {
         let arguments = args
         return self.string(format: self.string(for: key), arguments)
     }

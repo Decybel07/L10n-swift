@@ -6,7 +6,8 @@
 //  Copyright © 2017 Coding lifestyle. All rights reserved.
 //
 
-public protocol Localizable: CVarArg {
+/// Protocol Localizable.
+public protocol Localizable {
 
     /**
      Returns a string that represents the localized contents of the instance.
