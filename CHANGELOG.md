@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [2.1.2](https://github.com/Decybel07/L10n-swift/tree/2.1.2) (2017-06-05)
+* Bugfixe and minor improvements
+
 ## [2.1.1](https://github.com/Decybel07/L10n-swift/tree/2.1.1) (2017-06-03)
 * Create `Localizable` protocol
 * add attention in documentation
