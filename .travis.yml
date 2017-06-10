@@ -8,59 +8,74 @@ language: objective-c
 env:
   global:
   - LC_CTYPE=en_US.UTF-8
-  - LANG=en_US.UTF-8
   - WORKSPACE=L10n.xcworkspace
-  - FRAMEWORK_IOS_SCHEME="L10n iOS"
-  - FRAMEWORK_MACOS_SCHEME="L10n macOS"
-  - FRAMEWORK_TVOS_SCHEME="L10n tvOS"
-  - FRAMEWORK_WATCHOS_SCHEME="L10n watchOS"
-  - EXAMPLE_IOS_SCHEME="Example iOS"
-  - EXAMPLE_MACOS_SCHEME="Example macOS"
-  - EXAMPLE_TVOS_SCHEME="Example tvOS"
-  - EXAMPLE_WATCHOS_SCHEME="Example watchOS"
+  - IOS="iOS"
+  - MACOS="macOS"
+  - TVOS="tvOS"
+  - WATCHOS="watchOS"
 
   matrix:
-    - DESTINATION="OS=10.2,name=iPhone 7 Plus"     FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="YES"
-    - DESTINATION="OS=9.1,name=iPhone 6"           FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="YES" BUILD_EXAMPLE="YES" POD_LINT="NO"
-    - DESTINATION="OS=9.0,name=iPhone 5S"          FRAMEWORK_SCHEME="$FRAMEWORK_IOS_SCHEME"     EXAMPLE_SCHEME="$EXAMPLE_IOS_SCHEME"   RUN_TESTS="NO" BUILD_EXAMPLE="YES" POD_LINT="NO"
+    - LANG=en_US.UTF-8  DESTINATION="OS=9.0,name=iPad 2"                        PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"  
+    - LANG=en_GB.UTF-8  DESTINATION="OS=9.1,name=iPad Air"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=9.2,name=iPad Air 2"                    PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=ja_JP.UTF-8  DESTINATION="OS=10.0,name=iPad Pro (9.7-inch)"          PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=zh_HK.UTF-8  DESTINATION="OS=10.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
 
-    - DESTINATION="OS=10.2,name=Apple TV 1080p"    FRAMEWORK_SCHEME="$FRAMEWORK_TVOS_SCHEME"    EXAMPLE_SCHEME="$EXAMPLE_TVOS_SCHEME"  RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
-    - DESTINATION="OS=9.0,name=Apple TV 1080p"     FRAMEWORK_SCHEME="$FRAMEWORK_TVOS_SCHEME"    EXAMPLE_SCHEME="$EXAMPLE_TVOS_SCHEME"  RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+    - LANG=en_US.UTF-8  DESTINATION="OS=9.0,name=iPhone 4s"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=9.1,name=iPhone 5"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=9.2,name=iPhone 5s"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=ja_JP.UTF-8  DESTINATION="OS=9.3,name=iPhone 6"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=zh_HK.UTF-8  DESTINATION="OS=10.0,name=iPhone 6 Plus"                PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=ar_AE.UTF-8  DESTINATION="OS=10.1,name=iPhone 6s"                    PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=en_US.UTF-8  DESTINATION="OS=10.2,name=iPhone 6s Plus"               PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=10.1,name=iPhone 7"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=10.0,name=iPhone 7 Plus"                PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
 
-    - DESTINATION="arch=x86_64"                    FRAMEWORK_SCHEME="$FRAMEWORK_MACOS_SCHEME"   EXAMPLE_SCHEME="$EXAMPLE_MACOS_SCHEME" RUN_TESTS="NO" BUILD_EXAMPLE="YES"  POD_LINT="NO"
+    - LANG=en_US.UTF-8  DESTINATION="OS=2.0,name=Apple Watch - 38mm"            PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=2.2,name=Apple Watch - 42mm"            PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=3.1,name=Apple Watch - 42mm"            PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=3.1,name=Apple Watch Series 2 - 38mm"   PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO" 
+    - LANG=ja_JP.UTF-8  DESTINATION="OS=3.2,name=Apple Watch Series 2 - 42mm"   PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO" 
+
+    - LANG=en_US.UTF-8  DESTINATION="OS=10.3.1,name=iPhone 6s"                  PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="NO"  BUILD_EXAMPLE="YES" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=10.3.1,name=iPhone 6s Plus"             PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="NO"  BUILD_EXAMPLE="YES" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=10.3.1,name=iPhone 7"                   PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="NO"  BUILD_EXAMPLE="YES" 
+    - LANG=ja_JP.UTF-8  DESTINATION="OS=10.3.1,name=iPhone 7 Plus"              PLATFORM="$WATCHOS"   RUN_TESTS="NO"    BUILD_FRAMEWORK="NO"  BUILD_EXAMPLE="YES" 
+
+    - LANG=en_US.UTF-8  DESTINATION="OS=9.0,name=Apple TV 1080p"                PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=en_GB.UTF-8  DESTINATION="OS=9.1,name=Apple TV 1080p"                PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=pl_PL.UTF-8  DESTINATION="OS=9.2,name=Apple TV 1080p"                PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=ja_JP.UTF-8  DESTINATION="OS=10.0,name=Apple TV 1080p"               PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=zh_HK.UTF-8  DESTINATION="OS=10.1,name=Apple TV 1080p"               PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+    - LANG=ar_AE.UTF-8  DESTINATION="OS=10.2,name=Apple TV 1080p"               PLATFORM="$TVOS"      RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
+
+    - LANG=en_US.UTF-8  DESTINATION="arch=x86_64"                               PLATFORM="$MACOS"     RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
 
 script:
   - set -o pipefail
   - xcodebuild -version
   - xcodebuild -showsdks
 
-  # Build Framework in Debug
-  - xcodebuild -workspace "$WORKSPACE" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+  - FRAMEWORK_SCHEME="L10n $PLATFORM";
+  - EXAMPLE_SCHEME="Example $PLATFORM";
 
-  # Build Framework in Release
-  - xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
-
-  # Build Example in Debug if specified
+  # Build Framework
+  - if [ $BUILD_FRAMEWORK == "YES" ]; then
+      xcodebuild -workspace "$WORKSPACE" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
+    fi
+  
+  # Build Example
   - if [ $BUILD_EXAMPLE == "YES" ]; then
       xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
     fi
-    
-    # Build Example in Debug if specified
-  - if [ $BUILD_EXAMPLE == "YES" ]; then
-      xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
-    fi
-    
-    # Build Example in Debug and Run Tests if specified
+  
+  # Run Tests
   - if [ $RUN_TESTS == "YES" ]; then
       xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
-    fi
-    
-    # Build Example in Release and Run Tests if specified
-  - if [ $RUN_TESTS == "YES" ]; then
       xcodebuild -workspace "$WORKSPACE" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
     fi
-
-  # Run `pod lib lint` if specified
-  - if [ $POD_LINT == "YES" ]; then
-      pod lib lint;
-    fi
+  
+after_script:
+  - pod try L10n-swift;
