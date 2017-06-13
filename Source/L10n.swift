@@ -170,6 +170,8 @@ public class L10n {
         self.bundle = self.createBundle()
         self.stringsdict = self.createStringsdict()
         self.plist = self.createPlist()
+
+        NotificationCenter.default.post(name: .L10nLanguageChanged, object: self)
     }
 
     private func createLocale() -> Locale? {
