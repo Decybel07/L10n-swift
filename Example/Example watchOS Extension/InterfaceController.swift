@@ -18,6 +18,8 @@ class InterfaceController: WKInterfaceController {
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
         self.l10n()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.l10n), name: .L10nLanguageChanged, object: nil)
     }
 
     func l10n() {
@@ -37,7 +39,6 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func onLanguageChanged(_ value: Int) {
         L10n.shared.language = ["en", "pl", "es", "ja"][value]
-        self.l10n()
     }
     
     

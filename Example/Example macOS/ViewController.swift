@@ -26,6 +26,8 @@ class ViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.l10n()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.l10n), name: .L10nLanguageChanged, object: nil)
     }
     
     func l10n() {
@@ -46,6 +48,5 @@ class ViewController: NSViewController {
     
     @IBAction func onLanguageChanged(_ sender: NSSegmentedControl) {
         L10n.shared.language = ["en", "pl", "es", "ja"][sender.selectedSegment]
-        self.l10n()
     }
 }
