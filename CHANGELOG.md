@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [2.2.0](https://github.com/Decybel07/L10n-swift/tree/2.2.0) (2017-06-14)
+* Create post notification when language has been changed
+
 ## [2.1.2](https://github.com/Decybel07/L10n-swift/tree/2.1.2) (2017-06-05)
 * Bugfixe and minor improvements
 

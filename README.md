@@ -51,13 +51,13 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 2.1'
+ pod 'L10n-swift', '~> 2.2'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 2.1
+github "Decybel07/L10n-swift", ~> 2.2
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
@@ -96,6 +96,13 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
  textLabel.text = "numberOfApples".l10n(10)
  ```
  
+### Observe language changed
+
+ Add observer for notification `L10nLanguageChanged` This notification is called when language has been changed
+ ```swift
+ NotificationCenter.default.addObserver(self, selector: #selector(self.yourFunction), name: .L10nLanguageChanged, object: nil)
+ ```
+
 ### Set language
 
  ```swift
