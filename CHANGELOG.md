@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [3.0.0](https://github.com/Decybel07/L10n-swift/tree/3.0.0) (2017-06-25)
+* Support for user-defined `Localizable` file names
+
 ## [2.2.0](https://github.com/Decybel07/L10n-swift/tree/2.2.0) (2017-06-14)
 * Create post notification when language has been changed
 

@@ -3,7 +3,7 @@
 //  L10n
 //
 //  Created by Adrian Bobrowski on 30.04.2017.
-//  Copyright © 2017 Coding lifestyle. All rights reserved.
+//  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
 import Foundation
@@ -29,47 +29,37 @@ public class L10n {
         return Bundle.main.localizations
     }
 
+    /// A closure used to write info from framework
+    public var log: (String) -> Void = { print($0) }
+
     /// Current language code.
     public var language: String {
         didSet {
             guard self.language != oldValue else {
                 return
             }
-            self.locale = nil
-            self.bundle = nil
-            self.stringsdict = nil
-            self.plist = nil
             self.languageChanged()
         }
     }
 
     /// Current locale.
     private(set) public var locale: Locale?
-    private var stringsdict: NSDictionary?
-    private var plist: NSDictionary?
-    private var bundle: Bundle?
+    private var resources: [String: L10nResource] = [:]
 
     /**
-     Returns a localized version of the string designated by the specified key and residing in loaded *Localizable* files.
+     Initializes a new L10n with the provided language.
 
-     - parameter key: The key for a string in *Localizable* files.
+     - parameter language: The initialize language.
 
-     - returns: A localized version of the string designated by key. This method returns key when key not found.
+     - returns: A L10n object for language.
      */
-    public func string(for key: String) -> String {
-        let value = self.stringFromDictionary(stringsdict, for: key)
-            ?? self.stringFromDictionary(plist, for: key)
-            ?? self.stringFromBundle(for: key)
+    public init(language: String) {
+        self.language = language
+        self.languageChanged()
+    }
 
-        guard let text = value else {
-
-            #if DEBUG
-                print("[WARNING] L10n - Key \"\(key)\" does not exist for \"\(self.language)\"")
-            #endif
-
-            return key
-        }
-        return text
+    private convenience init() {
+        self.init(language: L10n.preferredLanguage)
     }
 
     /**
@@ -97,106 +87,80 @@ public class L10n {
     }
 
     /**
-     Returns a localized plural version of the string designated by the specified key and residing in loaded *Localizable* files.
+     Returns a localized version of the string designated by the specified *key* and residing in *resource*.
 
-     - parameter key: The key for a string in "Localizable" files.
-     - parameter args: The values for which the appropriate plural form is selected.
+     - parameter key: The key for a string in resource.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable files.
 
-     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
+     - returns: A localized version of the string designated by *key*. This method returns *key* when *key* not found.
      */
-    public func plural(for key: String, _ args: CVarArg...) -> String {
-        return self.plural(for: key, args)
-    }
-
-    /**
-     Returns a localized plural version of the string designated by the specified key and residing in loaded *Localizable* files.
-
-     - parameter key: The key for a string in "Localizable" files.
-     - parameter args: The values for which the appropriate plural form is selected.
-
-     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
-     */
-    public func plural(for key: String, _ args: [CVarArg]) -> String {
-        let arguments = args
-        return self.string(format: self.string(for: key), arguments)
-    }
-
-    /**
-     Initializes a new L10n with the provided language.
-
-     - parameter language: The initialize language.
-
-     - returns: A L10n object for language.
-     */
-    public init(language: String) {
-        self.language = language
-        self.languageChanged()
-    }
-
-    private convenience init() {
-        self.init(language: L10n.preferredLanguage)
-    }
-
-    private func stringFromBundle(for key: String) -> String? {
-        guard let text = self.bundle?.localizedString(forKey: key, value: nil, table: nil), !text.isEmpty else {
-            return nil
+    public func string(for key: String, resource: String? = nil) -> String {
+        guard let text = self.resource(named: resource).string(for: key) else {
+            self.log("L10n - Key \"\(key)\" does not exist for \"\(self.language)\"")
+            return key
         }
         return text
     }
 
-    private func stringFromDictionary(_ dictionary: NSDictionary?, for key: String) -> String? {
-        if var node = dictionary?.value(forKeyPath: key) {
-            if let value = (node as? NSDictionary)?.value(forKey: "value") {
-                node = value
-            }
-            if let text = node as? String {
-                return text
-            }
-        }
-        return nil
+    /**
+     Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
+
+     - important: You can define plurals **only** in stringsdict
+
+     For more details about string localization and the specification of a .stringsdict file, see "[Stringsdict File Format](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html)".
+
+     - parameter key: The key for a string in resource.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
+     - parameter args: The values for which the appropriate plural form is selected.
+
+     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
+     */
+    public func plural(for key: String, resource: String? = nil, _ args: CVarArg...) -> String {
+        return self.plural(for: key, resource: resource, args)
+    }
+
+    /**
+     Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
+
+     - important: You can define plurals **only** in stringsdict
+
+     For more details about string localization and the specification of a .stringsdict file, see "[Stringsdict File Format](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html)".
+
+     - parameter key: The key for a string in resource.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
+     - parameter args: The values for which the appropriate plural form is selected.
+
+     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
+     */
+    public func plural(for key: String, resource: String? = nil, _ args: [CVarArg]) -> String {
+        return self.string(format: self.string(for: key, resource: resource), args)
     }
 
     private func languageChanged() {
-        guard L10n.supportedLanguages.contains(self.language) else {
+        self.locale = nil
+        self.resources = [:]
 
-            #if DEBUG
-                print("[ERROR] L10n - List of supported languages does not contain \"\(self.language)\"")
-            #endif
-
-            return
+        if L10n.supportedLanguages.contains(self.language) {
+            self.locale = Locale(identifier: self.language)
+        } else {
+            self.log("L10n - List of supported languages does not contain \"\(self.language)\"")
         }
-
-        self.locale = self.createLocale()
-        self.bundle = self.createBundle()
-        self.stringsdict = self.createStringsdict()
-        self.plist = self.createPlist()
 
         NotificationCenter.default.post(name: .L10nLanguageChanged, object: self)
     }
 
-    private func createLocale() -> Locale? {
-        return Locale(identifier: self.language)
+    private func resource(named resourceName: String?) -> L10nResource {
+        let resourceName = (resourceName ?? "").isEmpty
+            ? "Localizable"
+            : resourceName!
+
+        return self.resources[resourceName]
+            ?? self.createResource(with: resourceName)
     }
 
-    private func createBundle() -> Bundle? {
-        guard let path = Bundle.main.path(forResource: self.language, ofType: "lproj") else {
-            return nil
-        }
-        return Bundle(path: path)
-    }
-
-    private func createPlist() -> NSDictionary? {
-        return self.createDictionary(type: "plist")
-    }
-
-    private func createStringsdict() -> NSDictionary? {
-        return self.createDictionary(type: "stringsdict")
-    }
-
-    private func createDictionary(type: String) -> NSDictionary? {
-        guard let path = self.bundle?.path(forResource: "Localizable", ofType: type) else {
-            return nil
-        }
-        return NSDictionary(contentsOfFile: path)
+    private func createResource(with resourceName: String) -> L10nResource {
+        let resource = L10nResource(language: self.language, name: resourceName)
+        self.resources[resourceName] = resource
+        return resource
     }
 }
