@@ -1,6 +1,7 @@
-<center>
+<div style="text-align:center">
  <img width="75%" src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/Logo.png" alt="L10n-swift"/>
-</center>
+</div>
+
 
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/L10n-swift.svg?style=flat&label=version)](http://cocoapods.org/pods/L10n-swift)
@@ -16,14 +17,14 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 
 ##  Overview
 
-<center>
+<div style="text-align:center">
 <table width="90%"><tr>
  <td rowspan="2"><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/L10n-swift.gif" alt="L10n-swift"/></td>
  <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/plist.png?raw=true" alt="Plist"/></td>
 </tr><tr>
  <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/stringsdict.png?raw=true" alt="Stringsdict"/></td>
 </tr></table>
-</center>
+</div>
 
 ## 🌟 Features
  
