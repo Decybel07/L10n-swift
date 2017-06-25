@@ -39,6 +39,10 @@
 		2DB89C9E1EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
 		2DB89C9F1EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
 		2DB89CA01EE334E2008FF3A1 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */; };
+		2DD9D5A91EFEEDB1005BFB68 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */; };
+		2DD9D5AA1EFEEDB1005BFB68 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */; };
+		2DD9D5AB1EFEEDB1005BFB68 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */; };
+		2DD9D5AC1EFEEDB1005BFB68 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */; };
 		2DEC0F311EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */; };
 		2DEC0F321EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */; };
 		2DEC0F331EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */; };
@@ -46,19 +50,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2D1BA6921EC0E52D0073392A /* Int+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+l10n.swift"; sourceTree = "<group>"; };
-		2D1BA6931EC0E52D0073392A /* String+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+l10n.swift"; sourceTree = "<group>"; };
-		2D1BA69C1EC0E8200073392A /* Double+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+l10n.swift"; sourceTree = "<group>"; };
+		2D1BA6921EC0E52D0073392A /* Int+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Int+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2D1BA6931EC0E52D0073392A /* String+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "String+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2D1BA69C1EC0E8200073392A /* Double+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "Double+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2D1D71041EB7B17A00A9849E /* L10n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1D71141EB7B24400A9849E /* L10n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1D71211EB7B28500A9849E /* L10n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1D712E1EB7B2BE00A9849E /* L10n.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D1D71371EB7B3BC00A9849E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		2D1D71381EB7B3BC00A9849E /* L10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = L10n.h; path = Source/L10n.h; sourceTree = "<group>"; };
-		2D1D71391EB7B3BC00A9849E /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = L10n.swift; path = Source/L10n.swift; sourceTree = "<group>"; };
-		2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+l10n.swift"; sourceTree = "<group>"; };
-		2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Localizable.swift; path = Source/Localizable.swift; sourceTree = "<group>"; };
-		2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+l10n.swift"; sourceTree = "<group>"; };
+		2D1D71391EB7B3BC00A9849E /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = L10n.swift; path = Source/L10n.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSNumber+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = Localizable.swift; path = Source/Localizable.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2DD9D5A41EFEE5AC005BFB68 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		2DD9D5A51EFEE5AC005BFB68 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		2DD9D5A61EFEE5AC005BFB68 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Package.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2DD9D5A71EFEE5AC005BFB68 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = L10nResource.swift; path = Source/L10nResource.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSNotificationName+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				2DEC0F301EF08F8C008FDA54 /* NSNotificationName+l10n.swift */,
+				2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */,
 				2D1BA6921EC0E52D0073392A /* Int+l10n.swift */,
 				2D1BA69C1EC0E8200073392A /* Double+l10n.swift */,
-				2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */,
 				2D1BA6931EC0E52D0073392A /* String+l10n.swift */,
 			);
 			name = Extensions;
@@ -111,6 +120,10 @@
 			children = (
 				2D1D71361EB7B2D400A9849E /* Source */,
 				2D1D71051EB7B17A00A9849E /* Products */,
+				2DD9D5A61EFEE5AC005BFB68 /* Package.swift */,
+				2DD9D5A71EFEE5AC005BFB68 /* README.md */,
+				2DD9D5A41EFEE5AC005BFB68 /* CHANGELOG.md */,
+				2DD9D5A51EFEE5AC005BFB68 /* LICENSE */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +144,7 @@
 				2D1D71371EB7B3BC00A9849E /* Info.plist */,
 				2D1D71381EB7B3BC00A9849E /* L10n.h */,
 				2D1D71391EB7B3BC00A9849E /* L10n.swift */,
+				2DD9D5A81EFEEDB1005BFB68 /* L10nResource.swift */,
 				2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */,
 				2D1BA6911EC0E52D0073392A /* Extensions */,
 			);
@@ -254,7 +268,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0830;
-				ORGANIZATIONNAME = "Coding lifestyle";
+				ORGANIZATIONNAME = "Adrian Bobrowski (Decybel07), adrian071993@gmail.com";
 				TargetAttributes = {
 					2D1D71031EB7B17A00A9849E = {
 						CreatedOnToolsVersion = 8.3.2;
@@ -335,6 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD9D5A91EFEEDB1005BFB68 /* L10nResource.swift in Sources */,
 				2D747A3F1EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6941EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2DEC0F311EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */,
@@ -349,6 +364,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD9D5AA1EFEEDB1005BFB68 /* L10nResource.swift in Sources */,
 				2D747A401EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6951EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2DEC0F321EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */,
@@ -363,6 +379,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD9D5AB1EFEEDB1005BFB68 /* L10nResource.swift in Sources */,
 				2D747A411EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6961EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2DEC0F331EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */,
@@ -377,6 +394,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DD9D5AC1EFEEDB1005BFB68 /* L10nResource.swift in Sources */,
 				2D747A421EDFC9A0003802FE /* NSNumber+l10n.swift in Sources */,
 				2D1BA6971EC0E52D0073392A /* Int+l10n.swift in Sources */,
 				2DEC0F341EF08F8C008FDA54 /* NSNotificationName+l10n.swift in Sources */,
@@ -512,7 +530,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CodingLifestyle.L10n;
+				PRODUCT_BUNDLE_IDENTIFIER = Decybel07.L10n;
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -536,7 +554,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = CodingLifestyle.L10n;
+				PRODUCT_BUNDLE_IDENTIFIER = Decybel07.L10n;
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
@@ -557,7 +575,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "Decybel07.L10n-watchOS";
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -581,7 +599,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "Decybel07.L10n-watchOS";
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
@@ -605,7 +623,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "Decybel07.L10n-tvOS";
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -629,7 +647,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "Decybel07.L10n-tvOS";
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
@@ -656,7 +674,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = CodingLifestyle.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = Decybel07.macOS;
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
@@ -681,7 +699,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				PRODUCT_BUNDLE_IDENTIFIER = CodingLifestyle.macOS;
+				PRODUCT_BUNDLE_IDENTIFIER = Decybel07.macOS;
 				PRODUCT_NAME = L10n;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
