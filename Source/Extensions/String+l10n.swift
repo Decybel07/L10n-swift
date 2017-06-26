@@ -46,7 +46,7 @@ extension String: Localizable {
 
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
-    public func l10n(resource _: String? = nil, _ args: [CVarArg]) -> String {
-        return L10n.shared.plural(for: self, args)
+    public func l10n(resource: String? = nil, _ args: [CVarArg]) -> String {
+        return L10n.shared.plural(for: self, resource: resource, args)
     }
 }
