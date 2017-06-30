@@ -23,8 +23,8 @@ internal class L10nResource {
     }
 
     final func string(for key: String) -> String? {
-        return self.stringFromDictionary(self.stringsdict, for: key)
-            ?? self.stringFromDictionary(self.plist, for: key)
+        return self.stringFromDictionary(self.plist, for: key)
+            ?? self.stringFromDictionary(self.stringsdict, for: key)
             ?? self.stringFromBundle(for: key)
     }
 

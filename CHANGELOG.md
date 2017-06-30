@@ -1,6 +1,11 @@
 
 # Change Log
 
+## [3.0.1](https://github.com/Decybel07/L10n-swift/tree/3.0.1) (2017-06-30)
+* Added `oldValue` and `newValue` in `userInfo` for notification `L10nLanguageChanged`
+* Bugfixing - missing `resource` parameter in string extension 
+* Change framework logo
+
 ## [3.0.0](https://github.com/Decybel07/L10n-swift/tree/3.0.0) (2017-06-25)
 * Support for user-defined `Localizable` file names
 
@@ -39,3 +44,4 @@
 * Support for grouping localization keys (Localizable.plist and Localizable.stringsdict)
 * Supports plural form in any language (Localizable.stringsdict)
 * Use .l10n() to localized any string, int and double
+* Use two or more languages at the same time

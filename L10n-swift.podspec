@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
   s.name             = 'L10n-swift'
   s.module_name      = 'L10n'
-  s.version          = '3.0.0'
+  s.version          = '3.0.1'
   s.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   s.description      = <<-DESC
@@ -13,6 +13,7 @@ Pod::Spec.new do |s|
       * Support for grouping localization keys `.plist and Localizable.stringsdict`
       * Supports plural forms in any language `.stringsdict`
       * Use .l10n() to localized any string, int and double
+      * Use two or more languages at the same time
                        DESC
 
   s.homepage         = 'https://github.com/Decybel07/L10n-swift'

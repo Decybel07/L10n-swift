@@ -60,6 +60,7 @@
 		2D1D71371EB7B3BC00A9849E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Source/Info.plist; sourceTree = "<group>"; };
 		2D1D71381EB7B3BC00A9849E /* L10n.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = L10n.h; path = Source/L10n.h; sourceTree = "<group>"; };
 		2D1D71391EB7B3BC00A9849E /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = L10n.swift; path = Source/L10n.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2D6736AB1F06BFAD003855CD /* L10n-swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "L10n-swift.podspec"; sourceTree = "<group>"; };
 		2D747A3E1EDFC9A0003802FE /* NSNumber+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = "NSNumber+l10n.swift"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2DB89C9C1EE334E2008FF3A1 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; name = Localizable.swift; path = Source/Localizable.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		2DD9D5A41EFEE5AC005BFB68 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -120,6 +121,7 @@
 			children = (
 				2D1D71361EB7B2D400A9849E /* Source */,
 				2D1D71051EB7B17A00A9849E /* Products */,
+				2D6736AB1F06BFAD003855CD /* L10n-swift.podspec */,
 				2DD9D5A61EFEE5AC005BFB68 /* Package.swift */,
 				2DD9D5A71EFEE5AC005BFB68 /* README.md */,
 				2DD9D5A41EFEE5AC005BFB68 /* CHANGELOG.md */,
