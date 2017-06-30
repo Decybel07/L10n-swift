@@ -38,7 +38,7 @@ public class L10n {
             guard self.language != oldValue else {
                 return
             }
-            self.languageChanged()
+            self.languageChanged(oldValue: oldValue)
         }
     }
 
@@ -136,7 +136,7 @@ public class L10n {
         return self.string(format: self.string(for: key, resource: resource), args)
     }
 
-    private func languageChanged() {
+    private func languageChanged(oldValue: String? = nil) {
         self.locale = nil
         self.resources = [:]
 
@@ -146,7 +146,12 @@ public class L10n {
             self.log("L10n - List of supported languages does not contain \"\(self.language)\"")
         }
 
-        NotificationCenter.default.post(name: .L10nLanguageChanged, object: self)
+        if let oldValue = oldValue {
+            NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
+                "oldValue": oldValue,
+                "newValue": self.language,
+            ])
+        }
     }
 
     private func resource(named resourceName: String?) -> L10nResource {
