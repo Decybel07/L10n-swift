@@ -2,7 +2,7 @@
 //  L10n.h
 //
 //  Created by Adrian Bobrowski on 01.05.2017.
-//  Copyright (c) 2017 CodingLifestyle
+//  Copyright (c) 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
