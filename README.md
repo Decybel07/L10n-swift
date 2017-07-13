@@ -34,6 +34,7 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 - [x] Support for grouping localization keys `.plist` and `.stringsdict`.
 - [x] Supports plural forms in any language `.stringsdict`.
 - [x] Use .l10n() to localized any string, int and double.
+- [x] Use two or more languages at the same time.
 
 ## 💻 Demo
 
