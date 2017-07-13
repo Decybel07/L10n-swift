@@ -8,7 +8,26 @@
 
 import Foundation
 
-/// Class L10n.
+/**
+ L10n manages the localized version of strings designated by the given **key** and located in the **resource** for the specified language. The default resources are *"Localizable"* files
+
+ ## The L10n class provides information about:
+ * supported languages for the application
+ * the best matching language supported by applications with user preferences
+
+ ## L10n objects provide information about:
+ * current language code for object
+ * locale for this language
+ * closure used to log information from the framework
+
+ Each object uses the default NotificationCenter to send notification (**.L10nLanguageChanged**) when the language has changed. This notification contains information "oldValue" and "newValue" where *"Value"* means the language code.
+
+ ## Supported files format:
+ * [.strings](https://github.com/Decybel07/L10n-swift/wiki/Localizable.strings)
+ * [.stringsdict](https://github.com/Decybel07/L10n-swift/wiki/Localizable.stringsdict)
+ * [.plist](https://github.com/Decybel07/L10n-swift/wiki/Localizable.plist)
+
+ */
 public class L10n {
 
     /// A single shared instance of L10n.
@@ -29,7 +48,7 @@ public class L10n {
         return Bundle.main.localizations
     }
 
-    /// A closure used to write info from framework
+    /// A closure used to log information from the framework
     public var log: (String) -> Void = { print($0) }
 
     /// Current language code.
@@ -105,9 +124,7 @@ public class L10n {
     /**
      Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
 
-     - important: You can define plurals **only** in stringsdict
-
-     For more details about string localization and the specification of a .stringsdict file, see "[Stringsdict File Format](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html)".
+     - important: You can define plurals **only** in stringsdict and **only** in root node
 
      - parameter key: The key for a string in resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
@@ -122,9 +139,7 @@ public class L10n {
     /**
      Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
 
-     - important: You can define plurals **only** in stringsdict
-
-     For more details about string localization and the specification of a .stringsdict file, see "[Stringsdict File Format](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/StringsdictFileFormat/StringsdictFileFormat.html)".
+     - important: You can define plurals **only** in stringsdict and **only** in root node
 
      - parameter key: The key for a string in resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
