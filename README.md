@@ -58,26 +58,26 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 3.0'
+ pod 'L10n-swift', '~> 4.0'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 3.0
+github "Decybel07/L10n-swift", ~> 4.0
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
 
 ```swift
-.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 3)
+.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 4)
 ```
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/L10n-swift/)
 
- Import L10n at the top of each Swift file that will use framework.
+ Import L10n_swift at the top of each Swift file that will use framework.
  ```swift
- import L10n
+ import L10n_swift
  ```
  
 ### Get localized text

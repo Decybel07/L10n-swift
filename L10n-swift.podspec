@@ -1,12 +1,12 @@
 
 Pod::Spec.new do |s|
   s.name             = 'L10n-swift'
-  s.module_name      = 'L10n'
+  s.module_name      = 'L10n_swift'
   s.version          = '3.1.0'
   s.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   s.description      = <<-DESC
-    L10n is a pod that adds easier localization support for your app
+    L10n-swift is a pod that adds easier localization support for your app
       * Change the language of your apps "on the fly".
       * Support for user-defined `Localizable` file names
       * Support for stantard localization keys `.strings`

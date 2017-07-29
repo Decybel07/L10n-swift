@@ -1,0 +1,16 @@
+PODS:
+  - L10n-swift (3.1.0)
+
+DEPENDENCIES:
+  - L10n-swift (from `./../`)
+
+EXTERNAL SOURCES:
+  L10n-swift:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  L10n-swift: b5506a2530124e817dc7185b4f0523ad6d7ffd7b
+
+PODFILE CHECKSUM: e7fa67f6efe0be6583977a089736d14c86aa84c8
+
+COCOAPODS: 1.2.1

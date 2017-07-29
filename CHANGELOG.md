@@ -1,6 +1,16 @@
 
 # Change Log
 
+## [4.0.0](https://github.com/Decybel07/L10n-swift/tree/4.0.0) (2017-07-30)
+* Support for other bundle than main
+* Opened class L10n
+* Created protocol for logger
+* In extensions you can defnining which L10n instance will be used.
+* Numbers can be convert to string using NumberFormatter configurated by user
+* Implemented `CustomStringConvertible` and `CustomDebugStringConvertible` for L10n class
+* Added `sender` in `userInfo` for notification `L10nLanguageChanged`
+* Created better tests
+
 ## [3.0.1](https://github.com/Decybel07/L10n-swift/tree/3.0.1) (2017-06-30)
 * Added `oldValue` and `newValue` in `userInfo` for notification `L10nLanguageChanged`
 * Bugfixing - missing `resource` parameter in string extension 

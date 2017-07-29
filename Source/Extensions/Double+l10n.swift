@@ -1,10 +1,12 @@
 //
 //  Double+l10n.swift
-//  L10n
+//  L10n_swift
 //
 //  Created by Adrian Bobrowski on 08.05.2017.
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
+
+import Foundation
 
 extension Double: Localizable {
 

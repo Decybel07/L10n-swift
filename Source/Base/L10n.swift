@@ -1,6 +1,6 @@
 //
 //  L10n.swift
-//  L10n
+//  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.04.2017.
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
@@ -171,6 +171,7 @@ open class L10n {
 
         if let oldValue = oldValue {
             NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
+                "sender": self,
                 "oldValue": oldValue,
                 "newValue": self.language,
             ])
