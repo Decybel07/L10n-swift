@@ -15,9 +15,9 @@ internal class L10nResource {
     private var stringsdict: NSDictionary?
     private var plist: NSDictionary?
 
-    init(language: String, name: String) {
+    init(bundle: Bundle, language: String, name: String) {
         self.name = name
-        self.bundle = self.createBundle(language: language)
+        self.bundle = self.createBundle(from: bundle, language: language)
         self.plist = self.createDictionary(type: "plist")
         self.stringsdict = self.createDictionary(type: "stringsdict")
     }
@@ -28,8 +28,8 @@ internal class L10nResource {
             ?? self.stringFromBundle(for: key)
     }
 
-    private func createBundle(language: String) -> Bundle? {
-        guard let path = Bundle.main.path(forResource: language, ofType: "lproj") else {
+    private func createBundle(from bundle: Bundle, language: String) -> Bundle? {
+        guard let path = bundle.path(forResource: language, ofType: "lproj") else {
             return nil
         }
         return Bundle(path: path)

@@ -30,26 +30,28 @@ import Foundation
  */
 public class L10n {
 
-    /// A single shared instance of L10n.
+    /// A single shared instance of L10n. 
+    ///
+    /// This instance is used in extensions
     public static let shared = L10n()
 
-    /// A preferred language contained in the main bundle.
-    public static var preferredLanguage: String {
+    /// A preferred language contained in the bundle.
+    public var preferredLanguage: String {
         return self.preferredLanguages.first ?? "UNDEFINED"
     }
 
-    /// An ordered list of preferred languages contained in the main bundle.
-    public static var preferredLanguages: [String] {
-        return Bundle.main.preferredLocalizations
+    /// An ordered list of preferred languages contained in the bundle.
+    public var preferredLanguages: [String] {
+        return self.bundle.preferredLocalizations
     }
 
-    /// A list of all the languages contained in the main bundle.
-    public static var supportedLanguages: [String] {
-        return Bundle.main.localizations
+    /// A list of all the languages contained in the bundle.
+    public var supportedLanguages: [String] {
+        return self.bundle.localizations
     }
 
     /// A closure used to log information from the framework
-    public var log: (String) -> Void = { print($0) }
+    public var loger: Logger?
 
     /// Current language code.
     public var language: String {
@@ -63,16 +65,21 @@ public class L10n {
 
     /// Current locale.
     private(set) public var locale: Locale?
+    
+    /// Base bundle used for localization.
+    private var bundle: Bundle
+    
     private var resources: [String: L10nResource] = [:]
 
     /**
-     Initializes a new L10n with the provided language.
+     Initialize a new L10n with the provided language.
 
      - parameter language: The initialize language.
 
      - returns: A L10n object for language.
      */
-    public init(language: String) {
+    public init(bundle: Bundle = .main, language: String) {
+        self.bundle = bundle
         self.language = language
         self.languageChanged()
     }
@@ -115,7 +122,7 @@ public class L10n {
      */
     public func string(for key: String, resource: String? = nil) -> String {
         guard let text = self.resource(named: resource).string(for: key) else {
-            self.log("L10n - Key \"\(key)\" does not exist for \"\(self.language)\"")
+            self.loger?.log("L10n - Key \"\(key)\" does not exist for \"\(self.language)\"")
             return key
         }
         return text
@@ -155,10 +162,10 @@ public class L10n {
         self.locale = nil
         self.resources = [:]
 
-        if L10n.supportedLanguages.contains(self.language) {
+        if self.supportedLanguages.contains(self.language) {
             self.locale = Locale(identifier: self.language)
         } else {
-            self.log("L10n - List of supported languages does not contain \"\(self.language)\"")
+            self.loger?.log("L10n - List of supported languages does not contain \"\(self.language)\"")
         }
 
         if let oldValue = oldValue {
@@ -179,8 +186,26 @@ public class L10n {
     }
 
     private func createResource(with resourceName: String) -> L10nResource {
-        let resource = L10nResource(language: self.language, name: resourceName)
+        let resource = L10nResource(bundle: self.bundle, language: self.language, name: resourceName)
         self.resources[resourceName] = resource
         return resource
+    }
+}
+
+public extension L10n {
+    
+    /// A preferred language contained in the main bundle.
+    static var preferredLanguage: String {
+        return self.preferredLanguages.first ?? "UNDEFINED"
+    }
+    
+    /// An ordered list of preferred languages contained in the main bundle.
+    static var preferredLanguages: [String] {
+        return Bundle.main.preferredLocalizations
+    }
+    
+    /// A list of all the languages contained in the main bundle.
+    static var supportedLanguages: [String] {
+        return Bundle.main.localizations
     }
 }

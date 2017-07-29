@@ -1,12 +1,14 @@
 //
-//  NSNumber+l10n.swift
+//  Date+l10n.swift
 //  L10n
 //
-//  Created by Adrian Bobrowski on 01.06.2017.
+//  Created by Adrian Bobrowski on 29.07.2017.
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
-extension NSNumber: Localizable {
+import Foundation
+
+extension Date: Localizable {
 
     /**
      Returns a localized **self** description.
@@ -14,21 +16,21 @@ extension NSNumber: Localizable {
      - parameter instance: The instance of L10n used for localization.
      */
     public func l10n(_ instance: L10n) -> String {
-        return self.description(withLocale: instance.locale)
+        return self.l10n(instance) { _ in }
     }
 
     /**
      Returns a localized **self** description.
 
      - parameter instance: The instance of L10n used for localization.
-     - parameter closure: A closure used to configure the NumberFormatter.
+     - parameter closure: A closure used to configure the DateFormatter.
 
      - returns: A localized **self** description.
      */
-    public func l10n(_ instance: L10n = L10n.shared, closure: (NumberFormatter) -> Void) -> String {
-        let formatter = NumberFormatter()
+    public func l10n(_ instance: L10n = L10n.shared, closure: (DateFormatter) -> Void) -> String {
+        let formatter = DateFormatter()
         formatter.locale = instance.locale
         closure(formatter)
-        return formatter.string(from: self)!
+        return formatter.string(from: self)
     }
 }

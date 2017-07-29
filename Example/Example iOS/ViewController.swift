@@ -39,7 +39,7 @@ class ViewController: UIViewController {
             self.languageSegmentedControl.setTitle(key.l10n(), forSegmentAt: index)
         }
 
-        self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(self.appleStepper.value))
+        self.numberOfApplesLabel.text = "numberOfApples".l10n(args: Int(self.appleStepper.value))
     }
 
     @IBAction func onLanguageChanged(_ sender: UISegmentedControl) {
@@ -47,6 +47,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func onNumberOfCountChnaged(_ sender: UIStepper) {
-        self.numberOfApplesLabel.text = "numberOfApples".l10n(Int(sender.value))
+        self.numberOfApplesLabel.text = "numberOfApples".l10n(args: Int(sender.value))
     }
 }
