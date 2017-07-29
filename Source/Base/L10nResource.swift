@@ -8,31 +8,24 @@
 
 import Foundation
 
-internal class L10nResource {
+internal struct L10nResource {
 
     private let name: String
     private var bundle: Bundle?
     private var stringsdict: NSDictionary?
     private var plist: NSDictionary?
 
-    init(bundle: Bundle, language: String, name: String) {
+    init(bundle: Bundle?, name: String) {
         self.name = name
-        self.bundle = self.createBundle(from: bundle, language: language)
+        self.bundle = bundle
         self.plist = self.createDictionary(type: "plist")
         self.stringsdict = self.createDictionary(type: "stringsdict")
     }
 
-    final func string(for key: String) -> String? {
+    func string(for key: String) -> String? {
         return self.stringFromDictionary(self.plist, for: key)
             ?? self.stringFromDictionary(self.stringsdict, for: key)
             ?? self.stringFromBundle(for: key)
-    }
-
-    private func createBundle(from bundle: Bundle, language: String) -> Bundle? {
-        guard let path = bundle.path(forResource: language, ofType: "lproj") else {
-            return nil
-        }
-        return Bundle(path: path)
     }
 
     private func createDictionary(type: String) -> NSDictionary? {

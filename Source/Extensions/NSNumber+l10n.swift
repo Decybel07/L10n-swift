@@ -28,6 +28,7 @@ extension NSNumber: Localizable {
     public func l10n(_ instance: L10n = L10n.shared, closure: (NumberFormatter) -> Void) -> String {
         let formatter = NumberFormatter()
         formatter.locale = instance.locale
+        formatter.numberStyle = .decimal
         closure(formatter)
         return formatter.string(from: self)!
     }

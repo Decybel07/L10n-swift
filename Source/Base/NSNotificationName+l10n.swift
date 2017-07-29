@@ -8,8 +8,15 @@
 
 import Foundation
 
-extension NSNotification.Name {
+public extension NSNotification.Name {
 
-    /// Name for language changed notification
-    public static let L10nLanguageChanged = NSNotification.Name(rawValue: "L10nLanguageChanged")
+    /**
+     Name for language changed notification
+
+     This notification contains information
+     * **oldValue** - old language code
+     * **newValue** - new language code
+
+     */
+    static let L10nLanguageChanged = NSNotification.Name(rawValue: "L10nLanguageChanged")
 }

@@ -20,34 +20,30 @@ import Foundation
  * locale for this language
  * closure used to log information from the framework
 
- Each object uses the default NotificationCenter to send notification (**.L10nLanguageChanged**) when the language has changed. This notification contains information "oldValue" and "newValue" where *"Value"* means the language code.
+ Each object uses the default NotificationCenter to send notification when the language has changed.
+
+ SeeAlso: `NSNotification.Name.L10nLanguageChanged`
 
  ## Supported files format:
- * [.strings](https://github.com/Decybel07/L10n-swift/wiki/Localizable.strings)
- * [.stringsdict](https://github.com/Decybel07/L10n-swift/wiki/Localizable.stringsdict)
- * [.plist](https://github.com/Decybel07/L10n-swift/wiki/Localizable.plist)
-
+ * [*.strings](https://github.com/Decybel07/L10n-swift/wiki/\*.strings)
+ * [*.stringsdict](https://github.com/Decybel07/L10n-swift/wiki/\*.stringsdict)
+ * [*.plist](https://github.com/Decybel07/L10n-swift/wiki/\*.plist)
  */
-public class L10n {
+open class L10n {
 
-    /// A single shared instance of L10n. 
-    ///
-    /// This instance is used in extensions
-    public static let shared = L10n()
-
-    /// A preferred language contained in the bundle.
+    /// A preferred language contained in the base bundle.
     public var preferredLanguage: String {
         return self.preferredLanguages.first ?? "UNDEFINED"
     }
 
-    /// An ordered list of preferred languages contained in the bundle.
+    /// An ordered list of preferred languages contained in the base bundle.
     public var preferredLanguages: [String] {
-        return self.bundle.preferredLocalizations
+        return self.baseBundle.preferredLocalizations
     }
 
-    /// A list of all the languages contained in the bundle.
+    /// A list of all the languages contained in the base bundle.
     public var supportedLanguages: [String] {
-        return self.bundle.localizations
+        return self.baseBundle.localizations
     }
 
     /// A closure used to log information from the framework
@@ -65,10 +61,11 @@ public class L10n {
 
     /// Current locale.
     private(set) public var locale: Locale?
-    
+
     /// Base bundle used for localization.
-    private var bundle: Bundle
-    
+    private(set) public var bundle: Bundle?
+
+    private var baseBundle: Bundle
     private var resources: [String: L10nResource] = [:]
 
     /**
@@ -78,14 +75,10 @@ public class L10n {
 
      - returns: A L10n object for language.
      */
-    public init(bundle: Bundle = .main, language: String) {
-        self.bundle = bundle
-        self.language = language
+    public init(bundle: Bundle = .main, language: String? = nil) {
+        self.language = language ?? bundle.preferredLocalizations.first ?? "UNDEFINED"
+        self.baseBundle = bundle
         self.languageChanged()
-    }
-
-    private convenience init() {
-        self.init(language: L10n.preferredLanguage)
     }
 
     /**
@@ -108,7 +101,7 @@ public class L10n {
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    public func string(format: String, _ args: [CVarArg]) -> String {
+    open func string(format: String, _ args: [CVarArg]) -> String {
         return String(format: format, locale: self.locale, arguments: args)
     }
 
@@ -120,9 +113,9 @@ public class L10n {
 
      - returns: A localized version of the string designated by *key*. This method returns *key* when *key* not found.
      */
-    public func string(for key: String, resource: String? = nil) -> String {
+    open func string(for key: String, resource: String? = nil) -> String {
         guard let text = self.resource(named: resource).string(for: key) else {
-            self.loger?.log("L10n - Key \"\(key)\" does not exist for \"\(self.language)\"")
+            self.loger?.log("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription)")
             return key
         }
         return text
@@ -154,18 +147,26 @@ public class L10n {
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    public func plural(for key: String, resource: String? = nil, _ args: [CVarArg]) -> String {
+    open func plural(for key: String, resource: String? = nil, _ args: [CVarArg]) -> String {
         return self.string(format: self.string(for: key, resource: resource), args)
     }
 
     private func languageChanged(oldValue: String? = nil) {
         self.locale = nil
+        self.bundle = nil
         self.resources = [:]
 
         if self.supportedLanguages.contains(self.language) {
-            self.locale = Locale(identifier: self.language)
+            if let path = self.baseBundle.path(forResource: self.language, ofType: "lproj"),
+                let bundle = Bundle(path: path) {
+
+                self.locale = Locale(identifier: self.language)
+                self.bundle = bundle
+            } else {
+                self.loger?.log("L10n - Could not find the bundle for \(self.language.debugDescription)")
+            }
         } else {
-            self.loger?.log("L10n - List of supported languages does not contain \"\(self.language)\"")
+            self.loger?.log("L10n - List of supported languages does not contain \(self.language.debugDescription)")
         }
 
         if let oldValue = oldValue {
@@ -186,26 +187,8 @@ public class L10n {
     }
 
     private func createResource(with resourceName: String) -> L10nResource {
-        let resource = L10nResource(bundle: self.bundle, language: self.language, name: resourceName)
+        let resource = L10nResource(bundle: self.bundle, name: resourceName)
         self.resources[resourceName] = resource
         return resource
-    }
-}
-
-public extension L10n {
-    
-    /// A preferred language contained in the main bundle.
-    static var preferredLanguage: String {
-        return self.preferredLanguages.first ?? "UNDEFINED"
-    }
-    
-    /// An ordered list of preferred languages contained in the main bundle.
-    static var preferredLanguages: [String] {
-        return Bundle.main.preferredLocalizations
-    }
-    
-    /// A list of all the languages contained in the main bundle.
-    static var supportedLanguages: [String] {
-        return Bundle.main.localizations
     }
 }
