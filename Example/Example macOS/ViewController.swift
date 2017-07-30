@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-import L10n
+import L10n_swift
 
 class ViewController: NSViewController {
 
@@ -19,7 +19,7 @@ class ViewController: NSViewController {
     
     var numberOfApples: Int = 0 {
         didSet {
-            self.numberOfApplesLabel.stringValue = "numberOfApples".l10n(self.numberOfApples)
+            self.numberOfApplesLabel.stringValue = "numberOfApples".l10n(args: self.numberOfApples)
         }
     }
     
@@ -43,7 +43,7 @@ class ViewController: NSViewController {
             self.languageSegmentedControl.setLabel(key.l10n(), forSegment: index)
         }
         
-        self.numberOfApplesLabel.stringValue = "numberOfApples".l10n(self.numberOfApples)
+        self.numberOfApplesLabel.stringValue = "numberOfApples".l10n(args: self.numberOfApples)
     }
     
     @IBAction func onLanguageChanged(_ sender: NSSegmentedControl) {
