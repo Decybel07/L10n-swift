@@ -53,10 +53,7 @@
 		2D1A3B641F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+l10n.swift */; };
 		2D1A3B651F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+l10n.swift */; };
 		2D1A3BB01F2E158D00BD2710 /* UIDatePicker+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA41F2E158D00BD2710 /* UIDatePicker+l10n.swift */; };
-		2D1A3BB11F2E158D00BD2710 /* UIDatePicker+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA41F2E158D00BD2710 /* UIDatePicker+l10n.swift */; };
 		2D1A3BB21F2E158D00BD2710 /* UISearchBar+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA51F2E158D00BD2710 /* UISearchBar+l10n.swift */; };
-		2D1A3BB31F2E158D00BD2710 /* UISearchBar+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA51F2E158D00BD2710 /* UISearchBar+l10n.swift */; };
-		2D1A3BB41F2E158D00BD2710 /* UIButton+l10n+focused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA71F2E158D00BD2710 /* UIButton+l10n+focused.swift */; };
 		2D1A3BB51F2E158D00BD2710 /* UIButton+l10n+focused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA71F2E158D00BD2710 /* UIButton+l10n+focused.swift */; };
 		2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BC71F2E15E800BD2710 /* WKInterfaceButton+l10n.swift */; };
 		2D1A3BCB1F2E15E800BD2710 /* WKInterfaceController+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BC81F2E15E800BD2710 /* WKInterfaceController+l10n.swift */; };
@@ -89,9 +86,9 @@
 		2D6F17A91F2CBA120031929D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17961F2CBA120031929D /* Localizable.stringsdict */; };
 		2D6F17AB1F2CC1490031929D /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */; };
 		2D6F17AD1F2CEA3F0031929D /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */; };
-		2DE4B1451F2C95490067EE98 /* L10n_swift_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B13B1F2C95490067EE98 /* L10n_swift_swift.framework */; };
-		2DE4B16E1F2C957A0067EE98 /* L10n_swift_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1651F2C957A0067EE98 /* L10n_swift_swift.framework */; };
-		2DE4B18A1F2C95A70067EE98 /* L10n_swift_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1811F2C95A70067EE98 /* L10n_swift_swift.framework */; };
+		2DE4B1451F2C95490067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */; };
+		2DE4B16E1F2C957A0067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1651F2C957A0067EE98 /* L10n_swift.framework */; };
+		2DE4B18A1F2C95A70067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1811F2C95A70067EE98 /* L10n_swift.framework */; };
 		2DE4B1C41F2C971B0067EE98 /* Date+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+l10n.swift */; };
 		2DE4B1C51F2C971B0067EE98 /* Date+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+l10n.swift */; };
 		2DE4B1C61F2C971B0067EE98 /* Date+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+l10n.swift */; };
@@ -191,13 +188,13 @@
 		2D6F17A01F2CBA120031929D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
-		2DE4B13B1F2C95490067EE98 /* L10n_swift_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B1441F2C95490067EE98 /* L10n_swift_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swift_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B1581F2C95620067EE98 /* L10n_swift_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B1651F2C957A0067EE98 /* L10n_swift_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B16D1F2C957A0067EE98 /* L10n_swift_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swift_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B1811F2C95A70067EE98 /* L10n_swift_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2DE4B1891F2C95A70067EE98 /* L10n_swift_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swift_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B1581F2C95620067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B1651F2C957A0067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B16D1F2C957A0067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B1811F2C95A70067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DE4B1891F2C95A70067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1991F2C96E80067EE98 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		2DE4B19A1F2C96E80067EE98 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		2DE4B19B1F2C96E80067EE98 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -226,7 +223,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE4B1451F2C95490067EE98 /* L10n_swift_swift.framework in Frameworks */,
+				2DE4B1451F2C95490067EE98 /* L10n_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,7 +245,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE4B16E1F2C957A0067EE98 /* L10n_swift_swift.framework in Frameworks */,
+				2DE4B16E1F2C957A0067EE98 /* L10n_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +260,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2DE4B18A1F2C95A70067EE98 /* L10n_swift_swift.framework in Frameworks */,
+				2DE4B18A1F2C95A70067EE98 /* L10n_swift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,13 +390,13 @@
 		2DE4B13C1F2C95490067EE98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2DE4B13B1F2C95490067EE98 /* L10n_swift_swift.framework */,
-				2DE4B1441F2C95490067EE98 /* L10n_swift_swiftTests.xctest */,
-				2DE4B1581F2C95620067EE98 /* L10n_swift_swift.framework */,
-				2DE4B1651F2C957A0067EE98 /* L10n_swift_swift.framework */,
-				2DE4B16D1F2C957A0067EE98 /* L10n_swift_swiftTests.xctest */,
-				2DE4B1811F2C95A70067EE98 /* L10n_swift_swift.framework */,
-				2DE4B1891F2C95A70067EE98 /* L10n_swift_swiftTests.xctest */,
+				2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */,
+				2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */,
+				2DE4B1581F2C95620067EE98 /* L10n_swift.framework */,
+				2DE4B1651F2C957A0067EE98 /* L10n_swift.framework */,
+				2DE4B16D1F2C957A0067EE98 /* L10n_swiftTests.xctest */,
+				2DE4B1811F2C95A70067EE98 /* L10n_swift.framework */,
+				2DE4B1891F2C95A70067EE98 /* L10n_swiftTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -495,7 +492,7 @@
 			);
 			name = "L10n_swift iOS";
 			productName = "L10n iOS";
-			productReference = 2DE4B13B1F2C95490067EE98 /* L10n_swift_swift.framework */;
+			productReference = 2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DE4B1431F2C95490067EE98 /* L10n_swift iOSTests */ = {
@@ -513,7 +510,7 @@
 			);
 			name = "L10n_swift iOSTests";
 			productName = "L10n iOSTests";
-			productReference = 2DE4B1441F2C95490067EE98 /* L10n_swift_swiftTests.xctest */;
+			productReference = 2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2DE4B1571F2C95620067EE98 /* L10n_swift watchOS */ = {
@@ -531,7 +528,7 @@
 			);
 			name = "L10n_swift watchOS";
 			productName = "L10n watchOS";
-			productReference = 2DE4B1581F2C95620067EE98 /* L10n_swift_swift.framework */;
+			productReference = 2DE4B1581F2C95620067EE98 /* L10n_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DE4B1641F2C957A0067EE98 /* L10n_swift tvOS */ = {
@@ -549,7 +546,7 @@
 			);
 			name = "L10n_swift tvOS";
 			productName = "L10n tvOS";
-			productReference = 2DE4B1651F2C957A0067EE98 /* L10n_swift_swift.framework */;
+			productReference = 2DE4B1651F2C957A0067EE98 /* L10n_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DE4B16C1F2C957A0067EE98 /* L10n_swift tvOSTests */ = {
@@ -567,7 +564,7 @@
 			);
 			name = "L10n_swift tvOSTests";
 			productName = "L10n tvOSTests";
-			productReference = 2DE4B16D1F2C957A0067EE98 /* L10n_swift_swiftTests.xctest */;
+			productReference = 2DE4B16D1F2C957A0067EE98 /* L10n_swiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		2DE4B1801F2C95A70067EE98 /* L10n_swift macOS */ = {
@@ -585,7 +582,7 @@
 			);
 			name = "L10n_swift macOS";
 			productName = "L10n macOS";
-			productReference = 2DE4B1811F2C95A70067EE98 /* L10n_swift_swift.framework */;
+			productReference = 2DE4B1811F2C95A70067EE98 /* L10n_swift.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		2DE4B1881F2C95A70067EE98 /* L10n_swift macOSTests */ = {
@@ -603,7 +600,7 @@
 			);
 			name = "L10n_swift macOSTests";
 			productName = "L10n macOSTests";
-			productReference = 2DE4B1891F2C95A70067EE98 /* L10n_swift_swiftTests.xctest */;
+			productReference = 2DE4B1891F2C95A70067EE98 /* L10n_swiftTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -770,7 +767,6 @@
 				2D1A3BB01F2E158D00BD2710 /* UIDatePicker+l10n.swift in Sources */,
 				2DE4B1D01F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
 				2D1A3BB21F2E158D00BD2710 /* UISearchBar+l10n.swift in Sources */,
-				2D1A3BB41F2E158D00BD2710 /* UIButton+l10n+focused.swift in Sources */,
 				2DE4B1C81F2C971B0067EE98 /* Double+l10n.swift in Sources */,
 				2D1A3BE11F2E167200BD2710 /* UISegmentedControl+l10n.swift in Sources */,
 				2D1A3B4E1F2D50C900BD2710 /* L10n+stringConvertible.swift in Sources */,
@@ -833,9 +829,7 @@
 				2D1A3BDC1F2E167200BD2710 /* UIButton+l10n.swift in Sources */,
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+l10n.swift in Sources */,
 				2D1A3B641F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */,
-				2D1A3BB11F2E158D00BD2710 /* UIDatePicker+l10n.swift in Sources */,
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
-				2D1A3BB31F2E158D00BD2710 /* UISearchBar+l10n.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+l10n+focused.swift in Sources */,
 				2DE4B1CA1F2C971B0067EE98 /* Double+l10n.swift in Sources */,
 				2D1A3BE21F2E167200BD2710 /* UISegmentedControl+l10n.swift in Sources */,
@@ -1014,7 +1008,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1075,7 +1069,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1137,7 +1131,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1187,7 +1181,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -1249,7 +1243,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1310,7 +1304,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -1377,7 +1371,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1437,7 +1431,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
@@ -1498,7 +1492,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1547,7 +1541,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;
@@ -1612,7 +1606,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1673,7 +1667,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
-				PRODUCT_NAME = L10n_swift_swift;
+				PRODUCT_NAME = L10n_swift;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -1734,7 +1728,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1785,7 +1779,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOSTests";
-				PRODUCT_NAME = L10n_swift_swiftTests;
+				PRODUCT_NAME = L10n_swiftTests;
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.0;

@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import L10n
+@testable import L10n_swift
 
 class StringExtensionTests: XCTestCase {
 

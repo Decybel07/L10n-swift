@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import L10n
+@testable import L10n_swift
 
 class IntExtensionTests: XCTestCase {
 
@@ -25,7 +25,7 @@ class IntExtensionTests: XCTestCase {
     }
 
     func testNumberWithLeadingZeros() {
-        XCTAssertEqual("00002", 2.l10n(self.instance, minIntegerDigits: 5))
+        XCTAssertEqual("002", 2.l10n(self.instance, minIntegerDigits: 3))
     }
 
     func testNumberWithConfigureFormatter() {
@@ -46,6 +46,6 @@ class IntExtensionTests: XCTestCase {
     func testArabicNumberWithLeadingZeros() {
         self.instance.language = "ar"
 
-        XCTAssertEqual("٠٠٠٠٢", 2.l10n(self.instance, minIntegerDigits: 5))
+        XCTAssertEqual("٠٠٢", 2.l10n(self.instance, minIntegerDigits: 3))
     }
 }
