@@ -1,0 +1,24 @@
+PODS:
+  - L10n-swift (4.0.0):
+    - L10n-swift/Core (= 4.0.0)
+    - L10n-swift/Extension (= 4.0.0)
+    - L10n-swift/IBInspectable (= 4.0.0)
+  - L10n-swift/Core (4.0.0)
+  - L10n-swift/Extension (4.0.0):
+    - L10n-swift/Core
+  - L10n-swift/IBInspectable (4.0.0):
+    - L10n-swift/Core
+
+DEPENDENCIES:
+  - L10n-swift (from `./../`)
+
+EXTERNAL SOURCES:
+  L10n-swift:
+    :path: "./../"
+
+SPEC CHECKSUMS:
+  L10n-swift: 38a316238b41b17c84721dad7ba050bace2ae7f2
+
+PODFILE CHECKSUM: e7fa67f6efe0be6583977a089736d14c86aa84c8
+
+COCOAPODS: 1.2.1
