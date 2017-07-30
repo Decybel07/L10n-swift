@@ -36,7 +36,7 @@ public extension UISearchBar {
     var l10nCancelButton: String {
         get { fatalError() }
         set {
-            let button = (self.value(forKey: "cancelButton") as? UIButton)
+            let button = self.value(forKey: "cancelButton") as? UIButton
             button?.setTitle(L10n.shared.string(for: newValue), for: .normal)
         }
     }

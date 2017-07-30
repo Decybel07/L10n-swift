@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2DE4B1571F2C95620067EE98"
-               BuildableName = "L10n_swift_swift.framework"
+               BuildableName = "L10n_swift.framework"
                BlueprintName = "L10n_swift watchOS"
                ReferencedContainer = "container:L10n_swift.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2DE4B1571F2C95620067EE98"
-            BuildableName = "L10n_swift_swift.framework"
+            BuildableName = "L10n_swift.framework"
             BlueprintName = "L10n_swift watchOS"
             ReferencedContainer = "container:L10n_swift.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2DE4B1571F2C95620067EE98"
-            BuildableName = "L10n_swift_swift.framework"
+            BuildableName = "L10n_swift.framework"
             BlueprintName = "L10n_swift watchOS"
             ReferencedContainer = "container:L10n_swift.xcodeproj">
          </BuildableReference>

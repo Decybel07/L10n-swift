@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2DE4B1801F2C95A70067EE98"
-               BuildableName = "L10n_swift_swift.framework"
+               BuildableName = "L10n_swift.framework"
                BlueprintName = "L10n_swift macOS"
                ReferencedContainer = "container:L10n_swift.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2DE4B1881F2C95A70067EE98"
-               BuildableName = "L10n_swift_swiftTests.xctest"
+               BuildableName = "L10n_swiftTests.xctest"
                BlueprintName = "L10n_swift macOSTests"
                ReferencedContainer = "container:L10n_swift.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2DE4B1801F2C95A70067EE98"
-            BuildableName = "L10n_swift_swift.framework"
+            BuildableName = "L10n_swift.framework"
             BlueprintName = "L10n_swift macOS"
             ReferencedContainer = "container:L10n_swift.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2DE4B1801F2C95A70067EE98"
-            BuildableName = "L10n_swift_swift.framework"
+            BuildableName = "L10n_swift.framework"
             BlueprintName = "L10n_swift macOS"
             ReferencedContainer = "container:L10n_swift.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2DE4B1801F2C95A70067EE98"
-            BuildableName = "L10n_swift_swift.framework"
+            BuildableName = "L10n_swift.framework"
             BlueprintName = "L10n_swift macOS"
             ReferencedContainer = "container:L10n_swift.xcodeproj">
          </BuildableReference>

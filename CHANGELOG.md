@@ -2,6 +2,7 @@
 # Change Log
 
 ## [4.0.0](https://github.com/Decybel07/L10n-swift/tree/4.0.0) (2017-07-30)
+* IBInspectable for Xcode Interface Builder
 * Support for other bundle than main
 * Opened class L10n
 * Created protocol for logger

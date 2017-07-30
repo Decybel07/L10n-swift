@@ -10,8 +10,9 @@
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n-swift.svg?style=flat&label=license)](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE)
 [![Docs percent](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](http://cocoadocs.org/docsets/L10n-swift/)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
-[![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)
+[![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
+
 
 L10n-swift is a simple framework that improves localization in swift app, providing cleaner syntax and in-app language switching.
 
@@ -29,10 +30,11 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 ## 🌟 Features
  
 - [x] Change the language of your apps "on the fly".
+- [x] IBInspectable for Xcode Interface Builder. (Cocoa - coming soon)
 - [x] Support for user-defined *Localizable* file names.
-- [x] Support for stantard localization keys `.strings`.
-- [x] Support for grouping localization keys `.plist` and `.stringsdict`.
-- [x] Supports plural forms in any language `.stringsdict`.
+- [x] Support for stantard localization keys `*.strings`.
+- [x] Support for grouping localization keys `*.plist` and `*.stringsdict`.
+- [x] Supports plural forms in any language `*.stringsdict`.
 - [x] Use .l10n() to localized any string, int and double.
 - [x] Use two or more languages at the same time.
 
@@ -54,6 +56,13 @@ pod try L10n-swift
  - If you **want to contribute**, submit a pull request.
 
 ## 📗 Installation
+
+|                          | Core | Extension | IBInspectable |
+|--------------------------|:----:|:---------:|:-------------:|
+| L10n-swift               |  ✔️  |     ✔️    |       ✔️     |
+| L10n-swift/Core          |  ✔️  |           |               |
+| L10n-swift/Extension     |  ✔️  |     ✔️    |               |
+| L10n-swift/IBInspectable |  ✔️  |           |       ✔️      |
 
 ### [CocoaPods](http://cocoapods.org)
  
@@ -98,9 +107,9 @@ github "Decybel07/L10n-swift", ~> 4.0
  
 ### Get plural
 
-Add `.l10(_ args: CVarArg...)` following any `String` object you want translated with plurals:
+Add `.l10(args: CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
- textLabel.text = "numberOfApples".l10n(10)
+ textLabel.text = "numberOfApples".l10n(args: 10)
  ```
  
 ### Observe language changed
@@ -132,7 +141,7 @@ Add `.l10(_ args: CVarArg...)` following any `String` object you want translated
 ### Get list of supported languages
 
  ```swift
- L10n.supportedLanguages // ["en", "es", "ja", "pl"]
+ L10n.supportedLanguages // ["ar", "en", "es", "ja", "pl"]
  ```
  A list of all the languages contained in the main bundle.
 
