@@ -1,5 +1,5 @@
 //
-//  L10n+CustomStringConvertable.swift
+//  L10n+stringConvertable.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 29.07.2017.
