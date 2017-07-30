@@ -51,15 +51,13 @@ script:
 
   # Run Tests
   - if [ $RUN_TESTS == "YES" ]; then
-      xcodebuild -workspace "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
-      xcodebuild -workspace "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+      xcodebuild -project "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
+      xcodebuild -project "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO ENABLE_TESTABILITY=YES test | xcpretty;
     fi
 
   # Build Example
   - if [ $BUILD_EXAMPLE == "YES" ]; then
-      cd "Example/"
-      pod install;
-      xcodebuild -workspace "Example.xcworkspace" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-      xcodebuild -workspace "Example.xcworkspace" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
-      cd "../"
+      pod install --project-directory="Example/";
+      xcodebuild -workspace "Example/Example.xcworkspace" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -workspace "Example/Example.xcworkspace" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
     fi
