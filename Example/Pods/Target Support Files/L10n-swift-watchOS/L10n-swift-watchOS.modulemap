@@ -1,6 +1,0 @@
-framework module L10n_swift {
-  umbrella header "L10n-swift-watchOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
