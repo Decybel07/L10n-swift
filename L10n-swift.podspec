@@ -1,31 +1,53 @@
 
-Pod::Spec.new do |s|
-  s.name             = 'L10n-swift'
-  s.module_name      = 'L10n_swift'
-  s.version          = '3.1.0'
-  s.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
+Pod::Spec.new do |spec|
+  spec.name             = 'L10n-swift'
+  spec.module_name      = 'L10n_swift'
+  spec.version          = '4.0.0'
+  spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
-  s.description      = <<-DESC
+  spec.description      = <<-DESC
     L10n-swift is a pod that adds easier localization support for your app
       * Change the language of your apps "on the fly".
-      * Support for user-defined `Localizable` file names
-      * Support for stantard localization keys `.strings`
-      * Support for grouping localization keys `.plist and Localizable.stringsdict`
-      * Supports plural forms in any language `.stringsdict`
+      * IBInspectable for Xcode Interface Builder.
+      * Support for user-defined `Localizable` file names.
+      * Support for stantard localization keys `*.strings`
+      * Support for grouping localization keys `*.plist` and `*.stringsdict`
+      * Supports plural forms in any language `*.stringsdict`
       * Use .l10n() to localized any string, int and double
       * Use two or more languages at the same time
                        DESC
 
-  s.homepage         = 'https://github.com/Decybel07/L10n-swift'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
-  s.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => s.version }
+  spec.homepage         = 'https://github.com/Decybel07/L10n-swift'
+  spec.license          = { :type => 'MIT', :file => 'LICENSE' }
+  spec.author           = { 'Adrian Bobrowski' => 'adrian071993@gmail.com' }
+  spec.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => spec.version }
 
-  s.ios.deployment_target = '9.0'
-  s.osx.deployment_target = '10.10'
-  s.tvos.deployment_target = '9.0'
-  s.watchos.deployment_target = '2.0'
+  spec.frameworks = 'Foundation'
 
-  s.source_files = 'Source/**/*.swift'
-  s.frameworks = 'Foundation'
+  spec.ios.deployment_target = '9.0'
+  spec.watchos.deployment_target = '2.0'
+  spec.tvos.deployment_target = '9.0'
+  spec.osx.deployment_target = '10.10'
+  
+  spec.subspec 'Core' do |core|
+    core.source_files = 'Source/Core/**/*.swift'
+  end
+  
+  spec.subspec 'Extension' do |extension|
+    extension.dependency 'L10n-swift/Core'
+    extension.source_files = 'Source/Extensions/**/*.swift'
+  end
+  
+  spec.subspec 'IBInspectable' do |inspectable|
+    inspectable.dependency 'L10n-swift/Core'
+    inspectable.ios.framework  = 'UIKit'
+    inspectable.ios.source_files = 'Source/IBInspectables/UIKit/{Common,iOS}/**/*.swift'
+    inspectable.watchos.framework  = 'WatchKit'
+    inspectable.watchos.source_files = 'Source/IBInspectables/WatchKit/**/*.swift'
+    inspectable.tvos.framework  = 'UIKit'
+    inspectable.tvos.source_files = 'Source/IBInspectables/UIKit/{Common,tvOS}/**/*.swift'
+    inspectable.osx.framework  = 'Cocoa'
+    inspectable.osx.source_files = 'Source/IBInspectables/Cocoa/**/*.swift'
+  end
+  
 end
