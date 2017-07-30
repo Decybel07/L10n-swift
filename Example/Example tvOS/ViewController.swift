@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import L10n
+import L10n_swift
 
 class ViewController: UIViewController {
 

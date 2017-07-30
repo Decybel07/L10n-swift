@@ -8,7 +8,7 @@
 
 import WatchKit
 import Foundation
-import L10n
+import L10n_swift
 
 class InterfaceController: WKInterfaceController {
 
