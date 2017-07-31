@@ -47,7 +47,7 @@ open class L10n {
     }
 
     /// A closure used to log information from the framework
-    public var loger: Logger?
+    public var logger: Logger?
 
     /// Current language code.
     public var language: String {
