@@ -172,8 +172,6 @@
 		2D1A3BD81F2E167200BD2710 /* UIViewController+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+l10n.swift"; sourceTree = "<group>"; };
 		2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+l10n.swift"; sourceTree = "<group>"; };
 		2D6F176F1F2CB6E80031929D /* L10nTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10nTests.swift; sourceTree = "<group>"; };
-		2D6F17911F2CBA120031929D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ar; path = ar.lproj/Localizable.plist; sourceTree = "<group>"; };
-		2D6F17931F2CBA120031929D /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D6F17941F2CBA120031929D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2D6F17951F2CBA120031929D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2D6F17971F2CBA120031929D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
@@ -188,6 +186,8 @@
 		2D6F17A01F2CBA120031929D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
+		2DD6AC761F46238D00EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ar; path = ar.lproj/Localizable.plist; sourceTree = "<group>"; };
+		2DD6AC781F46239500EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1581F2C95620067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -660,6 +660,7 @@
 				ja,
 				pl,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = 2DE4B11C1F2C946B0067EE98;
 			productRefGroup = 2DE4B13C1F2C95490067EE98 /* Products */;
@@ -906,11 +907,11 @@
 		2D6F17901F2CBA120031929D /* Localizable.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2D6F17911F2CBA120031929D /* ar */,
 				2D6F17941F2CBA120031929D /* en */,
 				2D6F17981F2CBA120031929D /* es */,
 				2D6F179B1F2CBA120031929D /* ja */,
 				2D6F179E1F2CBA120031929D /* pl */,
+				2DD6AC761F46238D00EDE71B /* ar */,
 			);
 			name = Localizable.plist;
 			sourceTree = "<group>";
@@ -918,7 +919,6 @@
 		2D6F17921F2CBA120031929D /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2D6F17931F2CBA120031929D /* ar */,
 				2D6F17951F2CBA120031929D /* en */,
 				2D6F17991F2CBA120031929D /* es */,
 				2D6F179C1F2CBA120031929D /* ja */,
@@ -934,6 +934,7 @@
 				2D6F179A1F2CBA120031929D /* es */,
 				2D6F179D1F2CBA120031929D /* ja */,
 				2D6F17A01F2CBA120031929D /* pl */,
+				2DD6AC781F46239500EDE71B /* ar */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";

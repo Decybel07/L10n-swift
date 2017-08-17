@@ -115,7 +115,7 @@ open class L10n {
      */
     open func string(for key: String, resource: String? = nil) -> String {
         guard let text = self.resource(named: resource).string(for: key) else {
-            self.loger?.log("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription)")
+            self.logger?.log("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription)")
             return key
         }
         return text
@@ -163,10 +163,10 @@ open class L10n {
                 self.locale = Locale(identifier: self.language)
                 self.bundle = bundle
             } else {
-                self.loger?.log("L10n - Could not find the bundle for \(self.language.debugDescription)")
+                self.logger?.log("L10n - Could not find the bundle for \(self.language.debugDescription)")
             }
         } else {
-            self.loger?.log("L10n - List of supported languages does not contain \(self.language.debugDescription)")
+            self.logger?.log("L10n - List of supported languages does not contain \(self.language.debugDescription)")
         }
 
         if let oldValue = oldValue {
