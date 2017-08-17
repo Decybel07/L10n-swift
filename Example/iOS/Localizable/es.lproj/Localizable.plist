@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>navigation</key>
+	<dict>
+		<key>back</key>
+		<string>espalda</string>
+	</dict>
+	<key>main</key>
+	<dict>
+		<key>changeLanguage</key>
+		<string>Cambiar idioma de demostración</string>
+		<key>simpleTranslator</key>
+		<string>Traductor simple</string>
+		<key>plurals</key>
+		<string>Plurales</string>
+	</dict>
+	<key>chooseLanguage</key>
+	<dict>
+		<key>title</key>
+		<string>Elige lengua</string>
+	</dict>
+	<key>simpleTranslator</key>
+	<dict>
+		<key>title</key>
+		<string>Traductor simple</string>
+		<key>list</key>
+		<dict>
+			<key>apple</key>
+			<string>manzana</string>
+			<key>bee</key>
+			<string>abeja</string>
+			<key>cat</key>
+			<string>gato</string>
+			<key>dolphin</key>
+			<string>delfín</string>
+			<key>elephant</key>
+			<string>elefante</string>
+			<key>fish</key>
+			<string>pescado</string>
+			<key>giraffe</key>
+			<string>jirafa</string>
+			<key>house</key>
+			<string>casa</string>
+			<key>iceCream</key>
+			<string>helado</string>
+			<key>jelly</key>
+			<string>gelatina</string>
+			<key>kite</key>
+			<string>cometa</string>
+			<key>ladybird</key>
+			<string>mariquita</string>
+			<key>mouse</key>
+			<string>ratón</string>
+			<key>newt</key>
+			<string>tritón</string>
+			<key>octopus</key>
+			<string>pulpo</string>
+			<key>pig</key>
+			<string>cerdo</string>
+			<key>queen</key>
+			<string>reina</string>
+			<key>rocket</key>
+			<string>cohete</string>
+			<key>snake</key>
+			<string>serpiente</string>
+			<key>teddybear</key>
+			<string>oso de peluche</string>
+			<key>umbrella</key>
+			<string>paraguas</string>
+			<key>vase</key>
+			<string>florero</string>
+			<key>whale</key>
+			<string>ballena</string>
+			<key>xylophone</key>
+			<string>xilófono</string>
+			<key>yoYo</key>
+			<string>yoyó</string>
+			<key>zebra</key>
+			<string>cebra</string>
+		</dict>
+	</dict>
+	<key>plurals</key>
+	<dict>
+		<key>title</key>
+		<string>Plurales</string>
+		<key>question</key>
+		<string>¿Cuantas manzanas tienes?</string>
+	</dict>
+</dict>
+</plist>

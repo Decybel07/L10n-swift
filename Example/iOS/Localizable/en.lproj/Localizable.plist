@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>navigation</key>
+	<dict>
+		<key>back</key>
+		<string>Back</string>
+	</dict>
+	<key>main</key>
+	<dict>
+		<key>changeLanguage</key>
+		<string>Change demo language</string>
+		<key>simpleTranslator</key>
+		<string>Simple translator</string>
+		<key>plurals</key>
+		<string>Plurals</string>
+	</dict>
+	<key>chooseLanguage</key>
+	<dict>
+		<key>title</key>
+		<string>Choose language</string>
+	</dict>
+	<key>simpleTranslator</key>
+	<dict>
+		<key>title</key>
+		<string>Simple translator</string>
+		<key>list</key>
+		<dict>
+			<key>apple</key>
+			<string>apple</string>
+			<key>bee</key>
+			<string>bee</string>
+			<key>cat</key>
+			<string>cat</string>
+			<key>dolphin</key>
+			<string>dolphin</string>
+			<key>elephant</key>
+			<string>elephant</string>
+			<key>fish</key>
+			<string>fish</string>
+			<key>giraffe</key>
+			<string>giraffe</string>
+			<key>house</key>
+			<string>house</string>
+			<key>iceCream</key>
+			<string>ice cream</string>
+			<key>jelly</key>
+			<string>jelly</string>
+			<key>kite</key>
+			<string>kite</string>
+			<key>ladybird</key>
+			<string>ladybird</string>
+			<key>mouse</key>
+			<string>mouse</string>
+			<key>newt</key>
+			<string>newt</string>
+			<key>octopus</key>
+			<string>octopus</string>
+			<key>pig</key>
+			<string>pig</string>
+			<key>queen</key>
+			<string>queen</string>
+			<key>rocket</key>
+			<string>rocket</string>
+			<key>snake</key>
+			<string>snake</string>
+			<key>teddybear</key>
+			<string>teddybear</string>
+			<key>umbrella</key>
+			<string>umbrella</string>
+			<key>vase</key>
+			<string>vase</string>
+			<key>whale</key>
+			<string>whale</string>
+			<key>xylophone</key>
+			<string>xylophone</string>
+			<key>yoYo</key>
+			<string>yo-yo</string>
+			<key>zebra</key>
+			<string>zebra</string>
+		</dict>
+	</dict>
+	<key>plurals</key>
+	<dict>
+		<key>title</key>
+		<string>Plurals</string>
+		<key>question</key>
+		<string>How many apples do you have?</string>
+	</dict>
+</dict>
+</plist>
