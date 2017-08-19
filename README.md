@@ -19,11 +19,10 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 ##  Overview
 
 <p align="center">
-<table width="90%"><tr>
- <td rowspan="2"><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/L10n-swift.gif" alt="L10n-swift"/></td>
- <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/plist.png?raw=true" alt="Plist"/></td>
-</tr><tr>
- <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/stringsdict.png?raw=true" alt="Stringsdict"/></td>
+<table><tr>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/language720.gif" alt="Change language"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/translator720.gif" alt="Simple translator"/></td>
+ <td><img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/plurals720.gif" alt="Plurals"/></td>
 </tr></table>
 </p>
 
