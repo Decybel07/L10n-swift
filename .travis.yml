@@ -57,6 +57,6 @@ script:
 
   # Build Example
   - if [ $BUILD_EXAMPLE == "YES" ]; then
-      xcodebuild -workspace "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-      xcodebuild -workspace "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
+      xcodebuild -project "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
+      xcodebuild -project "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
     fi
