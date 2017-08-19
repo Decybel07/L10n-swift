@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'L10n-swift'
   spec.module_name      = 'L10n_swift'
-  spec.version          = '4.0.0'
+  spec.version          = '4.0.1'
   spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   spec.description      = <<-DESC
@@ -40,12 +40,17 @@ Pod::Spec.new do |spec|
   
   spec.subspec 'IBInspectable' do |inspectable|
     inspectable.dependency 'L10n-swift/Core'
+    inspectable.source_files = 'Source/IBInspectables/Core/**/*.swift'
+    
     inspectable.ios.framework  = 'UIKit'
     inspectable.ios.source_files = 'Source/IBInspectables/UIKit/{Common,iOS}/**/*.swift'
+    
     inspectable.watchos.framework  = 'WatchKit'
     inspectable.watchos.source_files = 'Source/IBInspectables/WatchKit/**/*.swift'
+    
     inspectable.tvos.framework  = 'UIKit'
     inspectable.tvos.source_files = 'Source/IBInspectables/UIKit/{Common,tvOS}/**/*.swift'
+    
     inspectable.osx.framework  = 'Cocoa'
     inspectable.osx.source_files = 'Source/IBInspectables/Cocoa/**/*.swift'
   end

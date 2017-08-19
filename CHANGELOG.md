@@ -1,6 +1,11 @@
 
 # Change Log
 
+## [4.0.1](https://github.com/Decybel07/L10n-swift/tree/4.0.1) (2017-08-19)
+* Created better example
+* Refactoring IBInspectable properties
+* Fixes typo
+
 ## [4.0.0](https://github.com/Decybel07/L10n-swift/tree/4.0.0) (2017-07-30)
 * IBInspectable for Xcode Interface Builder
 * Support for other bundle than main

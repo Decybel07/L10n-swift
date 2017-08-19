@@ -86,6 +86,10 @@
 		2D6F17A91F2CBA120031929D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17961F2CBA120031929D /* Localizable.stringsdict */; };
 		2D6F17AB1F2CC1490031929D /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */; };
 		2D6F17AD1F2CEA3F0031929D /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */; };
+		2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
+		2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
+		2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
+		2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
 		2DE4B1451F2C95490067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */; };
 		2DE4B16E1F2C957A0067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1651F2C957A0067EE98 /* L10n_swift.framework */; };
 		2DE4B18A1F2C95A70067EE98 /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE4B1811F2C95A70067EE98 /* L10n_swift.framework */; };
@@ -188,6 +192,7 @@
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
 		2DD6AC761F46238D00EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ar; path = ar.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2DD6AC781F46239500EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		2DD6AC801F487BB100EDE71B /* IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBL10n.swift; sourceTree = "<group>"; };
 		2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1581F2C95620067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -284,6 +289,7 @@
 		2D1A3B771F2DCF7400BD2710 /* IBInspectables */ = {
 			isa = PBXGroup;
 			children = (
+				2DD6AC7A1F48774100EDE71B /* Core */,
 				2D1A3BA21F2E158D00BD2710 /* UIKit */,
 				2D1A3BC61F2E15E800BD2710 /* WatchKit */,
 				2D1A3BCD1F2E15FC00BD2710 /* Cocoa */,
@@ -375,6 +381,14 @@
 				2D6F17961F2CBA120031929D /* Localizable.stringsdict */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		2DD6AC7A1F48774100EDE71B /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2DD6AC801F487BB100EDE71B /* IBL10n.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		2DE4B11C1F2C946B0067EE98 = {
@@ -759,6 +773,7 @@
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B561F2D50C900BD2710 /* L10nResource.swift in Sources */,
 				2D1A3BDD1F2E167200BD2710 /* UILabel+l10n.swift in Sources */,
+				2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BE51F2E167200BD2710 /* UITextField+l10n.swift in Sources */,
 				2DE4B1D41F2C971B0067EE98 /* String+l10n.swift in Sources */,
 				2DE4B1CC1F2C971B0067EE98 /* Int+l10n.swift in Sources */,
@@ -807,6 +822,7 @@
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+l10n.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
 				2DE4B1C91F2C971B0067EE98 /* Double+l10n.swift in Sources */,
+				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3B4F1F2D50C900BD2710 /* L10n+stringConvertible.swift in Sources */,
 				2DE4B1C51F2C971B0067EE98 /* Date+l10n.swift in Sources */,
 			);
@@ -827,6 +843,7 @@
 				2D1A3BE61F2E167200BD2710 /* UITextField+l10n.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+l10n.swift in Sources */,
 				2DE4B1CE1F2C971B0067EE98 /* Int+l10n.swift in Sources */,
+				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BDC1F2E167200BD2710 /* UIButton+l10n.swift in Sources */,
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+l10n.swift in Sources */,
 				2D1A3B641F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */,
@@ -866,6 +883,7 @@
 				2D1A3B651F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */,
 				2DE4B1D31F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
 				2DE4B1CB1F2C971B0067EE98 /* Double+l10n.swift in Sources */,
+				2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+stringConvertible.swift in Sources */,
 				2DE4B1C71F2C971B0067EE98 /* Date+l10n.swift in Sources */,
 			);

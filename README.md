@@ -152,6 +152,8 @@ Add `.l10(args: CVarArg...)` following any `String` object you want translated w
  ```
  A preferred language contained in the main bundle
 
+## 📙 [FAQ](https://github.com/Decybel07/L10n-swift/wiki/FAQ)
+
 ## 🤓 Author
 
 Adrian Bobrowski ([Decybel07](https://github.com/Decybel07)), adrian071993@gmail.com
