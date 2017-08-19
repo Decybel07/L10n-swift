@@ -8,12 +8,10 @@
 
 import UIKit
 
-public extension UISegmentedControl {
+extension UISegmentedControl: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nUseSegmentTitleAsKey: Bool {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nUseSegmentTitleAsKey", "UISegmentedControl") }
         set {
             (0 ..< self.numberOfSegments).forEach {
                 self.setTitle(L10n.shared.string(for: self.titleForSegment(at: $0) ?? ""), forSegmentAt: $0)

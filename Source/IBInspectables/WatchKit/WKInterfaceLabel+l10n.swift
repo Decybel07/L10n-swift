@@ -8,12 +8,10 @@
 
 import WatchKit
 
-public extension WKInterfaceLabel {
+extension WKInterfaceLabel: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nText: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "WKInterfaceLabel") }
         set { self.setText(L10n.shared.string(for: newValue)) }
     }
 }

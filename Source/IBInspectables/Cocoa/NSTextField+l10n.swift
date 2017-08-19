@@ -8,12 +8,10 @@
 
 import Cocoa
 
-public extension NSTextField {
+extension NSTextField: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nStringValue: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nStringValue", "NSTextField") }
         set { self.stringValue = L10n.shared.string(for: newValue) }
     }
 }

@@ -10,10 +10,8 @@ import UIKit
 
 public extension UITabBarItem {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nBadge: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "UITabBarItem") }
         set { self.badgeValue = L10n.shared.string(for: newValue) }
     }
 }

@@ -8,12 +8,10 @@
 
 import UIKit
 
-public extension UILabel {
+extension UILabel: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nText: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nText", "UILabel") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 }

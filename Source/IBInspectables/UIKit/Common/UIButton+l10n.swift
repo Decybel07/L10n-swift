@@ -8,33 +8,25 @@
 
 import UIKit
 
-public extension UIButton {
+extension UIButton: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .normal) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nHighlightedTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nHighlightedTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .highlighted) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nSelectedTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nSelectedTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .selected) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nDisabledTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nDisabledTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .disabled) }
     }
 }

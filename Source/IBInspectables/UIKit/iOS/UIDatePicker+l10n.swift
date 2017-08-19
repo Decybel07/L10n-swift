@@ -8,14 +8,10 @@
 
 import UIKit
 
-public extension UIDatePicker {
+extension UIDatePicker: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nUseCurrentLocale: Bool {
-        get { fatalError() }
-        set {
-            self.locale = L10n.shared.locale
-        }
+        get { self.messageForSetOnlyProperty("l10nUseCurrentLocale", "UIDatePicker") }
+        set { self.locale = L10n.shared.locale }
     }
 }

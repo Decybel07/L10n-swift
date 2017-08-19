@@ -10,10 +10,8 @@ import UIKit
 
 public extension UIButton {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nFocusedTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nFocusedTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .focused) }
     }
 }

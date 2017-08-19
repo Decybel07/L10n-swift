@@ -8,26 +8,20 @@
 
 import UIKit
 
-public extension UINavigationItem {
+extension UINavigationItem: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "UINavigationItem") }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nPrompt: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nPrompt", "UINavigationItem") }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nBackButton: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nBackButton", "UINavigationItem") }
         set {
             if self.backBarButtonItem == nil {
                 self.backBarButtonItem = UIBarButtonItem()

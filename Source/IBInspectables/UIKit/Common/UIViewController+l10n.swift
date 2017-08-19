@@ -8,12 +8,10 @@
 
 import UIKit
 
-public extension UIViewController {
+extension UIViewController: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "UIViewController") }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 }

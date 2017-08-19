@@ -8,12 +8,10 @@
 
 import UIKit
 
-public extension UIBarItem {
+extension UIBarItem: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nTitle: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nTitle", "UIBarItem") }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 }

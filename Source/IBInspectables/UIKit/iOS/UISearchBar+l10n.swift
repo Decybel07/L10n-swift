@@ -8,33 +8,25 @@
 
 import UIKit
 
-public extension UISearchBar {
+extension UISearchBar: IBL10n {
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nText: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nText", "UISearchBar") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nPrompt: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nPrompt", "UISearchBar") }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nPlaceholder: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nPlaceholder", "UISearchBar") }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 
-    @IBInspectable
-    @available(*, unavailable, message: "This property is reserved for Interface Builder.")
     var l10nCancelButton: String {
-        get { fatalError() }
+        get { self.messageForSetOnlyProperty("l10nCancelButton", "UISearchBar") }
         set {
             let button = self.value(forKey: "cancelButton") as? UIButton
             button?.setTitle(L10n.shared.string(for: newValue), for: .normal)
