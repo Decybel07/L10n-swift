@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [4.1.1](https://github.com/Decybel07/L10n-swift/tree/4.1.1) (2017-08-24)
+* Implementation of the `Localizable` protocol for the `L10n`
+
 ## [4.0.1](https://github.com/Decybel07/L10n-swift/tree/4.0.1) (2017-08-19)
 * Created better example
 * Refactoring IBInspectable properties
