@@ -7,12 +7,14 @@
 //
 
 extension L10n: CustomStringConvertible {
+
     public var description: String {
         return "L10n(\(self.language))"
     }
 }
 
 extension L10n: CustomDebugStringConvertible {
+
     public var debugDescription: String {
         return "L10n {"
             + "\n\tLanguage: \(self.language)"

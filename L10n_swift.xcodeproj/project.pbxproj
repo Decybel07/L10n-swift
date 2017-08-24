@@ -74,6 +74,10 @@
 		2D1A3BE71F2E167200BD2710 /* UIViewController+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BD81F2E167200BD2710 /* UIViewController+l10n.swift */; };
 		2D1A3BE81F2E167200BD2710 /* UIViewController+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BD81F2E167200BD2710 /* UIViewController+l10n.swift */; };
 		2D1A3BEA1F2E1E3800BD2710 /* UINavigationItem+l10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+l10n.swift */; };
+		2D51A6081F4F272600EF2801 /* L10n+localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+localizable.swift */; };
+		2D51A6091F4F272600EF2801 /* L10n+localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+localizable.swift */; };
+		2D51A60A1F4F272600EF2801 /* L10n+localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+localizable.swift */; };
+		2D51A60B1F4F272600EF2801 /* L10n+localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+localizable.swift */; };
 		2D6F17701F2CB6E80031929D /* L10nTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F176F1F2CB6E80031929D /* L10nTests.swift */; };
 		2D6F17A11F2CBA120031929D /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17901F2CBA120031929D /* Localizable.plist */; };
 		2D6F17A21F2CBA120031929D /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17901F2CBA120031929D /* Localizable.plist */; };
@@ -175,6 +179,7 @@
 		2D1A3BD71F2E167200BD2710 /* UITextField+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+l10n.swift"; sourceTree = "<group>"; };
 		2D1A3BD81F2E167200BD2710 /* UIViewController+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+l10n.swift"; sourceTree = "<group>"; };
 		2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+l10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+l10n.swift"; sourceTree = "<group>"; };
+		2D51A6071F4F272600EF2801 /* L10n+localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n+localizable.swift"; sourceTree = "<group>"; };
 		2D6F176F1F2CB6E80031929D /* L10nTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10nTests.swift; sourceTree = "<group>"; };
 		2D6F17941F2CBA120031929D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2D6F17951F2CBA120031929D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -277,6 +282,7 @@
 			children = (
 				2D1A3B451F2D50C900BD2710 /* L10n.swift */,
 				2D1A3B431F2D50C900BD2710 /* L10n+static.swift */,
+				2D51A6071F4F272600EF2801 /* L10n+localizable.swift */,
 				2D1A3B441F2D50C900BD2710 /* L10n+stringConvertible.swift */,
 				2D1A3B461F2D50C900BD2710 /* L10nResource.swift */,
 				2D1A3B471F2D50C900BD2710 /* Localizable.swift */,
@@ -782,6 +788,7 @@
 				2D1A3B621F2D50C900BD2710 /* NSNotificationName+l10n.swift in Sources */,
 				2D1A3BB01F2E158D00BD2710 /* UIDatePicker+l10n.swift in Sources */,
 				2DE4B1D01F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
+				2D51A6081F4F272600EF2801 /* L10n+localizable.swift in Sources */,
 				2D1A3BB21F2E158D00BD2710 /* UISearchBar+l10n.swift in Sources */,
 				2DE4B1C81F2C971B0067EE98 /* Double+l10n.swift in Sources */,
 				2D1A3BE11F2E167200BD2710 /* UISegmentedControl+l10n.swift in Sources */,
@@ -823,6 +830,7 @@
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+l10n.swift in Sources */,
 				2DE4B1C91F2C971B0067EE98 /* Double+l10n.swift in Sources */,
 				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
+				2D51A6091F4F272600EF2801 /* L10n+localizable.swift in Sources */,
 				2D1A3B4F1F2D50C900BD2710 /* L10n+stringConvertible.swift in Sources */,
 				2DE4B1C51F2C971B0067EE98 /* Date+l10n.swift in Sources */,
 			);
@@ -833,6 +841,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D1A3B541F2D50C900BD2710 /* L10n.swift in Sources */,
+				2D51A60A1F4F272600EF2801 /* L10n+localizable.swift in Sources */,
 				2D1A3B601F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4C1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+l10n.swift in Sources */,
@@ -877,6 +886,7 @@
 				2D1A3B4D1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3B5D1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B591F2D50C900BD2710 /* L10nResource.swift in Sources */,
+				2D51A60B1F4F272600EF2801 /* L10n+localizable.swift in Sources */,
 				2DE4B1D71F2C971B0067EE98 /* String+l10n.swift in Sources */,
 				2DE4B1CF1F2C971B0067EE98 /* Int+l10n.swift in Sources */,
 				2D1A3BCF1F2E15FC00BD2710 /* NSTextField+l10n.swift in Sources */,

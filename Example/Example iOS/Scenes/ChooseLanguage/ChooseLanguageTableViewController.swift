@@ -11,7 +11,7 @@ import L10n_swift
 
 final class ChooseLanguageTableViewController: UITableViewController {
 
-    private var items: [String] = L10n.supportedLanguages
+    private var items: [L10n] = L10n.supportedLanguages.map { L10n(language: $0) }
 
     // MARK: - Life cycle
 
@@ -35,7 +35,7 @@ final class ChooseLanguageTableViewController: UITableViewController {
         self.navigationItem.title = "chooseLanguage.title".l10n()
         self.tableView.reloadData()
 
-        if let row = self.items.index(where: { $0 == L10n.shared.language }) {
+        if let row = self.items.index(where: { $0.language == L10n.shared.language }) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .none)
         }
     }
@@ -52,15 +52,15 @@ final class ChooseLanguageTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "language", for: indexPath)
-        let language = self.items[indexPath.row]
+        let item = self.items[indexPath.row]
 
-        cell.textLabel?.text = L10n.shared.locale?.localizedString(forLanguageCode: language)
-        cell.detailTextLabel?.text = Locale(identifier: language).localizedString(forLanguageCode: language)
+        cell.textLabel?.text = item.l10n()
+        cell.detailTextLabel?.text = item.l10n(item)
 
         return cell
     }
 
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-        L10n.shared.language = self.items[indexPath.row]
+        L10n.shared.language = self.items[indexPath.row].language
     }
 }
