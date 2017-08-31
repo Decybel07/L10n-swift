@@ -10,6 +10,7 @@ import WatchKit
 
 extension WKInterfaceButton: IBL10n {
 
+    @IBInspectable
     var l10nTitle: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "WKInterfaceButton") }
         set { self.setTitle(L10n.shared.string(for: newValue)) }

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIDatePicker: IBL10n {
 
+    @IBInspectable
     var l10nUseCurrentLocale: Bool {
         get { self.messageForSetOnlyProperty("l10nUseCurrentLocale", "UIDatePicker") }
         set { self.locale = L10n.shared.locale }

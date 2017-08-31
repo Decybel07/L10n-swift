@@ -10,21 +10,25 @@ import UIKit
 
 extension UISearchBar: IBL10n {
 
+    @IBInspectable
     var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nText", "UISearchBar") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
+    @IBInspectable
     var l10nPrompt: String {
         get { self.messageForSetOnlyProperty("l10nPrompt", "UISearchBar") }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
+    @IBInspectable
     var l10nPlaceholder: String {
         get { self.messageForSetOnlyProperty("l10nPlaceholder", "UISearchBar") }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 
+    @IBInspectable
     var l10nCancelButton: String {
         get { self.messageForSetOnlyProperty("l10nCancelButton", "UISearchBar") }
         set {

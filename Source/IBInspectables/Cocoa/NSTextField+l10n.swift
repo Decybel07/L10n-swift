@@ -10,6 +10,7 @@ import Cocoa
 
 extension NSTextField: IBL10n {
 
+    @IBInspectable
     var l10nStringValue: String {
         get { self.messageForSetOnlyProperty("l10nStringValue", "NSTextField") }
         set { self.stringValue = L10n.shared.string(for: newValue) }

@@ -10,11 +10,13 @@ import UIKit
 
 extension UITextField: IBL10n {
 
+    @IBInspectable
     var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nText", "UITextField") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
+    @IBInspectable
     var l10nPlaceholder: String {
         get { self.messageForSetOnlyProperty("l10nPlaceholder", "UITextField") }
         set { self.placeholder = L10n.shared.string(for: newValue) }

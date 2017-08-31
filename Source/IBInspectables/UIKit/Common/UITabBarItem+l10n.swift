@@ -10,6 +10,7 @@ import UIKit
 
 public extension UITabBarItem {
 
+    @IBInspectable
     var l10nBadge: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "UITabBarItem") }
         set { self.badgeValue = L10n.shared.string(for: newValue) }

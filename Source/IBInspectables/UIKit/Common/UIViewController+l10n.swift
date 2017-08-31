@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController: IBL10n {
 
+    @IBInspectable
     var l10nTitle: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "UIViewController") }
         set { self.title = L10n.shared.string(for: newValue) }

@@ -10,6 +10,7 @@ import UIKit
 
 extension UIBarItem: IBL10n {
 
+    @IBInspectable
     var l10nTitle: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "UIBarItem") }
         set { self.title = L10n.shared.string(for: newValue) }
