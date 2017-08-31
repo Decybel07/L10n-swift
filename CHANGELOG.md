@@ -1,7 +1,7 @@
 
 # Change Log
 
-## [4.1.2](https://github.com/Decybel07/L10n-swift/tree/4.1.2) (2017-08-24)
+## [4.1.2](https://github.com/Decybel07/L10n-swift/tree/4.1.2) (2017-08-31)
 * Bugfix - missing @IBInspectable
 
 ## [4.1.1](https://github.com/Decybel07/L10n-swift/tree/4.1.1) (2017-08-24)
