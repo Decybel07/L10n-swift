@@ -34,7 +34,7 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'Extension' do |extension|
-    extension.dependency 'LSwiftyLocalizer/Core'
+    extension.dependency 'SwiftyLocalizer/Core'
     extension.source_files = 'Source/Extensions/**/*.swift'
   end
   
