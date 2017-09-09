@@ -34,12 +34,12 @@ Pod::Spec.new do |spec|
   end
   
   spec.subspec 'Extension' do |extension|
-    extension.dependency 'L10n-swift/Core'
+    extension.dependency 'LSwiftyLocalizer/Core'
     extension.source_files = 'Source/Extensions/**/*.swift'
   end
   
   spec.subspec 'IBInspectable' do |inspectable|
-    inspectable.dependency 'L10n-swift/Core'
+    inspectable.dependency 'SwiftyLocalizer/Core'
     inspectable.source_files = 'Source/IBInspectables/Core/**/*.swift'
     
     inspectable.ios.framework  = 'UIKit'
