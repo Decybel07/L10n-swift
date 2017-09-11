@@ -19,25 +19,31 @@ final class ChooseLanguageTableViewController: UITableViewController {
         super.viewDidLoad()
 
         NotificationCenter.default.addObserver(
-            self, selector: #selector(self.localizeUI), name: .L10nLanguageChanged, object: nil
+            self, selector: #selector(self.onLanguageChanged), name: .L10nLanguageChanged, object: nil
         )
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
-        self.localizeUI()
-    }
-
-    // MARK: - @IBAction
-
-    @IBAction private func localizeUI() {
-        self.navigationItem.title = "chooseLanguage.title".l10n()
-        self.tableView.reloadData()
-
+        
         if let row = self.items.index(where: { $0.language == L10n.shared.language }) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .none)
         }
+    }
+    
+    // MARK: - @IBAction
+
+    @IBAction
+    private func onLanguageChanged() {
+        self.navigationController?.setViewControllers(
+            self.navigationController?.viewControllers.map {
+                if let storyboard = $0.storyboard, let identifier = $0.restorationIdentifier {
+                    return storyboard.instantiateViewController(withIdentifier: identifier)
+                }
+                return $0
+            } ?? [],
+            animated: false
+        )
     }
 
     // MARK: - Table view data source

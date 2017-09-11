@@ -18,7 +18,7 @@
 		2DAB8C481F48943A00C22A0C /* ChooseLanguageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB8C3A1F48943A00C22A0C /* ChooseLanguageTableViewController.swift */; };
 		2DAB8C491F48943A00C22A0C /* PluralsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB8C3C1F48943A00C22A0C /* PluralsViewController.swift */; };
 		2DAB8C4A1F48943A00C22A0C /* SimpleTranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB8C3E1F48943A00C22A0C /* SimpleTranslatorViewController.swift */; };
-		2DAB8C4C1F48945E00C22A0C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB8C4B1F48945E00C22A0C /* MainViewController.swift */; };
+		2DB100D81F671E8A004ECBC5 /* RightToLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB100D71F671E8A004ECBC5 /* RightToLeftViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,7 +105,7 @@
 		2DAB8C3A1F48943A00C22A0C /* ChooseLanguageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseLanguageTableViewController.swift; sourceTree = "<group>"; };
 		2DAB8C3C1F48943A00C22A0C /* PluralsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PluralsViewController.swift; sourceTree = "<group>"; };
 		2DAB8C3E1F48943A00C22A0C /* SimpleTranslatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleTranslatorViewController.swift; sourceTree = "<group>"; };
-		2DAB8C4B1F48945E00C22A0C /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		2DB100D71F671E8A004ECBC5 /* RightToLeftViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightToLeftViewController.swift; sourceTree = "<group>"; };
 		2DD6AC4B1F434CA100EDE71B /* L10n_swift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = L10n_swift.xcodeproj; path = ../L10n_swift.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,7 +167,7 @@
 				2DAB8C391F48943A00C22A0C /* ChooseLanguage */,
 				2DAB8C3D1F48943A00C22A0C /* SimpleTranslator */,
 				2DAB8C3B1F48943A00C22A0C /* Plurals */,
-				2DAB8C4B1F48945E00C22A0C /* MainViewController.swift */,
+				2DB100D61F671E64004ECBC5 /* RTL */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -194,6 +194,14 @@
 				2DAB8C3E1F48943A00C22A0C /* SimpleTranslatorViewController.swift */,
 			);
 			path = SimpleTranslator;
+			sourceTree = "<group>";
+		};
+		2DB100D61F671E64004ECBC5 /* RTL */ = {
+			isa = PBXGroup;
+			children = (
+				2DB100D71F671E8A004ECBC5 /* RightToLeftViewController.swift */,
+			);
+			path = RTL;
 			sourceTree = "<group>";
 		};
 		2DD6AC4C1F434CA100EDE71B /* Products */ = {
@@ -350,8 +358,8 @@
 				2DAB8C491F48943A00C22A0C /* PluralsViewController.swift in Sources */,
 				2DAB8C3F1F48943A00C22A0C /* AppDelegate.swift in Sources */,
 				2DAB8C481F48943A00C22A0C /* ChooseLanguageTableViewController.swift in Sources */,
+				2DB100D81F671E8A004ECBC5 /* RightToLeftViewController.swift in Sources */,
 				2DAB8C4A1F48943A00C22A0C /* SimpleTranslatorViewController.swift in Sources */,
-				2DAB8C4C1F48945E00C22A0C /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

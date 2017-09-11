@@ -11,9 +11,16 @@ import L10n_swift
 
 final class SimpleTranslatorViewController: UIViewController {
 
-    @IBOutlet fileprivate weak var pickerView: UIPickerView!
-    @IBOutlet fileprivate weak var tableView: UITableView!
+    // MARK: - @IBOutlet
+    
+    @IBOutlet
+    fileprivate weak var pickerView: UIPickerView!
+    
+    @IBOutlet
+    fileprivate weak var tableView: UITableView!
 
+    // MARK: - variable
+    
     fileprivate var languages: [String] = L10n.supportedLanguages
     fileprivate var items: [String] = [
         "apple", "bee", "cat", "dolphin", "elephant",
@@ -29,6 +36,8 @@ final class SimpleTranslatorViewController: UIViewController {
         L10n(language: L10n.supportedLanguages.first(where: { $0 != L10n.shared.language }))
     }()
 
+    // MARK: - Life cycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
@@ -36,6 +45,8 @@ final class SimpleTranslatorViewController: UIViewController {
         self.pickerView.selectRow(self.languages.index(of: self.to.language) ?? 0, inComponent: 1, animated: false)
     }
 }
+
+// MARK: - UITableViewDataSource
 
 extension SimpleTranslatorViewController: UITableViewDataSource {
 
@@ -54,6 +65,8 @@ extension SimpleTranslatorViewController: UITableViewDataSource {
     }
 }
 
+// MARK: - UIPickerViewDataSource
+
 extension SimpleTranslatorViewController: UIPickerViewDataSource {
 
     func numberOfComponents(in _: UIPickerView) -> Int {
@@ -64,6 +77,8 @@ extension SimpleTranslatorViewController: UIPickerViewDataSource {
         return self.languages.count
     }
 }
+
+// MARK: - UIPickerViewDelegate
 
 extension SimpleTranslatorViewController: UIPickerViewDelegate {
 
