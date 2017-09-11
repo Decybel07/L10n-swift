@@ -25,6 +25,6 @@ public protocol Localizable {
 public extension Localizable {
 
     func l10n() -> String {
-        return self.l10n(L10n.shared)
+        return self.l10n(.shared)
     }
 }

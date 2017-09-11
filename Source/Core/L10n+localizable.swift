@@ -1,5 +1,5 @@
 //
-//  L10n+localizable.swift
+//  L10n+Localizable.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 24.08.2017.

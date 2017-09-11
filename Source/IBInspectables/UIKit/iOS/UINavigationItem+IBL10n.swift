@@ -1,5 +1,5 @@
 //
-//  UINavigationItem+l10n.swift
+//  UINavigationItem+IBL10n.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,19 +11,19 @@ import UIKit
 extension UINavigationItem: IBL10n {
 
     @IBInspectable
-    var l10nTitle: String {
+    public var l10nTitle: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "UINavigationItem") }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nPrompt: String {
+    public var l10nPrompt: String {
         get { self.messageForSetOnlyProperty("l10nPrompt", "UINavigationItem") }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nBackButton: String {
+    public var l10nBackButton: String {
         get { self.messageForSetOnlyProperty("l10nBackButton", "UINavigationItem") }
         set {
             if self.backBarButtonItem == nil {

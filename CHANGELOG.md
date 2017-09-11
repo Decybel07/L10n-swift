@@ -1,6 +1,9 @@
 
 # Change Log
 
+## [4.1.3](https://github.com/Decybel07/L10n-swift/tree/4.1.3) (2017-00-12)
+* Created example for Right-to-Left
+
 ## [4.1.2](https://github.com/Decybel07/L10n-swift/tree/4.1.2) (2017-08-31)
 * Bugfix - missing @IBInspectable
 

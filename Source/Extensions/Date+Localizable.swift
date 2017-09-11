@@ -1,5 +1,5 @@
 //
-//  Date+l10n.swift
+//  Date+Localizable.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 29.07.2017.
@@ -27,7 +27,7 @@ extension Date: Localizable {
 
      - returns: A localized **self** description.
      */
-    public func l10n(_ instance: L10n = L10n.shared, closure: (DateFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (DateFormatter) -> Void) -> String {
         let formatter = DateFormatter()
         formatter.locale = instance.locale
         closure(formatter)

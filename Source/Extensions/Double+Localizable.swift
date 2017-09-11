@@ -1,5 +1,5 @@
 //
-//  Double+l10n.swift
+//  Double+Localizable.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 08.05.2017.
@@ -27,7 +27,7 @@ extension Double: Localizable {
 
      - returns: A localized **self** description.
      */
-    public func l10n(_ instance: L10n = L10n.shared, closure: (NumberFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
         return (self as NSNumber).l10n(instance, closure: closure)
     }
 
@@ -39,7 +39,7 @@ extension Double: Localizable {
 
      - returns: A localized **self** description with defined number of fractionDigits.
      */
-    public func l10n(_ instance: L10n = L10n.shared, fractionDigits: Int) -> String {
+    public func l10n(_ instance: L10n = .shared, fractionDigits: Int) -> String {
         return self.l10n(instance) { formatter in
             formatter.minimumIntegerDigits = 1
             formatter.minimumFractionDigits = fractionDigits

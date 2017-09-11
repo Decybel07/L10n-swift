@@ -1,5 +1,5 @@
 //
-//  UIButton+l10n+focused.swift
+//  UIButton+IBL10n+focused.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,7 +11,7 @@ import UIKit
 public extension UIButton {
 
     @IBInspectable
-    var l10nFocusedTitle: String {
+    public var l10nFocusedTitle: String {
         get { self.messageForSetOnlyProperty("l10nFocusedTitle", "UIButton") }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .focused) }
     }

@@ -1,5 +1,5 @@
 //
-//  NSNumber+l10n.swift
+//  NSNumber+Localizable.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 01.06.2017.
@@ -27,7 +27,7 @@ extension NSNumber: Localizable {
 
      - returns: A localized **self** description.
      */
-    public func l10n(_ instance: L10n = L10n.shared, closure: (NumberFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
         let formatter = NumberFormatter()
         formatter.locale = instance.locale
         formatter.numberStyle = .decimal

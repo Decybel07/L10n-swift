@@ -1,5 +1,5 @@
 //
-//  NSNotificationName+l10n.swift
+//  NSNotificationName+L10nLanguageChanged.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 13.06.2017.

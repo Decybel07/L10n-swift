@@ -13,6 +13,8 @@ public protocol IBL10n {}
 public extension IBL10n {
 
     func messageForSetOnlyProperty(_ property: String, _ typeName: String) -> Never {
-        fatalError("The \(property) property for \(typeName) is reserved for the interface. It's only for setting")
+        fatalError(
+            "The \(property) property for \(typeName) is reserved for the interface builder. It's only for setting"
+        )
     }
 }

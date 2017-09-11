@@ -1,5 +1,5 @@
 //
-//  UILabel+l10n.swift
+//  UILabel+IBL10n.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,7 +11,7 @@ import UIKit
 extension UILabel: IBL10n {
 
     @IBInspectable
-    var l10nText: String {
+    public var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nText", "UILabel") }
         set { self.text = L10n.shared.string(for: newValue) }
     }

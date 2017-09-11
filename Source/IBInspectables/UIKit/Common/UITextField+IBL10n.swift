@@ -1,5 +1,5 @@
 //
-//  UITextField+l10n.swift
+//  UITextField+IBL10n.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,13 +11,13 @@ import UIKit
 extension UITextField: IBL10n {
 
     @IBInspectable
-    var l10nText: String {
+    public var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nText", "UITextField") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nPlaceholder: String {
+    public var l10nPlaceholder: String {
         get { self.messageForSetOnlyProperty("l10nPlaceholder", "UITextField") }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }

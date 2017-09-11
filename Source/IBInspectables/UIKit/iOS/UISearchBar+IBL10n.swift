@@ -1,5 +1,5 @@
 //
-//  UISearchBar+l10n.swift
+//  UISearchBar+IBL10n.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,25 +11,25 @@ import UIKit
 extension UISearchBar: IBL10n {
 
     @IBInspectable
-    var l10nText: String {
+    public var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nText", "UISearchBar") }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nPrompt: String {
+    public var l10nPrompt: String {
         get { self.messageForSetOnlyProperty("l10nPrompt", "UISearchBar") }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nPlaceholder: String {
+    public var l10nPlaceholder: String {
         get { self.messageForSetOnlyProperty("l10nPlaceholder", "UISearchBar") }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
-    var l10nCancelButton: String {
+    public var l10nCancelButton: String {
         get { self.messageForSetOnlyProperty("l10nCancelButton", "UISearchBar") }
         set {
             let button = self.value(forKey: "cancelButton") as? UIButton

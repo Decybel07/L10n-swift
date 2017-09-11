@@ -1,5 +1,5 @@
 //
-//  WKInterfaceLabel+l10n.swift
+//  WKInterfaceLabel+IBL10n.swift
 //  L10n_swift
 //
 //  Created by Adrian Bobrowski on 30.07.2017.
@@ -11,7 +11,7 @@ import WatchKit
 extension WKInterfaceLabel: IBL10n {
 
     @IBInspectable
-    var l10nText: String {
+    public var l10nText: String {
         get { self.messageForSetOnlyProperty("l10nTitle", "WKInterfaceLabel") }
         set { self.setText(L10n.shared.string(for: newValue)) }
     }
