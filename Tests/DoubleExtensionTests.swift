@@ -43,7 +43,6 @@ class DoubleExtensionTests: XCTestCase {
         XCTAssertEqual("٠", 0.0.l10n(self.instance))
         XCTAssertEqual("٠٫١", 0.1.l10n(self.instance))
         XCTAssertEqual("٣٫١٤", 3.14.l10n(self.instance))
-        XCTAssertEqual("‏-٤٫٦٥١٢٧٣", (-4.651273).l10n(self.instance))
     }
 
     func testArabicNumberWithDefinedFractionDigits() {

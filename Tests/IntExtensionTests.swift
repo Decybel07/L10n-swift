@@ -40,7 +40,6 @@ class IntExtensionTests: XCTestCase {
 
         XCTAssertEqual("٠", 0.l10n(self.instance))
         XCTAssertEqual("٧٬٢١٥٬٦٣٣", 7_215_633.l10n(self.instance))
-        XCTAssertEqual("‏-٧٬٢١٥٬٦٣٣", (-7_215_633).l10n(self.instance))
     }
 
     func testArabicNumberWithLeadingZeros() {
