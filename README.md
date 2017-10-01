@@ -66,13 +66,13 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 4.1'
+ pod 'L10n-swift', '~> 4.2'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 4.1
+github "Decybel07/L10n-swift", ~> 4.2
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
