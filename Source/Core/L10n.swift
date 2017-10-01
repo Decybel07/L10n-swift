@@ -90,7 +90,7 @@ open class L10n {
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
     public func string(format: String, _ args: CVarArg...) -> String {
-        return self.string(format: format, args)
+        return self.string(format: format, args: args)
     }
 
     /**
@@ -101,7 +101,7 @@ open class L10n {
 
      - returns: A localized by using `format` as a template into which the remaining argument values are substituted.
      */
-    open func string(format: String, _ args: [CVarArg]) -> String {
+    open func string(format: String, args: [CVarArg]) -> String {
         return String(format: format, locale: self.locale, arguments: args)
     }
 
@@ -133,7 +133,7 @@ open class L10n {
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
     public func plural(for key: String, resource: String? = nil, _ args: CVarArg...) -> String {
-        return self.plural(for: key, resource: resource, args)
+        return self.plural(for: key, resource: resource, args: args)
     }
 
     /**
@@ -147,8 +147,8 @@ open class L10n {
 
      - returns: A localized plural version of the string designated by key. This method returns key when key not found.
      */
-    open func plural(for key: String, resource: String? = nil, _ args: [CVarArg]) -> String {
-        return self.string(format: self.string(for: key, resource: resource), args)
+    open func plural(for key: String, resource: String? = nil, args: [CVarArg]) -> String {
+        return self.string(format: self.string(for: key, resource: resource), args: args)
     }
 
     private func languageChanged(oldValue: String? = nil) {

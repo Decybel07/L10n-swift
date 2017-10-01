@@ -39,7 +39,7 @@ extension String: Localizable {
 
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
-    public func l10n(_ instance: L10n = .shared, resource: String? = nil, args: CVarArg...) -> String {
+    public func l10n(_ instance: L10n = .shared, resource: String? = nil, _ args: CVarArg...) -> String {
         return self.l10n(instance, resource: resource, args: args)
     }
 
@@ -52,6 +52,6 @@ extension String: Localizable {
      - returns: A localized plural version of the string designated by **self** or **self** if key not found.
      */
     public func l10n(_ instance: L10n = .shared, resource: String? = nil, args: [CVarArg]) -> String {
-        return instance.plural(for: self, resource: resource, args)
+        return instance.plural(for: self, resource: resource, args: args)
     }
 }
