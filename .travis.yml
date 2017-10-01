@@ -1,8 +1,4 @@
-# references:
-# * http://www.objc.io/issue-6/travis-ci.html
-# * https://github.com/supermarin/xcpretty#usage
-
-osx_image: xcode8.3
+osx_image: xcode9
 language: objective-c
 
 env:
@@ -19,8 +15,7 @@ env:
     - LANG=ja_JP.UTF-8  DESTINATION="OS=9.2,name=iPad Air 2"                    PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
     - LANG=zh_HK.UTF-8  DESTINATION="OS=10.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
 
-    - LANG=en_US.UTF-8  DESTINATION="OS=9.0,name=iPhone 4s"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
-    - LANG=en_GB.UTF-8  DESTINATION="OS=9.1,name=iPhone 5"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
+    - LANG=en_GB.UTF-8  DESTINATION="OS=9.1,name=iPhone 6"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
     - LANG=en_US.UTF-8  DESTINATION="OS=10.2,name=iPhone 7"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
     - LANG=pl_PL.UTF-8  DESTINATION="OS=10.0,name=iPhone 7 Plus"                PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES" 
 
