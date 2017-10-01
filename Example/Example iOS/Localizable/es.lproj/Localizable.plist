@@ -15,6 +15,8 @@
 		<string>Traductor simple</string>
 		<key>plurals</key>
 		<string>Plurales</string>
+		<key>rightToLeft</key>
+		<string>Ver de derecha a izquierda</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
@@ -87,6 +89,13 @@
 		<string>Plurales</string>
 		<key>question</key>
 		<string>¿Cuantas manzanas tienes?</string>
+	</dict>
+	<key>rightToLeft</key>
+	<dict>
+		<key>title</key>
+		<string>Ver de derecha a izquierda</string>
+		<key>force</key>
+		<string>Fuerza de derecha a izquierda</string>
 	</dict>
 </dict>
 </plist>

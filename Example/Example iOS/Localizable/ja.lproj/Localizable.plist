@@ -15,6 +15,8 @@
 		<string>シンプルトランスレータ</string>
 		<key>plurals</key>
 		<string>プルーフル</string>
+		<key>rightToLeft</key>
+		<string>右から左に見る</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
@@ -87,6 +89,13 @@
 		<string>プルーフル</string>
 		<key>question</key>
 		<string>あなたはリンゴをいくつ持っていますか？</string>
+	</dict>
+	<key>rightToLeft</key>
+	<dict>
+		<key>title</key>
+		<string>右から左に見る</string>
+		<key>force</key>
+		<string>右から左に強制する</string>
 	</dict>
 </dict>
 </plist>

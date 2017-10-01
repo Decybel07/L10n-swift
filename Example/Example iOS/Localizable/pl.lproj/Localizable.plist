@@ -15,6 +15,8 @@
 		<string>Prosty tłumacz</string>
 		<key>plurals</key>
 		<string>Liczba mnoga</string>
+		<key>rightToLeft</key>
+		<string>Widok od prawej do lewej</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
@@ -87,6 +89,13 @@
 		<string>Liczba mnoga</string>
 		<key>question</key>
 		<string>Ile masz jabłek?</string>
+	</dict>
+	<key>rightToLeft</key>
+	<dict>
+		<key>title</key>
+		<string>Widok od prawej do lewej</string>
+		<key>force</key>
+		<string>Wymuszaj od prawej do lewej</string>
 	</dict>
 </dict>
 </plist>

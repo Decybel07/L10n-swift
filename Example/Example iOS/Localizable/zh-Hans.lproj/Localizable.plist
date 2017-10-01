@@ -15,6 +15,8 @@
 		<string>简单的翻译</string>
 		<key>plurals</key>
 		<string>复数</string>
+		<key>rightToLeft</key>
+		<string>从右到左查看</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
@@ -87,6 +89,13 @@
 		<string>复数</string>
 		<key>question</key>
 		<string>你有多少苹果？</string>
+	</dict>
+	<key>rightToLeft</key>
+	<dict>
+		<key>title</key>
+		<string>从右到左查看</string>
+		<key>force</key>
+		<string>力从右到左</string>
 	</dict>
 </dict>
 </plist>

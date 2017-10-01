@@ -15,6 +15,8 @@
 		<string>Simple translator</string>
 		<key>plurals</key>
 		<string>Plurals</string>
+		<key>rightToLeft</key>
+		<string>View right to left</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
@@ -87,6 +89,13 @@
 		<string>Plurals</string>
 		<key>question</key>
 		<string>How many apples do you have?</string>
+	</dict>
+	<key>rightToLeft</key>
+	<dict>
+		<key>title</key>
+		<string>View right to left</string>
+		<key>force</key>
+		<string>Force right to left</string>
 	</dict>
 </dict>
 </plist>
