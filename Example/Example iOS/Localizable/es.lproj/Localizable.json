@@ -1,0 +1,8 @@
+{
+    "main":{
+        "changeLanguage":"Cambiar idioma de demostración",
+        "simpleTranslator":"Traductor simple",
+        "plurals":"Plurales",
+        "rightToLeft":"Ver de derecha a izquierda"
+    }
+}

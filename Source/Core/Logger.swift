@@ -16,3 +16,12 @@ public protocol Logger {
      */
     func log(_ message: String)
 }
+
+import Foundation
+internal extension Logger {
+
+    func info(_ message: String, fileName: StaticString = #file, functionName: StaticString = #function, lineNumber: Int = #line) {
+        let fileName = URL(string: fileName.description)?.pathComponents.last ?? ""
+        self.log("[\(fileName)][\(functionName)][\(lineNumber)] \(message)")
+    }
+}

@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- L10n manages the localized version of strings designated by the given **key** and located in the **resource** for the specified language. The default resources are *"Localizable"* files
+ L10n manages the localized version of strings designated by the given `key` and located in the `resource` for the specified language. The default resources are **Localizable** files
 
  ## The L10n class provides information about:
  * supported languages for the application
@@ -22,23 +22,19 @@ import Foundation
 
  Each object uses the default NotificationCenter to send notification when the language has changed.
 
- SeeAlso: `NSNotification.Name.L10nLanguageChanged`
+ SeeAlso: `Notification.Name.L10nLanguageChanged`
 
  ## Supported files format:
- * [*.strings](https://github.com/Decybel07/L10n-swift/wiki/\*.strings)
- * [*.stringsdict](https://github.com/Decybel07/L10n-swift/wiki/\*.stringsdict)
  * [*.plist](https://github.com/Decybel07/L10n-swift/wiki/\*.plist)
+ * [*.json](https://github.com/Decybel07/L10n-swift/wiki/\*.json)
+ * [*.stringsdict](https://github.com/Decybel07/L10n-swift/wiki/\*.stringsdict)
+ * [*.strings](https://github.com/Decybel07/L10n-swift/wiki/\*.strings)
  */
 open class L10n {
 
     /// A preferred language contained in the base bundle.
     public var preferredLanguage: String {
-        return self.preferredLanguages.first ?? "UNDEFINED"
-    }
-
-    /// An ordered list of preferred languages contained in the base bundle.
-    public var preferredLanguages: [String] {
-        return self.baseBundle.preferredLocalizations
+        return self.baseBundle.preferredLocalizations.first ?? "UNDEFINED"
     }
 
     /// A list of all the languages contained in the base bundle.
@@ -46,7 +42,7 @@ open class L10n {
         return self.baseBundle.localizations
     }
 
-    /// A closure used to log information from the framework
+    /// A logger used to log information from the framework
     public var logger: Logger?
 
     /// Current language code.
@@ -55,6 +51,9 @@ open class L10n {
             guard self.language != oldValue else {
                 return
             }
+            self.locale = nil
+            self.bundle = nil
+            self.resources = [:]
             self.languageChanged(oldValue: oldValue)
         }
     }
@@ -66,14 +65,14 @@ open class L10n {
     private(set) public var bundle: Bundle?
 
     private var baseBundle: Bundle
-    private var resources: [String: L10nResource] = [:]
+    private var resources: [String: ResourceContainer] = [:]
 
     /**
-     Initialize a new L10n with the provided language.
+     Initialize a new `L10n` with the provided language.
 
      - parameter language: The initialize language.
 
-     - returns: A L10n object for language.
+     - returns: A `L10n` object for language.
      */
     public init(bundle: Bundle = .main, language: String? = nil) {
         self.language = language ?? bundle.preferredLocalizations.first ?? "UNDEFINED"
@@ -106,56 +105,48 @@ open class L10n {
     }
 
     /**
-     Returns a localized version of the string designated by the specified *key* and residing in *resource*.
+     Returns a localized version of the string designated by the specified `key` and residing in `resource`.
 
      - parameter key: The key for a string in resource.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable files.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
 
-     - returns: A localized version of the string designated by *key*. This method returns *key* when *key* not found.
+     - returns: A localized version of the string designated by `key`. This method returns `key` when `key` not found.
      */
     open func string(for key: String, resource: String? = nil) -> String {
         guard let text = self.resource(named: resource).string(for: key) else {
-            self.logger?.log("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription)")
+            self.logger?.info("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription).")
             return key
         }
         return text
     }
 
     /**
-     Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
-
-     - important: You can define plurals **only** in stringsdict and **only** in root node
+     Returns a localized plural version of the string designated by the specified `key` and residing in `resource`.
 
      - parameter key: The key for a string in resource.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
-     - parameter args: The values for which the appropriate plural form is selected.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter arg: The values for which the appropriate plural form is selected.
 
-     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
+     - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found or `arg` is not a number .
      */
-    public func plural(for key: String, resource: String? = nil, _ args: CVarArg...) -> String {
-        return self.plural(for: key, resource: resource, args: args)
-    }
+    open func plural(for key: String, resource: String? = nil, arg: CVarArg) -> String {
+        guard let number = arg as? NSNumber else {
+            self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
+            return key
+        }
 
-    /**
-     Returns a localized plural version of the string designated by the specified *key* and residing in *resource*.
+        let firstFormat = Plural.variants(for: number, with: self.locale).lazy.map { plural in
+            self.resource(named: resource).string(for: "\(key).\(plural.rawValue)")
+        }.first { $0 != nil }
 
-     - important: You can define plurals **only** in stringsdict and **only** in root node
-
-     - parameter key: The key for a string in resource.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable.stringsdict.
-     - parameter args: The values for which the appropriate plural form is selected.
-
-     - returns: A localized plural version of the string designated by key. This method returns key when key not found.
-     */
-    open func plural(for key: String, resource: String? = nil, args: [CVarArg]) -> String {
-        return self.string(format: self.string(for: key, resource: resource), args: args)
+        guard let format = firstFormat else {
+            self.logger?.info("L10n - Key \(key.debugDescription) does not support plural for \(self.language.debugDescription).")
+            return key
+        }
+        return self.string(format: format!, arg)
     }
 
     private func languageChanged(oldValue: String? = nil) {
-        self.locale = nil
-        self.bundle = nil
-        self.resources = [:]
-
         if self.supportedLanguages.contains(self.language) {
             if let path = self.baseBundle.path(forResource: self.language, ofType: "lproj"),
                 let bundle = Bundle(path: path) {
@@ -163,10 +154,10 @@ open class L10n {
                 self.locale = Locale(identifier: self.language)
                 self.bundle = bundle
             } else {
-                self.logger?.log("L10n - Could not find the bundle for \(self.language.debugDescription)")
+                self.logger?.info("L10n - Could not find the bundle for \(self.language.debugDescription).")
             }
         } else {
-            self.logger?.log("L10n - List of supported languages does not contain \(self.language.debugDescription)")
+            self.logger?.info("L10n - List of supported languages does not contain \(self.language.debugDescription).")
         }
 
         if let oldValue = oldValue {
@@ -178,18 +169,13 @@ open class L10n {
         }
     }
 
-    private func resource(named resourceName: String?) -> L10nResource {
-        let resourceName = (resourceName ?? "").isEmpty
-            ? "Localizable"
-            : resourceName!
+    private func resource(named resourceName: String?) -> ResourceContainer {
+        let resourceName = (resourceName ?? "").isEmpty ? "Localizable" : resourceName!
 
-        return self.resources[resourceName]
-            ?? self.createResource(with: resourceName)
-    }
-
-    private func createResource(with resourceName: String) -> L10nResource {
-        let resource = L10nResource(bundle: self.bundle, name: resourceName)
-        self.resources[resourceName] = resource
-        return resource
+        return self.resources[resourceName] ?? {
+            let resource = ResourceContainer(bundle: self.bundle, name: resourceName)
+            self.resources[resourceName] = resource
+            return resource
+        }()
     }
 }

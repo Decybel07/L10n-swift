@@ -7,17 +7,6 @@
 		<key>back</key>
 		<string>バック</string>
 	</dict>
-	<key>main</key>
-	<dict>
-		<key>changeLanguage</key>
-		<string>デモ言語を変更する</string>
-		<key>simpleTranslator</key>
-		<string>シンプルトランスレータ</string>
-		<key>plurals</key>
-		<string>プルーフル</string>
-		<key>rightToLeft</key>
-		<string>右から左に見る</string>
-	</dict>
 	<key>chooseLanguage</key>
 	<dict>
 		<key>title</key>

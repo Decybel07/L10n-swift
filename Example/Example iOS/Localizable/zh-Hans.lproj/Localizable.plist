@@ -7,17 +7,6 @@
 		<key>back</key>
 		<string>背部</string>
 	</dict>
-	<key>main</key>
-	<dict>
-		<key>changeLanguage</key>
-		<string>更改演示语言</string>
-		<key>simpleTranslator</key>
-		<string>简单的翻译</string>
-		<key>plurals</key>
-		<string>复数</string>
-		<key>rightToLeft</key>
-		<string>从右到左查看</string>
-	</dict>
 	<key>chooseLanguage</key>
 	<dict>
 		<key>title</key>

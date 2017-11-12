@@ -27,13 +27,4 @@ extension UISearchBar: IBL10n {
         get { self.messageForSetOnlyProperty("l10nPlaceholder", "UISearchBar") }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
-
-    @IBInspectable
-    public var l10nCancelButton: String {
-        get { self.messageForSetOnlyProperty("l10nCancelButton", "UISearchBar") }
-        set {
-            let button = self.value(forKey: "cancelButton") as? UIButton
-            button?.setTitle(L10n.shared.string(for: newValue), for: .normal)
-        }
-    }
 }

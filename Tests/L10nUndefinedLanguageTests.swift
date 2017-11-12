@@ -31,7 +31,7 @@ class L10nUndefinedLanguageTests: XCTestCase {
     }
 
     func testDefinedPlural() {
-        XCTAssertEqual("numberOfApples", self.instance.plural(for: "numberOfApples", 0))
-        XCTAssertEqual("numberOfApples", self.instance.plural(for: "numberOfApples", 1))
+        XCTAssertEqual("numberOfApples", self.instance.plural(for: "numberOfApples", arg: 0))
+        XCTAssertEqual("numberOfApples", self.instance.plural(for: "numberOfApples", arg: 1))
     }
 }

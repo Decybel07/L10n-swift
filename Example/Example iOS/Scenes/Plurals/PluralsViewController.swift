@@ -12,23 +12,23 @@ import L10n_swift
 final class PluralsViewController: UIViewController {
 
     // MARK: - @IBOutlet
-    
+
     @IBOutlet
     weak var tableView: UITableView!
-    
+
     @IBOutlet
     weak var stepper: UIStepper!
-    
+
     @IBOutlet
     weak var numberField: UITextField!
 
     // MARK: - variable
-    
+
     fileprivate var items: [L10n] = L10n.supportedLanguages.map { L10n(language: $0) }
     fileprivate var value: Int = 0
 
     // MARK: - @IBAction
-    
+
     @IBAction
     private func onTapped() {
         self.view.endEditing(true)

@@ -1,0 +1,8 @@
+{
+    "main":{
+        "changeLanguage":"Change demo language",
+        "simpleTranslator":"Simple translator",
+        "plurals":"Plurals",
+        "rightToLeft":"View right to left"
+    }
+}

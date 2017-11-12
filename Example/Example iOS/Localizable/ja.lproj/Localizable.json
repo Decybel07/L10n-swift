@@ -1,0 +1,8 @@
+{
+    "main":{
+        "changeLanguage":"デモ言語を変更する",
+        "simpleTranslator":"シンプルトランスレータ",
+        "plurals":"プルーフル",
+        "rightToLeft":"右から左に見る"
+    }
+}

@@ -11,7 +11,7 @@ import UIKit
 extension UISegmentedControl: IBL10n {
 
     @IBInspectable
-    var l10nUseSegmentTitleAsKey: Bool {
+    internal var l10nUseSegmentTitleAsKey: Bool {
         get { self.messageForSetOnlyProperty("l10nUseSegmentTitleAsKey", "UISegmentedControl") }
         set {
             if newValue {

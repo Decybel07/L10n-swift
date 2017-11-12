@@ -8,11 +8,20 @@
 
 import Foundation
 
+/// Protocol Localizable.
 public protocol IBL10n {}
 
-public extension IBL10n {
+extension IBL10n {
 
-    func messageForSetOnlyProperty(_ property: String, _ typeName: String) -> Never {
+    /**
+     Throw message for set only property.
+
+     - parameter property: The property name.
+     - parameter typeName: The type name.
+
+     - throws: `fatalError` with message.
+     */
+    public func messageForSetOnlyProperty(_ property: String, _ typeName: String) -> Never {
         fatalError(
             "The \(property) property for \(typeName) is reserved for the interface builder. It's only for setting"
         )

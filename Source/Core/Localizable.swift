@@ -10,14 +10,14 @@
 public protocol Localizable {
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
      */
     func l10n() -> String
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
 
-     - parameter instance: The instance of L10n used for localization.
+     - parameter instance: The instance of `L10n` used for localization.
      */
     func l10n(_ instance: L10n) -> String
 }

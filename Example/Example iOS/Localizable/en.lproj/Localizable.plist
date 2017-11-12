@@ -7,17 +7,6 @@
 		<key>back</key>
 		<string>Back</string>
 	</dict>
-	<key>main</key>
-	<dict>
-		<key>changeLanguage</key>
-		<string>Change demo language</string>
-		<key>simpleTranslator</key>
-		<string>Simple translator</string>
-		<key>plurals</key>
-		<string>Plurals</string>
-		<key>rightToLeft</key>
-		<string>View right to left</string>
-	</dict>
 	<key>chooseLanguage</key>
 	<dict>
 		<key>title</key>

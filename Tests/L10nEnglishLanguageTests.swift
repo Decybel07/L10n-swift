@@ -39,22 +39,14 @@ class L10nEnglishLanguageTests: XCTestCase {
     }
 
     func testDefinedPlural() {
-        XCTAssertEqual("Zero apples", self.instance.plural(for: "numberOfApples", 0))
-        XCTAssertEqual("One apple", self.instance.plural(for: "numberOfApples", 1))
-        XCTAssertEqual("2 apples", self.instance.plural(for: "numberOfApples", 2))
-        XCTAssertEqual("5 apples", self.instance.plural(for: "numberOfApples", 5))
-        XCTAssertEqual("124 apples", self.instance.plural(for: "numberOfApples", 124))
-    }
-
-    func testDefinedPluralTooManyParameters() {
-        XCTAssertEqual("Zero apples", self.instance.plural(for: "numberOfApples", 0, 4, 3, 1))
-        XCTAssertEqual("One apple", self.instance.plural(for: "numberOfApples", 1, 23))
-        XCTAssertEqual("2 apples", self.instance.plural(for: "numberOfApples", 2, 56))
-        XCTAssertEqual("5 apples", self.instance.plural(for: "numberOfApples", 5))
-        XCTAssertEqual("124 apples", self.instance.plural(for: "numberOfApples", 124))
+        XCTAssertEqual("Zero apples", self.instance.plural(for: "numberOfApples", arg: 0))
+        XCTAssertEqual("One apple", self.instance.plural(for: "numberOfApples", arg: 1))
+        XCTAssertEqual("2 apples", self.instance.plural(for: "numberOfApples", arg: 2))
+        XCTAssertEqual("5 apples", self.instance.plural(for: "numberOfApples", arg: 5))
+        XCTAssertEqual("124 apples", self.instance.plural(for: "numberOfApples", arg: 124))
     }
 
     func testUndefinedPlural() {
-        XCTAssertEqual("someUndefinedPlural", self.instance.plural(for: "someUndefinedPlural", 5))
+        XCTAssertEqual("someUndefinedPlural", self.instance.plural(for: "someUndefinedPlural", arg: 5))
     }
 }

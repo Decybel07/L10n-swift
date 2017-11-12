@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>group</key>
+	<dict>
+		<key>a</key>
+		<dict>
+			<key>b</key>
+			<dict>
+				<key>c</key>
+				<string>This is &quot;group.a.b.c&quot;</string>
+			</dict>
+		</dict>
+	</dict>
+	<key>menu</key>
+	<dict>
+		<key>changeLanguage</key>
+		<string>Change demo language</string>
+		<key>simpleTranslator</key>
+		<string>Simple translator</string>
+	</dict>
+	<key>numberOfApples</key>
+	<dict>
+		<key>zero</key>
+		<string>I don&apos;t have any apples</string>
+		<key>one</key>
+		<string>I have one apple</string>
+		<key>other</key>
+		<string>I have %d apples</string>
+	</dict>
+</dict>
+</plist>

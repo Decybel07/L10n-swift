@@ -1,0 +1,20 @@
+
+{
+    "group":{
+        "a":{
+            "b":{
+                "c":"This is \"group.a.b.c\""
+            }
+        }
+    },
+    "menu":{
+        "changeLanguage":"Change demo language",
+        "simpleTranslator":"Simple translator"
+    },
+    "numberOfApples":{
+        "zero":"I don't have any apples",
+        "one":"I have one apple",
+        "other":"I have %d apples"
+    }
+}
+

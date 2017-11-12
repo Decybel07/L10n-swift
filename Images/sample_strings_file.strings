@@ -1,0 +1,8 @@
+
+"group.a.b.c" = "This is \"group.a.b.c\"";
+"menu.changeLanguage" = "Change demo language":
+"menu.simpleTranslator" = "Simple translator";
+"numberOfApples.zero" = "I don't have any apples";
+"numberOfApples.one" = "I have one apple";
+"numberOfApples.other" = "I have %d apples";
+

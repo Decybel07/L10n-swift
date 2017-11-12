@@ -1,0 +1,8 @@
+{
+    "main":{
+        "changeLanguage":"更改演示语言",
+        "simpleTranslator":"简单的翻译",
+        "plurals":"复数",
+        "rightToLeft":"从右到左查看"
+    }
+}

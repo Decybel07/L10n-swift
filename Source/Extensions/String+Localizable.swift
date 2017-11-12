@@ -9,49 +9,37 @@
 extension String: Localizable {
 
     /**
-     Returns a localized version of the string designated by **self** and residing in *Localizable*.
+     Returns a localized version of the string designated by `self` and residing in **Localizable**.
 
-     - parameter instance: The instance of L10n used for localization.
+     - parameter instance: The instance of `L10n` used for localization.
 
-     - returns: A localized version of the string designated by **self** or **self** if key not found.
+     - returns: A localized version of the string designated by `self` or `self` if not found.
      */
     public func l10n(_ instance: L10n) -> String {
         return instance.string(for: self)
     }
 
     /**
-     Returns a localized version of the string designated by the **self** and residing in *resource*.
+     Returns a localized version of the string designated by the `self` and residing in `resource`.
 
-     - parameter instance: The instance of L10n used for localization.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in Localizable files.
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
 
-     - returns: A localized version of the string designated by **self** or **self** if key not found.
+     - returns: A localized version of the string designated by `self` or `self` if not found.
      */
     public func l10n(_ instance: L10n = .shared, resource: String?) -> String {
         return instance.string(for: self, resource: resource)
     }
 
     /**
-     Returns a localized plural version of the string designated by **self** and residing in *resource*.
+     Returns a localized plural version of the string designated by `self` and residing in *resource*.
 
-     - parameter instance: The instance of L10n used for localization.
+     - parameter instance: The instance of `L10n` used for localization.
      - parameter args: The values for which the appropriate plural form is selected.
 
-     - returns: A localized plural version of the string designated by **self** or **self** if key not found.
+     - returns: A localized plural version of the string designated by `self` or `self` if not found.
      */
-    public func l10n(_ instance: L10n = .shared, resource: String? = nil, _ args: CVarArg...) -> String {
-        return self.l10n(instance, resource: resource, args: args)
-    }
-
-    /**
-     Returns a localized plural version of the string designated by **self** and residing in *resource*.
-
-     - parameter instance: The instance of L10n used for localization.
-     - parameter args: The values for which the appropriate plural form is selected.
-
-     - returns: A localized plural version of the string designated by **self** or **self** if key not found.
-     */
-    public func l10n(_ instance: L10n = .shared, resource: String? = nil, args: [CVarArg]) -> String {
-        return instance.plural(for: self, resource: resource, args: args)
+    public func l10n(_ instance: L10n = .shared, resource: String? = nil, _ arg: CVarArg) -> String {
+        return instance.plural(for: self, resource: resource, arg: arg)
     }
 }

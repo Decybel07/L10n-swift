@@ -20,13 +20,9 @@ class L10nTests: XCTestCase {
         XCTAssertEqual(self.bundle.preferredLocalizations.first ?? "", self.l10n.preferredLanguage)
     }
 
-    func testPreferredLanguages() {
-        XCTAssertGreaterThanOrEqual(1, self.l10n.preferredLanguages.count)
-        XCTAssertEqual(self.bundle.preferredLocalizations, self.l10n.preferredLanguages)
-    }
-
     func testSupportedLanguages() {
-        XCTAssertEqual(["ar", "en", "es", "ja", "pl"], self.l10n.supportedLanguages)
+
+        XCTAssertEqual(Set(["ar", "en", "es", "ja", "pl"]), Set(self.l10n.supportedLanguages))
     }
 
     func testLanguage() {

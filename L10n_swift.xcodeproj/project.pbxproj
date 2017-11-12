@@ -33,10 +33,10 @@
 		2D1A3B531F2D50C900BD2710 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B451F2D50C900BD2710 /* L10n.swift */; };
 		2D1A3B541F2D50C900BD2710 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B451F2D50C900BD2710 /* L10n.swift */; };
 		2D1A3B551F2D50C900BD2710 /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B451F2D50C900BD2710 /* L10n.swift */; };
-		2D1A3B561F2D50C900BD2710 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* L10nResource.swift */; };
-		2D1A3B571F2D50C900BD2710 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* L10nResource.swift */; };
-		2D1A3B581F2D50C900BD2710 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* L10nResource.swift */; };
-		2D1A3B591F2D50C900BD2710 /* L10nResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* L10nResource.swift */; };
+		2D1A3B561F2D50C900BD2710 /* ResourceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */; };
+		2D1A3B571F2D50C900BD2710 /* ResourceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */; };
+		2D1A3B581F2D50C900BD2710 /* ResourceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */; };
+		2D1A3B591F2D50C900BD2710 /* ResourceContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */; };
 		2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B471F2D50C900BD2710 /* Localizable.swift */; };
 		2D1A3B5B1F2D50C900BD2710 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B471F2D50C900BD2710 /* Localizable.swift */; };
 		2D1A3B5C1F2D50C900BD2710 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B471F2D50C900BD2710 /* Localizable.swift */; };
@@ -45,10 +45,10 @@
 		2D1A3B5F1F2D50C900BD2710 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B481F2D50C900BD2710 /* Logger.swift */; };
 		2D1A3B601F2D50C900BD2710 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B481F2D50C900BD2710 /* Logger.swift */; };
 		2D1A3B611F2D50C900BD2710 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B481F2D50C900BD2710 /* Logger.swift */; };
-		2D1A3B621F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */; };
-		2D1A3B631F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */; };
-		2D1A3B641F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */; };
-		2D1A3B651F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */; };
+		2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */; };
+		2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */; };
+		2D1A3B641F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */; };
+		2D1A3B651F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */; };
 		2D1A3BB01F2E158D00BD2710 /* UIDatePicker+IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA41F2E158D00BD2710 /* UIDatePicker+IBL10n.swift */; };
 		2D1A3BB21F2E158D00BD2710 /* UISearchBar+IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA51F2E158D00BD2710 /* UISearchBar+IBL10n.swift */; };
 		2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BA71F2E158D00BD2710 /* UIButton+IBL10n+focused.swift */; };
@@ -86,6 +86,30 @@
 		2D6F17A91F2CBA120031929D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17961F2CBA120031929D /* Localizable.stringsdict */; };
 		2D6F17AB1F2CC1490031929D /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */; };
 		2D6F17AD1F2CEA3F0031929D /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */; };
+		2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2DC0E3531FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2DC0E3541FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2DC0E3551FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2DC0E3561FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
+		2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
+		2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
+		2DC0E35C1FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
+		2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */; };
+		2DC0E35F1FB5125C00BFBBAD /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */; };
+		2DC0E3601FB5125C00BFBBAD /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */; };
+		2DC0E3611FB5125C00BFBBAD /* EmptyResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */; };
+		2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3621FB5127C00BFBBAD /* StringResource.swift */; };
+		2DC0E3641FB5127C00BFBBAD /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3621FB5127C00BFBBAD /* StringResource.swift */; };
+		2DC0E3651FB5127C00BFBBAD /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3621FB5127C00BFBBAD /* StringResource.swift */; };
+		2DC0E3661FB5127C00BFBBAD /* StringResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3621FB5127C00BFBBAD /* StringResource.swift */; };
+		2DC0E3681FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
+		2DC0E3691FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
+		2DC0E36A1FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
+		2DC0E36B1FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
 		2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
 		2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
 		2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
@@ -152,10 +176,10 @@
 		2D1A3B431F2D50C900BD2710 /* L10n+static.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n+static.swift"; sourceTree = "<group>"; };
 		2D1A3B441F2D50C900BD2710 /* L10n+StringConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n+StringConvertible.swift"; sourceTree = "<group>"; };
 		2D1A3B451F2D50C900BD2710 /* L10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
-		2D1A3B461F2D50C900BD2710 /* L10nResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10nResource.swift; sourceTree = "<group>"; };
+		2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResourceContainer.swift; sourceTree = "<group>"; };
 		2D1A3B471F2D50C900BD2710 /* Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
 		2D1A3B481F2D50C900BD2710 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNotificationName+L10nLanguageChanged.swift"; sourceTree = "<group>"; };
+		2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NotificationName+L10nLanguageChanged.swift"; sourceTree = "<group>"; };
 		2D1A3BA41F2E158D00BD2710 /* UIDatePicker+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDatePicker+IBL10n.swift"; sourceTree = "<group>"; };
 		2D1A3BA51F2E158D00BD2710 /* UISearchBar+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UISearchBar+IBL10n.swift"; sourceTree = "<group>"; };
 		2D1A3BA71F2E158D00BD2710 /* UIButton+IBL10n+focused.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+IBL10n+focused.swift"; sourceTree = "<group>"; };
@@ -186,6 +210,12 @@
 		2D6F17A01F2CBA120031929D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
+		2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plural.swift; sourceTree = "<group>"; };
+		2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Plural.stringsdict; sourceTree = "<group>"; };
+		2DC0E3581FB4FD8700BFBBAD /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResource.swift; sourceTree = "<group>"; };
+		2DC0E3621FB5127C00BFBBAD /* StringResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResource.swift; sourceTree = "<group>"; };
+		2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryResource.swift; sourceTree = "<group>"; };
 		2DD6AC761F46238D00EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = ar; path = ar.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2DD6AC781F46239500EDE71B /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = ar; path = ar.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2DD6AC801F487BB100EDE71B /* IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBL10n.swift; sourceTree = "<group>"; };
@@ -271,14 +301,15 @@
 		2D1A3B421F2D50C900BD2710 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2D1A3B471F2D50C900BD2710 /* Localizable.swift */,
+				2D1A3B481F2D50C900BD2710 /* Logger.swift */,
 				2D1A3B451F2D50C900BD2710 /* L10n.swift */,
 				2D1A3B431F2D50C900BD2710 /* L10n+static.swift */,
 				2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */,
 				2D1A3B441F2D50C900BD2710 /* L10n+StringConvertible.swift */,
-				2D1A3B461F2D50C900BD2710 /* L10nResource.swift */,
-				2D1A3B471F2D50C900BD2710 /* Localizable.swift */,
-				2D1A3B481F2D50C900BD2710 /* Logger.swift */,
-				2D1A3B491F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift */,
+				2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */,
+				2DC0E3571FB4FCF600BFBBAD /* Resource */,
+				2DC0E3511FB4F12900BFBBAD /* Plural */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -369,6 +400,27 @@
 				2D6F17961F2CBA120031929D /* Localizable.stringsdict */,
 			);
 			path = Localizable;
+			sourceTree = "<group>";
+		};
+		2DC0E3511FB4F12900BFBBAD /* Plural */ = {
+			isa = PBXGroup;
+			children = (
+				2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */,
+				2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */,
+			);
+			path = Plural;
+			sourceTree = "<group>";
+		};
+		2DC0E3571FB4FCF600BFBBAD /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */,
+				2DC0E3581FB4FD8700BFBBAD /* Resource.swift */,
+				2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */,
+				2DC0E3621FB5127C00BFBBAD /* StringResource.swift */,
+				2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		2DD6AC7A1F48774100EDE71B /* Core */ = {
@@ -689,6 +741,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3531FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +759,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3541FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +767,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3551FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -730,6 +785,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3561FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -754,17 +810,21 @@
 				2D1A3B5E1F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4A1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE71F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
+				2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
-				2D1A3B561F2D50C900BD2710 /* L10nResource.swift in Sources */,
+				2D1A3B561F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D1A3BDD1F2E167200BD2710 /* UILabel+IBL10n.swift in Sources */,
 				2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BE51F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2DE4B1D41F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CC1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
+				2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */,
+				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
+				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
-				2D1A3B621F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */,
+				2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2D1A3BB01F2E158D00BD2710 /* UIDatePicker+IBL10n.swift in Sources */,
 				2DE4B1D01F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D51A6081F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
@@ -773,6 +833,7 @@
 				2D1A3BE11F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
 				2D1A3B4E1F2D50C900BD2710 /* L10n+StringConvertible.swift in Sources */,
 				2DE4B1C41F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
+				2DC0E3681FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3BEA1F2E1E3800BD2710 /* UINavigationItem+IBL10n.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,17 +856,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3641FB5127C00BFBBAD /* StringResource.swift in Sources */,
+				2DC0E3691FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3B531F2D50C900BD2710 /* L10n.swift in Sources */,
+				2DC0E35F1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B5F1F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3BCB1F2E15E800BD2710 /* WKInterfaceController+IBL10n.swift in Sources */,
 				2D1A3BCC1F2E15E800BD2710 /* WKInterfaceLabel+IBL10n.swift in Sources */,
 				2D1A3B4B1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3B5B1F2D50C900BD2710 /* Localizable.swift in Sources */,
-				2D1A3B571F2D50C900BD2710 /* L10nResource.swift in Sources */,
+				2D1A3B571F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2DE4B1D51F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CD1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
-				2D1A3B631F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */,
+				2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */,
+				2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
+				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2DE4B1C91F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
@@ -825,16 +891,21 @@
 				2D1A3B4C1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D1A3BE41F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
+				2DC0E3651FB5127C00BFBBAD /* StringResource.swift in Sources */,
+				2DC0E3601FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B5C1F2D50C900BD2710 /* Localizable.swift in Sources */,
-				2D1A3B581F2D50C900BD2710 /* L10nResource.swift in Sources */,
+				2D1A3B581F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
+				2DC0E36A1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3BDE1F2E167200BD2710 /* UILabel+IBL10n.swift in Sources */,
+				2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3BE61F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CE1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BDC1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
-				2D1A3B641F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */,
+				2D1A3B641F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
+				2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */,
 				2DE4B1CA1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
@@ -860,18 +931,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DC0E3611FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B551F2D50C900BD2710 /* L10n.swift in Sources */,
+				2DC0E35C1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3B611F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4D1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3B5D1F2D50C900BD2710 /* Localizable.swift in Sources */,
-				2D1A3B591F2D50C900BD2710 /* L10nResource.swift in Sources */,
+				2D1A3B591F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D51A60B1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2DE4B1D71F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CF1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
-				2D1A3B651F2D50C900BD2710 /* NSNotificationName+L10nLanguageChanged.swift in Sources */,
+				2D1A3B651F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
+				2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */,
+				2DC0E3661FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2DE4B1D31F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2DE4B1CB1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */,
+				2DC0E36B1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+StringConvertible.swift in Sources */,
 				2DE4B1C71F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 			);

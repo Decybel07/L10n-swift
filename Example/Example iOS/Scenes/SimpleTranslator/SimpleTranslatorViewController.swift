@@ -12,15 +12,15 @@ import L10n_swift
 final class SimpleTranslatorViewController: UIViewController {
 
     // MARK: - @IBOutlet
-    
+
     @IBOutlet
     fileprivate weak var pickerView: UIPickerView!
-    
+
     @IBOutlet
     fileprivate weak var tableView: UITableView!
 
     // MARK: - variable
-    
+
     fileprivate var languages: [String] = L10n.supportedLanguages
     fileprivate var items: [String] = [
         "apple", "bee", "cat", "dolphin", "elephant",
@@ -37,7 +37,7 @@ final class SimpleTranslatorViewController: UIViewController {
     }()
 
     // MARK: - Life cycle
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 

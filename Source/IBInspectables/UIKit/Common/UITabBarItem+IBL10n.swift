@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UITabBarItem {
+extension UITabBarItem {
 
     @IBInspectable
     public var l10nBadge: String {

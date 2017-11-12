@@ -11,21 +11,24 @@ import Foundation
 extension Date: Localizable {
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
 
-     - parameter instance: The instance of L10n used for localization.
+     - parameter instance: The instance of `L10n` used for localization.
      */
     public func l10n(_ instance: L10n) -> String {
-        return self.l10n(instance) { _ in }
+        return self.l10n(instance) { formatter in
+            formatter.dateStyle = .medium
+            formatter.timeStyle = .medium
+        }
     }
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
 
-     - parameter instance: The instance of L10n used for localization.
-     - parameter closure: A closure used to configure the DateFormatter.
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter closure: A closure used to configure the `DateFormatter`.
 
-     - returns: A localized **self** description.
+     - returns: A localized `self` description.
      */
     public func l10n(_ instance: L10n = .shared, closure: (DateFormatter) -> Void) -> String {
         let formatter = DateFormatter()

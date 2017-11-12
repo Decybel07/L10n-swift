@@ -8,6 +8,7 @@
 
 extension L10n: CustomStringConvertible {
 
+    /// A textual representation of this instance.
     public var description: String {
         return "L10n(\(self.language))"
     }
@@ -15,12 +16,13 @@ extension L10n: CustomStringConvertible {
 
 extension L10n: CustomDebugStringConvertible {
 
+    /// A textual representation of this instance, suitable for debugging.
     public var debugDescription: String {
         return "L10n {"
             + "\n\tLanguage: \(self.language)"
-            + "\n\tPreferred languages: \(self.preferredLanguages)"
+            + "\n\tPreferred language: \(self.preferredLanguage)"
             + "\n\tSupported languages: \(self.supportedLanguages)"
             + "\n\tBundle: \(self.bundle?.bundlePath ?? "nil")"
-            + "\n\t}"
+            + "\n}"
     }
 }

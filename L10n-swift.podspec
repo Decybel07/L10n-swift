@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'L10n-swift'
   spec.module_name      = 'L10n_swift'
-  spec.version          = '4.2.0'
+  spec.version          = '5.0.0'
   spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   spec.description      = <<-DESC
@@ -10,11 +10,11 @@ Pod::Spec.new do |spec|
       * Change the language of your apps "on the fly".
       * IBInspectable for Xcode Interface Builder.
       * Support for user-defined `Localizable` file names.
-      * Support for stantard localization keys `*.strings`
-      * Support for grouping localization keys `*.plist` and `*.stringsdict`
-      * Supports plural forms in any language `*.stringsdict`
-      * Use .l10n() to localized any string, int and double
-      * Use two or more languages at the same time
+      * Support for formats: `*.plist`, `*.json`, `*.stringsdict`, `*.strings`.
+      * Support for grouping localization keys.
+      * Support for plural forms in any language.
+      * Use .l10n() to localized any string, date int and double.
+      * Use more than one languages at the same time.
                        DESC
 
   spec.homepage         = 'https://github.com/Decybel07/L10n-swift'
@@ -31,7 +31,7 @@ Pod::Spec.new do |spec|
   spec.osx.deployment_target = '10.10'
   
   spec.subspec 'Core' do |core|
-    core.source_files = 'Source/Core/**/*.swift'
+    core.source_files = 'Source/Core/**/*.{swift,stringsdict}'
   end
   
   spec.subspec 'Extension' do |extension|

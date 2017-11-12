@@ -11,21 +11,21 @@ import Foundation
 extension NSNumber: Localizable {
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
 
-     - parameter instance: The instance of L10n used for localization.
+     - parameter instance: The instance of `L10n` used for localization.
      */
     public func l10n(_ instance: L10n) -> String {
         return self.description(withLocale: instance.locale)
     }
 
     /**
-     Returns a localized **self** description.
+     Returns a localized `self` description.
 
-     - parameter instance: The instance of L10n used for localization.
-     - parameter closure: A closure used to configure the NumberFormatter.
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter closure: A closure used to configure the `NumberFormatter`.
 
-     - returns: A localized **self** description.
+     - returns: A localized `self` description.
      */
     public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
         let formatter = NumberFormatter()

@@ -10,19 +10,14 @@ import Foundation
 
 public extension L10n {
 
-    /// A single shared instance of L10n.
+    /// A single shared instance of `L10n`.
     ///
     /// This instance is used in extensions
     static var shared = L10n(language: L10n.preferredLanguage)
 
     /// A preferred language contained in the main bundle.
     static var preferredLanguage: String {
-        return self.preferredLanguages.first ?? "UNDEFINED"
-    }
-
-    /// An ordered list of preferred languages contained in the main bundle.
-    static var preferredLanguages: [String] {
-        return Bundle.main.preferredLocalizations
+        return Bundle.main.preferredLocalizations.first ?? "UNDEFINED"
     }
 
     /// A list of all the languages contained in the main bundle.
