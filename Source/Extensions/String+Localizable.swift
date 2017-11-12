@@ -35,11 +35,11 @@ extension String: Localizable {
      Returns a localized plural version of the string designated by `self` and residing in *resource*.
 
      - parameter instance: The instance of `L10n` used for localization.
-     - parameter args: The values for which the appropriate plural form is selected.
+     - parameter arg: The value for which the appropriate plural form is selected.
 
      - returns: A localized plural version of the string designated by `self` or `self` if not found.
      */
-    public func l10n(_ instance: L10n = .shared, resource: String? = nil, _ arg: CVarArg) -> String {
+    public func l10n(_ instance: L10n = .shared, resource: String? = nil, arg: CVarArg) -> String {
         return instance.plural(for: self, resource: resource, arg: arg)
     }
 }

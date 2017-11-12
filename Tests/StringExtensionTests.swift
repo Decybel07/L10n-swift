@@ -31,10 +31,10 @@ class StringExtensionTests: XCTestCase {
     }
 
     func testStringWithArgs() {
-        XCTAssertEqual("numberOfApples".l10n(self.instance, 2), "2 jabłka")
+        XCTAssertEqual("numberOfApples".l10n(self.instance, arg: 2), "2 jabłka")
     }
 
     func testStringWithArgsAsArray() {
-        XCTAssertEqual("numberOfApples".l10n(self.instance, 5), "5 jabłek")
+        XCTAssertEqual("numberOfApples".l10n(self.instance, arg: 5), "5 jabłek")
     }
 }
