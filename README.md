@@ -174,15 +174,19 @@ Add `.l10(_ arg: CVarArg)` following any `String` object you want translated wit
 ### Supported formats
 #### .plist, .stringsdict
 <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_plist_file.png" alt="Sample .plist and .stringsdict file"/>
+
  More about **.plist** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.plist)
+ 
  More about **.stringsdict** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict)
  
  #### .json
  <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_json_file.png" alt="Sample .json file"/>
+ 
  More about **.json** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.json)
  
  #### .strings
  <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_strings_file.png" alt="Sample .strings file"/>
+ 
  More about **.strings** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.strings).
 
 ## 📙 [FAQ](https://github.com/Decybel07/L10n-swift/wiki/FAQ)
