@@ -167,7 +167,7 @@ Add `.l10(arg: CVarArg)` following any `String` object you want translated with 
 ### Get preferred language
 
  ```swift
- L10n.preferredLanguage // "en"
+ L10n.preferredLanguage
  ```
  A preferred language contained in the main bundle
 

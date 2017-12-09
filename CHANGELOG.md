@@ -4,6 +4,9 @@
 
 # Swift 4.0
 
+## [5.0.1](https://github.com/Decybel07/L10n-swift/tree/5.0.1) (2017-12-09)
+* Improving performance for keys from `.strings` files
+
 ## [5.0.0](https://github.com/Decybel07/L10n-swift/tree/5.0.0) (2017-11-12)
 * Support for `json` format.
 * Faster access to localization keys.
