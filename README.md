@@ -173,19 +173,19 @@ Add `.l10(arg: CVarArg)` following any `String` object you want translated with 
 
 ### Supported formats
 #### .plist, .stringsdict
-<img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_plist_file.png" alt="Sample .plist and .stringsdict file"/>
+<img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_plist_file.png" alt="Sample .plist and .stringsdict file" width="597" style="max-width:100%;"/>
 
  More about **.plist** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.plist)
  
  More about **.stringsdict** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict)
  
  #### .json
- <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_json_file.png" alt="Sample .json file"/>
+ <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_json_file.png" alt="Sample .json file" width="554" style="max-width:100%;"/>
  
  More about **.json** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.json)
  
  #### .strings
- <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_strings_file.png" alt="Sample .strings file"/>
+ <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_strings_file.png" alt="Sample .strings file" width="544" style="max-width:100%;"/>
  
  More about **.strings** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.strings).
 
