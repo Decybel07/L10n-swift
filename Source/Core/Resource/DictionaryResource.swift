@@ -19,11 +19,9 @@ internal struct DictionaryResource: Resource {
     }
 
     subscript(keyPath: String) -> String? {
-        var resource: Resource = self
-        keyPath.components(separatedBy: ".").forEach {
-            resource = resource[$0]
-        }
-        return resource.value
+        return (keyPath.components(separatedBy: ".").reduce(self) { resource, key in
+            resource[key]
+        } as Resource).value
     }
 
     func merging(_ other: Resource) -> Resource {

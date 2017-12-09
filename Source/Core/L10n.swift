@@ -113,7 +113,7 @@ open class L10n {
      - returns: A localized version of the string designated by `key`. This method returns `key` when `key` not found.
      */
     open func string(for key: String, resource: String? = nil) -> String {
-        guard let text = self.resource(named: resource).string(for: key) else {
+        guard let text = self.resource(named: resource)[key] else {
             self.logger?.info("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription).")
             return key
         }
@@ -136,7 +136,7 @@ open class L10n {
         }
 
         let firstFormat = Plural.variants(for: number, with: self.locale).lazy.map { plural in
-            self.resource(named: resource).string(for: "\(key).\(plural.rawValue)")
+            self.resource(named: resource)["\(key).\(plural.rawValue)"]
         }.first { $0 != nil }
 
         guard let format = firstFormat else {

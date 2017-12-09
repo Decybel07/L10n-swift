@@ -14,43 +14,31 @@ internal struct ResourceContainer {
     private let bundle: Bundle?
     private var resource: Resource = EmptyResource()
 
+    subscript(keyPath: String) -> String? {
+        return self.resource[keyPath]
+    }
+
     init(bundle: Bundle?, name: String) {
         self.name = name
         self.bundle = bundle
 
         self.resource = [
+            self.cleanStringsdict(self.loadDictionary(ofType: "stringsdict")),
+            self.loadDictionary(ofType: "strings"),
+            self.loadDictionary(ofType: "plist"),
             self.loadJSON(),
-            self.loadPlist(),
-            self.loadStringsdict(),
-        ].reduce(self.resource) { $0.merging($1) }
+        ].reduce(self.resource) { $0.merging(DictionaryResource($1)) }
     }
 
-    func string(for key: String) -> String? {
-        return self.resource[key] ?? {
-            guard let text = self.bundle?.localizedString(forKey: key, value: "\0", table: self.name), text != "\0" else {
-                return nil
-            }
-            return text
-        }()
-    }
-
-    private func loadJSON() -> Resource {
+    private func loadJSON() -> [String: Any] {
         guard let path = self.bundle?.path(forResource: self.name, ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
             let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments),
             let dictionary = json as? [String: Any]
         else {
-            return EmptyResource()
+            return [:]
         }
-        return DictionaryResource(dictionary)
-    }
-
-    private func loadPlist() -> Resource {
-        return DictionaryResource(self.loadDictionary(ofType: "plist"))
-    }
-
-    private func loadStringsdict() -> Resource {
-        return DictionaryResource(self.cleanStringsdict(self.loadDictionary(ofType: "stringsdict")))
+        return dictionary
     }
 
     private func loadDictionary(ofType type: String) -> [String: Any] {
