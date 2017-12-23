@@ -37,6 +37,7 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 - [x] Support for [**plural**](https://github.com/Decybel07/L10n-swift/wiki/Plural) forms in any language.
 - [x] Use `.l10n()` to localized any string, date, int and double.
 - [x] Use more than one languages at the same time.
+- [x] About 25 times faster than a native solution.
 
 ## 💻 Demo
 
