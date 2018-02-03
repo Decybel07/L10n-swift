@@ -146,6 +146,19 @@ open class L10n {
         return self.string(format: format!, arg)
     }
 
+    /**
+     Inject `dictionary` from an external source (eg internet) with translations into the `resource`.
+
+     - parameter dictionary: A dictionary with translations that will be injected into the resource.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the **Localizable** resource.
+
+     - Important:
+     After changing the language, all the dictionary should be injected again.
+     */
+    open func inject(dictionary: [String: Any], into resource: String? = nil) {
+        self.resource(named: resource).inject(dictionary: dictionary)
+    }
+
     private func languageChanged(oldValue: String? = nil) {
         if self.supportedLanguages.contains(self.language) {
             if let path = self.baseBundle.path(forResource: self.language, ofType: "lproj"),

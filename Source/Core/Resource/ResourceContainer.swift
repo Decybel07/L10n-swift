@@ -8,7 +8,7 @@
 
 import Foundation
 
-internal struct ResourceContainer {
+internal class ResourceContainer {
 
     private let name: String
     private let bundle: Bundle?
@@ -28,6 +28,10 @@ internal struct ResourceContainer {
             self.loadDictionary(ofType: "plist"),
             self.loadJSON(),
         ].reduce(self.resource) { $0.merging(DictionaryResource($1)) }
+    }
+
+    func inject(dictionary: [String: Any]) {
+        self.resource = self.resource.merging(DictionaryResource(self.cleanStringsdict(dictionary)))
     }
 
     private func loadJSON() -> [String: Any] {
@@ -57,7 +61,7 @@ internal struct ResourceContainer {
                 return
             }
 
-            if var value = format["value"] as? [String: Any], format.keys.contains("NSStringLocalizedFormatKey") {
+            if let key = self.formatKey(for: format), var value = format[key] as? [String: Any] {
                 value.removeValue(forKey: "NSStringFormatSpecTypeKey")
                 value.removeValue(forKey: "NSStringFormatValueTypeKey")
                 dictionary[$0] = value
@@ -66,5 +70,16 @@ internal struct ResourceContainer {
             }
         }
         return dictionary
+    }
+
+    private func formatKey(for dictionary: [String: Any]) -> String? {
+        guard let format = dictionary["NSStringLocalizedFormatKey"] as? String,
+            let regularExpression = try? NSRegularExpression(pattern: "@(.+?)@", options: []),
+            let match = regularExpression.matches(in: format, options: [], range: NSRange(location: 0, length: format.count)).first,
+            let range = Range(match.range(at: 1), in: format)
+        else {
+            return nil
+        }
+        return format[range].description
     }
 }
