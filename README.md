@@ -116,7 +116,7 @@ github "Decybel07/L10n-swift", ~> 5.1 # swift4
  
  ### Get localized date
  
- Add `.l10()` following any `Date`  object you want localized using the number format for the current language:
+ Add `.l10()` following any `Date`  object you want localized using the date format for the current language:
  ```swift
  Date().l10n()
  
