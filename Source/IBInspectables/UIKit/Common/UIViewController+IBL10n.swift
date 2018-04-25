@@ -12,7 +12,7 @@ extension UIViewController: IBL10n {
 
     @IBInspectable
     public var l10nTitle: String {
-        get { self.messageForSetOnlyProperty("l10nTitle", "UIViewController") }
+        get { self.messageForSetOnlyProperty() }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 }

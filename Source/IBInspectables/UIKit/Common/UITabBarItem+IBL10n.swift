@@ -12,7 +12,7 @@ extension UITabBarItem {
 
     @IBInspectable
     public var l10nBadge: String {
-        get { self.messageForSetOnlyProperty("l10nTitle", "UITabBarItem") }
+        get { self.messageForSetOnlyProperty() }
         set { self.badgeValue = L10n.shared.string(for: newValue) }
     }
 }

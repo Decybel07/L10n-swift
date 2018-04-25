@@ -12,19 +12,19 @@ extension UINavigationItem: IBL10n {
 
     @IBInspectable
     public var l10nTitle: String {
-        get { self.messageForSetOnlyProperty("l10nTitle", "UINavigationItem") }
+        get { self.messageForSetOnlyProperty() }
         set { self.title = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
     public var l10nPrompt: String {
-        get { self.messageForSetOnlyProperty("l10nPrompt", "UINavigationItem") }
+        get { self.messageForSetOnlyProperty() }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
     public var l10nBackButton: String {
-        get { self.messageForSetOnlyProperty("l10nBackButton", "UINavigationItem") }
+        get { self.messageForSetOnlyProperty() }
         set {
             if self.backBarButtonItem == nil {
                 self.backBarButtonItem = UIBarButtonItem()

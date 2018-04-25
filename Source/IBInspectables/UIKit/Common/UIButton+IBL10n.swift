@@ -12,25 +12,25 @@ extension UIButton: IBL10n {
 
     @IBInspectable
     public var l10nTitle: String {
-        get { self.messageForSetOnlyProperty("l10nTitle", "UIButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .normal) }
     }
 
     @IBInspectable
     public var l10nHighlightedTitle: String {
-        get { self.messageForSetOnlyProperty("l10nHighlightedTitle", "UIButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .highlighted) }
     }
 
     @IBInspectable
     public var l10nSelectedTitle: String {
-        get { self.messageForSetOnlyProperty("l10nSelectedTitle", "UIButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .selected) }
     }
 
     @IBInspectable
     public var l10nDisabledTitle: String {
-        get { self.messageForSetOnlyProperty("l10nDisabledTitle", "UIButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .disabled) }
     }
 }

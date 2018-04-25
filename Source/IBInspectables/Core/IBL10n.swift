@@ -21,9 +21,9 @@ extension IBL10n {
 
      - throws: `fatalError` with message.
      */
-    public func messageForSetOnlyProperty(_ property: String, _ typeName: String) -> Never {
+    public func messageForSetOnlyProperty(_ property: String = #function) -> Never {
         fatalError(
-            "The \(property) property for \(typeName) is reserved for the interface builder. It's only for setting"
+            "The \(property) property for \(type(of: self)) is reserved for the interface builder. It's only for setting"
         )
     }
 }

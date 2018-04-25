@@ -12,7 +12,7 @@ extension UISegmentedControl: IBL10n {
 
     @IBInspectable
     internal var l10nUseSegmentTitleAsKey: Bool {
-        get { self.messageForSetOnlyProperty("l10nUseSegmentTitleAsKey", "UISegmentedControl") }
+        get { self.messageForSetOnlyProperty() }
         set {
             if newValue {
                 (0 ..< self.numberOfSegments).forEach {

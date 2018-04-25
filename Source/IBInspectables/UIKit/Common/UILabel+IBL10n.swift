@@ -12,7 +12,7 @@ extension UILabel: IBL10n {
 
     @IBInspectable
     public var l10nText: String {
-        get { self.messageForSetOnlyProperty("l10nText", "UILabel") }
+        get { self.messageForSetOnlyProperty() }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 }

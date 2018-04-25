@@ -12,7 +12,7 @@ public extension UIButton {
 
     @IBInspectable
     public var l10nFocusedTitle: String {
-        get { self.messageForSetOnlyProperty("l10nFocusedTitle", "UIButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue), for: .focused) }
     }
 }

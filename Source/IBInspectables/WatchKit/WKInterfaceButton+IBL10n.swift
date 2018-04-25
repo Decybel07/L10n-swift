@@ -12,7 +12,7 @@ extension WKInterfaceButton: IBL10n {
 
     @IBInspectable
     public var l10nTitle: String {
-        get { self.messageForSetOnlyProperty("l10nTitle", "WKInterfaceButton") }
+        get { self.messageForSetOnlyProperty() }
         set { self.setTitle(L10n.shared.string(for: newValue)) }
     }
 }

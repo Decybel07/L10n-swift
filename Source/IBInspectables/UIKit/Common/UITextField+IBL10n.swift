@@ -12,13 +12,13 @@ extension UITextField: IBL10n {
 
     @IBInspectable
     public var l10nText: String {
-        get { self.messageForSetOnlyProperty("l10nText", "UITextField") }
+        get { self.messageForSetOnlyProperty() }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
     public var l10nPlaceholder: String {
-        get { self.messageForSetOnlyProperty("l10nPlaceholder", "UITextField") }
+        get { self.messageForSetOnlyProperty() }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 }

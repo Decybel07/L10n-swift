@@ -12,7 +12,7 @@ extension UIDatePicker: IBL10n {
 
     @IBInspectable
     public var l10nUseCurrentLocale: Bool {
-        get { self.messageForSetOnlyProperty("l10nUseCurrentLocale", "UIDatePicker") }
+        get { self.messageForSetOnlyProperty() }
         set {
             if newValue {
                 self.locale = L10n.shared.locale

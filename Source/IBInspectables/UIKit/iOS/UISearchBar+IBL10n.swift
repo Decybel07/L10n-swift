@@ -12,19 +12,19 @@ extension UISearchBar: IBL10n {
 
     @IBInspectable
     public var l10nText: String {
-        get { self.messageForSetOnlyProperty("l10nText", "UISearchBar") }
+        get { self.messageForSetOnlyProperty() }
         set { self.text = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
     public var l10nPrompt: String {
-        get { self.messageForSetOnlyProperty("l10nPrompt", "UISearchBar") }
+        get { self.messageForSetOnlyProperty() }
         set { self.prompt = L10n.shared.string(for: newValue) }
     }
 
     @IBInspectable
     public var l10nPlaceholder: String {
-        get { self.messageForSetOnlyProperty("l10nPlaceholder", "UISearchBar") }
+        get { self.messageForSetOnlyProperty() }
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 }
