@@ -1,18 +1,10 @@
 //
-//  L10n+StringConvertable.swift
+//  L10n+CustomDebugStringConvertible.swift
 //  L10n_swift
 //
-//  Created by Adrian Bobrowski on 29.07.2017.
-//  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
+//  Created by Adrian Bobrowski on 25.04.2018.
+//  Copyright © 2018 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
-
-extension L10n: CustomStringConvertible {
-
-    /// A textual representation of this instance.
-    public var description: String {
-        return "L10n(\(self.language))"
-    }
-}
 
 extension L10n: CustomDebugStringConvertible {
 
