@@ -16,9 +16,52 @@ extension Date: Localizable {
      - parameter instance: The instance of `L10n` used for localization.
      */
     public func l10n(_ instance: L10n) -> String {
+        return self.l10n(instance, dateStyle: .medium, timeStyle: .medium)
+    }
+
+    /**
+     Returns a localized `self` description.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter dateStyle: A style used to configure the `DateFormatter.dateStyle`.
+     */
+    public func l10n(_ instance: L10n = .shared, dateStyle: DateFormatter.Style) -> String {
+        return self.l10n(instance, dateStyle: dateStyle, timeStyle: .none)
+    }
+
+    /**
+     Returns a localized `self` description.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter timeStyle: A style used to configure the `DateFormatter.timeStyle`.
+     */
+    public func l10n(_ instance: L10n = .shared, timeStyle: DateFormatter.Style) -> String {
+        return self.l10n(instance, dateStyle: .none, timeStyle: timeStyle)
+    }
+
+    /**
+     Returns a localized `self` description.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter dateStyle: A style used to configure the `DateFormatter.dateStyle`.
+     - parameter timeStyle: A style used to configure the `DateFormatter.timeStyle`.
+     */
+    public func l10n(_ instance: L10n = .shared, dateStyle: DateFormatter.Style, timeStyle: DateFormatter.Style) -> String {
         return self.l10n(instance) { formatter in
-            formatter.dateStyle = .medium
-            formatter.timeStyle = .medium
+            formatter.dateStyle = dateStyle
+            formatter.timeStyle = timeStyle
+        }
+    }
+
+    /**
+     Returns a localized `self` description.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter format: A format used to configure the `DateFormatter.dateFormat`.
+     */
+    public func l10n(_ instance: L10n = .shared, format: String) -> String {
+        return self.l10n(instance) { formatter in
+            formatter.dateFormat = format
         }
     }
 
