@@ -1,8 +1,10 @@
 
 # Change Log
 ---
-
-# Swift 4.0
+## [5.2.0](https://github.com/Decybel07/L10n-swift/tree/5.2.0) (2018-04-25)
+* Support for swift 3.0+
+* Add supportings method for `Date`
+* Possibility to define the Logger format
 
 ## [5.1.0](https://github.com/Decybel07/L10n-swift/tree/5.1.0) (2018-02-03)
 * Added functionality of injecting dictionary from an external source (eg internet)
@@ -22,12 +24,6 @@
 
 ## [4.2.0](https://github.com/Decybel07/L10n-swift/tree/4.2.0) (2017-10-01)
 * Migrate to Swift 4.0.
-
-# Swift 4.0
-
----
-
-# Swift 3.2
 
 ## [4.1.3](https://github.com/Decybel07/L10n-swift/tree/4.1.3) (2017-09-12)
 * Created example for Right-to-Left.

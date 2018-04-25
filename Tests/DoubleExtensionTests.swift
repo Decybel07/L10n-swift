@@ -22,7 +22,7 @@ class DoubleExtensionTests: XCTestCase {
         XCTAssertEqual("0", 0.0.l10n(self.instance))
         XCTAssertEqual("0,1", 0.1.l10n(self.instance))
         XCTAssertEqual("3,14", 3.14.l10n(self.instance))
-        XCTAssertEqual("-4,651273", (-4.651273).l10n(self.instance))
+        XCTAssertEqual("-4,651", (-4.651).l10n(self.instance))
     }
 
     func testNumberWithDefinedFractionDigits() {

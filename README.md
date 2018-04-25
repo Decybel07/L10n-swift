@@ -68,22 +68,19 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 4.1' # swift3
- pod 'L10n-swift', '~> 5.1' # swift4
+ pod 'L10n-swift', '~> 5.2'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 4.1 # swift3
-github "Decybel07/L10n-swift", ~> 5.1 # swift4
+github "Decybel07/L10n-swift", ~> 5.2
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
 
 ```swift
-.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 4) // swift3
-.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 5) // swift4
+.Package(url: "https://github.com/Decybel07/L10n-swift.git", majorVersion: 5)
 ```
 
 ## 📘 [Usage](http://cocoadocs.org/docsets/L10n-swift/)
