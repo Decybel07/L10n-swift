@@ -74,12 +74,27 @@ internal class ResourceContainer {
 
     private func formatKey(for dictionary: [String: Any]) -> String? {
         guard let format = dictionary["NSStringLocalizedFormatKey"] as? String,
-            let regularExpression = try? NSRegularExpression(pattern: "@(.+?)@", options: []),
-            let match = regularExpression.matches(in: format, options: [], range: NSRange(location: 0, length: format.count)).first,
-            let range = Range(match.range(at: 1), in: format)
+            let range = self.matchRange(in: format)
         else {
             return nil
         }
+
         return format[range].description
+    }
+
+    private func matchRange(in format: String) -> Range<String.Index>? {
+        guard let regularExpression = try? NSRegularExpression(pattern: "@(.+?)@", options: []),
+            let match = regularExpression.matches(
+                in: format, options: [], range: NSRange(location: 0, length: format.count)
+            ).first
+        else {
+            return nil
+        }
+
+        #if swift(>=4.0)
+            return Range(match.range(at: 1), in: format)
+        #else
+            return Range(match.rangeAt(1), in: format)
+        #endif
     }
 }
