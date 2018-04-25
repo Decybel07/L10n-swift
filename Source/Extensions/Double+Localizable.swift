@@ -16,19 +16,7 @@ extension Double: Localizable {
      - parameter instance: The instance of `L10n` used for localization.
      */
     public func l10n(_ instance: L10n) -> String {
-        return (self as NSNumber).l10n(instance)
-    }
-
-    /**
-     Returns a localized `self` description.
-
-     - parameter instance: The instance of `L10n` used for localization.
-     - parameter closure: A closure used to configure the `NumberFormatter`.
-
-     - returns: A localized `self` description.
-     */
-    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
-        return (self as NSNumber).l10n(instance, closure: closure)
+        return self.l10n(instance) { _ in }
     }
 
     /**
@@ -45,5 +33,17 @@ extension Double: Localizable {
             formatter.minimumFractionDigits = fractionDigits
             formatter.maximumFractionDigits = fractionDigits
         }
+    }
+
+    /**
+     Returns a localized `self` description.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter closure: A closure used to configure the `NumberFormatter`.
+
+     - returns: A localized `self` description.
+     */
+    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
+        return (self as NSNumber).l10n(instance, closure: closure)
     }
 }

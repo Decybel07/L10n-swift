@@ -25,31 +25,28 @@ internal struct DictionaryResource: Resource {
     }
 
     func merging(_ other: Resource) -> Resource {
-        let values = (other as? DictionaryResource)?.values ?? ["value": other]
-
-        return DictionaryResource(values: self.values.merging(values) { left, right in
-            left.merging(right)
-        })
+        let otherValues = (other as? DictionaryResource)?.values ?? ["value": other]
+        return DictionaryResource(values: self.values.merging(otherValues) { $0.merging($1) })
     }
 }
 
 internal extension DictionaryResource {
 
     init(_ dictionary: [String: Any]) {
-        self.values = dictionary.reduce([String: Resource]()) { result, pair in
-            var result = result
+        self.values = dictionary.reduce(into: [String: Resource]()) { result, pair in
+            var resource: Resource!
 
             let keys = pair.key.components(separatedBy: ".")
             if keys.count > 1 {
-                result[keys[0]] = (result[keys[0]] ?? EmptyResource()).merging(
-                    DictionaryResource([keys.dropFirst().joined(separator: "."): pair.value])
-                )
+                resource = DictionaryResource([keys.dropFirst().joined(separator: "."): pair.value])
             } else if let value = pair.value as? [String: Any] {
-                result[pair.key] = (result[pair.key] ?? EmptyResource()).merging(DictionaryResource(value))
+                resource = DictionaryResource(value)
             } else if let value = pair.value as? String {
-                result[pair.key] = (result[pair.key] ?? EmptyResource()).merging(StringResource(value: value))
+                resource = StringResource(value: value)
+            } else {
+                return
             }
-            return result
+            result[keys[0]] = (result[keys[0]] ?? EmptyResource()).merging(resource)
         }
     }
 }
