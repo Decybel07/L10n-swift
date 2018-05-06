@@ -94,6 +94,30 @@
 		2D6F17A91F2CBA120031929D /* Localizable.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2D6F17961F2CBA120031929D /* Localizable.stringsdict */; };
 		2D6F17AB1F2CC1490031929D /* StringExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */; };
 		2D6F17AD1F2CEA3F0031929D /* IntExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */; };
+		2D99E79E209F0C14003ECD51 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */; };
+		2D99E79F209F0C14003ECD51 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */; };
+		2D99E7A0209F0C14003ECD51 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */; };
+		2D99E7A1209F0C14003ECD51 /* ResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */; };
+		2D99E7A8209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */; };
+		2D99E7A9209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */; };
+		2D99E7AA209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */; };
+		2D99E7AB209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */; };
+		2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */; };
+		2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */; };
+		2D99E7AF209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */; };
+		2D99E7B0209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */; };
+		2D99E7B2209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */; };
+		2D99E7B3209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */; };
+		2D99E7B4209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */; };
+		2D99E7B5209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */; };
+		2D99E7B7209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */; };
+		2D99E7B8209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */; };
+		2D99E7B9209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */; };
+		2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */; };
+		2D99E7C2209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
+		2D99E7C3209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
+		2D99E7C4209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
+		2D99E7C5209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
 		2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
 		2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
 		2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
@@ -220,6 +244,12 @@
 		2D6F17A01F2CBA120031929D /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2D6F17AA1F2CC1490031929D /* StringExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensionTests.swift; sourceTree = "<group>"; };
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
+		2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceProvider.swift; sourceTree = "<group>"; };
+		2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonResourceProvider.swift; sourceTree = "<group>"; };
+		2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsdictResourceProvider.swift; sourceTree = "<group>"; };
+		2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistResourceProvider.swift; sourceTree = "<group>"; };
+		2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringsResourceProvider.swift; sourceTree = "<group>"; };
+		2D99E7C1209F4777003ECD51 /* .jazzy.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .jazzy.yml; sourceTree = "<group>"; };
 		2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Plural.swift; sourceTree = "<group>"; };
 		2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.stringsdict; path = Plural.stringsdict; sourceTree = "<group>"; };
 		2DC0E3581FB4FD8700BFBBAD /* Resource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
@@ -430,6 +460,29 @@
 			path = Localizable;
 			sourceTree = "<group>";
 		};
+		2D99E79C209F0BE6003ECD51 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				2D99E79D209F0C14003ECD51 /* ResourceProvider.swift */,
+				2D99E7B6209F0D99003ECD51 /* StringsResourceProvider.swift */,
+				2D99E7AC209F0D73003ECD51 /* StringsdictResourceProvider.swift */,
+				2D99E7B1209F0D86003ECD51 /* PlistResourceProvider.swift */,
+				2D99E7A7209F0D55003ECD51 /* JsonResourceProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		2D99E7BB209F0DC2003ECD51 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				2DC0E3581FB4FD8700BFBBAD /* Resource.swift */,
+				2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */,
+				2DC0E3621FB5127C00BFBBAD /* StringResource.swift */,
+				2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		2DC0E3511FB4F12900BFBBAD /* Plural */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,10 +496,8 @@
 			isa = PBXGroup;
 			children = (
 				2D1A3B461F2D50C900BD2710 /* ResourceContainer.swift */,
-				2DC0E3581FB4FD8700BFBBAD /* Resource.swift */,
-				2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */,
-				2DC0E3621FB5127C00BFBBAD /* StringResource.swift */,
-				2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */,
+				2D99E7BB209F0DC2003ECD51 /* Resource */,
+				2D99E79C209F0BE6003ECD51 /* Provider */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -491,6 +542,7 @@
 				2DE4B19F1F2C96E80067EE98 /* README.md */,
 				2DE4B19D1F2C96E80067EE98 /* LICENSE */,
 				2DE4B19A1F2C96E80067EE98 /* .travis.yml */,
+				2D99E7C1209F4777003ECD51 /* .jazzy.yml */,
 				2DE4B19E1F2C96E80067EE98 /* Package.swift */,
 				2DE4B1991F2C96E80067EE98 /* .swift-version */,
 			);
@@ -769,6 +821,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D99E7C2209F4777003ECD51 /* .jazzy.yml in Resources */,
 				2DC0E3531FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -787,6 +840,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D99E7C3209F4777003ECD51 /* .jazzy.yml in Resources */,
 				2DC0E3541FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -795,6 +849,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D99E7C4209F4777003ECD51 /* .jazzy.yml in Resources */,
 				2DC0E3551FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -813,6 +868,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D99E7C5209F4777003ECD51 /* .jazzy.yml in Resources */,
 				2DC0E3561FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,11 +894,15 @@
 				2D1A3B5E1F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4A1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE71F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
+				2D99E79E209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
+				2D99E7B2209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
+				2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B561F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D2E4F592090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D99E7A8209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2D1A3BDD1F2E167200BD2710 /* UILabel+IBL10n.swift in Sources */,
 				2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BE51F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
@@ -851,6 +911,7 @@
 				2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
+				2D99E7B7209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
 				2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
@@ -891,6 +952,7 @@
 				2D1A3B531F2D50C900BD2710 /* L10n.swift in Sources */,
 				2DC0E35F1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B5F1F2D50C900BD2710 /* Logger.swift in Sources */,
+				2D99E7B3209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2D1A3BCB1F2E15E800BD2710 /* WKInterfaceController+IBL10n.swift in Sources */,
 				2D1A3BCC1F2E15E800BD2710 /* WKInterfaceLabel+IBL10n.swift in Sources */,
 				2D1A3B4B1F2D50C900BD2710 /* L10n+static.swift in Sources */,
@@ -899,13 +961,17 @@
 				2D1A3B571F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2DE4B1D51F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CD1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
+				2D99E7A9209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
+				2D99E7B8209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
 				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D2E4F5A2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2DE4B1C91F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
+				2D99E79F209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D51A6091F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2D1A3B4F1F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
@@ -919,19 +985,23 @@
 			files = (
 				2D1A3B541F2D50C900BD2710 /* L10n.swift in Sources */,
 				2D51A60A1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
+				2D99E7AA209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2D1A3B601F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4C1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D1A3BE41F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2DC0E3651FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2DC0E3601FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
+				2D99E7B9209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2D1A3B5C1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B581F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
+				2D99E7A0209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DC0E36A1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3BDE1F2E167200BD2710 /* UILabel+IBL10n.swift in Sources */,
 				2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3BE61F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2D2E4F5B2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D99E7AF209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DE4B1CE1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
@@ -942,6 +1012,7 @@
 				2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */,
+				2D99E7B4209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2DE4B1CA1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2D1A3BE21F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
 				2D1A3B501F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
@@ -965,19 +1036,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D99E7A1209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DC0E3611FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B551F2D50C900BD2710 /* L10n.swift in Sources */,
 				2DC0E35C1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3B611F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4D1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3B5D1F2D50C900BD2710 /* Localizable.swift in Sources */,
+				2D99E7B5209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2D1A3B591F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D51A60B1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2DE4B1D71F2C971B0067EE98 /* String+Localizable.swift in Sources */,
+				2D99E7AB209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2DE4B1CF1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2D1A3B651F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DC0E3661FB5127C00BFBBAD /* StringResource.swift in Sources */,
+				2D99E7B0209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D31F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2DE4B1CB1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */,
@@ -985,6 +1060,7 @@
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D2E4F5C2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2DE4B1C71F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

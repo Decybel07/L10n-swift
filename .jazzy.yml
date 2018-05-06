@@ -1,0 +1,28 @@
+module: L10n-swift
+module_version: 5.2.1
+author: Adrian Bobrowski
+author_url: https://github.com/Decybel07
+github_url: https://github.com/Decybel07/L10n-swift
+root_url: https://decybel07.github.io/L10n-swift/
+
+theme: fullwidth
+
+output: docs
+
+custom_categories:
+- name: Core
+  children:
+  - L10n
+  - Localizable
+  - Logger
+  - Notification.Name
+- name: Extension
+  children:
+  - String
+  - Date
+  - NSNumber
+  - Double
+  - Int
+- name: IBInspectable
+  children:
+  - IBL10n
