@@ -14,11 +14,11 @@ internal struct DictionaryResource: Resource {
         return self.values["value"]?.value
     }
 
-    subscript(key: String) -> Resource {
+    subscript(_ key: String) -> Resource {
         return self.values[key] ?? EmptyResource()
     }
 
-    subscript(keyPath: String) -> String? {
+    subscript(_ keyPath: String) -> String? {
         return (keyPath.components(separatedBy: ".").reduce(self) { resource, key in
             resource[key]
         } as Resource).value

@@ -14,7 +14,7 @@ internal struct StringResource: Resource {
         return EmptyResource()
     }
 
-    subscript(keyPath: String) -> String? {
+    subscript(_ keyPath: String) -> String? {
         return keyPath.isEmpty ? nil : self.value
     }
 
