@@ -12,7 +12,7 @@
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)
 [![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
-[![Mentioned in Awesome-swift](https://awesome.re/mentioned-badge.svg)](https://github.com/matteocrippa/awesome-swift)
+[![Mentioned in Awesome-swift](https://awesome.re/mentioned-badge.svg)](https://github.com/matteocrippa/awesome-swift#localization)
 
 
 L10n-swift is a simple framework that improves localization in swift app, providing cleaner syntax and in-app language switching.
