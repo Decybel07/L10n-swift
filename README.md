@@ -101,7 +101,7 @@ github "Decybel07/L10n-swift", ~> 5.3
  
 ### Get localized number
 
- Add `.l10()` following any `Int`,  `Double` or `NSNumber` object you want localized using the number format for the current language:
+ Add `.l10()` following any `Int`,  `Double` or `NSNumber` object you want localized. Using the number format for the current language:
  ```swift
  12.l10n()
  24.l10n(minIntegerDigits: 4)
