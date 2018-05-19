@@ -8,9 +8,10 @@
 [![Language Swift3](https://img.shields.io/badge/languages-Swift%203.0+-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
 [![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n-swift.svg?style=flat&label=platform)](http://cocoapods.org/pods/L10n-swift)
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n-swift.svg?style=flat&label=license)](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE)
-[![Docs percent](https://img.shields.io/badge/docs-100%25-brightgreen.svg)](http://cocoadocs.org/docsets/L10n-swift/)
+[![Docs percent](https://img.shields.io/cocoapods/metrics/doc-percent/L10n-swift.svg)](http://cocoadocs.org/docsets/L10n-swift/)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)
+<!--[![codecov](https://codecov.io/gh/Decybel07/L10n-swift/branch/master/graph/badge.svg)](https://codecov.io/gh/Decybel07/L10n-swift)-->
+<!--[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3063467ecae74021b7666787333eac54)](https://www.codacy.com/app/Decybel07/L10n-swift/dashboard)-->
 [![codebeat badge](https://codebeat.co/badges/5f83f891-8cd6-4b12-9340-562a74c51442)](https://codebeat.co/projects/github-com-decybel07-l10n-swift-master)
 [![Mentioned in Awesome-swift](https://awesome.re/mentioned-badge.svg)](https://github.com/matteocrippa/awesome-swift)
 
@@ -68,13 +69,13 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 5.2'
+ pod 'L10n-swift', '~> 5.3'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 5.2
+github "Decybel07/L10n-swift", ~> 5.3
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)

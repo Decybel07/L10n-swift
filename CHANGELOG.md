@@ -1,6 +1,10 @@
 
 # Change Log
 ---
+## [5.3.0](https://github.com/Decybel07/L10n-swift/tree/5.3.0) (2018-05-18)
+* Support for base internacionalization [#12](https://github.com/Decybel07/L10n-swift/issues/12)
+* Add extension to use strings with args  [#9](https://github.com/Decybel07/L10n-swift/issues/9)
+
 ## [5.2.1](https://github.com/Decybel07/L10n-swift/tree/5.2.1) (2018-05-06)
 * Extracting classes that load files
 
