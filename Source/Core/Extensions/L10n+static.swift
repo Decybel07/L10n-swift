@@ -17,11 +17,11 @@ public extension L10n {
 
     /// A preferred language contained in the main bundle.
     static var preferredLanguage: String {
-        return Bundle.main.preferredLocalizations.first ?? "UNDEFINED"
+        return Bundle.main.preferredLanguage
     }
 
     /// A list of all the languages contained in the main bundle.
     static var supportedLanguages: [String] {
-        return Bundle.main.localizations
+        return Bundle.main.supportedLanguages
     }
 }

@@ -34,12 +34,12 @@ open class L10n {
 
     /// A preferred language contained in the base bundle.
     public var preferredLanguage: String {
-        return self.baseBundle.preferredLocalizations.first ?? "UNDEFINED"
+        return self.coreBundle.preferredLanguage
     }
 
     /// A list of all the languages contained in the base bundle.
     public var supportedLanguages: [String] {
-        return self.baseBundle.localizations
+        return self.coreBundle.supportedLanguages
     }
 
     /// A logger used to log information from the framework
@@ -47,25 +47,42 @@ open class L10n {
 
     /// Current language code.
     public var language: String {
-        didSet {
-            guard self.language != oldValue else {
+        get {
+            return self.languageCode
+        }
+        set {
+            if newValue == "Base", let developmentLanguage = self.coreBundle.developmentLocalization {
+                self.language = developmentLanguage
                 return
             }
-            self.locale = nil
-            self.bundle = nil
-            self.resources = [:]
-            self.languageChanged(oldValue: oldValue)
+            if newValue.contains("_") {
+                self.language = newValue.replacingOccurrences(of: "_", with: "-")
+                return
+            }
+            self.languageCode = newValue
         }
     }
 
     /// Current locale.
     private(set) public var locale: Locale?
 
-    /// Base bundle used for localization.
-    private(set) public var bundle: Bundle?
+    /// Bundles used for localization.
+    private(set) public var bundles: [Bundle] = []
 
-    private var baseBundle: Bundle
+    private var coreBundle: Bundle
     private var resources: [String: ResourceContainer] = [:]
+
+    private var languageCode: String = "" {
+        didSet {
+            guard self.language != oldValue else {
+                return
+            }
+            self.locale = nil
+            self.bundles = []
+            self.resources = [:]
+            self.languageChanged(oldValue: oldValue)
+        }
+    }
 
     /**
      Initialize a new `L10n` with the provided language.
@@ -75,9 +92,8 @@ open class L10n {
      - returns: A `L10n` object for language.
      */
     public init(bundle: Bundle = .main, language: String? = nil) {
-        self.language = language ?? bundle.preferredLocalizations.first ?? "UNDEFINED"
-        self.baseBundle = bundle
-        self.languageChanged()
+        self.coreBundle = bundle
+        self.language = language ?? bundle.preferredLanguage
     }
 
     /**
@@ -159,21 +175,27 @@ open class L10n {
         self.resource(named: resource).inject(dictionary: dictionary)
     }
 
-    private func languageChanged(oldValue: String? = nil) {
-        if self.supportedLanguages.contains(self.language) {
-            if let path = self.baseBundle.path(forResource: self.language, ofType: "lproj"),
-                let bundle = Bundle(path: path) {
-
-                self.locale = Locale(identifier: self.language)
-                self.bundle = bundle
-            } else {
+    private func languageChanged(oldValue: String = "") {
+        let locale = Locale(identifier: self.language)
+        if let code = locale.languageCode, Locale.isoLanguageCodes.contains(code) {
+            self.locale = locale
+            self.bundles = [
+                self.coreBundle.bundle(forLangage: self.language),
+                self.coreBundle.bundle(forLangage: code),
+                self.coreBundle.bundle(forLangage: "Base"),
+            ].reduce(into: [Bundle]()) { result, bundle in
+                if let bundle = bundle, !result.contains(bundle) {
+                    result.append(bundle)
+                }
+            }
+            if self.bundles.isEmpty {
                 self.logger?.info("L10n - Could not find the bundle for \(self.language.debugDescription).")
             }
         } else {
             self.logger?.info("L10n - List of supported languages does not contain \(self.language.debugDescription).")
         }
 
-        if let oldValue = oldValue {
+        if !oldValue.isEmpty {
             NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
                 "sender": self,
                 "oldValue": oldValue,
@@ -186,7 +208,7 @@ open class L10n {
         let resourceName = (resourceName ?? "").isEmpty ? "Localizable" : resourceName!
 
         return self.resources[resourceName] ?? {
-            let resource = ResourceContainer(bundle: self.bundle, name: resourceName)
+            let resource = ResourceContainer(bundles: self.bundles, name: resourceName)
             self.resources[resourceName] = resource
             return resource
         }()

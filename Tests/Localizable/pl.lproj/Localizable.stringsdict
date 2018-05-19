@@ -22,5 +22,16 @@
 			<string>%d jabłek</string>
 		</dict>
 	</dict>
+	<key>numberOfPears</key>
+	<dict>
+		<key>zero</key>
+		<string>Zero gruszek</string>
+		<key>one</key>
+		<string>Jedna gruszka</string>
+		<key>few</key>
+		<string>%d gruszki</string>
+		<key>other</key>
+		<string>%d gruszek</string>
+	</dict>
 </dict>
 </plist>

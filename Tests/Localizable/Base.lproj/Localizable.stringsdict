@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>resource</key>
+	<string>stringsdict</string>
 	<key>numberOfApples</key>
 	<dict>
 		<key>NSStringLocalizedFormatKey</key>
@@ -13,12 +15,21 @@
 			<key>NSStringFormatValueTypeKey</key>
 			<string>d</string>
 			<key>zero</key>
-			<string>ゼロのリンゴ</string>
+			<string>Zero apples</string>
 			<key>one</key>
-			<string>一つのりんご</string>
+			<string>One apple</string>
 			<key>other</key>
-			<string>%d つのリンゴ</string>
+			<string>%d apples</string>
 		</dict>
+	</dict>
+	<key>numberOfPears</key>
+	<dict>
+		<key>zero</key>
+		<string>Zero pears</string>
+		<key>one</key>
+		<string>One pear</string>
+		<key>other</key>
+		<string>%d pears</string>
 	</dict>
 </dict>
 </plist>

@@ -6,4 +6,6 @@
   Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 */
 
-"HelloWorld" = "Hello World!";
+"resource" = "strings";
+"hello.world" = "Hello World!";
+

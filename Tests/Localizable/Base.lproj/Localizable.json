@@ -1,0 +1,7 @@
+{
+    "resource": "json",
+    "parameters": {
+        "oneArg": "Hello %@!",
+        "twoArgs": "Hello %@, I'm %@",
+    }
+}

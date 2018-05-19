@@ -19,6 +19,6 @@ extension L10n: Equatable {
     public static func ==(lhs: L10n, rhs: L10n) -> Bool {
         return lhs.language == rhs.language
             && lhs.locale == rhs.locale
-            && lhs.bundle == rhs.bundle
+            && lhs.bundles == rhs.bundles
     }
 }

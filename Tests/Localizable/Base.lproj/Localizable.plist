@@ -2,18 +2,14 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>resource</key>
+	<string>plist</string>
 	<key>language</key>
 	<dict>
 		<key>value</key>
-		<string>Idioma</string>
-		<key>english</key>
-		<string>Inglés</string>
-		<key>polish</key>
-		<string>Polaco</string>
-		<key>japanese</key>
-		<string>Japonés</string>
-		<key>spanish</key>
-		<string>Español</string>
+		<string>Language</string>
+		<key>current</key>
+		<string>English</string>
 	</dict>
 </dict>
 </plist>

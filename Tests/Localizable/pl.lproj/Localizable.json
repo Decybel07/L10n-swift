@@ -1,0 +1,6 @@
+{
+    "parameters": {
+        "oneArg": "Witaj %@!",
+        "twoArgs": "Witaj %@, jestem %@",
+    }
+}

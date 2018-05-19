@@ -9,42 +9,41 @@
 import XCTest
 @testable import L10n_swift
 
-class IntExtensionTests: XCTestCase {
-
-    var instance: L10n!
-
-    override func setUp() {
-        super.setUp()
-        self.instance = L10n(bundle: Bundle(for: IntExtensionTests.self), language: "ja")
-    }
+final class IntExtensionTests: L10nBaseTest {
 
     func testNumber() {
-        XCTAssertEqual("0", 0.l10n(self.instance))
-        XCTAssertEqual("7,215,633", 7_215_633.l10n(self.instance))
-        XCTAssertEqual("-7,215,633", (-7_215_633).l10n(self.instance))
+        self.l10nInstance.language = "ja"
+
+        XCTAssertEqual("0", 0.l10n(self.l10nInstance))
+        XCTAssertEqual("7,215,633", 7_215_633.l10n(self.l10nInstance))
+        XCTAssertEqual("-7,215,633", (-7_215_633).l10n(self.l10nInstance))
     }
 
     func testNumberWithLeadingZeros() {
-        XCTAssertEqual("002", 2.l10n(self.instance, minIntegerDigits: 3))
+        self.l10nInstance.language = "ja"
+
+        XCTAssertEqual("002", 2.l10n(self.l10nInstance, minIntegerDigits: 3))
     }
 
     func testNumberWithConfigureFormatter() {
-        XCTAssertEqual("11🐒23🐒58🐒13🐒21", 1_123_581_321.l10n(self.instance) {
+        self.l10nInstance.language = "ja"
+
+        XCTAssertEqual("11🐒23🐒58🐒13🐒21", 1_123_581_321.l10n(self.l10nInstance) {
             $0.groupingSize = 2
             $0.groupingSeparator = "🐒"
         })
     }
 
     func testArabicNumber() {
-        self.instance.language = "ar"
+        self.l10nInstance.language = "ar"
 
-        XCTAssertEqual("٠", 0.l10n(self.instance))
-        XCTAssertEqual("٧٬٢١٥٬٦٣٣", 7_215_633.l10n(self.instance))
+        XCTAssertEqual("٠", 0.l10n(self.l10nInstance))
+        XCTAssertEqual("٧٬٢١٥٬٦٣٣", 7_215_633.l10n(self.l10nInstance))
     }
 
     func testArabicNumberWithLeadingZeros() {
-        self.instance.language = "ar"
+        self.l10nInstance.language = "ar"
 
-        XCTAssertEqual("٠٠٢", 2.l10n(self.instance, minIntegerDigits: 3))
+        XCTAssertEqual("٠٠٢", 2.l10n(self.l10nInstance, minIntegerDigits: 3))
     }
 }

@@ -6,14 +6,8 @@
 	<dict>
 		<key>value</key>
 		<string>Język</string>
-		<key>english</key>
-		<string>Angielski</string>
-		<key>polish</key>
+		<key>current</key>
 		<string>Polski</string>
-		<key>japanese</key>
-		<string>Japoński</string>
-		<key>spanish</key>
-		<string>Hiszpański</string>
 	</dict>
 </dict>
 </plist>

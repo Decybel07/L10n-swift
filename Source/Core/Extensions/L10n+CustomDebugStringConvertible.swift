@@ -14,7 +14,9 @@ extension L10n: CustomDebugStringConvertible {
             + "\n\tLanguage: \(self.language)"
             + "\n\tPreferred language: \(self.preferredLanguage)"
             + "\n\tSupported languages: \(self.supportedLanguages)"
-            + "\n\tBundle: \(self.bundle?.bundlePath ?? "nil")"
+            + "\n\tBundles: ["
+            + "\(self.bundles.map { "\n\t\t\($0.bundlePath.debugDescription)" }.joined(separator: ","))"
+            + "\n\t]"
             + "\n}"
     }
 }

@@ -2,48 +2,91 @@
 //  L10nTests.swift
 //  L10n_swift
 //
-//  Created by Adrian Bobrowski on 29.07.2017.
-//  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
+//  Created by Adrian Bobrowski on 19.05.2018.
+//  Copyright © 2018 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
 import XCTest
 @testable import L10n_swift
 
-class L10nTests: XCTestCase {
-
-    let (bundle, l10n): (Bundle, L10n) = {
-        let bundle = Bundle(for: L10nTests.self)
-        return (bundle, L10n(bundle: bundle))
-    }()
+final class L10nTests: L10nBaseTest {
 
     func testPreferredLanguage() {
-        XCTAssertEqual(self.bundle.preferredLocalizations.first ?? "", self.l10n.preferredLanguage)
+        XCTAssertEqual(self.bundle.preferredLocalizations.first ?? "Base", self.l10nInstance.preferredLanguage)
     }
 
     func testSupportedLanguages() {
-
-        XCTAssertEqual(Set(["ar", "en", "es", "ja", "pl"]), Set(self.l10n.supportedLanguages))
+        XCTAssertFalse(self.l10nInstance.supportedLanguages.contains("Base"))
+        XCTAssertEqual(Set(["en", "pl"]), Set(self.l10nInstance.supportedLanguages))
     }
 
-    func testLanguage() {
-        self.testLanguage("ar", isValid: true)
-        self.testLanguage("en", isValid: true)
-        self.testLanguage("🐒", isValid: false)
-        self.testLanguage("es", isValid: true)
-        self.testLanguage("ja", isValid: true)
-        self.testLanguage("", isValid: false)
-        self.testLanguage("pl", isValid: true)
-    }
-
-    func testLanguage(_ language: String, isValid: Bool) {
-        self.l10n.language = language
-        XCTAssertEqual(language, self.l10n.language)
-        if isValid {
-            XCTAssertNotNil(self.l10n.locale)
-            XCTAssertNotNil(self.l10n.bundle)
-        } else {
-            XCTAssertNil(self.l10n.locale)
-            XCTAssertNil(self.l10n.bundle)
+    func testSetDevelopmentLanguage() {
+        if let developmentLanguage = self.bundle.developmentLocalization {
+            self.l10nInstance.language = developmentLanguage
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.identifier)
+            XCTAssertEqual(1, self.l10nInstance.bundles.count)
+            XCTAssertNotNil(self.l10nInstance.locale)
         }
+    }
+
+    func testSetBaseLanguage() {
+        self.l10nInstance.language = "Base"
+
+        if let developmentLanguage = self.bundle.developmentLocalization {
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.identifier)
+            XCTAssertEqual(1, self.l10nInstance.bundles.count)
+            XCTAssertNotNil(self.l10nInstance.locale)
+        } else {
+            XCTAssertEqual("Base", self.l10nInstance.language)
+            XCTAssertTrue(self.l10nInstance.bundles.isEmpty)
+            XCTAssertNil(self.l10nInstance.locale)
+        }
+    }
+
+    func testSetSuportedLanguage() {
+        self.l10nInstance.language = "pl"
+        XCTAssertEqual("pl", self.l10nInstance.language)
+        XCTAssertEqual("pl", self.l10nInstance.locale?.identifier)
+        XCTAssertEqual(2, self.l10nInstance.bundles.count)
+        XCTAssertNotNil(self.l10nInstance.locale)
+    }
+
+    func testSetSuportedLanguageWithRegion() {
+        self.l10nInstance.language = "pl_PL"
+        XCTAssertEqual("pl-PL", self.l10nInstance.language)
+        XCTAssertEqual("pl-PL", self.l10nInstance.locale?.identifier)
+        XCTAssertEqual(2, self.l10nInstance.bundles.count)
+        XCTAssertNotNil(self.l10nInstance.locale)
+    }
+
+    func testSetUnsuportedLanguage() {
+        self.l10nInstance.language = "es"
+        XCTAssertEqual("es", self.l10nInstance.language)
+        XCTAssertEqual("es", self.l10nInstance.locale?.identifier)
+        XCTAssertEqual(1, self.l10nInstance.bundles.count)
+        XCTAssertNotNil(self.l10nInstance.locale)
+    }
+
+    func testSetUndefinedLanguage() {
+        self.l10nInstance.language = "🐒"
+        XCTAssertEqual("🐒", self.l10nInstance.language)
+        XCTAssertTrue(self.l10nInstance.bundles.isEmpty)
+        XCTAssertNil(self.l10nInstance.locale)
+    }
+
+    func testInject() {
+        self.l10nInstance.language = "en"
+        XCTAssertEqual("stringsdict", self.l10nInstance.string(for: "resource"))
+
+        self.l10nInstance.inject(dictionary: ["resource": "Custom"])
+        XCTAssertEqual("Custom", self.l10nInstance.string(for: "resource"))
+        XCTAssertEqual("resource.value", self.l10nInstance.string(for: "resource.value"))
+
+        self.l10nInstance.inject(dictionary: ["resource.group": "Group"])
+        XCTAssertEqual("Custom", self.l10nInstance.string(for: "resource"))
+        XCTAssertEqual("Custom", self.l10nInstance.string(for: "resource.value"))
+        XCTAssertEqual("Group", self.l10nInstance.string(for: "resource.group"))
     }
 }

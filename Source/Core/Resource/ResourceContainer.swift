@@ -10,24 +10,28 @@ import Foundation
 
 internal class ResourceContainer {
 
-    private var resource: Resource = EmptyResource()
+    private var resource: Resource
 
     subscript(keyPath: String) -> String? {
         return self.resource[keyPath]
     }
 
-    init(bundle: Bundle?, name: String) {
-        self.resource = ([
+    init(bundles: [Bundle], name: String) {
+        let providers: [ResourceProvider] = [
             StringsdictResourceProvider(),
             StringsResourceProvider(),
             PlistResourceProvider(),
             JsonResourceProvider(),
-        ] as [ResourceProvider]).reduce(self.resource) { resource, provider in
-            resource.merging(provider.load(name: name, in: bundle))
+        ]
+
+        self.resource = bundles.reduce(EmptyResource()) { result, bundle in
+            providers.reduce(result) { resource, provider in
+                resource.merging(provider.load(name: name, in: bundle))
+            }
         }
     }
 
     func inject(dictionary: [String: Any]) {
-        self.resource = self.resource.merging(DictionaryResource(dictionary))
+        self.resource = DictionaryResource(dictionary).merging(self.resource)
     }
 }
