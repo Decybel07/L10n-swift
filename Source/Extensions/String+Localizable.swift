@@ -32,6 +32,32 @@ extension String: Localizable {
     }
 
     /**
+     Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter args: The values used to fill.
+
+     - returns: A localized version of the string designated by `self` or `self` if not found.
+     */
+    public func l10n(_ instance: L10n = .shared, resource: String?, _ args: CVarArg...) -> String {
+        return self.l10n(instance, resource: resource, args: args)
+    }
+
+    /**
+     Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter args: The values used to fill.
+
+     - returns: A localized version of the string designated by `self` or `self` if not found.
+     */
+    public func l10n(_ instance: L10n = .shared, resource: String?, args: [CVarArg]) -> String {
+        return instance.string(format: instance.string(for: self, resource: resource), args: args)
+    }
+
+    /**
      Returns a localized plural version of the string designated by `self` and residing in *resource*.
 
      - parameter instance: The instance of `L10n` used for localization.
