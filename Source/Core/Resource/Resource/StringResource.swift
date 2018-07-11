@@ -8,14 +8,14 @@
 
 internal struct StringResource: Resource {
 
-    let value: String?
+    private let value: String
 
     subscript(_: String) -> Resource {
         return EmptyResource()
     }
 
-    subscript(_ keyPath: String) -> String? {
-        return keyPath.isEmpty ? nil : self.value
+    func text() -> String? {
+        return self.value
     }
 
     func merging(_ other: Resource) -> Resource {
@@ -23,5 +23,9 @@ internal struct StringResource: Resource {
             return self
         }
         return other.merging(self)
+    }
+
+    init(_ value: String) {
+        self.value = value
     }
 }

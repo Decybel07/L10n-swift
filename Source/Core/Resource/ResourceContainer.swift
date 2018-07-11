@@ -12,8 +12,25 @@ internal class ResourceContainer {
 
     private var resource: Resource
 
-    subscript(keyPath: String) -> String? {
-        return self.resource[keyPath]
+    subscript(keyPath: String, fittingWidth: Int?) -> String? {
+        return self[keyPath].text(for: fittingWidth)
+    }
+
+    subscript(keyPath: String, variants: [Plural], fittingWidth: Int?) -> String? {
+        let resource = self[keyPath]
+        return variants.lazy.compactMap { plural in
+            resource[plural.rawValue].text(for: fittingWidth)
+        }.first
+    }
+
+    private subscript(keyPath: String) -> Resource {
+        return keyPath.components(separatedBy: ".").reduce(self.resource) { resource, key in
+            resource[key]
+        } as Resource
+    }
+
+    func inject(dictionary: [String: Any]) {
+        self.resource = DictionaryResource(dictionary).merging(self.resource)
     }
 
     init(bundles: [Bundle], name: String) {
@@ -29,9 +46,5 @@ internal class ResourceContainer {
                 resource.merging(provider.load(name: name, in: bundle))
             }
         }
-    }
-
-    func inject(dictionary: [String: Any]) {
-        self.resource = DictionaryResource(dictionary).merging(self.resource)
     }
 }

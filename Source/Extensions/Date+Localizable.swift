@@ -73,7 +73,7 @@ extension Date: Localizable {
 
      - returns: A localized `self` description.
      */
-    public func l10n(_ instance: L10n = .shared, closure: (DateFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (_ formatter: DateFormatter) -> Void) -> String {
         let formatter = DateFormatter()
         formatter.locale = instance.locale
         closure(formatter)

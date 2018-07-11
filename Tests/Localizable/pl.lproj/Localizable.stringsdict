@@ -33,5 +33,17 @@
 		<key>other</key>
 		<string>%d gruszek</string>
 	</dict>
+	<key>fittingWidth</key>
+	<dict>
+		<key>NSStringVariableWidthRuleType</key>
+		<dict>
+			<key>100</key>
+			<string>krótki</string>
+			<key>200</key>
+			<string>średni tekst</string>
+			<key>300</key>
+			<string>bardzo długi tekst</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

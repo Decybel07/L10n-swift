@@ -27,7 +27,7 @@ extension NSNumber: Localizable {
 
      - returns: A localized `self` description.
      */
-    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (_ formatter: NumberFormatter) -> Void) -> String {
         let formatter = NumberFormatter()
         formatter.locale = instance.locale
         formatter.numberStyle = .decimal

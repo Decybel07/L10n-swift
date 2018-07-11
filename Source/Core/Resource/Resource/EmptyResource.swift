@@ -8,15 +8,11 @@
 
 internal struct EmptyResource: Resource {
 
-    var value: String? {
-        return nil
-    }
-
     subscript(_: String) -> Resource {
         return self
     }
 
-    subscript(_: String) -> String? {
+    func text() -> String? {
         return nil
     }
 

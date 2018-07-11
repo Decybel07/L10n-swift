@@ -41,7 +41,7 @@ extension Int: Localizable {
 
      - returns: A localized `self` description.
      */
-    public func l10n(_ instance: L10n = .shared, closure: (NumberFormatter) -> Void) -> String {
+    public func l10n(_ instance: L10n = .shared, closure: (_ formatter: NumberFormatter) -> Void) -> String {
         return (self as NSNumber).l10n(instance, closure: closure)
     }
 }

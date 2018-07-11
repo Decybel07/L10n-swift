@@ -8,10 +8,16 @@
 
 internal protocol Resource {
 
-    var value: String? { get }
-
     subscript(_: String) -> Resource { get }
-    subscript(_: String) -> String? { get }
 
+    func text() -> String?
+    func text(for: Int?) -> String?
     func merging(_ other: Resource) -> Resource
+}
+
+extension Resource {
+
+    func text(for _: Int?) -> String? {
+        return self.text()
+    }
 }

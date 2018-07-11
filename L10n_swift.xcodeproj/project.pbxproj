@@ -151,6 +151,9 @@
 		2DCF933520B0990200FB1ECC /* L10nBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */; };
 		2DCF933620B0990200FB1ECC /* L10nBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */; };
 		2DCF933720B0990200FB1ECC /* L10nBaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */; };
+		2DD5ED2020F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */; };
+		2DD5ED2120F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */; };
+		2DD5ED2220F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */; };
 		2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
 		2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
 		2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD6AC801F487BB100EDE71B /* IBL10n.swift */; };
@@ -262,6 +265,7 @@
 		2DCF933120B083F000FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF933320B083FA00FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10nBaseTest.swift; sourceTree = "<group>"; };
+		2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10nFittingWidthTests.swift; sourceTree = "<group>"; };
 		2DD6AC801F487BB100EDE71B /* IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBL10n.swift; sourceTree = "<group>"; };
 		2DE4B13B1F2C95490067EE98 /* L10n_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = L10n_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DE4B1441F2C95490067EE98 /* L10n_swiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = L10n_swiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -443,14 +447,15 @@
 			isa = PBXGroup;
 			children = (
 				2D1A3B3E1F2D480200BD2710 /* Info.plist */,
+				2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */,
 				2D6F176F1F2CB6E80031929D /* L10nTests.swift */,
 				2D01E2E61F2D3831005644F2 /* L10nStringTests.swift */,
 				2D01E2E21F2D3500005644F2 /* L10nPluralTests.swift */,
+				2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */,
 				2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */,
 				2D01E2DD1F2CFB37005644F2 /* DoubleExtensionTests.swift */,
 				2DCF931320AE11D300FB1ECC /* DateExtensionTests.swift */,
 				2DCF931720B0668400FB1ECC /* Localizable */,
-				2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -940,6 +945,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D01E2DE1F2CFB37005644F2 /* DoubleExtensionTests.swift in Sources */,
+				2DD5ED2020F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */,
 				2DCF931420AE11D300FB1ECC /* DateExtensionTests.swift in Sources */,
 				2D6F17AD1F2CEA3F0031929D /* IntExtensionTests.swift in Sources */,
 				2D01E2E31F2D3500005644F2 /* L10nPluralTests.swift in Sources */,
@@ -1033,6 +1039,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D01E2E41F2D3500005644F2 /* L10nPluralTests.swift in Sources */,
+				2DD5ED2120F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */,
 				2DCF933620B0990200FB1ECC /* L10nBaseTest.swift in Sources */,
 				2DCF931520AE11D300FB1ECC /* DateExtensionTests.swift in Sources */,
 				2D01E2F11F2D3AB0005644F2 /* L10nTests.swift in Sources */,
@@ -1080,6 +1087,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D01E2E51F2D3500005644F2 /* L10nPluralTests.swift in Sources */,
+				2DD5ED2220F6305500ADAFF1 /* L10nFittingWidthTests.swift in Sources */,
 				2DCF933720B0990200FB1ECC /* L10nBaseTest.swift in Sources */,
 				2DCF931620AE11D300FB1ECC /* DateExtensionTests.swift in Sources */,
 				2D01E2F21F2D3AB1005644F2 /* L10nTests.swift in Sources */,

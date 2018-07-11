@@ -31,5 +31,17 @@
 		<key>other</key>
 		<string>%d pears</string>
 	</dict>
+	<key>fittingWidth</key>
+	<dict>
+		<key>NSStringVariableWidthRuleType</key>
+		<dict>
+			<key>100</key>
+			<string>short</string>
+			<key>200</key>
+			<string>medium</string>
+			<key>300</key>
+			<string>very long text</string>
+		</dict>
+	</dict>
 </dict>
 </plist>

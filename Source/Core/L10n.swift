@@ -125,11 +125,12 @@ open class L10n {
 
      - parameter key: The key for a string in resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter fittingWidth: The desired width of the string variation.
 
      - returns: A localized version of the string designated by `key`. This method returns `key` when `key` not found.
      */
-    open func string(for key: String, resource: String? = nil) -> String {
-        guard let text = self.resource(named: resource)[key] else {
+    open func string(for key: String, resource: String? = nil, fittingWidth: Int? = nil) -> String {
+        guard let text = self.resource(named: resource)[key, fittingWidth] else {
             self.logger?.info("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription).")
             return key
         }
@@ -141,29 +142,27 @@ open class L10n {
 
      - parameter key: The key for a string in resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter fittingWidth: The desired width of the string variation.
      - parameter arg: The values for which the appropriate plural form is selected.
+     - parameter converting: A closure used to modify the number to display it to the user.
 
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found or `arg` is not a number .
      */
-    open func plural(for key: String, resource: String? = nil, arg: CVarArg) -> String {
+    open func plural<Number: Numeric & CVarArg>(for key: String, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: (_ number: Number) -> CVarArg = { $0 }) -> String {
         guard let number = arg as? NSNumber else {
             self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
             return key
         }
-
-        let firstFormat = Plural.variants(for: number, with: self.locale).lazy.map { plural in
-            self.resource(named: resource)["\(key).\(plural.rawValue)"]
-        }.first { $0 != nil }
-
-        guard let format = firstFormat else {
+        let variants = Plural.variants(for: number, with: self.locale)
+        guard let format = self.resource(named: resource)[key, variants, fittingWidth] else {
             self.logger?.info("L10n - Key \(key.debugDescription) does not support plural for \(self.language.debugDescription).")
             return key
         }
-        return self.string(format: format!, arg)
+        return self.string(format: format, converting(arg))
     }
 
     /**
-     Inject `dictionary` from an external source (eg internet) with translations into the `resource`.
+     Inject `dictionary` from an external source (eg Internet) with translations into the `resource`.
 
      - parameter dictionary: A dictionary with translations that will be injected into the resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the **Localizable** resource.

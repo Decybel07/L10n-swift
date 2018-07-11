@@ -13,7 +13,7 @@ public extension L10n {
     /// A single shared instance of `L10n`.
     ///
     /// This instance is used in extensions
-    static var shared = L10n(language: L10n.preferredLanguage)
+    static var shared = L10n()
 
     /// A preferred language contained in the main bundle.
     static var preferredLanguage: String {

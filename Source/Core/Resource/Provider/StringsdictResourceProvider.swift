@@ -20,10 +20,11 @@ internal struct StringsdictResourceProvider: ResourceProvider {
             guard let format = dictionary[$0] as? [String: Any] else {
                 return
             }
-
             if let key = self.formatKey(for: format), var value = format[key] as? [String: Any] {
                 value.removeValue(forKey: "NSStringFormatSpecTypeKey")
                 value.removeValue(forKey: "NSStringFormatValueTypeKey")
+                dictionary[$0] = value
+            } else if let value = format["NSStringVariableWidthRuleType"] as? [String: Any] {
                 dictionary[$0] = value
             } else {
                 dictionary[$0] = self.clean(dictionary: format)
@@ -38,7 +39,6 @@ internal struct StringsdictResourceProvider: ResourceProvider {
         else {
             return nil
         }
-
         return format[range].description
     }
 
