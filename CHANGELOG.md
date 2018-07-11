@@ -1,6 +1,10 @@
 
 # Change Log
 ---
+
+## [5.4.0](https://github.com/Decybel07/L10n-swift/tree/5.4.0) (2018-07-11)
+* Support for variant fitting presentation width
+
 ## [5.3.0](https://github.com/Decybel07/L10n-swift/tree/5.3.0) (2018-05-18)
 * Support for base internacionalization [#12](https://github.com/Decybel07/L10n-swift/issues/12)
 * Add extension to use strings with args  [#9](https://github.com/Decybel07/L10n-swift/issues/9)
