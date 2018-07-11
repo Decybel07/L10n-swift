@@ -59,9 +59,11 @@ internal struct DictionaryResource: Resource {
 
     init(_ values: [String: Resource]) {
         self.values = values
-        self.fittingWidths = values.keys
-            .map { Int($0) }
-            .compactMap { $0 }
-            .sorted()
+
+        #if swift(>=4.1)
+            self.fittingWidths = values.keys.compactMap { Int($0) }.sorted()
+        #else
+            self.fittingWidths = values.keys.flatMap { Int($0) }.sorted()
+        #endif
     }
 }
