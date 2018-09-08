@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.4.1](https://github.com/Decybel07/L10n-swift/tree/5.4.1) (2018-09-08)
+* `Local` includes system settings for the region
+
 ## [5.4.0](https://github.com/Decybel07/L10n-swift/tree/5.4.0) (2018-07-11)
 * Support for variant fitting presentation width
 
