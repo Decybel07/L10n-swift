@@ -15,6 +15,15 @@ final class DoubleExtensionTests: L10nBaseTest {
         self.l10nInstance.language = "es"
 
         XCTAssertEqual("0", 0.0.l10n(self.l10nInstance))
+        XCTAssertEqual("0.1", 0.1.l10n(self.l10nInstance))
+        XCTAssertEqual("3.14", 3.14.l10n(self.l10nInstance))
+        XCTAssertEqual("-4.651", (-4.651).l10n(self.l10nInstance))
+    }
+
+    func testNumberWithRegionCode() {
+        self.l10nInstance.language = "es-PL"
+
+        XCTAssertEqual("0", 0.0.l10n(self.l10nInstance))
         XCTAssertEqual("0,1", 0.1.l10n(self.l10nInstance))
         XCTAssertEqual("3,14", 3.14.l10n(self.l10nInstance))
         XCTAssertEqual("-4,651", (-4.651).l10n(self.l10nInstance))
@@ -23,9 +32,9 @@ final class DoubleExtensionTests: L10nBaseTest {
     func testNumberWithDefinedFractionDigits() {
         self.l10nInstance.language = "es"
 
-        XCTAssertEqual("3,1", 3.142.l10n(self.l10nInstance, fractionDigits: 1))
-        XCTAssertEqual("4,7", 4.651.l10n(self.l10nInstance, fractionDigits: 1))
-        XCTAssertEqual("3,14000", 3.14.l10n(self.l10nInstance, fractionDigits: 5))
+        XCTAssertEqual("3.1", 3.142.l10n(self.l10nInstance, fractionDigits: 1))
+        XCTAssertEqual("4.7", 4.651.l10n(self.l10nInstance, fractionDigits: 1))
+        XCTAssertEqual("3.14000", 3.14.l10n(self.l10nInstance, fractionDigits: 5))
     }
 
     func testNumberWithConfigureFormatter() {

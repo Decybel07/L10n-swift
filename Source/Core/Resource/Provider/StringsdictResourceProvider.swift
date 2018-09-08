@@ -14,7 +14,11 @@ internal struct StringsdictResourceProvider: ResourceProvider {
         return "stringsdict"
     }
 
-    func clean(dictionary: [String: Any]) -> [String: Any] {
+    func load(file path: String) -> [String: Any] {
+        return self.clean(NSDictionary(contentsOfFile: path) as? [String: Any] ?? [:])
+    }
+
+    private func clean(_ dictionary: [String: Any]) -> [String: Any] {
         var dictionary = dictionary
         dictionary.keys.forEach {
             guard let format = dictionary[$0] as? [String: Any] else {
@@ -27,7 +31,7 @@ internal struct StringsdictResourceProvider: ResourceProvider {
             } else if let value = format["NSStringVariableWidthRuleType"] as? [String: Any] {
                 dictionary[$0] = value
             } else {
-                dictionary[$0] = self.clean(dictionary: format)
+                dictionary[$0] = self.clean(format)
             }
         }
         return dictionary

@@ -177,7 +177,7 @@ open class L10n {
     private func languageChanged(oldValue: String = "") {
         let locale = Locale(identifier: self.language)
         if let code = locale.languageCode, Locale.isoLanguageCodes.contains(code) {
-            self.locale = locale
+            self.locale = locale.merging(.autoupdatingCurrent)
             self.bundles = [
                 self.coreBundle.bundle(forLangage: self.language),
                 self.coreBundle.bundle(forLangage: code),
@@ -191,7 +191,7 @@ open class L10n {
                 self.logger?.info("L10n - Could not find the bundle for \(self.language.debugDescription).")
             }
         } else {
-            self.logger?.info("L10n - List of supported languages does not contain \(self.language.debugDescription).")
+            self.logger?.info("L10n - List of possible languages does not contain \(self.language.debugDescription).")
         }
 
         if !oldValue.isEmpty {

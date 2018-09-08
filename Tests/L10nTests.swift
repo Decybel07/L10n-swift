@@ -24,7 +24,8 @@ final class L10nTests: L10nBaseTest {
         if let developmentLanguage = self.bundle.developmentLocalization {
             self.l10nInstance.language = developmentLanguage
             XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
-            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.identifier)
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.languageCode)
+            XCTAssertEqual("US", self.l10nInstance.locale?.regionCode)
             XCTAssertEqual(1, self.l10nInstance.bundles.count)
             XCTAssertNotNil(self.l10nInstance.locale)
         }
@@ -35,7 +36,8 @@ final class L10nTests: L10nBaseTest {
 
         if let developmentLanguage = self.bundle.developmentLocalization {
             XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
-            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.identifier)
+            XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.languageCode)
+            XCTAssertEqual("US", self.l10nInstance.locale?.regionCode)
             XCTAssertEqual(1, self.l10nInstance.bundles.count)
             XCTAssertNotNil(self.l10nInstance.locale)
         } else {
@@ -48,7 +50,7 @@ final class L10nTests: L10nBaseTest {
     func testSetSuportedLanguage() {
         self.l10nInstance.language = "pl"
         XCTAssertEqual("pl", self.l10nInstance.language)
-        XCTAssertEqual("pl", self.l10nInstance.locale?.identifier)
+        XCTAssertEqual("pl-US", self.l10nInstance.locale?.identifier)
         XCTAssertEqual(2, self.l10nInstance.bundles.count)
         XCTAssertNotNil(self.l10nInstance.locale)
     }
@@ -64,7 +66,7 @@ final class L10nTests: L10nBaseTest {
     func testSetUnsuportedLanguage() {
         self.l10nInstance.language = "es"
         XCTAssertEqual("es", self.l10nInstance.language)
-        XCTAssertEqual("es", self.l10nInstance.locale?.identifier)
+        XCTAssertEqual("es-US", self.l10nInstance.locale?.identifier)
         XCTAssertEqual(1, self.l10nInstance.bundles.count)
         XCTAssertNotNil(self.l10nInstance.locale)
     }

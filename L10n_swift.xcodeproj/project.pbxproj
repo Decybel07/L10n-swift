@@ -75,6 +75,10 @@
 		2D2E4F6020907DF7000FE288 /* L10n+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F5E20907DF7000FE288 /* L10n+Equatable.swift */; };
 		2D2E4F6120907DF7000FE288 /* L10n+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F5E20907DF7000FE288 /* L10n+Equatable.swift */; };
 		2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F5E20907DF7000FE288 /* L10n+Equatable.swift */; };
+		2D3B5BD92143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
+		2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
+		2D3B5BDB2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
+		2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
 		2D51A6081F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
 		2D51A6091F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
 		2D51A60A1F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
@@ -239,6 +243,7 @@
 		2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+IBL10n.swift"; sourceTree = "<group>"; };
 		2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
 		2D2E4F5E20907DF7000FE288 /* L10n+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n+Equatable.swift"; sourceTree = "<group>"; };
+		2D3B5BD82143133200F4617F /* Locale+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+utils.swift"; sourceTree = "<group>"; };
 		2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "L10n+Localizable.swift"; sourceTree = "<group>"; };
 		2D6F176F1F2CB6E80031929D /* L10nTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10nTests.swift; sourceTree = "<group>"; };
 		2D6F17AC1F2CEA3F0031929D /* IntExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntExtensionTests.swift; sourceTree = "<group>"; };
@@ -431,6 +436,7 @@
 				2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */,
 				2D1A3B491F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift */,
 				2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */,
+				2D3B5BD82143133200F4617F /* Locale+utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -909,6 +915,7 @@
 				2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
+				2D3B5BD92143133200F4617F /* Locale+utils.swift in Sources */,
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B561F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D2E4F592090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
@@ -981,6 +988,7 @@
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
 				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D2E4F5A2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2DE4B1C91F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
@@ -1001,6 +1009,7 @@
 				2D99E7AA209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2D1A3B601F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4C1F2D50C900BD2710 /* L10n+static.swift in Sources */,
+				2D3B5BDB2143133200F4617F /* Locale+utils.swift in Sources */,
 				2DCF92E320ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D1A3BE41F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
@@ -1077,6 +1086,7 @@
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D2E4F5C2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2DE4B1C71F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 			);
