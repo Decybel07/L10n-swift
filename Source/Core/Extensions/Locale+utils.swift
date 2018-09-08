@@ -10,14 +10,24 @@ import Foundation
 
 internal extension Locale {
 
+    private static let components: [(Locale) -> String?] = [
+        { $0.languageCode },
+        { $0.scriptCode },
+        { $0.regionCode },
+        { $0.variantCode },
+    ]
+
     func merging(_ locale: Locale) -> Locale {
-        return Locale(identifier: ([
-            { $0.languageCode },
-            { $0.scriptCode },
-            { $0.regionCode },
-            { $0.variantCode },
-        ] as [(Locale) -> String?]).compactMap {
-            $0(self) ?? $0(locale)
-        }.joined(separator: "-"))
+        #if swift(>=4.1)
+            let identifier = Locale.components.compactMap {
+                $0(self) ?? $0(locale)
+            }.joined(separator: "-")
+        #else
+            let identifier = Locale.components.flatMap {
+                $0(self) ?? $0(locale)
+            }.joined(separator: "-")
+        #endif
+
+        return Locale(identifier: identifier)
     }
 }

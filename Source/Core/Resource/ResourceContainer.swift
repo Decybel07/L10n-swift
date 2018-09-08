@@ -19,9 +19,17 @@ internal class ResourceContainer {
     subscript(keyPath: String, variants: [Plural], fittingWidth: Int?) -> String? {
         let resource = self[keyPath]
 
-        return variants.lazy.compactMap { plural in
-            resource[plural.rawValue].text(for: fittingWidth)
-        }.first ?? resource.text(for: fittingWidth)
+        #if swift(>=4.1)
+            let variants = variants.lazy.compactMap { plural in
+                resource[plural.rawValue].text(for: fittingWidth)
+            }
+        #else
+            let variants = variants.lazy.flatMap { plural in
+                resource[plural.rawValue].text(for: fittingWidth)
+            }
+        #endif
+
+        return variants.first ?? resource.text(for: fittingWidth)
     }
 
     private subscript(keyPath: String) -> Resource {
