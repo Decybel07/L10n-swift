@@ -12,8 +12,8 @@ Pod::Spec.new do |spec|
       * Support for user-defined `Localizable` file names.
       * Support for formats: `*.plist`, `*.json`, `*.stringsdict`, `*.strings`.
       * Support for grouping localization keys.
-      * Support for plural forms in any language.
-      * Use .l10n() to localized any string, date int and double.
+      * Support for plural forms in any language with multiple arguments.
+      * Use .l10n() to localized any string, date numbers.
       * Use more than one languages at the same time.
                        DESC
 

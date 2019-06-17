@@ -84,7 +84,12 @@ extension String: Localizable {
 
      - returns: A localized plural version of the string designated by `self` or `self` if not found.
      */
-    public func l10n<Number: Numeric & CVarArg>(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: (_ number: Number) -> CVarArg = { $0 }) -> String {
-        return instance.plural(for: self, resource: resource, fittingWidth: fittingWidth, arg: arg, converting: converting)
+
+    public func l10nPlural(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int? = nil, _ args: CVarArg...) -> String {
+        return self.l10nPlural(instance, resource: resource, fittingWidth: fittingWidth, args: args)
+    }
+
+    public func l10nPlural(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int? = nil, args: [CVarArg]) -> String {
+        return instance.plural(for: self, resource: resource, fittingWidth: fittingWidth, args: args)
     }
 }

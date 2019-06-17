@@ -15,23 +15,28 @@ internal struct DictionaryResource: Resource {
         return self.values[key] ?? EmptyResource()
     }
 
-    func text() -> String? {
-        return self.values["value"]?.text()
-    }
-
-    func text(for fittingWidth: Int?) -> String? {
+    subscript(_ fittingWidth: Int?) -> Resource {
         if self.fittingWidths.isEmpty {
-            return self.text()
+            return self
         }
-        let fittingWidth = fittingWidth ?? Int.max
+
+        guard let fittingWidth = fittingWidth else {
+            return self.fittingWidths.last.flatMap { self.values[$0.description] }.unsafelyUnwrapped
+        }
+
         var width = self.fittingWidths[0]
-        for current in self.fittingWidths.dropFirst() {
-            if current > fittingWidth {
-                break
-            }
+        for current in self.fittingWidths.dropFirst() where current <= fittingWidth {
             width = current
         }
-        return self.values[width.description]?.text()
+        return self.values[width.description].unsafelyUnwrapped
+    }
+
+    var isEmpty: Bool {
+        return self.values.isEmpty
+    }
+
+    func text() -> String? {
+        return self.values["value"]?.text()
     }
 
     func merging(_ other: Resource) -> Resource {

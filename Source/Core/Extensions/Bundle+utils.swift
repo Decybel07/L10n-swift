@@ -28,9 +28,16 @@ internal extension Bundle {
     }
 
     private func removeBase(_ languages: [String]) -> [String] {
-        guard let index = languages.index(of: "Base") else {
-            return languages
-        }
+        #if swift(>=4.2)
+            guard let index = languages.firstIndex(of: "Base") else {
+                return languages
+            }
+        #else
+            guard let index = languages.index(of: "Base") else {
+                return languages
+            }
+        #endif
+
         var result = languages
         if let developmentLanguage = self.developmentLocalization, !result.contains(developmentLanguage) {
             result[index] = developmentLanguage

@@ -148,17 +148,26 @@ open class L10n {
 
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found or `arg` is not a number .
      */
-    open func plural<Number: Numeric & CVarArg>(for key: String, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: (_ number: Number) -> CVarArg = { $0 }) -> String {
-        guard let number = arg as? NSNumber else {
-            self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
-            return key
+
+    public func plural(for key: String, resource: String? = nil, fittingWidth: Int? = nil, _ args: CVarArg...) -> String {
+        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, args: args)
+    }
+
+    open func plural(for key: String, resource: String? = nil, fittingWidth: Int? = nil, args: [CVarArg]) -> String {
+        let args = args.map { arg -> (CVarArg, [Plural]) in
+            if let pluralArg = arg as? PluralArg {
+                return (pluralArg.convertedArg, Plural.variants(for: pluralArg.value, with: self.locale))
+            }
+            if let number = arg as? NSNumber {
+                return (arg, Plural.variants(for: number, with: self.locale))
+            }
+            return (arg, [])
         }
-        let variants = Plural.variants(for: number, with: self.locale)
-        guard let format = self.resource(named: resource)[key, variants, fittingWidth] else {
+        guard let format = self.resource(named: resource)[key, args.map { $0.1 }, fittingWidth] else {
             self.logger?.info("L10n - Key \(key.debugDescription) does not support plural for \(self.language.debugDescription).")
             return key
         }
-        return self.string(format: format, converting(arg))
+        return self.string(format: format, args: args.map { $0.0 })
     }
 
     /**
@@ -204,7 +213,7 @@ open class L10n {
     }
 
     private func resource(named resourceName: String?) -> ResourceContainer {
-        let resourceName = (resourceName ?? "").isEmpty ? "Localizable" : resourceName!
+        let resourceName = resourceName.flatMap { $0.isEmpty ? nil : $0 } ?? "Localizable"
 
         return self.resources[resourceName] ?? {
             let resource = ResourceContainer(bundles: self.bundles, name: resourceName)

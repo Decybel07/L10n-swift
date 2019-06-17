@@ -133,6 +133,18 @@
 		2DC0E3691FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
 		2DC0E36A1FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
 		2DC0E36B1FB512A500BFBBAD /* DictionaryResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */; };
+		2DC85EB922AD2D800052F15D /* PluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EB822AD2D800052F15D /* PluralArg.swift */; };
+		2DC85EBA22AD2D800052F15D /* PluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EB822AD2D800052F15D /* PluralArg.swift */; };
+		2DC85EBB22AD2D800052F15D /* PluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EB822AD2D800052F15D /* PluralArg.swift */; };
+		2DC85EBC22AD2D800052F15D /* PluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EB822AD2D800052F15D /* PluralArg.swift */; };
+		2DC85EBE22AD488F0052F15D /* NumericPluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */; };
+		2DC85EBF22AD488F0052F15D /* NumericPluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */; };
+		2DC85EC022AD488F0052F15D /* NumericPluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */; };
+		2DC85EC122AD488F0052F15D /* NumericPluralArg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */; };
+		2DC85EC322B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
+		2DC85EC422B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
+		2DC85EC522B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
+		2DC85EC622B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
 		2DCF92E120ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
 		2DCF92E220ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
 		2DCF92E320ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
@@ -169,14 +181,6 @@
 		2DE4B1C51F2C971B0067EE98 /* Date+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+Localizable.swift */; };
 		2DE4B1C61F2C971B0067EE98 /* Date+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+Localizable.swift */; };
 		2DE4B1C71F2C971B0067EE98 /* Date+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A81F2C971B0067EE98 /* Date+Localizable.swift */; };
-		2DE4B1C81F2C971B0067EE98 /* Double+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */; };
-		2DE4B1C91F2C971B0067EE98 /* Double+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */; };
-		2DE4B1CA1F2C971B0067EE98 /* Double+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */; };
-		2DE4B1CB1F2C971B0067EE98 /* Double+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */; };
-		2DE4B1CC1F2C971B0067EE98 /* Int+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */; };
-		2DE4B1CD1F2C971B0067EE98 /* Int+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */; };
-		2DE4B1CE1F2C971B0067EE98 /* Int+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */; };
-		2DE4B1CF1F2C971B0067EE98 /* Int+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */; };
 		2DE4B1D01F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */; };
 		2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */; };
 		2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */; };
@@ -259,6 +263,9 @@
 		2DC0E35D1FB5125C00BFBBAD /* EmptyResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyResource.swift; sourceTree = "<group>"; };
 		2DC0E3621FB5127C00BFBBAD /* StringResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringResource.swift; sourceTree = "<group>"; };
 		2DC0E3671FB512A500BFBBAD /* DictionaryResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryResource.swift; sourceTree = "<group>"; };
+		2DC85EB822AD2D800052F15D /* PluralArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluralArg.swift; sourceTree = "<group>"; };
+		2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericPluralArg.swift; sourceTree = "<group>"; };
+		2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Localizable.swift"; sourceTree = "<group>"; };
 		2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+utils.swift"; sourceTree = "<group>"; };
 		2DCF931320AE11D300FB1ECC /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		2DCF931920B0668400FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
@@ -282,13 +289,11 @@
 		2DE4B1991F2C96E80067EE98 /* .swift-version */ = {isa = PBXFileReference; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
 		2DE4B19A1F2C96E80067EE98 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .travis.yml; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.sh; };
 		2DE4B19B1F2C96E80067EE98 /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		2DE4B19C1F2C96E80067EE98 /* L10n-swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "L10n-swift.podspec"; sourceTree = "<group>"; };
+		2DE4B19C1F2C96E80067EE98 /* L10n-swift.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = "L10n-swift.podspec"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		2DE4B19D1F2C96E80067EE98 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		2DE4B19E1F2C96E80067EE98 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		2DE4B19F1F2C96E80067EE98 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2DE4B1A81F2C971B0067EE98 /* Date+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Localizable.swift"; sourceTree = "<group>"; };
-		2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Double+Localizable.swift"; sourceTree = "<group>"; };
-		2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Int+Localizable.swift"; sourceTree = "<group>"; };
 		2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSNumber+Localizable.swift"; sourceTree = "<group>"; };
 		2DE4B1AC1F2C971B0067EE98 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		2DE4B1AE1F2C971B0067EE98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -493,6 +498,8 @@
 			isa = PBXGroup;
 			children = (
 				2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */,
+				2DC85EB822AD2D800052F15D /* PluralArg.swift */,
+				2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */,
 				2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */,
 			);
 			path = Plural;
@@ -583,9 +590,8 @@
 			children = (
 				2DE4B1AC1F2C971B0067EE98 /* String+Localizable.swift */,
 				2DE4B1A81F2C971B0067EE98 /* Date+Localizable.swift */,
+				2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */,
 				2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */,
-				2DE4B1A91F2C971B0067EE98 /* Double+Localizable.swift */,
-				2DE4B1AA1F2C971B0067EE98 /* Int+Localizable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -766,47 +772,47 @@
 				TargetAttributes = {
 					2DE4B13A1F2C95490067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					2DE4B1431F2C95490067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = J9YB6F3PT7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					2DE4B1571F2C95620067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					2DE4B1641F2C957A0067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					2DE4B16C1F2C957A0067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = J9YB6F3PT7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					2DE4B1801F2C95A70067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Manual;
 					};
 					2DE4B1881F2C95A70067EE98 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = J9YB6F3PT7;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 2DE4B1201F2C946B0067EE98 /* Build configuration list for PBXProject "L10n_swift" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -908,10 +914,12 @@
 			files = (
 				2D1A3B521F2D50C900BD2710 /* L10n.swift in Sources */,
 				2D1A3B5E1F2D50C900BD2710 /* Logger.swift in Sources */,
+				2DC85EBE22AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2D1A3B4A1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3BE71F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D99E79E209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2D99E7B2209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
+				2DC85EC322B61BFC0052F15D /* Number+Localizable.swift in Sources */,
 				2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
@@ -925,7 +933,6 @@
 				2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BE51F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2DE4B1D41F2C971B0067EE98 /* String+Localizable.swift in Sources */,
-				2DE4B1CC1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
@@ -933,11 +940,11 @@
 				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
 				2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
+				2DC85EB922AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D1A3BB01F2E158D00BD2710 /* UIDatePicker+IBL10n.swift in Sources */,
 				2DE4B1D01F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D51A6081F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2D1A3BB21F2E158D00BD2710 /* UISearchBar+IBL10n.swift in Sources */,
-				2DE4B1C81F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2D1A3BE11F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
 				2D1A3B4E1F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2DE4B1C41F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
@@ -975,15 +982,17 @@
 				2D1A3BCB1F2E15E800BD2710 /* WKInterfaceController+IBL10n.swift in Sources */,
 				2D1A3BCC1F2E15E800BD2710 /* WKInterfaceLabel+IBL10n.swift in Sources */,
 				2D1A3B4B1F2D50C900BD2710 /* L10n+static.swift in Sources */,
+				2DC85EC422B61BFC0052F15D /* Number+Localizable.swift in Sources */,
 				2D1A3B5B1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D2E4F6020907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D1A3B571F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2DE4B1D51F2C971B0067EE98 /* String+Localizable.swift in Sources */,
-				2DE4B1CD1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2D99E7A9209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2DCF92E220ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D99E7B8209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
 				2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */,
+				2DC85EBF22AD488F0052F15D /* NumericPluralArg.swift in Sources */,
+				2DC85EBA22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
 				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
@@ -991,7 +1000,6 @@
 				2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
-				2DE4B1C91F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2D99E79F209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D51A6091F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
@@ -1006,11 +1014,13 @@
 			files = (
 				2D1A3B541F2D50C900BD2710 /* L10n.swift in Sources */,
 				2D51A60A1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
+				2DC85EBB22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D99E7AA209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2D1A3B601F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D1A3B4C1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D3B5BDB2143133200F4617F /* Locale+utils.swift in Sources */,
 				2DCF92E320ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
+				2DC85EC522B61BFC0052F15D /* Number+Localizable.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D1A3BE41F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2DC0E3651FB5127C00BFBBAD /* StringResource.swift in Sources */,
@@ -1019,6 +1029,7 @@
 				2D1A3B5C1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D1A3B581F2D50C900BD2710 /* ResourceContainer.swift in Sources */,
 				2D99E7A0209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
+				2DC85EC022AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2DC0E36A1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3BDE1F2E167200BD2710 /* UILabel+IBL10n.swift in Sources */,
 				2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */,
@@ -1026,7 +1037,6 @@
 				2D2E4F5B2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
 				2D99E7AF209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+Localizable.swift in Sources */,
-				2DE4B1CE1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BDC1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
@@ -1036,7 +1046,6 @@
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */,
 				2D99E7B4209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
-				2DE4B1CA1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
 				2D1A3BE21F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
 				2D1A3B501F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2DE4B1C61F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
@@ -1063,6 +1072,7 @@
 			files = (
 				2DCF92E420ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D99E7A1209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
+				2DC85EC622B61BFC0052F15D /* Number+Localizable.swift in Sources */,
 				2DC0E3611FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B551F2D50C900BD2710 /* L10n.swift in Sources */,
 				2DC0E35C1FB4FD8700BFBBAD /* Resource.swift in Sources */,
@@ -1074,13 +1084,13 @@
 				2D51A60B1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2DE4B1D71F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2D99E7AB209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
-				2DE4B1CF1F2C971B0067EE98 /* Int+Localizable.swift in Sources */,
 				2D1A3B651F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DC0E3661FB5127C00BFBBAD /* StringResource.swift in Sources */,
+				2DC85EBC22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D99E7B0209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D31F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
-				2DE4B1CB1F2C971B0067EE98 /* Double+Localizable.swift in Sources */,
+				2DC85EC122AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2DC0E36B1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
@@ -1295,7 +1305,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1355,7 +1365,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1416,7 +1426,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1465,7 +1475,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -1530,7 +1540,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1590,7 +1600,7 @@
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1658,7 +1668,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1717,7 +1727,7 @@
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 				VALIDATE_PRODUCT = YES;
@@ -1777,7 +1787,7 @@
 				SDKROOT = appletvos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 			};
 			name = Debug;
@@ -1825,7 +1835,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				TVOS_DEPLOYMENT_TARGET = 10.2;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1893,7 +1903,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1953,7 +1963,7 @@
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2013,7 +2023,7 @@
 				SDKROOT = macosx;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -2063,7 +2073,7 @@
 				PRODUCT_NAME = "$(PROJECT_NAME)Tests";
 				SDKROOT = macosx;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};

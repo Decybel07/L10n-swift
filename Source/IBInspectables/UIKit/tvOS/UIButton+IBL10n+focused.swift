@@ -8,7 +8,7 @@
 
 import UIKit
 
-public extension UIButton {
+extension UIButton {
 
     @IBInspectable
     public var l10nFocusedTitle: String {
