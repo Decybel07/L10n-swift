@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'L10n-swift'
   spec.module_name      = 'L10n_swift'
-  spec.version          = '5.4.1'
+  spec.version          = '5.5.0'
   spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   spec.description      = <<-DESC
@@ -13,7 +13,7 @@ Pod::Spec.new do |spec|
       * Support for formats: `*.plist`, `*.json`, `*.stringsdict`, `*.strings`.
       * Support for grouping localization keys.
       * Support for plural forms in any language with multiple arguments.
-      * Use .l10n() to localized any string, date numbers.
+      * Use .l10n() to localized any string, date and numbers.
       * Use more than one languages at the same time.
                        DESC
 
@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => spec.version }
 
   spec.frameworks = 'Foundation'
-  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
 
   spec.ios.deployment_target = '9.0'
   spec.watchos.deployment_target = '2.0'

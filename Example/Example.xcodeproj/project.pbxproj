@@ -15,6 +15,7 @@
 		2DAB8C4A1F48943A00C22A0C /* SimpleTranslatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAB8C3E1F48943A00C22A0C /* SimpleTranslatorViewController.swift */; };
 		2DB100D81F671E8A004ECBC5 /* RightToLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB100D71F671E8A004ECBC5 /* RightToLeftViewController.swift */; };
 		2DC85EE322BB4CFF0052F15D /* L10n_swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC85ED322BB4CB50052F15D /* L10n_swift.framework */; };
+		2DC85EE522BBEAC80052F15D /* L10n_swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC85ED322BB4CB50052F15D /* L10n_swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2DCF92F520AE08EB00FB1ECC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DCF92F420AE08EB00FB1ECC /* LaunchScreen.storyboard */; };
 		2DCF930F20AE090900FB1ECC /* Localizable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DCF92F720AE090900FB1ECC /* Localizable.plist */; };
 		2DCF931020AE090900FB1ECC /* Localizable.json in Resources */ = {isa = PBXBuildFile; fileRef = 2DCF92F920AE090900FB1ECC /* Localizable.json */; };
@@ -79,7 +80,28 @@
 			remoteGlobalIDString = 2DE4B13A1F2C95490067EE98;
 			remoteInfo = "L10n_swift iOS";
 		};
+		2DC85EE622BBEAC80052F15D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2DC85EC822BB4CB50052F15D /* L10n_swift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 2DE4B13A1F2C95490067EE98;
+			remoteInfo = "L10n_swift iOS";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		2DC85EE822BBEAC80052F15D /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2DC85EE522BBEAC80052F15D /* L10n_swift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2D1714871F2E757B00AADEB5 /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,11 +266,13 @@
 				2D1714831F2E757B00AADEB5 /* Sources */,
 				2D1714841F2E757B00AADEB5 /* Frameworks */,
 				2D1714851F2E757B00AADEB5 /* Resources */,
+				2DC85EE822BBEAC80052F15D /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				2DC85EE122BB4CF00052F15D /* PBXTargetDependency */,
+				2DC85EE722BBEAC80052F15D /* PBXTargetDependency */,
 			);
 			name = "Example iOS";
 			productName = iOS;
@@ -267,16 +291,15 @@
 					2D1714861F2E757B00AADEB5 = {
 						CreatedOnToolsVersion = 8.3.3;
 						LastSwiftMigration = 0900;
-						ProvisioningStyle = Manual;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
 			buildConfigurationList = 2D1714801F2E74EF00AADEB5 /* Build configuration list for PBXProject "Example" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				es,
 				ja,
@@ -389,6 +412,11 @@
 			isa = PBXTargetDependency;
 			name = "L10n_swift iOS";
 			targetProxy = 2DC85EE022BB4CF00052F15D /* PBXContainerItemProxy */;
+		};
+		2DC85EE722BBEAC80052F15D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "L10n_swift iOS";
+			targetProxy = 2DC85EE622BBEAC80052F15D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -515,6 +543,7 @@
 		2D1714981F2E757B00AADEB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -535,7 +564,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = "";
@@ -574,6 +605,7 @@
 		2D1714991F2E757B00AADEB5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -594,7 +626,9 @@
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "";
