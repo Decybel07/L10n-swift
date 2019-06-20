@@ -3,7 +3,7 @@
 ---
 
 ## [5.5.0](https://github.com/Decybel07/L10n-swift/tree/5.5.0) (2019-06-20)
-* Issue [#16](https://github.com/Decybel07/L10n-swift/issues/16) support for multiple arguments in plural function.
+* Support for multiple arguments in plural function [#16](https://github.com/Decybel07/L10n-swift/issues/16)
 
 ## [5.4.1](https://github.com/Decybel07/L10n-swift/tree/5.4.1) (2018-09-08)
 * `Local` includes system settings for the region
