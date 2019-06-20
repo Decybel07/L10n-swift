@@ -22,40 +22,6 @@
 			<string>%d apples</string>
 		</dict>
 	</dict>
-	<key>testABC</key>
-	<dict>
-		<key>format</key>
-		<string>%d &lt;-&gt; %#@a@</string>
-		<key>NSStringLocalizedFormatKey</key>
-		<string>%d &lt;-&gt; %#@a@</string>
-		<key>a</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>d</string>
-			<key>other</key>
-			<string>a(%d) -&gt; %#@b@</string>
-		</dict>
-		<key>b</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>d</string>
-			<key>other</key>
-			<string>b(%d) -&gt; %#@c@ %#@c@</string>
-		</dict>
-		<key>c</key>
-		<dict>
-			<key>NSStringFormatSpecTypeKey</key>
-			<string>NSStringPluralRuleType</string>
-			<key>NSStringFormatValueTypeKey</key>
-			<string>d</string>
-			<key>other</key>
-			<string>c(%d)</string>
-		</dict>
-	</dict>
 	<key>numberOfPears</key>
 	<dict>
 		<key>zero</key>
