@@ -36,8 +36,8 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 - [x] Support for user-defined `Localizable` file names.
 - [x] Support for formats: [`*.plist`](https://github.com/Decybel07/L10n-swift/wiki/*.plist), [`*.json`](https://github.com/Decybel07/L10n-swift/wiki/*.json), [`*.stringsdict`](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict), [`*.strings`](https://github.com/Decybel07/L10n-swift/wiki/*.strings).
 - [x] Support for grouping localization keys.
-- [x] Support for [**plural**](https://github.com/Decybel07/L10n-swift/wiki/Plural) forms in any language.
-- [x] Use `.l10n()` to localized any string, date, int and double.
+- [x] Support for [**plural**](https://github.com/Decybel07/L10n-swift/wiki/Plural) forms in any language with multiple arguments.
+- [x] Use `.l10n()` to localized any string, date and numbers
 - [x] Use more than one languages at the same time.
 - [x] About 25 times faster than a native solution.
 
@@ -70,13 +70,13 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 5.4'
+ pod 'L10n-swift', '~> 5.5'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 5.4
+github "Decybel07/L10n-swift", ~> 5.5
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
@@ -101,7 +101,7 @@ github "Decybel07/L10n-swift", ~> 5.4
  
 ### Get localized number
 
- Add `.l10()` following any `Int`,  `Double` or `NSNumber` object you want localized. Using the number format for the current language:
+ Add `.l10()` following number you want localized. Using the number format for the current language:
  ```swift
  12.l10n()
  24.l10n(minIntegerDigits: 4)
@@ -126,9 +126,9 @@ github "Decybel07/L10n-swift", ~> 5.4
  
 ### Get plural
 
-Add `.l10(arg: CVarArg)` following any `String` object you want translated with plurals:
+Add `.l10nPlural(CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
- "numberOfApples".l10n(arg: 2)
+ "numberOfApples".l10nPlural(2)
  ```
  More about plurals, you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/Plural)
  

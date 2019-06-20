@@ -24,16 +24,21 @@ internal struct StringsdictResourceProvider: ResourceProvider {
             guard let format = dictionary[$0] as? [String: Any] else {
                 return
             }
-            if let key = self.formatKey(for: format), var value = format[key] as? [String: Any] {
-                value.removeValue(forKey: "NSStringFormatSpecTypeKey")
-                value.removeValue(forKey: "NSStringFormatValueTypeKey")
-                dictionary[$0] = value
+            if let value = format["NSStringLocalizedFormatKey"] as? [String] {
+                dictionary["format"] = value
             } else if let value = format["NSStringVariableWidthRuleType"] as? [String: Any] {
                 dictionary[$0] = value
             } else {
                 dictionary[$0] = self.clean(format)
             }
         }
+
+        [
+            "NSStringLocalizedFormatKey",
+            "NSStringFormatSpecTypeKey",
+            "NSStringFormatValueTypeKey",
+        ].forEach { dictionary.removeValue(forKey: $0) }
+
         return dictionary
     }
 
@@ -48,9 +53,9 @@ internal struct StringsdictResourceProvider: ResourceProvider {
 
     private func matchRange(in format: String) -> Range<String.Index>? {
         guard let regularExpression = try? NSRegularExpression(pattern: "@(.+?)@", options: []),
-            let match = regularExpression.matches(
+            let match = regularExpression.firstMatch(
                 in: format, options: [], range: NSRange(location: 0, length: format.count)
-            ).first
+            )
         else {
             return nil
         }

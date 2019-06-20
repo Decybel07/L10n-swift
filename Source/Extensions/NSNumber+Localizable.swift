@@ -8,7 +8,11 @@
 
 import Foundation
 
-extension NSNumber: Localizable {
+extension NSNumber: NumericLocalizable, NSNumberRepresentable {
+
+    public func asNSNumber() -> NSNumber {
+        return self
+    }
 
     /**
      Returns a localized `self` description.

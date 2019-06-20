@@ -9,15 +9,17 @@
 internal protocol Resource {
 
     subscript(_: String) -> Resource { get }
+    subscript(_: Int?) -> Resource { get }
+
+    var isEmpty: Bool { get }
 
     func text() -> String?
-    func text(for: Int?) -> String?
     func merging(_ other: Resource) -> Resource
 }
 
 extension Resource {
 
-    func text(for _: Int?) -> String? {
-        return self.text()
+    subscript(_: Int?) -> Resource {
+        return self
     }
 }

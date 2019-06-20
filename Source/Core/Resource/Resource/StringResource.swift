@@ -14,6 +14,10 @@ internal struct StringResource: Resource {
         return EmptyResource()
     }
 
+    var isEmpty: Bool {
+        return false
+    }
+
     func text() -> String? {
         return self.value
     }
