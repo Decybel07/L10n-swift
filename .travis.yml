@@ -12,10 +12,10 @@ env:
 
   matrix:
     # iOS
-    - DESTINATION="OS=9.1,name=iPad Air"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
-    - DESTINATION="OS=10.0,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
+    - DESTINATION="OS=9.1,name=iPad Air"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
+    - DESTINATION="OS=11.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
 
-    - DESTINATION="OS=10.3,name=iPhone 7"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
+    - DESTINATION="OS=10.3.1,name=iPhone 7"                   PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
     - DESTINATION="OS=11.4,name=iPhone 8 Plus"                PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
     - DESTINATION="OS=12.2,name=iPhone X"                     PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="YES"
 
@@ -48,7 +48,7 @@ script:
   # Build Framework
   - if [ $BUILD_FRAMEWORK == "YES" ]; then
       xcodebuild -project "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-      xcodebuild -project "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
+      xcodebuild -project "L10n_swift.xcodeproj" -scheme "$FRAMEWORK_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
 
   # Run Tests
@@ -60,7 +60,7 @@ script:
   # Build Example
   - if [ $BUILD_EXAMPLE == "YES" ]; then
       xcodebuild -project "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Debug ONLY_ACTIVE_ARCH=NO build | xcpretty;
-      xcodebuild -project "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build| xcpretty;
+      xcodebuild -project "Example/Example.xcodeproj" -scheme "$EXAMPLE_SCHEME" -destination "$DESTINATION" -configuration Release ONLY_ACTIVE_ARCH=NO build | xcpretty;
     fi
 after_success:
   - bash <(curl -s https://codecov.io/bash)
