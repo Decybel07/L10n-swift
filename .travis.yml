@@ -12,7 +12,7 @@ env:
 
   matrix:
     # iOS
-    - DESTINATION="OS=9.1,name=iPad Air"                      PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
+    - DESTINATION="OS=9.1,name=iPad Air"                      PLATFORM="$IOS"       RUN_TESTS="NO"    BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
     - DESTINATION="OS=11.1,name=iPad Pro (12.9-inch)"         PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
 
     - DESTINATION="OS=10.3.1,name=iPhone 7"                   PLATFORM="$IOS"       RUN_TESTS="YES"   BUILD_FRAMEWORK="YES" BUILD_EXAMPLE="NO"
