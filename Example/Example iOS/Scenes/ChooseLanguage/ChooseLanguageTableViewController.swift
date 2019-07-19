@@ -26,7 +26,7 @@ final class ChooseLanguageTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        if let row = self.items.index(where: { $0.language == L10n.shared.language }) {
+        if let row = self.items.firstIndex(where: { $0.language == L10n.shared.language }) {
             self.tableView.selectRow(at: IndexPath(row: row, section: 0), animated: true, scrollPosition: .none)
         }
     }

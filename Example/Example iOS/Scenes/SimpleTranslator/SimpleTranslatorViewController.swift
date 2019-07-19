@@ -41,8 +41,8 @@ final class SimpleTranslatorViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.pickerView.selectRow(self.languages.index(of: self.from.language) ?? 0, inComponent: 0, animated: false)
-        self.pickerView.selectRow(self.languages.index(of: self.to.language) ?? 0, inComponent: 1, animated: false)
+        self.pickerView.selectRow(self.languages.firstIndex(of: self.from.language) ?? 0, inComponent: 0, animated: false)
+        self.pickerView.selectRow(self.languages.firstIndex(of: self.to.language) ?? 0, inComponent: 1, animated: false)
     }
 }
 

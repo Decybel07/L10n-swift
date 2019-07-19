@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.5.1](https://github.com/Decybel07/L10n-swift/tree/5.5.1) (2019-07-19)
+* Swift 5.0 Support [#19](https://github.com/Decybel07/L10n-swift/issues/19)
+
 ## [5.5.0](https://github.com/Decybel07/L10n-swift/tree/5.5.0) (2019-06-20)
 * Support for multiple arguments in plural function [#16](https://github.com/Decybel07/L10n-swift/issues/16)
 
