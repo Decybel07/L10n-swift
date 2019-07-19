@@ -23,7 +23,7 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => spec.version }
 
   spec.frameworks = 'Foundation'
-  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }
+  spec.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
   spec.ios.deployment_target = '9.0'
   spec.watchos.deployment_target = '2.0'
