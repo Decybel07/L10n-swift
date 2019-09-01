@@ -6,6 +6,8 @@
 //  Copyright © 2018 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+import Foundation
+
 internal protocol ResourceProvider {
 
     var type: String { get }

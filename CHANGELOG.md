@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.5.2](https://github.com/Decybel07/L10n-swift/tree/5.5.2) (2019-09-01)
+* Solution to the problem with Swift PM [#21](https://github.com/Decybel07/L10n-swift/issues/21)
+
 ## [5.5.1](https://github.com/Decybel07/L10n-swift/tree/5.5.1) (2019-07-19)
 * Swift 5.0 Support [#19](https://github.com/Decybel07/L10n-swift/issues/19)
 
