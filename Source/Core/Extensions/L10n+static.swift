@@ -21,7 +21,7 @@ public extension L10n {
 
     /// A preferred language contained in the main bundle.
     static var preferredLanguage: String {
-        get { Bundle.main.preferredLanguage }
+        get { return Bundle.main.preferredLanguage }
         set { Bundle.main.preferredLanguage = newValue }
     }
 
