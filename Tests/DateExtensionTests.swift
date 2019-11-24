@@ -18,13 +18,13 @@ final class DateExtensionTests: L10nBaseTest {
     }()
 
     func testDate() {
-        self.l10nInstance.language = "pl"
-
+        self.l10nInstance.language = "pl_PL"
+        debugPrint(self.l10nInstance)
         XCTAssertEqual("07.12.1993, 08:25:36", self.date.l10n(self.l10nInstance))
     }
 
     func testDateWithDateStyle() {
-        self.l10nInstance.language = "pl"
+        self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, dateStyle: .none))
         XCTAssertEqual("07.12.1993", self.date.l10n(self.l10nInstance, dateStyle: .short))
@@ -34,7 +34,7 @@ final class DateExtensionTests: L10nBaseTest {
     }
 
     func testDateWithTimeStyle() {
-        self.l10nInstance.language = "pl"
+        self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, timeStyle: .none))
         XCTAssertEqual("08:25", self.date.l10n(self.l10nInstance, timeStyle: .short))
@@ -42,7 +42,7 @@ final class DateExtensionTests: L10nBaseTest {
     }
 
     func testDateWithDateStyleAndTimeStyle() {
-        self.l10nInstance.language = "pl"
+        self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, dateStyle: .none, timeStyle: .none))
         XCTAssertEqual("07.12.1993, 08:25", self.date.l10n(self.l10nInstance, dateStyle: .short, timeStyle: .short))
@@ -52,14 +52,14 @@ final class DateExtensionTests: L10nBaseTest {
     }
 
     func testDateWithFormat() {
-        self.l10nInstance.language = "pl"
+        self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("1993 12 07", self.date.l10n(self.l10nInstance, format: "yyyy MM dd"))
         XCTAssertEqual("08 25 36", self.date.l10n(self.l10nInstance, format: "HH mm ss"))
     }
 
     func testDateWithConfigureFormatter() {
-        self.l10nInstance.language = "pl"
+        self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("Dzisiaj", Date().l10n(self.l10nInstance) {
             $0.doesRelativeDateFormatting = true

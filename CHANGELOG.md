@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.6.0](https://github.com/Decybel07/L10n-swift/tree/5.6.0) (2019-11-24)
+* Storing selected language for `L10n.shared`
+
 ## [5.5.2](https://github.com/Decybel07/L10n-swift/tree/5.5.2) (2019-09-01)
 * Solution to the problem with Swift PM [#21](https://github.com/Decybel07/L10n-swift/issues/21)
 

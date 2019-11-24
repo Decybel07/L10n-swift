@@ -79,6 +79,14 @@
 		2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
 		2D3B5BDB2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
 		2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D3B5BD82143133200F4617F /* Locale+utils.swift */; };
+		2D3CDB99238A8A180010D162 /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2D3CDB9A238A8A180010D162 /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2D3CDB9B238A8A190010D162 /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2D3CDB9C238A8A1A0010D162 /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
+		2D3CDB9D238A8BB20010D162 /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2D3CDB9E238A8BB20010D162 /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2D3CDB9F238A8BB30010D162 /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
+		2D3CDBA0238A8BB50010D162 /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
 		2D51A6081F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
 		2D51A6091F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
 		2D51A60A1F4F272600EF2801 /* L10n+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D51A6071F4F272600EF2801 /* L10n+Localizable.swift */; };
@@ -109,14 +117,6 @@
 		2D99E7C3209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
 		2D99E7C4209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
 		2D99E7C5209F4777003ECD51 /* .jazzy.yml in Resources */ = {isa = PBXBuildFile; fileRef = 2D99E7C1209F4777003ECD51 /* .jazzy.yml */; };
-		2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
-		2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
-		2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
-		2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E34B1FB4F0A900BFBBAD /* Plural.swift */; };
-		2DC0E3531FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
-		2DC0E3541FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
-		2DC0E3551FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
-		2DC0E3561FB4F13F00BFBBAD /* Plural.stringsdict in Resources */ = {isa = PBXBuildFile; fileRef = 2DC0E3521FB4F13F00BFBBAD /* Plural.stringsdict */; };
 		2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
 		2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
 		2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC0E3581FB4FD8700BFBBAD /* Resource.swift */; };
@@ -837,8 +837,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CDBA0238A8BB50010D162 /* Plural.stringsdict in Resources */,
 				2D99E7C2209F4777003ECD51 /* .jazzy.yml in Resources */,
-				2DC0E3531FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -857,8 +857,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CDB9F238A8BB30010D162 /* Plural.stringsdict in Resources */,
 				2D99E7C3209F4777003ECD51 /* .jazzy.yml in Resources */,
-				2DC0E3541FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -866,8 +866,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CDB9E238A8BB20010D162 /* Plural.stringsdict in Resources */,
 				2D99E7C4209F4777003ECD51 /* .jazzy.yml in Resources */,
-				2DC0E3551FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -886,8 +886,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CDB9D238A8BB20010D162 /* Plural.stringsdict in Resources */,
 				2D99E7C5209F4777003ECD51 /* .jazzy.yml in Resources */,
-				2DC0E3561FB4F13F00BFBBAD /* Plural.stringsdict in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -918,7 +918,6 @@
 				2D99E7B2209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2DC85EC322B61BFC0052F15D /* Number+Localizable.swift in Sources */,
 				2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
-				2DC0E34C1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2D3B5BD92143133200F4617F /* Locale+utils.swift in Sources */,
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
@@ -934,6 +933,7 @@
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D99E7B7209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
+				2D3CDB9C238A8A1A0010D162 /* Plural.swift in Sources */,
 				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
 				2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
@@ -987,13 +987,13 @@
 				2D99E7A9209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2DCF92E220ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D99E7B8209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
-				2DC0E34D1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DC85EBF22AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2DC85EBA22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
 				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D2E4F5A2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D3CDB9B238A8A190010D162 /* Plural.swift in Sources */,
 				2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
@@ -1039,10 +1039,10 @@
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
 				2D2E4F6120907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D1A3B641F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
-				2DC0E34E1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */,
 				2D99E7B4209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
+				2D3CDB9A238A8A180010D162 /* Plural.swift in Sources */,
 				2D1A3BE21F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
 				2D1A3B501F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2DE4B1C61F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
@@ -1067,6 +1067,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D3CDB99238A8A180010D162 /* Plural.swift in Sources */,
 				2DCF92E420ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D99E7A1209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DC85EC622B61BFC0052F15D /* Number+Localizable.swift in Sources */,
@@ -1082,7 +1083,6 @@
 				2DE4B1D71F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2D99E7AB209F0D55003ECD51 /* JsonResourceProvider.swift in Sources */,
 				2D1A3B651F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
-				2DC0E34F1FB4F0A900BFBBAD /* Plural.swift in Sources */,
 				2DC0E3661FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2DC85EBC22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D99E7B0209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,

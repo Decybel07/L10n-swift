@@ -196,9 +196,9 @@ open class L10n {
         if let code = locale.languageCode, Locale.isoLanguageCodes.contains(code) {
             self.locale = locale.merging(.autoupdatingCurrent)
             self.bundles = [
-                self.coreBundle.bundle(forLangage: self.language),
-                self.coreBundle.bundle(forLangage: code),
-                self.coreBundle.bundle(forLangage: "Base"),
+                self.coreBundle.bundle(forLanguage: self.language),
+                self.coreBundle.bundle(forLanguage: code),
+                self.coreBundle.bundle(forLanguage: "Base"),
             ].reduce(into: [Bundle]()) { result, bundle in
                 if let bundle = bundle, !result.contains(bundle) {
                     result.append(bundle)
@@ -212,6 +212,9 @@ open class L10n {
         }
 
         if !oldValue.isEmpty {
+            if self === L10n.shared {
+                L10n.preferredLanguage = self.languageCode
+            }
             NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
                 "sender": self,
                 "oldValue": oldValue,
