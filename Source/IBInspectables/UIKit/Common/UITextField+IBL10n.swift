@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UITextField: IBL10n {
@@ -22,3 +23,5 @@ extension UITextField: IBL10n {
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 }
+
+#endif

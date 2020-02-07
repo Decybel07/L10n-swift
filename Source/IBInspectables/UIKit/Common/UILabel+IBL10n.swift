@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UILabel: IBL10n {
@@ -16,3 +17,5 @@ extension UILabel: IBL10n {
         set { self.text = L10n.shared.string(for: newValue) }
     }
 }
+
+#endif

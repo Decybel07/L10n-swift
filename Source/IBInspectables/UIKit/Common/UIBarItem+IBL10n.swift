@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIBarItem: IBL10n {
@@ -16,3 +17,5 @@ extension UIBarItem: IBL10n {
         set { self.title = L10n.shared.string(for: newValue) }
     }
 }
+
+#endif

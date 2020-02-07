@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 extension UINavigationItem: IBL10n {
@@ -33,3 +34,5 @@ extension UINavigationItem: IBL10n {
         }
     }
 }
+
+#endif

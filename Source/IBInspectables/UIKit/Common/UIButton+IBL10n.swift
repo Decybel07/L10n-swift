@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UIButton: IBL10n {
@@ -34,3 +35,5 @@ extension UIButton: IBL10n {
         set { self.setTitle(L10n.shared.string(for: newValue), for: .disabled) }
     }
 }
+
+#endif

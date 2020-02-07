@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 extension UIDatePicker: IBL10n {
@@ -20,3 +21,5 @@ extension UIDatePicker: IBL10n {
         }
     }
 }
+
+#endif

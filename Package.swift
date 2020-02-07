@@ -19,25 +19,7 @@ let package = Package(
     targets: [
         .target(
             name: "L10n-swift",
-            path: "./Source",
-            exclude: {
-                var paths: [String] = ["Info.plist", "L10n_swift.h"]
-                #if !os(watchOS)
-                    paths.append("./IBInspectables/WatchKit")
-                #endif
-
-                if #available(iOS 9.0, *) {
-                    paths.append("./IBInspectables/UIKit/tvOS")
-                } else if #available(tvOS 9.0, *) {
-                    paths.append("./IBInspectables/UIKit/iOS")
-                } else {
-                    paths.append("./IBInspectables/UIKit")
-                }
-                return paths
-            }(),
-            resources: [
-                .process("./Core/Plural/Plural.stringsdict", localization: .default)
-            ]
+            path: "Source"
         ),
     ],
     swiftLanguageVersions: [.v4, .v4_2, .v5]

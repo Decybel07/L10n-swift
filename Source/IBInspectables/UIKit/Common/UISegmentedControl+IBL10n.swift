@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit)
 import UIKit
 
 extension UISegmentedControl: IBL10n {
@@ -24,3 +25,5 @@ extension UISegmentedControl: IBL10n {
         }
     }
 }
+
+#endif

@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit) && os(tvOS)
 import UIKit
 
 extension UIButton {
@@ -16,3 +17,5 @@ extension UIButton {
         set { self.setTitle(L10n.shared.string(for: newValue), for: .focused) }
     }
 }
+
+#endif

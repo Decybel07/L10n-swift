@@ -6,6 +6,7 @@
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
 
+#if canImport(UIKit) && os(iOS)
 import UIKit
 
 extension UISearchBar: IBL10n {
@@ -28,3 +29,5 @@ extension UISearchBar: IBL10n {
         set { self.placeholder = L10n.shared.string(for: newValue) }
     }
 }
+
+#endif
