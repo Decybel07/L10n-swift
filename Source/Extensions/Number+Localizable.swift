@@ -61,7 +61,7 @@ extension NumericLocalizable where Self: NSNumberRepresentable {
 
 // MARK: - IntegerLocalizable
 
-protocol IntegerLocalizable: NumericLocalizable {}
+public protocol IntegerLocalizable: NumericLocalizable {}
 
 extension IntegerLocalizable {
 
@@ -82,7 +82,7 @@ extension IntegerLocalizable {
 
 // MARK: - FloatingPointLocalizable
 
-protocol FloatingPointLocalizable: NumericLocalizable {}
+public protocol FloatingPointLocalizable: NumericLocalizable {}
 
 extension FloatingPointLocalizable {
     /**
