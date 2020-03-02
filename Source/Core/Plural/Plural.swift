@@ -20,8 +20,8 @@ internal enum Plural: String {
 
 extension Plural {
 
-    private static let format = Bundle(for: L10n.self).localizedString(forKey: "integer", value: "other", table: "Plural")
-
+    private static let format = Self.createFormat()
+    
     static func variants(for number: NSNumber, with locale: Locale?) -> [Plural] {
         var variants: [Plural] = []
 
@@ -39,5 +39,64 @@ extension Plural {
     private static func variants(base: Plural?, alternative: Plural) -> [Plural] {
         let variant = base ?? alternative
         return variant == alternative ? [alternative] : [variant, alternative]
+    }
+    
+    private static func createFormat() -> String {
+        let table = "Plural"
+        let `extension` = "stringsdict"
+        var bundle = Bundle(for: L10n.self)
+
+        if bundle.url(forResource: table, withExtension: `extension`) == nil,
+            case let subdirectory = "spmResources",
+            bundle.url(forResource: table, withExtension: `extension`, subdirectory: subdirectory) == nil
+        {
+            // FIXME: This is temporary solution for Swift Package Manager.
+            // See also: https://github.com/Decybel07/L10n-swift/issues/21
+            
+            let baseUrl = bundle.bundleURL.appendingPathComponent(subdirectory)
+            let url = baseUrl.appendingPathComponent(table).appendingPathExtension(`extension`)
+            let fileContent = """
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>integer</key>
+    <dict>
+        <key>NSStringLocalizedFormatKey</key>
+        <string>%#@value@</string>
+        <key>value</key>
+        <dict>
+            <key>NSStringFormatSpecTypeKey</key>
+            <string>NSStringPluralRuleType</string>
+            <key>NSStringFormatValueTypeKey</key>
+            <string>ld</string>
+            <key>zero</key>
+            <string>zero</string>
+            <key>one</key>
+            <string>one</string>
+            <key>two</key>
+            <string>two</string>
+            <key>few</key>
+            <string>few</string>
+            <key>many</key>
+            <string>many</string>
+            <key>other</key>
+            <string>other</string>
+        </dict>
+    </dict>
+</dict>
+</plist>
+
+"""
+            do {
+                try FileManager.default.createDirectory(at: baseUrl, withIntermediateDirectories: true)
+                try fileContent.write(to: url, atomically: true, encoding: .utf8)
+                bundle = Bundle(url: baseUrl) ?? bundle
+            } catch {
+                L10n.shared.logger?.log("Can't create \(url): \(error.localizedDescription)")
+            }
+        }
+        
+        return bundle.localizedString(forKey: "integer", value: "other", table: table)
     }
 }

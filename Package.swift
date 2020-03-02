@@ -39,12 +39,6 @@ let package = Package(
                 return paths
             }()
         ),
-//        .testTarget(
-//            name: "L10n-swiftTest",
-//            dependencies: ["L10n-swift"],
-//            path: "Tests",
-//            cSettings: [.define("LANG", to: "en_US.UTF-8")]
-//        ),
     ],
     swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
