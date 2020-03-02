@@ -20,7 +20,7 @@ internal enum Plural: String {
 
 extension Plural {
 
-    private static let format = Self.createFormat()
+    private static let format = Plural.createFormat()
     
     static func variants(for number: NSNumber, with locale: Locale?) -> [Plural] {
         var variants: [Plural] = []
