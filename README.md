@@ -128,7 +128,7 @@ github "Decybel07/L10n-swift", ~> 5.6
 
 Add `.l10nPlural(CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
- "numberOfApples".l10nPlural(2)
+ "numberOfApples".l10nPlural(args: [2])
  ```
  More about plurals, you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/Plural)
  

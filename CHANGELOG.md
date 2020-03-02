@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.6.1](https://github.com/Decybel07/L10n-swift/tree/5.6.1) (2020-03-02)
+* Temporary solution for plurals when using Swift PM [#21](https://github.com/Decybel07/L10n-swift/issues/21)
+
 ## [5.6.0](https://github.com/Decybel07/L10n-swift/tree/5.6.0) (2019-11-24)
 * Storing selected language for `L10n.shared`
 
