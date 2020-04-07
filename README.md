@@ -37,8 +37,8 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 - [x] Support for formats: [`*.plist`](https://github.com/Decybel07/L10n-swift/wiki/*.plist), [`*.json`](https://github.com/Decybel07/L10n-swift/wiki/*.json), [`*.stringsdict`](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict), [`*.strings`](https://github.com/Decybel07/L10n-swift/wiki/*.strings).
 - [x] Support for grouping localization keys.
 - [x] Support for [**plural**](https://github.com/Decybel07/L10n-swift/wiki/Plural) forms in any language with multiple arguments.
-- [x] Use `.l10n()` to localized any string, date and numbers
-- [x] Use more than one languages at the same time.
+- [x] Use `.l10n()` to localize any string, date and numbers.
+- [x] Use more than one language at the same time.
 - [x] About 25 times faster than a native solution.
 
 ## 💻 Demo
@@ -134,7 +134,7 @@ Add `.l10nPlural(CVarArg...)` following any `String` object you want translated 
  
 ### Observe language changed
 
- Add observer for notification `L10nLanguageChanged` This notification is called when language has been changed
+ Add observer for notification `L10nLanguageChanged`. This notification is called when language has been changed.
  ```swift
  NotificationCenter.default.addObserver(
      self, selector: #selector(self.yourFunction), name: .L10nLanguageChanged, object: nil
@@ -147,7 +147,7 @@ Add `.l10nPlural(CVarArg...)` following any `String` object you want translated 
  L10n.shared.language = "en"
  L10n.shared.language = "en-GB"
  ```
- At runtime, you can switch the language at any time by setting the language property
+ At runtime, you can switch the language at any time by setting the language property.
  
 ### Get current language
 
@@ -173,20 +173,20 @@ Add `.l10nPlural(CVarArg...)` following any `String` object you want translated 
  ```swift
  L10n.preferredLanguage
  ```
- A preferred language contained in the main bundle
+ A preferred language contained in the main bundle.
 
 ### Supported formats
 #### .plist, .stringsdict
 <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_plist_file.png" alt="Sample .plist and .stringsdict file" width="597" style="max-width:100%;"/>
 
- More about **.plist** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.plist)
+ More about **.plist** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.plist).
  
- More about **.stringsdict** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict)
+ More about **.stringsdict** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict).
  
  #### .json
  <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_json_file.png" alt="Sample .json file" width="554" style="max-width:100%;"/>
  
- More about **.json** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.json)
+ More about **.json** format you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/*.json).
  
  #### .strings
  <img src="https://raw.githubusercontent.com/Decybel07/L10n-swift/master/Images/sample_strings_file.png" alt="Sample .strings file" width="544" style="max-width:100%;"/>
