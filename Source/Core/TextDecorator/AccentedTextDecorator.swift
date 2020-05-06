@@ -22,8 +22,8 @@ struct AccentedTextDecorator: TextDecorator {
         }
         let hash = abs(char.hashValue)
         return base
-            + self.scalar(Self.up.unicodeScalars, for: hash)
-            + self.scalar(Self.down.unicodeScalars, for: hash)
+            + self.scalar(AccentedTextDecorator.up.unicodeScalars, for: hash)
+            + self.scalar(AccentedTextDecorator.down.unicodeScalars, for: hash)
     }
     
     private func scalar(_ unicodeScalars: String.UnicodeScalarView, for hash: Int) -> String {

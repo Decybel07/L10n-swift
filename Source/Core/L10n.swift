@@ -54,7 +54,6 @@ open class L10n {
             return self.languageCode
         }
         set {
-            newValue.isEmpty
             if newValue == "Base", let developmentLanguage = self.coreBundle.developmentLocalization {
                 self.language = developmentLanguage
                 return
