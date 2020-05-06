@@ -46,13 +46,22 @@ extension Plural {
         let `extension` = "stringsdict"
         var bundle = Bundle(for: L10n.self)
 
-        if bundle.url(forResource: table, withExtension: `extension`) == nil,
-            case let subdirectory = "spmResources",
-            bundle.url(forResource: table, withExtension: `extension`, subdirectory: subdirectory) == nil
-        {
-            // FIXME: This is temporary solution for Swift Package Manager.
-            // See also: https://github.com/Decybel07/L10n-swift/issues/21
-            
+        if bundle.url(forResource: table, withExtension: `extension`) == nil {
+            self.createFileIfNeeded(table: table, extension: `extension`, bundle: &bundle)
+        }
+        
+        return bundle.localizedString(forKey: "integer", value: "other", table: table)
+    }
+    
+    /**
+     This is temporary solution for Swift Package Manager.
+     
+      - SeeAlso:
+      [Issue #21](https://github.com/Decybel07/L10n-swift/issues/21)
+     */
+    private static func createFileIfNeeded(table: String, `extension`: String, bundle: inout Bundle) {
+        let subdirectory = "spmResources"
+        if bundle.url(forResource: table, withExtension: `extension`, subdirectory: subdirectory) == nil {
             let baseUrl = bundle.bundleURL.appendingPathComponent(subdirectory)
             let url = baseUrl.appendingPathComponent(table).appendingPathExtension(`extension`)
             let fileContent = """
@@ -96,7 +105,5 @@ extension Plural {
                 L10n.shared.logger?.log("Can't create \(url): \(error.localizedDescription)")
             }
         }
-        
-        return bundle.localizedString(forKey: "integer", value: "other", table: table)
     }
 }

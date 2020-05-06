@@ -10,7 +10,7 @@ import Foundation
 
 public extension L10n {
 
-    /// A single shared instance of `L10n`.
+    /// A shared instance of `L10n`.
     ///
     /// This instance is used in extensions
     static var shared: L10n = {
