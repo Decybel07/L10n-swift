@@ -44,6 +44,9 @@ open class L10n {
 
     /// A logger used to log information from the framework
     public var logger: Logger?
+    
+    /// A configuration used to modification of output
+    public var configuration: LocalizedStringsConfiguration
 
     /// Current language code.
     public var language: String {
@@ -85,14 +88,17 @@ open class L10n {
     }
 
     /**
-     Initialize a new `L10n` with the provided language.
-
+      a new `L10n` with the provided language.
+     
+     - parameter bundle: The initialize bundle.
      - parameter language: The initialize language.
+     - parameter configuration: The initialize configuration.
 
      - returns: A `L10n` object for language.
      */
-    public init(bundle: Bundle = .main, language: String? = nil) {
+    public init(bundle: Bundle = .main, language: String? = nil, configuration: LocalizedStringsConfiguration = .shared) {
         self.coreBundle = bundle
+        self.configuration = configuration
         self.language = language ?? bundle.preferredLanguage
     }
 
@@ -130,11 +136,16 @@ open class L10n {
      - returns: A localized version of the string designated by `key`. This method returns `key` when `key` not found.
      */
     open func string(for key: String, resource: String? = nil, fittingWidth: Int? = nil) -> String {
-        guard let text = self.resource(named: resource)[key, fittingWidth] else {
+        let text: String
+        if self.configuration.isNonLocalized {
+            text = key
+        } else if let value = self.resource(named: resource)[key, fittingWidth] {
+            text = value
+        } else {
             self.logger?.info("L10n - Key \(key.debugDescription) does not exist for \(self.language.debugDescription).")
-            return key
+            text = key
         }
-        return text
+        return self.configuration.decorate(text: text)
     }
 
     /**
@@ -162,20 +173,27 @@ open class L10n {
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
      */
     open func plural(for key: String, resource: String? = nil, fittingWidth: Int? = nil, args: [CVarArg]) -> String {
-        let args = args.map { arg -> (CVarArg, [Plural]) in
-            if let pluralArg = arg as? PluralArg {
-                return (pluralArg.convertedArg, Plural.variants(for: pluralArg.value, with: self.locale))
+        let text: String
+        if self.configuration.isNonLocalized {
+            text = key
+        } else {
+            let args = args.map { arg -> (CVarArg, [Plural]) in
+                if let pluralArg = arg as? PluralArg {
+                    return (pluralArg.convertedArg, Plural.variants(for: pluralArg.value, with: self.locale))
+                }
+                if let number = arg as? NSNumber {
+                    return (arg, Plural.variants(for: number, with: self.locale))
+                }
+                return (arg, [])
             }
-            if let number = arg as? NSNumber {
-                return (arg, Plural.variants(for: number, with: self.locale))
+            if let format = self.resource(named: resource)[key, args.map { $0.1 }, fittingWidth] {
+                text = self.string(format: format, args: args.map { $0.0 })
+            } else {
+                self.logger?.info("L10n - Key \(key.debugDescription) does not support plural for \(self.language.debugDescription).")
+                text = key
             }
-            return (arg, [])
         }
-        guard let format = self.resource(named: resource)[key, args.map { $0.1 }, fittingWidth] else {
-            self.logger?.info("L10n - Key \(key.debugDescription) does not support plural for \(self.language.debugDescription).")
-            return key
-        }
-        return self.string(format: format, args: args.map { $0.0 })
+        return self.configuration.decorate(text: text)
     }
 
     /**

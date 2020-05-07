@@ -37,6 +37,7 @@ L10n-swift is a simple framework that improves localization in swift app, provid
 - [x] Support for formats: [`*.plist`](https://github.com/Decybel07/L10n-swift/wiki/*.plist), [`*.json`](https://github.com/Decybel07/L10n-swift/wiki/*.json), [`*.stringsdict`](https://github.com/Decybel07/L10n-swift/wiki/*.stringsdict), [`*.strings`](https://github.com/Decybel07/L10n-swift/wiki/*.strings).
 - [x] Support for grouping localization keys.
 - [x] Support for [**plural**](https://github.com/Decybel07/L10n-swift/wiki/Plural) forms in any language with multiple arguments.
+- [x] Support for pseudo-languages: `NonLocalized`, `DoubleLength`, `Accented`, `Bounded`, `ForcedRightToLeft`.
 - [x] Use `.l10n()` to localize any string, date and numbers.
 - [x] Use more than one language at the same time.
 - [x] About 25 times faster than a native solution.
@@ -70,13 +71,13 @@ pod try L10n-swift
 ### [CocoaPods](http://cocoapods.org)
  
  ```ruby
- pod 'L10n-swift', '~> 5.6'
+ pod 'L10n-swift', '~> 5.7'
  ```
  
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ogdl
-github "Decybel07/L10n-swift", ~> 5.6
+github "Decybel07/L10n-swift", ~> 5.7
 ```
 
 ### [Swift Package Manager](https://swift.org/package-manager/)
@@ -96,7 +97,7 @@ github "Decybel07/L10n-swift", ~> 5.6
 
  Add `.l10()` following any `String` object you want localized:
  ```swift
- "HelloWorld".l10n()
+ "hello.world".l10n()
  ```
  
 ### Get localized number
@@ -128,7 +129,7 @@ github "Decybel07/L10n-swift", ~> 5.6
 
 Add `.l10nPlural(CVarArg...)` following any `String` object you want translated with plurals:
  ```swift
- "numberOfApples".l10nPlural(args: [2])
+ "numberOfApples".l10nPlural(2)
  ```
  More about plurals, you can read on [**wiki**](https://github.com/Decybel07/L10n-swift/wiki/Plural)
  

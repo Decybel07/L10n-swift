@@ -23,7 +23,6 @@ extension String: Localizable {
      Returns a localized version of the string designated by the `self` and residing in `resource`.
 
      - parameter instance: The instance of `L10n` used for localization.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
      - parameter fittingWidth: The desired width of the string variation.
 
      - returns: A localized version of the string designated by `self` or `self` if not found.
@@ -48,6 +47,42 @@ extension String: Localizable {
     /**
      Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
 
+     - parameter args: The values used to fill.
+
+     - returns: A localized version of the string designated by `self` or `self` if not found.
+     */
+    public func l10n(_ args: CVarArg...) -> String {
+        return self.l10n(.shared, resource: nil, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter args: The values used to fill.
+
+     - returns: A localized version of the string designated by `self` or `self` if not found.
+     */
+    public func l10n(_ instance: L10n = .shared, _ args: CVarArg...) -> String {
+        return self.l10n(instance, resource: nil, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter args: The values used to fill.
+
+     - returns: A localized version of the string designated by `self` or `self` if not found.
+     */
+    public func l10n(_ instance: L10n = .shared, resource: String, _ args: CVarArg...) -> String {
+        return self.l10n(instance, resource: resource, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized version of the string designated by the `self`, residing in `resource` and filled with the values of the arguments.
+
      - parameter instance: The instance of `L10n` used for localization.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
      - parameter fittingWidth: The desired width of the string variation.
@@ -55,7 +90,7 @@ extension String: Localizable {
 
      - returns: A localized version of the string designated by `self` or `self` if not found.
      */
-    public func l10n(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int? = nil, _ args: CVarArg...) -> String {
+    public func l10n(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int, _ args: CVarArg...) -> String {
         return self.l10n(instance, resource: resource, fittingWidth: fittingWidth, args: args)
     }
 
@@ -77,6 +112,42 @@ extension String: Localizable {
     /**
      Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
 
+     - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
+
+     - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
+     */
+    public func l10nPlural(_ args: CVarArg...) -> String {
+        return self.l10nPlural(.shared, resource: nil, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
+
+     - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
+     */
+    public func l10nPlural(_ instance: L10n, _ args: CVarArg...) -> String {
+        return self.l10nPlural(instance, resource: nil, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+
+     - parameter instance: The instance of `L10n` used for localization.
+     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
+     - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
+
+     - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
+     */
+    public func l10nPlural(_ instance: L10n = .shared, resource: String, _ args: CVarArg...) -> String {
+        return self.l10nPlural(instance, resource: resource, fittingWidth: nil, args: args)
+    }
+    
+    /**
+     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+
      - parameter instance: The instance of `L10n` used for localization.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
      - parameter fittingWidth: The desired width of the string variation.
@@ -84,7 +155,7 @@ extension String: Localizable {
 
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
      */
-    public func l10nPlural(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int? = nil, _ args: CVarArg...) -> String {
+    public func l10nPlural(_ instance: L10n = .shared, resource: String? = nil, fittingWidth: Int, _ args: CVarArg...) -> String {
         return self.l10nPlural(instance, resource: resource, fittingWidth: fittingWidth, args: args)
     }
 

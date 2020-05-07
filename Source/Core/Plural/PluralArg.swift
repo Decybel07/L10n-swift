@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// Protocol PluralArg.
 public protocol PluralArg: CVarArg {
 
     var arg: CVarArg { get }

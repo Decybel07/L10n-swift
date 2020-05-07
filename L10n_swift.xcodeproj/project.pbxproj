@@ -193,6 +193,30 @@
 		2DE4B1DD1F2C971B0067EE98 /* L10n_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE4B1AF1F2C971B0067EE98 /* L10n_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DE4B1DE1F2C971B0067EE98 /* L10n_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE4B1AF1F2C971B0067EE98 /* L10n_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2DE4B1DF1F2C971B0067EE98 /* L10n_swift.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DE4B1AF1F2C971B0067EE98 /* L10n_swift.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DF202602461AFBA00355BFA /* TextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2025F2461AFBA00355BFA /* TextDecorator.swift */; };
+		2DF202612461AFBA00355BFA /* TextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2025F2461AFBA00355BFA /* TextDecorator.swift */; };
+		2DF202622461AFBA00355BFA /* TextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2025F2461AFBA00355BFA /* TextDecorator.swift */; };
+		2DF202632461AFBA00355BFA /* TextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2025F2461AFBA00355BFA /* TextDecorator.swift */; };
+		2DF202652461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */; };
+		2DF202662461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */; };
+		2DF202672461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */; };
+		2DF202682461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */; };
+		2DF2026A2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */; };
+		2DF2026B2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */; };
+		2DF2026C2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */; };
+		2DF2026D2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */; };
+		2DF2026F2461B01E00355BFA /* AccentedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */; };
+		2DF202702461B01E00355BFA /* AccentedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */; };
+		2DF202712461B01E00355BFA /* AccentedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */; };
+		2DF202722461B01E00355BFA /* AccentedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */; };
+		2DF202742461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */; };
+		2DF202752461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */; };
+		2DF202762461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */; };
+		2DF202772461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */; };
+		2DF202792462ACF900355BFA /* BoundedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */; };
+		2DF2027A2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */; };
+		2DF2027B2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */; };
+		2DF2027C2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -297,6 +321,12 @@
 		2DE4B1AC1F2C971B0067EE98 /* String+Localizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Localizable.swift"; sourceTree = "<group>"; };
 		2DE4B1AE1F2C971B0067EE98 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DE4B1AF1F2C971B0067EE98 /* L10n_swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = L10n_swift.h; sourceTree = "<group>"; };
+		2DF2025F2461AFBA00355BFA /* TextDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDecorator.swift; sourceTree = "<group>"; };
+		2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleLengthTextDecorator.swift; sourceTree = "<group>"; };
+		2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RightToLeftTextDecorator.swift; sourceTree = "<group>"; };
+		2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccentedTextDecorator.swift; sourceTree = "<group>"; };
+		2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizedStringsConfiguration.swift; sourceTree = "<group>"; };
+		2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoundedTextDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -360,9 +390,11 @@
 			children = (
 				2D1A3B471F2D50C900BD2710 /* Localizable.swift */,
 				2D1A3B451F2D50C900BD2710 /* L10n.swift */,
+				2DF202732461B2E600355BFA /* LocalizedStringsConfiguration.swift */,
 				2D2E4F5D20907DC4000FE288 /* Logger */,
 				2DC0E3511FB4F12900BFBBAD /* Plural */,
 				2DC0E3571FB4FCF600BFBBAD /* Resource */,
+				2DF2025E2461AF8000355BFA /* TextDecorator */,
 				2D2E4F5720907873000FE288 /* Extensions */,
 			);
 			path = Core;
@@ -592,6 +624,18 @@
 				2DE4B1AB1F2C971B0067EE98 /* NSNumber+Localizable.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2DF2025E2461AF8000355BFA /* TextDecorator */ = {
+			isa = PBXGroup;
+			children = (
+				2DF2025F2461AFBA00355BFA /* TextDecorator.swift */,
+				2DF202642461AFE800355BFA /* DoubleLengthTextDecorator.swift */,
+				2DF202692461B00300355BFA /* RightToLeftTextDecorator.swift */,
+				2DF2026E2461B01E00355BFA /* AccentedTextDecorator.swift */,
+				2DF202782462ACF900355BFA /* BoundedTextDecorator.swift */,
+			);
+			path = TextDecorator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -915,7 +959,9 @@
 				2D99E79E209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2D99E7B2209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2DC85EC322B61BFC0052F15D /* Number+Localizable.swift in Sources */,
+				2DF202652461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */,
 				2D99E7AD209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
+				2DF202742461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */,
 				2D1A3BE31F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2D3B5BD92143133200F4617F /* Locale+utils.swift in Sources */,
 				2D1A3B5A1F2D50C900BD2710 /* Localizable.swift in Sources */,
@@ -927,6 +973,8 @@
 				2DD6AC811F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BE51F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2DE4B1D41F2C971B0067EE98 /* String+Localizable.swift in Sources */,
+				2DF202792462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
+				2DF2026A2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */,
 				2DC0E3591FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
@@ -937,10 +985,12 @@
 				2D1A3B621F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2DC85EB922AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D1A3BB01F2E158D00BD2710 /* UIDatePicker+IBL10n.swift in Sources */,
+				2DF202602461AFBA00355BFA /* TextDecorator.swift in Sources */,
 				2DE4B1D01F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D51A6081F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2D1A3BB21F2E158D00BD2710 /* UISearchBar+IBL10n.swift in Sources */,
 				2D1A3BE11F2E167200BD2710 /* UISegmentedControl+IBL10n.swift in Sources */,
+				2DF2026F2461B01E00355BFA /* AccentedTextDecorator.swift in Sources */,
 				2D1A3B4E1F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2DE4B1C41F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 				2DC0E3681FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
@@ -988,17 +1038,23 @@
 				2DC85EBF22AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2DC85EBA22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D1A3B631F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
+				2DF202752461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */,
 				2D1A3BCA1F2E15E800BD2710 /* WKInterfaceButton+IBL10n.swift in Sources */,
+				2DF202612461AFBA00355BFA /* TextDecorator.swift in Sources */,
 				2DC0E35A1FB4FD8700BFBBAD /* Resource.swift in Sources */,
+				2DF202662461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */,
 				2D2E4F5A2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2DF202702461B01E00355BFA /* AccentedTextDecorator.swift in Sources */,
 				2D3CDB9B238A8A190010D162 /* Plural.swift in Sources */,
 				2D3B5BDA2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7AE209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
+				2DF2026B2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */,
 				2DE4B1D11F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
 				2D99E79F209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
 				2DD6AC821F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D51A6091F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2D1A3B4F1F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
+				2DF2027A2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
 				2DE4B1C51F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1007,6 +1063,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF202622461AFBA00355BFA /* TextDecorator.swift in Sources */,
 				2D1A3B541F2D50C900BD2710 /* L10n.swift in Sources */,
 				2D51A60A1F4F272600EF2801 /* L10n+Localizable.swift in Sources */,
 				2DC85EBB22AD2D800052F15D /* PluralArg.swift in Sources */,
@@ -1016,6 +1073,8 @@
 				2D3B5BDB2143133200F4617F /* Locale+utils.swift in Sources */,
 				2DCF92E320ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2DC85EC522B61BFC0052F15D /* Number+Localizable.swift in Sources */,
+				2DF202712461B01E00355BFA /* AccentedTextDecorator.swift in Sources */,
+				2DF2027B2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
 				2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */,
 				2D1A3BE41F2E167200BD2710 /* UITabBarItem+IBL10n.swift in Sources */,
 				2DC0E3651FB5127C00BFBBAD /* StringResource.swift in Sources */,
@@ -1035,9 +1094,12 @@
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2D1A3BDC1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D1A3BDA1F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
+				2DF202762461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */,
+				2DF202672461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */,
 				2D2E4F6120907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D1A3B641F2D50C900BD2710 /* NotificationName+L10nLanguageChanged.swift in Sources */,
 				2DE4B1D21F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
+				2DF2026C2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */,
 				2D1A3BB51F2E158D00BD2710 /* UIButton+IBL10n+focused.swift in Sources */,
 				2D99E7B4209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
 				2D3CDB9A238A8A180010D162 /* Plural.swift in Sources */,
@@ -1065,6 +1127,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF202632461AFBA00355BFA /* TextDecorator.swift in Sources */,
 				2D3CDB99238A8A180010D162 /* Plural.swift in Sources */,
 				2DCF92E420ADF0B800FB1ECC /* Bundle+utils.swift in Sources */,
 				2D99E7A1209F0C14003ECD51 /* ResourceProvider.swift in Sources */,
@@ -1073,6 +1136,8 @@
 				2D1A3B551F2D50C900BD2710 /* L10n.swift in Sources */,
 				2DC0E35C1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3B611F2D50C900BD2710 /* Logger.swift in Sources */,
+				2DF2026D2461B00300355BFA /* RightToLeftTextDecorator.swift in Sources */,
+				2DF202772461B2E600355BFA /* LocalizedStringsConfiguration.swift in Sources */,
 				2D1A3B4D1F2D50C900BD2710 /* L10n+static.swift in Sources */,
 				2D1A3B5D1F2D50C900BD2710 /* Localizable.swift in Sources */,
 				2D99E7B5209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
@@ -1085,14 +1150,17 @@
 				2DC85EBC22AD2D800052F15D /* PluralArg.swift in Sources */,
 				2D99E7B0209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D31F2C971B0067EE98 /* NSNumber+Localizable.swift in Sources */,
+				2DF202682461AFE800355BFA /* DoubleLengthTextDecorator.swift in Sources */,
 				2DC85EC122AD488F0052F15D /* NumericPluralArg.swift in Sources */,
 				2DD6AC841F487BB100EDE71B /* IBL10n.swift in Sources */,
 				2DC0E36B1FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
+				2DF2027C2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */,
 				2D2E4F5C2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
 				2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
+				2DF202722461B01E00355BFA /* AccentedTextDecorator.swift in Sources */,
 				2DE4B1C71F2C971B0067EE98 /* Date+Localizable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
