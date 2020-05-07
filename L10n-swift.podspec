@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'L10n-swift'
   spec.module_name      = 'L10n_swift'
-  spec.version          = '5.6.1'
+  spec.version          = '5.7.0'
   spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   spec.description      = <<-DESC
@@ -13,6 +13,7 @@ Pod::Spec.new do |spec|
       * Support for formats: `*.plist`, `*.json`, `*.stringsdict`, `*.strings`.
       * Support for grouping localization keys.
       * Support for plural forms in any language with multiple arguments.
+      * Support for pseudo-languages: `NonLocalized`, `DoubleLength`, `Accented`, `Bounded`, `ForcedRightToLeft`.
       * Use .l10n() to localized any string, date and numbers.
       * Use more than one languages at the same time.
                        DESC
