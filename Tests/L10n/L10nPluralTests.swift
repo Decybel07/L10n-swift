@@ -23,17 +23,17 @@ final class L10nPluralTests: L10nBaseTest {
         self.checkBaseEnglishPlurals()
     }
 
-    func testPluralSuportedLanguage() {
+    func testPluralSupportedLanguage() {
         self.l10nInstance.language = "pl"
-        self.checkSuportedPolishPlurals()
+        self.checkSupportedPolishPlurals()
     }
 
-    func testPluralSuportedLanguageWithRegion() {
+    func testPluralSupportedLanguageWithRegion() {
         self.l10nInstance.language = "pl_PL"
-        self.checkSuportedPolishPlurals()
+        self.checkSupportedPolishPlurals()
     }
 
-    func testPluralUnsuportedLanguage() {
+    func testPluralUnSupportedLanguage() {
         self.l10nInstance.language = "es"
         self.checkBaseEnglishPlurals()
     }
@@ -59,7 +59,7 @@ final class L10nPluralTests: L10nBaseTest {
         ])
     }
 
-    private func checkSuportedPolishPlurals() {
+    private func checkSupportedPolishPlurals() {
         self.checkPlurals([
             (key: "numberOfApples", value: 0, expected: "Zero jabłek"),
             (key: "numberOfApples", value: 1, expected: "Jedno jabłko"),

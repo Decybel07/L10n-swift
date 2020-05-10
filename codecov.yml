@@ -1,0 +1,15 @@
+codecov:
+  require_ci_to_pass: yes
+  ci:
+    - "travis.org"
+  
+coverage:
+  precision: 1
+  round: nearest
+  range: "65...100"
+    
+ignore:
+  - "Tests"
+  - "Example"
+  - "Source/IBInspectables"
+  - "Source/Extensions/String+Localizable.swift"

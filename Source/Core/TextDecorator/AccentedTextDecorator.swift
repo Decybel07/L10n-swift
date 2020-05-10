@@ -20,7 +20,7 @@ struct AccentedTextDecorator: TextDecorator {
         guard char.isLetter else {
             return base
         }
-        let hash = abs(char.hashValue)
+        let hash = abs(char.utf8.first?.asNSNumber().intValue ?? 0)
         return base
             + self.scalar(AccentedTextDecorator.up.unicodeScalars, for: hash)
             + self.scalar(AccentedTextDecorator.down.unicodeScalars, for: hash)

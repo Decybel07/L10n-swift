@@ -23,17 +23,17 @@ final class L10nFittingWidthTests: L10nBaseTest {
         self.checkBaseEnglishFittingWidth()
     }
 
-    func testFittingWidthSuportedLanguage() {
+    func testFittingWidthSupportedLanguage() {
         self.l10nInstance.language = "pl"
-        self.checkSuportedPolishFittingWidth()
+        self.checkSupportedPolishFittingWidth()
     }
 
-    func testFittingWidthSuportedLanguageWithRegion() {
+    func testFittingWidthSupportedLanguageWithRegion() {
         self.l10nInstance.language = "pl_PL"
-        self.checkSuportedPolishFittingWidth()
+        self.checkSupportedPolishFittingWidth()
     }
 
-    func testFittingWidthUnsuportedLanguage() {
+    func testFittingWidthUnSupportedLanguage() {
         self.l10nInstance.language = "es"
         self.checkBaseEnglishFittingWidth()
     }
@@ -60,7 +60,7 @@ final class L10nFittingWidthTests: L10nBaseTest {
         ])
     }
 
-    private func checkSuportedPolishFittingWidth() {
+    private func checkSupportedPolishFittingWidth() {
         self.checkStrings([
             (key: "language", fittingWidth: nil, expected: "Język"),
             (key: "language", fittingWidth: -10, expected: "Język"),

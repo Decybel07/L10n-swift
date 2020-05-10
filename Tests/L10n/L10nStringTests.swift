@@ -23,17 +23,17 @@ final class L10nStringTests: L10nBaseTest {
         self.checkBaseEnglishStrings()
     }
 
-    func testStringSuportedLanguage() {
+    func testStringSupportedLanguage() {
         self.l10nInstance.language = "pl"
-        self.checkSuportedPolishStrings()
+        self.checkSupportedPolishStrings()
     }
 
-    func testStringSuportedLanguageWithRegion() {
+    func testStringSupportedLanguageWithRegion() {
         self.l10nInstance.language = "pl_PL"
-        self.checkSuportedPolishStrings()
+        self.checkSupportedPolishStrings()
     }
 
-    func testStringUnsuportedLanguage() {
+    func testStringUnSupportedLanguage() {
         self.l10nInstance.language = "es"
         self.checkBaseEnglishStrings()
     }
@@ -55,7 +55,7 @@ final class L10nStringTests: L10nBaseTest {
         ])
     }
 
-    private func checkSuportedPolishStrings() {
+    private func checkSupportedPolishStrings() {
         self.checkStrings([
             (key: "language", expected: "Język"),
             (key: "language.value", expected: "Język"),

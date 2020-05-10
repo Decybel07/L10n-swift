@@ -40,14 +40,10 @@ final class L10nTests: L10nBaseTest {
             XCTAssertEqual("US", self.l10nInstance.locale?.regionCode)
             XCTAssertEqual(1, self.l10nInstance.bundles.count)
             XCTAssertNotNil(self.l10nInstance.locale)
-        } else {
-            XCTAssertEqual("Base", self.l10nInstance.language)
-            XCTAssertTrue(self.l10nInstance.bundles.isEmpty)
-            XCTAssertNil(self.l10nInstance.locale)
         }
     }
 
-    func testSetSuportedLanguage() {
+    func testSetSupportedLanguage() {
         self.l10nInstance.language = "pl"
         XCTAssertEqual("pl", self.l10nInstance.language)
         XCTAssertEqual("pl-US", self.l10nInstance.locale?.identifier)
@@ -55,7 +51,7 @@ final class L10nTests: L10nBaseTest {
         XCTAssertNotNil(self.l10nInstance.locale)
     }
 
-    func testSetSuportedLanguageWithRegion() {
+    func testSetSupportedLanguageWithRegion() {
         self.l10nInstance.language = "pl_PL"
         XCTAssertEqual("pl-PL", self.l10nInstance.language)
         XCTAssertEqual("pl-PL", self.l10nInstance.locale?.identifier)
@@ -63,7 +59,7 @@ final class L10nTests: L10nBaseTest {
         XCTAssertNotNil(self.l10nInstance.locale)
     }
 
-    func testSetUnsuportedLanguage() {
+    func testSetUnSupportedLanguage() {
         self.l10nInstance.language = "es"
         XCTAssertEqual("es", self.l10nInstance.language)
         XCTAssertEqual("es-US", self.l10nInstance.locale?.identifier)
@@ -90,5 +86,43 @@ final class L10nTests: L10nBaseTest {
         XCTAssertEqual("Custom", self.l10nInstance.string(for: "resource"))
         XCTAssertEqual("Custom", self.l10nInstance.string(for: "resource.value"))
         XCTAssertEqual("Group", self.l10nInstance.string(for: "resource.group"))
+    }
+    
+    func testNonLocalized() {
+        self.l10nInstance.configuration.isNonLocalized = true
+        XCTAssertEqual("resource", self.l10nInstance.string(for: "resource"))
+        XCTAssertEqual("numberOfApples", self.l10nInstance.plural(for: "numberOfApples", 5))
+    }
+    
+    func testLocalizedWithDoubleLength() {
+        self.l10nInstance.configuration.isDoubleLength = true
+        XCTAssertEqual("Hello World! Hello World!", self.l10nInstance.string(for: "hello.world"))
+        XCTAssertEqual("numberOfApples numberOfApples", self.l10nInstance.plural(for: "numberOfApples", 5))
+    }
+    
+    func testLocalizedWithAccented() {
+        self.l10nInstance.configuration.isAccented = true
+        XCTAssertEqual("Ḣ̜ȅ̤l̮̓l̮̓ó̱ W̤͊ó̱r̜̄l̮̓d̜̎!", self.l10nInstance.string(for: "hello.world"))
+        XCTAssertEqual("ǹ̰ü̦m̯͊b̖̌ȅ̤r̜̄Ȍ̭f̥̐A̭͊p̖̂p̖̂l̮̓ȅ̤s̤̆", self.l10nInstance.plural(for: "numberOfApples", 5))
+    }
+    
+    func testLocalizedWithBounded() {
+        self.l10nInstance.configuration.isBounded = true
+        XCTAssertEqual("[# Hello World! #]", self.l10nInstance.string(for: "hello.world"))
+        XCTAssertEqual("[# numberOfApples #]", self.l10nInstance.plural(for: "numberOfApples", 5))
+    }
+    
+    func testLocalizedWithForcedRightToLeft() {
+        self.l10nInstance.configuration.isForcedRightToLeft = true
+        XCTAssertEqual("!dlroW olleH", self.l10nInstance.string(for: "hello.world"))
+        XCTAssertEqual("selppAfOrebmun", self.l10nInstance.plural(for: "numberOfApples", 5))
+    }
+    
+    func testLocalizedWithAllDecorators() {
+        self.l10nInstance.configuration = .init(
+            isDoubleLength: true, isAccented: true, isBounded: true, isForcedRightToLeft: true
+        )
+        XCTAssertEqual("[# !d̜̎l̮̓r̜̄ó̱W̤͊ ó̱l̮̓l̮̓ȅ̤Ḣ̜ !d̜̎l̮̓r̜̄ó̱W̤͊ ó̱l̮̓l̮̓ȅ̤Ḣ̜ #]", self.l10nInstance.string(for: "hello.world"))
+        XCTAssertEqual("[# s̤̆ȅ̤l̮̓p̖̂p̖̂A̭͊f̥̐Ȍ̭r̜̄ȅ̤b̖̌m̯͊ü̦ǹ̰ s̤̆ȅ̤l̮̓p̖̂p̖̂A̭͊f̥̐Ȍ̭r̜̄ȅ̤b̖̌m̯͊ü̦ǹ̰ #]", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
 }
