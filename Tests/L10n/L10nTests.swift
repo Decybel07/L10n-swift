@@ -97,25 +97,25 @@ final class L10nTests: L10nBaseTest {
     func testLocalizedWithDoubleLength() {
         self.l10nInstance.configuration.isDoubleLength = true
         XCTAssertEqual("Hello World! Hello World!", self.l10nInstance.string(for: "hello.world"))
-        XCTAssertEqual("numberOfApples numberOfApples", self.l10nInstance.plural(for: "numberOfApples", 5))
+        XCTAssertEqual("5 apples 5 apples", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
     
     func testLocalizedWithAccented() {
         self.l10nInstance.configuration.isAccented = true
         XCTAssertEqual("Ḣ̜ȅ̤l̮̓l̮̓ó̱ W̤͊ó̱r̜̄l̮̓d̜̎!", self.l10nInstance.string(for: "hello.world"))
-        XCTAssertEqual("ǹ̰ü̦m̯͊b̖̌ȅ̤r̜̄Ȍ̭f̥̐A̭͊p̖̂p̖̂l̮̓ȅ̤s̤̆", self.l10nInstance.plural(for: "numberOfApples", 5))
+        XCTAssertEqual("5 a̱̋p̖̂p̖̂l̮̓ȅ̤s̤̆", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
     
     func testLocalizedWithBounded() {
         self.l10nInstance.configuration.isBounded = true
         XCTAssertEqual("[# Hello World! #]", self.l10nInstance.string(for: "hello.world"))
-        XCTAssertEqual("[# numberOfApples #]", self.l10nInstance.plural(for: "numberOfApples", 5))
+        XCTAssertEqual("[# 5 apples #]", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
     
     func testLocalizedWithForcedRightToLeft() {
         self.l10nInstance.configuration.isForcedRightToLeft = true
         XCTAssertEqual("!dlroW olleH", self.l10nInstance.string(for: "hello.world"))
-        XCTAssertEqual("selppAfOrebmun", self.l10nInstance.plural(for: "numberOfApples", 5))
+        XCTAssertEqual("selppa 5", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
     
     func testLocalizedWithAllDecorators() {
@@ -123,6 +123,6 @@ final class L10nTests: L10nBaseTest {
             isDoubleLength: true, isAccented: true, isBounded: true, isForcedRightToLeft: true
         )
         XCTAssertEqual("[# !d̜̎l̮̓r̜̄ó̱W̤͊ ó̱l̮̓l̮̓ȅ̤Ḣ̜ !d̜̎l̮̓r̜̄ó̱W̤͊ ó̱l̮̓l̮̓ȅ̤Ḣ̜ #]", self.l10nInstance.string(for: "hello.world"))
-        XCTAssertEqual("[# s̤̆ȅ̤l̮̓p̖̂p̖̂A̭͊f̥̐Ȍ̭r̜̄ȅ̤b̖̌m̯͊ü̦ǹ̰ s̤̆ȅ̤l̮̓p̖̂p̖̂A̭͊f̥̐Ȍ̭r̜̄ȅ̤b̖̌m̯͊ü̦ǹ̰ #]", self.l10nInstance.plural(for: "numberOfApples", 5))
+        XCTAssertEqual("[# s̤̆ȅ̤l̮̓p̖̂p̖̂a̱̋ 5 s̤̆ȅ̤l̮̓p̖̂p̖̂a̱̋ 5 #]", self.l10nInstance.plural(for: "numberOfApples", 5))
     }
 }
