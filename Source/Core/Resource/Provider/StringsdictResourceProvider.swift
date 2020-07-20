@@ -21,16 +21,16 @@ internal struct StringsdictResourceProvider: ResourceProvider {
     private func clean(_ dictionary: [String: Any]) -> [String: Any] {
         var dictionary = dictionary
         dictionary.keys.forEach {
-            guard let format = dictionary[$0] as? [String: Any] else {
+            guard var format = dictionary[$0] as? [String: Any] else {
                 return
             }
             if let value = format["NSStringLocalizedFormatKey"] as? String {
-                dictionary["format"] = value
+                format["format"] = value
             } else if let value = format["NSStringVariableWidthRuleType"] as? [String: Any] {
                 dictionary[$0] = value
-            } else {
-                dictionary[$0] = self.clean(format)
+                return
             }
+            dictionary[$0] = self.clean(format)
         }
 
         [
