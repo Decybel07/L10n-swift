@@ -24,7 +24,7 @@ internal struct StringsdictResourceProvider: ResourceProvider {
             guard let format = dictionary[$0] as? [String: Any] else {
                 return
             }
-            if let value = format["NSStringLocalizedFormatKey"] as? [String] {
+            if let value = format["NSStringLocalizedFormatKey"] as? String {
                 dictionary["format"] = value
             } else if let value = format["NSStringVariableWidthRuleType"] as? [String: Any] {
                 dictionary[$0] = value

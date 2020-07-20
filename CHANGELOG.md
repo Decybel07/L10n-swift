@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.7.1](https://github.com/Decybel07/L10n-swift/tree/5.7.1) (2020-07-20)
+* Prular bugfix with `stringsdict`
+
 ## [5.7.0](https://github.com/Decybel07/L10n-swift/tree/5.7.0) (2020-05-07)
 * Support for pseudo-languages: `NonLocalized`, `DoubleLength`, `Accented`, `Bounded`, `ForcedRightToLeft`.
 
