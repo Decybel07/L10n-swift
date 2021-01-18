@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.7.3](https://github.com/Decybel07/L10n-swift/tree/5.7.3) (2021-01-18)
+* Update  `Package.swift`
+
 ## [5.7.2](https://github.com/Decybel07/L10n-swift/tree/5.7.2) (2020-07-20)
 * Prular bugfix with `stringsdict`
 

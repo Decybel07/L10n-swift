@@ -1,8 +1,6 @@
-// swift-tools-version:5.0
-// The swift-tools-version declares the minimum version of Swift required to build this package.
+// swift-tools-version:5.3
 //
 //  Package.swift
-//  swift-tools-version:5.0
 //  Created by Adrian Bobrowski on 30.04.2017.
 //  Copyright © 2017 Adrian Bobrowski (Decybel07), adrian071993@gmail.com. All rights reserved.
 //
@@ -11,6 +9,7 @@ import PackageDescription
 
 let package = Package(
     name: "L10n-swift",
+    defaultLocalization: "en",
     platforms: [
         .macOS(.v10_10), .iOS(.v9), .tvOS(.v9), .watchOS(.v2)
     ],
@@ -20,24 +19,25 @@ let package = Package(
     targets: [
         .target(
             name: "L10n-swift",
-            path: "Source",
+            path: "./Source",
             exclude: {
-                var paths: [String] = []
-                #if !canImport(WatchKit)
-                    paths.append("IBInspectables/WatchKit")
+                var paths: [String] = ["Info.plist", "L10n_swift.h"]
+                #if !os(watchOS)
+                    paths.append("./IBInspectables/WatchKit")
                 #endif
 
-                #if canImport(UIKit)
-                    #if os(iOS)
-                        paths.append("IBInspectables/UIKit/tvOS")
-                    #elseif os(tvOS)
-                        paths.append("IBInspectables/UIKit/iOS")
-                    #endif
-                #else
-                    paths.append("IBInspectables/UIKit")
-                #endif
+                if #available(iOS 9.0, *) {
+                    paths.append("./IBInspectables/UIKit/tvOS")
+                } else if #available(tvOS 9.0, *) {
+                    paths.append("./IBInspectables/UIKit/iOS")
+                } else {
+                    paths.append("./IBInspectables/UIKit")
+                }
                 return paths
-            }()
+            }(),
+            resources: [
+                .process("./Core/Plural/Plural.stringsdict", localization: .default)
+            ]
         ),
     ],
     swiftLanguageVersions: [.v4, .v4_2, .v5]
