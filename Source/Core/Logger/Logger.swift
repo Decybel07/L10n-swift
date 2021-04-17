@@ -11,10 +11,10 @@ public protocol Logger {
 
     /**
      Format as a template to which the argument values will be replaced in order:
-     1. file name (String)
-     2. function name (String)
-     3. line number (Int)
-     4. message (String)
+     1. File name (String)
+     2. Function name (String)
+     3. Line number (Int)
+     4. Message (String)
 
      For example:
      * `"[%@][%@][%d] %@"` -> `"[L10n.swift][languageChanged(oldValue:)][173] "L10n - List of supported languages does not contain "xyz"."`

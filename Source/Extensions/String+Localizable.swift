@@ -110,7 +110,7 @@ extension String: Localizable {
     }
 
     /**
-     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+     Returns a localized plural version of the string designated by the specified `self` and `args` and residing in `resource`.
 
      - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
 
@@ -121,7 +121,7 @@ extension String: Localizable {
     }
     
     /**
-     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+     Returns a localized plural version of the string designated by the specified `self` and `args` and residing in `resource`.
 
      - parameter instance: The instance of `L10n` used for localization.
      - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
@@ -133,7 +133,7 @@ extension String: Localizable {
     }
     
     /**
-     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+     Returns a localized plural version of the string designated by the specified `self` and `args` and residing in `resource`.
 
      - parameter instance: The instance of `L10n` used for localization.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
@@ -146,7 +146,7 @@ extension String: Localizable {
     }
     
     /**
-     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+     Returns a localized plural version of the string designated by the specified `self` and `args` and residing in `resource`.
 
      - parameter instance: The instance of `L10n` used for localization.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
@@ -160,7 +160,7 @@ extension String: Localizable {
     }
 
     /**
-     Returns a localized plural version of the string designated by the specified `slef` and `args` and residing in `resource`.
+     Returns a localized plural version of the string designated by the specified `self` and `args` and residing in `resource`.
 
      - parameter instance: The instance of `L10n` used for localization.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
