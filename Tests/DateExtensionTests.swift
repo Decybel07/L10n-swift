@@ -45,6 +45,7 @@ final class DateExtensionTests: L10nBaseTest {
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, dateStyle: .none, timeStyle: .none))
         XCTAssertEqual("07.12.1993, 08:25", self.date.l10n(self.l10nInstance, dateStyle: .short, timeStyle: .short))
+    }
 
     func testDateWithFormat() {
         self.l10nInstance.language = "pl_PL"
