@@ -23,10 +23,7 @@ internal struct StringResource: Resource {
     }
 
     func merging(_ other: Resource) -> Resource {
-        if other is StringResource {
-            return self
-        }
-        return other.merging(self)
+        return other is StringResource ? self : other.merging(self)
     }
 
     init(_ value: String) {

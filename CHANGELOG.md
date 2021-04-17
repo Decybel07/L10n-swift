@@ -2,6 +2,10 @@
 # Change Log
 ---
 
+## [5.8.0](https://github.com/Decybel07/L10n-swift/tree/5.8.0) (2021-04-17)
+* Add localizable `Date` with template
+* Update  `Package.swift`
+
 ## [5.7.3](https://github.com/Decybel07/L10n-swift/tree/5.7.3) (2021-01-18)
 * Update  `Package.swift`
 

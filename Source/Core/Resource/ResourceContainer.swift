@@ -69,7 +69,7 @@ internal class ResourceContainer {
 
     private func pluralFormat(resource: Resource, format: String, variants: [[Plural]], startPosition: Int = 0) -> String {
         return self.matchArgs(in: format, startPosition: startPosition)
-            .map { match -> (range: Range<String.Index>, subformat: String)? in
+            .map { match -> (range: Range<String.Index>, subFormat: String)? in
                 guard let key = match.key,
                     case let index = match.position - 1,
                     variants.indices.contains(index),
@@ -84,7 +84,7 @@ internal class ResourceContainer {
                 guard let match = match else {
                     return
                 }
-                result.replaceSubrange(match.range, with: match.subformat)
+                result.replaceSubrange(match.range, with: match.subFormat)
             }
     }
 
