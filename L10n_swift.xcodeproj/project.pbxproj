@@ -67,6 +67,10 @@
 		2D1A3BE71F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BD81F2E167200BD2710 /* UIViewController+IBL10n.swift */; };
 		2D1A3BE81F2E167200BD2710 /* UIViewController+IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BD81F2E167200BD2710 /* UIViewController+IBL10n.swift */; };
 		2D1A3BEA1F2E1E3800BD2710 /* UINavigationItem+IBL10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+IBL10n.swift */; };
+		2D233CB3263FB9B200F1A741 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CB2263FB9B200F1A741 /* BaseLogger.swift */; };
+		2D233CB4263FB9B200F1A741 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CB2263FB9B200F1A741 /* BaseLogger.swift */; };
+		2D233CB5263FB9B200F1A741 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CB2263FB9B200F1A741 /* BaseLogger.swift */; };
+		2D233CB6263FB9B200F1A741 /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D233CB2263FB9B200F1A741 /* BaseLogger.swift */; };
 		2D2E4F592090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */; };
 		2D2E4F5A2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */; };
 		2D2E4F5B2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */; };
@@ -293,6 +297,11 @@
 		2D1A3BD71F2E167200BD2710 /* UITextField+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextField+IBL10n.swift"; sourceTree = "<group>"; };
 		2D1A3BD81F2E167200BD2710 /* UIViewController+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+IBL10n.swift"; sourceTree = "<group>"; };
 		2D1A3BE91F2E1E3800BD2710 /* UINavigationItem+IBL10n.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+IBL10n.swift"; sourceTree = "<group>"; };
+		2D233CB2263FB9B200F1A741 /* BaseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLogger.swift; sourceTree = "<group>"; };
+		2D233CC1263FBB1500F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Localizable.json; sourceTree = "<group>"; };
+		2D233CC2263FBB1500F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2D233CC3263FBB1500F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		2D233CC4263FBB1D00F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2D2E4F582090797C000FE288 /* L10n+CustomDebugStringConvertible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n+CustomDebugStringConvertible.swift"; sourceTree = "<group>"; };
 		2D2E4F5E20907DF7000FE288 /* L10n+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "L10n+Equatable.swift"; sourceTree = "<group>"; };
 		2D3B5BD82143133200F4617F /* Locale+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Locale+utils.swift"; sourceTree = "<group>"; };
@@ -316,13 +325,9 @@
 		2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Localizable.swift"; sourceTree = "<group>"; };
 		2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+utils.swift"; sourceTree = "<group>"; };
 		2DCF931320AE11D300FB1ECC /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
-		2DCF931920B0668400FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
-		2DCF931B20B0668400FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2DCF931D20B0668400FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2DCF931E20B0668400FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2DCF931F20B0668400FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DCF932020B0668400FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = pl; path = pl.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
-		2DCF933120B083F000FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF933320B083FA00FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF933420B0990200FB1ECC /* L10nBaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10nBaseTest.swift; sourceTree = "<group>"; };
 		2DD5ED1F20F6305500ADAFF1 /* L10nFittingWidthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10nFittingWidthTests.swift; sourceTree = "<group>"; };
@@ -514,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1A3B481F2D50C900BD2710 /* Logger.swift */,
+				2D233CB2263FB9B200F1A741 /* BaseLogger.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -1037,6 +1043,7 @@
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D99E7B7209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
+				2D233CB3263FB9B200F1A741 /* BaseLogger.swift in Sources */,
 				2D3CDB9C238A8A1A0010D162 /* Plural.swift in Sources */,
 				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
@@ -1087,6 +1094,7 @@
 				2DC0E3641FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2DC0E3691FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3B531F2D50C900BD2710 /* L10n.swift in Sources */,
+				2D233CB4263FB9B200F1A741 /* BaseLogger.swift in Sources */,
 				2DC0E35F1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B5F1F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D99E7B3209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
@@ -1155,6 +1163,7 @@
 				2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3BE61F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2D2E4F5B2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2D233CB5263FB9B200F1A741 /* BaseLogger.swift in Sources */,
 				2D99E7AF209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
@@ -1231,6 +1240,7 @@
 				2DF2027C2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */,
+				2D233CB6263FB9B200F1A741 /* BaseLogger.swift in Sources */,
 				2D2E4F5C2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
 				2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
@@ -1285,8 +1295,8 @@
 		2DCF931820B0668400FB1ECC /* Localizable.plist */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2DCF931920B0668400FB1ECC /* Base */,
 				2DCF931E20B0668400FB1ECC /* pl */,
+				2D233CC4263FBB1D00F1A741 /* en */,
 			);
 			name = Localizable.plist;
 			sourceTree = "<group>";
@@ -1294,8 +1304,8 @@
 		2DCF931A20B0668400FB1ECC /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2DCF931B20B0668400FB1ECC /* Base */,
 				2DCF931F20B0668400FB1ECC /* pl */,
+				2D233CC2263FBB1500F1A741 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -1303,8 +1313,8 @@
 		2DCF931C20B0668400FB1ECC /* Localizable.stringsdict */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2DCF931D20B0668400FB1ECC /* Base */,
 				2DCF932020B0668400FB1ECC /* pl */,
+				2D233CC3263FBB1500F1A741 /* en */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -1312,8 +1322,8 @@
 		2DCF933220B083F000FB1ECC /* Localizable.json */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2DCF933120B083F000FB1ECC /* Base */,
 				2DCF933320B083FA00FB1ECC /* pl */,
+				2D233CC1263FBB1500F1A741 /* en */,
 			);
 			name = Localizable.json;
 			sourceTree = "<group>";
@@ -1441,7 +1451,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
@@ -1504,7 +1514,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -1684,7 +1694,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
@@ -1747,7 +1757,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -1814,7 +1824,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
@@ -1876,7 +1886,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -2051,7 +2061,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
@@ -2114,7 +2124,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
