@@ -43,7 +43,7 @@ open class L10n {
     }
 
     /// A logger used to log information from the framework
-    public var logger: Logger? = BaseLogger()
+    public var logger: Logger?
     
     /// A configuration used to modification of output
     public var configuration: LocalizedStringsConfiguration

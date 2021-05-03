@@ -105,10 +105,6 @@
 
 /* Begin PBXFileReference section */
 		2D1714871F2E757B00AADEB5 /* Example iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2D233CB7263FBA6E00F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		2D233CBE263FBA7300F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = en; path = en.lproj/Localizable.plist; sourceTree = "<group>"; };
-		2D233CBF263FBA7A00F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = en; path = en.lproj/Localizable.json; sourceTree = "<group>"; };
-		2D233CC0263FBA7F00F1A741 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = en; path = en.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2DAB8C1F1F48943A00C22A0C /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DAB8C201F48943A00C22A0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DAB8C211F48943A00C22A0C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -131,6 +127,10 @@
 		2DCF930420AE090900FB1ECC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = es; path = es.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF930520AE090900FB1ECC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2DCF930620AE090900FB1ECC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = es; path = es.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
+		2DCF930720AE090900FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
+		2DCF930820AE090900FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = Base; path = Base.lproj/Localizable.json; sourceTree = "<group>"; };
+		2DCF930920AE090900FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		2DCF930A20AE090900FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.stringsdict; name = Base; path = Base.lproj/Localizable.stringsdict; sourceTree = "<group>"; };
 		2DCF930B20AE090900FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = pl; path = pl.lproj/Localizable.plist; sourceTree = "<group>"; };
 		2DCF930C20AE090900FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = pl; path = pl.lproj/Localizable.json; sourceTree = "<group>"; };
 		2DCF930D20AE090900FB1ECC /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -306,6 +306,7 @@
 				ja,
 				pl,
 				"zh-Hans",
+				Base,
 			);
 			mainGroup = 2D17147C1F2E74EF00AADEB5;
 			productRefGroup = 2D1714881F2E757B00AADEB5 /* Products */;
@@ -427,8 +428,8 @@
 				2DCF92F820AE090900FB1ECC /* zh-Hans */,
 				2DCF92FF20AE090900FB1ECC /* ja */,
 				2DCF930320AE090900FB1ECC /* es */,
+				2DCF930720AE090900FB1ECC /* Base */,
 				2DCF930B20AE090900FB1ECC /* pl */,
-				2D233CBE263FBA7300F1A741 /* en */,
 			);
 			name = Localizable.plist;
 			sourceTree = "<group>";
@@ -439,8 +440,8 @@
 				2DCF92FA20AE090900FB1ECC /* zh-Hans */,
 				2DCF930020AE090900FB1ECC /* ja */,
 				2DCF930420AE090900FB1ECC /* es */,
+				2DCF930820AE090900FB1ECC /* Base */,
 				2DCF930C20AE090900FB1ECC /* pl */,
-				2D233CBF263FBA7A00F1A741 /* en */,
 			);
 			name = Localizable.json;
 			sourceTree = "<group>";
@@ -451,8 +452,8 @@
 				2DCF92FC20AE090900FB1ECC /* zh-Hans */,
 				2DCF930120AE090900FB1ECC /* ja */,
 				2DCF930520AE090900FB1ECC /* es */,
+				2DCF930920AE090900FB1ECC /* Base */,
 				2DCF930D20AE090900FB1ECC /* pl */,
-				2D233CB7263FBA6E00F1A741 /* en */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -463,8 +464,8 @@
 				2DCF92FE20AE090900FB1ECC /* zh-Hans */,
 				2DCF930220AE090900FB1ECC /* ja */,
 				2DCF930620AE090900FB1ECC /* es */,
+				2DCF930A20AE090900FB1ECC /* Base */,
 				2DCF930E20AE090900FB1ECC /* pl */,
-				2D233CC0263FBA7F00F1A741 /* en */,
 			);
 			name = Localizable.stringsdict;
 			sourceTree = "<group>";
@@ -587,9 +588,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Example iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.8.1;
+				MARKETING_VERSION = 5.8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = bobrowski.adrian.iOS;
@@ -644,9 +645,9 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "$(SRCROOT)/Example iOS/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 5.8.1;
+				MARKETING_VERSION = 5.8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = bobrowski.adrian.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
