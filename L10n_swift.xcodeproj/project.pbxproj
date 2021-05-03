@@ -145,6 +145,10 @@
 		2DC85EC422B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
 		2DC85EC522B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
 		2DC85EC622B61BFC0052F15D /* Number+Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */; };
+		2DCC7392263FC92200D677EA /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC7391263FC92200D677EA /* BaseLogger.swift */; };
+		2DCC7393263FC92200D677EA /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC7391263FC92200D677EA /* BaseLogger.swift */; };
+		2DCC7394263FC92200D677EA /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC7391263FC92200D677EA /* BaseLogger.swift */; };
+		2DCC7395263FC92200D677EA /* BaseLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCC7391263FC92200D677EA /* BaseLogger.swift */; };
 		2DCF92E120ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
 		2DCF92E220ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
 		2DCF92E320ADF0B800FB1ECC /* Bundle+utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */; };
@@ -314,6 +318,7 @@
 		2DC85EB822AD2D800052F15D /* PluralArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PluralArg.swift; sourceTree = "<group>"; };
 		2DC85EBD22AD488F0052F15D /* NumericPluralArg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumericPluralArg.swift; sourceTree = "<group>"; };
 		2DC85EC222B61BFC0052F15D /* Number+Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Number+Localizable.swift"; sourceTree = "<group>"; };
+		2DCC7391263FC92200D677EA /* BaseLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLogger.swift; sourceTree = "<group>"; };
 		2DCF92E020ADF0B800FB1ECC /* Bundle+utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+utils.swift"; sourceTree = "<group>"; };
 		2DCF931320AE11D300FB1ECC /* DateExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtensionTests.swift; sourceTree = "<group>"; };
 		2DCF931920B0668400FB1ECC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Base; path = Base.lproj/Localizable.plist; sourceTree = "<group>"; };
@@ -514,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				2D1A3B481F2D50C900BD2710 /* Logger.swift */,
+				2DCC7391263FC92200D677EA /* BaseLogger.swift */,
 			);
 			path = Logger;
 			sourceTree = "<group>";
@@ -1037,6 +1043,7 @@
 				2DC0E3631FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2D1A3BDB1F2E167200BD2710 /* UIButton+IBL10n.swift in Sources */,
 				2D99E7B7209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
+				2DCC7392263FC92200D677EA /* BaseLogger.swift in Sources */,
 				2D3CDB9C238A8A1A0010D162 /* Plural.swift in Sources */,
 				2DC0E35E1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3BD91F2E167200BD2710 /* UIBarItem+IBL10n.swift in Sources */,
@@ -1087,6 +1094,7 @@
 				2DC0E3641FB5127C00BFBBAD /* StringResource.swift in Sources */,
 				2DC0E3691FB512A500BFBBAD /* DictionaryResource.swift in Sources */,
 				2D1A3B531F2D50C900BD2710 /* L10n.swift in Sources */,
+				2DCC7393263FC92200D677EA /* BaseLogger.swift in Sources */,
 				2DC0E35F1FB5125C00BFBBAD /* EmptyResource.swift in Sources */,
 				2D1A3B5F1F2D50C900BD2710 /* Logger.swift in Sources */,
 				2D99E7B3209F0D87003ECD51 /* PlistResourceProvider.swift in Sources */,
@@ -1155,6 +1163,7 @@
 				2DC0E35B1FB4FD8700BFBBAD /* Resource.swift in Sources */,
 				2D1A3BE61F2E167200BD2710 /* UITextField+IBL10n.swift in Sources */,
 				2D2E4F5B2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
+				2DCC7394263FC92200D677EA /* BaseLogger.swift in Sources */,
 				2D99E7AF209F0D73003ECD51 /* StringsdictResourceProvider.swift in Sources */,
 				2DE4B1D61F2C971B0067EE98 /* String+Localizable.swift in Sources */,
 				2DD6AC831F487BB100EDE71B /* IBL10n.swift in Sources */,
@@ -1231,6 +1240,7 @@
 				2DF2027C2462ACF900355BFA /* BoundedTextDecorator.swift in Sources */,
 				2D1A3B511F2D50C900BD2710 /* L10n+CustomStringConvertible.swift in Sources */,
 				2D2E4F6220907DF7000FE288 /* L10n+Equatable.swift in Sources */,
+				2DCC7395263FC92200D677EA /* BaseLogger.swift in Sources */,
 				2D2E4F5C2090797C000FE288 /* L10n+CustomDebugStringConvertible.swift in Sources */,
 				2D3B5BDC2143133200F4617F /* Locale+utils.swift in Sources */,
 				2D99E7BA209F0D99003ECD51 /* StringsResourceProvider.swift in Sources */,
@@ -1441,7 +1451,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
@@ -1504,7 +1514,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-iOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -1684,7 +1694,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
@@ -1747,7 +1757,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-watchOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -1814,7 +1824,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
@@ -1876,7 +1886,7 @@
 				INFOPLIST_FILE = "$(SRCROOT)/Source/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-tvOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
@@ -2051,7 +2061,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
@@ -2114,7 +2124,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
-				MARKETING_VERSION = 5.8.0;
+				MARKETING_VERSION = 5.8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = "CodingLifestyle.L10n-macOS";
 				PRODUCT_NAME = "$(PROJECT_NAME)";
