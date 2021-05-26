@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.9.0](https://github.com/Decybel07/L10n-swift/tree/5.9.0) (2021-05-26)
+ * Bugfix - calling wrong function when using `String.l10n()` without parameters
+ 
 ## [5.8.1](https://github.com/Decybel07/L10n-swift/tree/5.8.1) (2021-05-03)
  * Configure basic logger
 

@@ -154,14 +154,14 @@ open class L10n {
      - parameter key: The key for a string in resource.
      - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
      - parameter fittingWidth: The desired width of the string variation.
-     - parameter args: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
+     - parameter arg: The values for which the appropriate plural form is selected. If you want to modify the argument to be displayed, use `PluralArg` (eg. `NumericPluralArg`).
 
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found.
      */
-    public func plural(for key: String, resource: String? = nil, fittingWidth: Int? = nil, _ args: CVarArg...) -> String {
-        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, args: args)
+    public func plural(for key: String, resource: String? = nil, fittingWidth: Int? = nil, _ arg: CVarArg) -> String {
+        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, args: [arg])
     }
-
+    
     /**
      Returns a localized plural version of the string designated by the specified `key` and `args` and residing in `resource`.
 
@@ -271,6 +271,6 @@ extension L10n {
             self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
             return key
         }
-        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, arg)
+        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, args: [arg])
     }
 }

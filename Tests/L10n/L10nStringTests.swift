@@ -21,6 +21,9 @@ final class L10nStringTests: L10nBaseTest {
     func testStringBaseLanguage() {
         self.l10nInstance.language = "Base"
         self.checkBaseEnglishStrings()
+        
+        XCTAssertEqual("Hello %@!", "parameters.oneArg".l10n())
+        XCTAssertEqual("Hello %@!", self.l10nInstance.string(for: "parameters.oneArg"))
     }
 
     func testStringSupportedLanguage() {
@@ -52,6 +55,7 @@ final class L10nStringTests: L10nBaseTest {
             (key: "hello.world.deeper", expected: "hello.world.deeper"),
             (key: "parameters", expected: "parameters"),
             (key: "other", expected: "other"),
+            (key: "parameters.oneArg", expected: "Hello %@!"),
         ])
     }
 
