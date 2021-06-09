@@ -6,7 +6,7 @@
 [![Build Status](https://travis-ci.org/Decybel07/L10n-swift.svg?branch=master&style=flat)](https://travis-ci.org/Decybel07/L10n-swift)
 [![CocoaPods Version](https://img.shields.io/cocoapods/v/L10n-swift.svg?style=flat&label=version)](http://cocoapods.org/pods/L10n-swift)
 [![Language Swift4](https://img.shields.io/badge/languages-Swift%204.0+-FFAC45.svg?style=flat)](https://developer.apple.com/swift/) 
-[![CocoaPods Platform](https://img.shields.io/cocoapods/p/L10n-swift.svg?style=flat&label=platform)](http://cocoapods.org/pods/L10n-swift)
+[![](https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FDecybel07%2FL10n-swift%2Fbadge%3Ftype%3Dplatforms)](https://swiftpackageindex.com/Decybel07/L10n-swift)
 [![CocoaPods License](https://img.shields.io/cocoapods/l/L10n-swift.svg?style=flat&label=license)](https://github.com/Decybel07/L10n-swift/blob/master/LICENSE)
 [![Pod method Compatible](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage%20%7C%20Swift%20Package%20Manager-green.svg?style=flat)](#-installation)
 [![Mentioned in Awesome-swift](https://awesome.re/mentioned-badge.svg)](https://github.com/matteocrippa/awesome-swift#localization)
