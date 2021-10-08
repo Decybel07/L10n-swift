@@ -5,12 +5,12 @@
 	<key>navigation</key>
 	<dict>
 		<key>back</key>
-		<string>バック</string>
+		<string>戻る</string>
 	</dict>
 	<key>chooseLanguage</key>
 	<dict>
 		<key>title</key>
-		<string>言語を選択する</string>
+		<string>言語を選択</string>
 	</dict>
 	<key>simpleTranslator</key>
 	<dict>
@@ -33,19 +33,19 @@
 			<key>giraffe</key>
 			<string>キリン</string>
 			<key>house</key>
-			<string>自宅</string>
+			<string>家</string>
 			<key>iceCream</key>
-			<string>フローズン</string>
+			<string>アイスクリーム</string>
 			<key>jelly</key>
 			<string>ゼリー</string>
 			<key>kite</key>
 			<string>凧</string>
 			<key>ladybird</key>
-			<string>ミツバチ</string>
+			<string>てんとう虫</string>
 			<key>mouse</key>
-			<string>マウス</string>
+			<string>ネズミ</string>
 			<key>newt</key>
-			<string>トリトン</string>
+			<string>イモリ</string>
 			<key>octopus</key>
 			<string>たこ</string>
 			<key>pig</key>
@@ -61,7 +61,7 @@
 			<key>umbrella</key>
 			<string>傘</string>
 			<key>vase</key>
-			<string>花器</string>
+			<string>花瓶</string>
 			<key>whale</key>
 			<string>鯨</string>
 			<key>xylophone</key>
@@ -75,7 +75,7 @@
 	<key>plurals</key>
 	<dict>
 		<key>title</key>
-		<string>プルーフル</string>
+		<string>複数形</string>
 		<key>question</key>
 		<string>あなたはリンゴをいくつ持っていますか？</string>
 	</dict>
