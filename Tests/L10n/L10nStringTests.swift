@@ -43,7 +43,7 @@ final class L10nStringTests: L10nBaseTest {
 
     func testStringUndefinedLanguage() {
         self.l10nInstance.language = "🐒"
-        self.checkUndefinedLanguageStrings()
+        self.checkBaseEnglishStrings()
     }
 
     private func checkBaseEnglishStrings() {
@@ -65,18 +65,6 @@ final class L10nStringTests: L10nBaseTest {
             (key: "language.value", expected: "Język"),
             (key: "language.current", expected: "Polski"),
             (key: "hello.world", expected: "Witaj świecie!"),
-            (key: "hello.world.deeper", expected: "hello.world.deeper"),
-            (key: "parameters", expected: "parameters"),
-            (key: "other", expected: "other"),
-        ])
-    }
-
-    private func checkUndefinedLanguageStrings() {
-        self.checkStrings([
-            (key: "language", expected: "language"),
-            (key: "language.value", expected: "language.value"),
-            (key: "language.current", expected: "language.current"),
-            (key: "hello.world", expected: "hello.world"),
             (key: "hello.world.deeper", expected: "hello.world.deeper"),
             (key: "parameters", expected: "parameters"),
             (key: "other", expected: "other"),

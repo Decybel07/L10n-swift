@@ -48,42 +48,42 @@ open class L10n {
     /// A configuration used to modification of output
     public var configuration: LocalizedStringsConfiguration
 
-    /// Current language code.
-    public var language: String {
-        get {
-            return self.languageCode
-        }
-        set {
-            if newValue == "Base", let developmentLanguage = self.coreBundle.developmentLocalization {
-                self.language = developmentLanguage
-                return
-            }
-            if newValue.contains("_") {
-                self.language = newValue.replacingOccurrences(of: "_", with: "-")
-                return
-            }
-            self.languageCode = newValue
-        }
-    }
-
     /// Current locale.
     private(set) public var locale: Locale?
 
     /// Bundles used for localization.
     private(set) public var bundles: [Bundle] = []
 
-    private var coreBundle: Bundle
     private var resources: [String: ResourceContainer] = [:]
+    
+    internal var coreBundle: Bundle
 
-    private var languageCode: String = "" {
+    internal var languageCode: String = "" {
         didSet {
             guard self.language != oldValue else {
                 return
             }
-            self.locale = nil
-            self.bundles = []
-            self.resources = [:]
-            self.languageChanged(oldValue: oldValue)
+            self.resetLanguageProperties()
+            
+            if !oldValue.isEmpty {
+                if self === L10n.shared {
+                    L10n.preferredLanguage = self.languageCode
+                }
+                NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
+                    "sender": self,
+                    "oldValue": oldValue,
+                    "newValue": self.language,
+                ])
+            }
+        }
+    }
+    
+    internal var fallbackLanguageCode: String = "" {
+        didSet {
+            guard self.language != oldValue, !oldValue.isEmpty else {
+                return
+            }
+            self.resetLanguageProperties()
         }
     }
 
@@ -99,6 +99,7 @@ open class L10n {
     public init(bundle: Bundle = .main, language: String? = nil, configuration: LocalizedStringsConfiguration = .shared) {
         self.coreBundle = bundle
         self.configuration = configuration
+        self.fallbackLanguage = bundle.developmentLocalization ?? "en"
         self.language = language ?? bundle.preferredLanguage
     }
 
@@ -209,36 +210,35 @@ open class L10n {
         self.resource(named: resource).inject(dictionary: dictionary)
     }
 
-    private func languageChanged(oldValue: String = "") {
-        let locale = Locale(identifier: self.language)
-        if let code = locale.languageCode, Locale.isoLanguageCodes.contains(code) {
-            self.locale = locale.merging(.autoupdatingCurrent)
-            self.bundles = [
-                self.coreBundle.bundle(forLanguage: self.language),
-                self.coreBundle.bundle(forLanguage: code),
-                self.coreBundle.bundle(forLanguage: "Base"),
-            ].reduce(into: [Bundle]()) { result, bundle in
-                if let bundle = bundle, !result.contains(bundle) {
-                    result.append(bundle)
-                }
+    private func resetLanguageProperties() {
+        self.locale = Locale(identifier: self.language).merging(.autoupdatingCurrent)
+        self.bundles = [
+            self.bundles(for: self.language),
+            self.bundles(for: self.fallbackLanguage),
+            (self.coreBundle.bundle(forLanguage: "Base").map { [$0] } ?? [])
+        ].flatMap { $0 }.reduce(into: [Bundle]()) { result, bundle in
+            if !result.contains(bundle) {
+                result.append(bundle)
             }
-            if self.bundles.isEmpty {
-                self.logger?.info("L10n - Could not find the bundle for \(self.language.debugDescription).")
-            }
+        }
+        self.resources = [:]
+    }
+    
+    private func bundles(for language: String) -> [Bundle] {
+        var bundles: [Bundle] = []
+        if let languageBundle = self.coreBundle.bundle(forLanguage: language) {
+            bundles.append(languageBundle)
         } else {
-            self.logger?.info("L10n - List of possible languages does not contain \(self.language.debugDescription).")
+            self.logger?.info("L10n - Could not find the bundle for language: \(language.debugDescription).")
         }
-
-        if !oldValue.isEmpty {
-            if self === L10n.shared {
-                L10n.preferredLanguage = self.languageCode
+        if let code = Locale(identifier: language).languageCode, code != language {
+            if let codeBundle = self.coreBundle.bundle(forLanguage: code) {
+                bundles.append(codeBundle)
+            } else {
+                self.logger?.info("L10n - Could not find the bundle for language code: \(code.debugDescription).")
             }
-            NotificationCenter.default.post(name: .L10nLanguageChanged, object: self, userInfo: [
-                "sender": self,
-                "oldValue": oldValue,
-                "newValue": self.language,
-            ])
         }
+        return bundles
     }
 
     private func resource(named resourceName: String?) -> ResourceContainer {
@@ -249,28 +249,5 @@ open class L10n {
             self.resources[resourceName] = resource
             return resource
         }()
-    }
-}
-
-// MARK: - Deprecated
-
-extension L10n {
-
-    /**
-     Returns a localized plural version of the string designated by the specified `key` and residing in `resource`.
-     - parameter key: The key for a string in resource.
-     - parameter resource: The receiver’s string resource to search. If resource is nil or is an empty string, the method attempts to use the resource in **Localizable** files.
-     - parameter fittingWidth: The desired width of the string variation.
-     - parameter arg: The values for which the appropriate plural form is selected.
-     - parameter converting: A closure used to modify the number to display it to the user.
-     - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found or `arg` is not a number .
-     */
-    @available(*, deprecated, renamed: "plural(for:resource:fittingWidth:_:)")
-    open func plural<Number: Numeric & CVarArg>(for key: String, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: @escaping (_ number: Number) -> CVarArg = { $0 }) -> String {
-        guard let arg = NumericPluralArg(arg: arg, converting: converting) else {
-            self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
-            return key
-        }
-        return self.plural(for: key, resource: resource, fittingWidth: fittingWidth, args: [arg])
     }
 }

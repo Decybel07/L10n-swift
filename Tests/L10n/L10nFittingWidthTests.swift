@@ -40,7 +40,7 @@ final class L10nFittingWidthTests: L10nBaseTest {
 
     func testFittingWidthUndefinedLanguage() {
         self.l10nInstance.language = "🐒"
-        self.checkUndefinedLanguageFittingWidth()
+        self.checkBaseEnglishFittingWidth()
     }
 
     private func checkBaseEnglishFittingWidth() {
@@ -74,23 +74,6 @@ final class L10nFittingWidthTests: L10nBaseTest {
             (key: "fittingWidth", fittingWidth: 250, expected: "średni tekst"),
             (key: "fittingWidth", fittingWidth: 300, expected: "bardzo długi tekst"),
             (key: "fittingWidth", fittingWidth: 350, expected: "bardzo długi tekst"),
-        ])
-    }
-
-    private func checkUndefinedLanguageFittingWidth() {
-        self.checkStrings([
-            (key: "language", fittingWidth: nil, expected: "language"),
-            (key: "language", fittingWidth: -10, expected: "language"),
-            (key: "language", fittingWidth: 0, expected: "language"),
-            (key: "language", fittingWidth: 100, expected: "language"),
-            (key: "fittingWidth", fittingWidth: nil, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: -10, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 100, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 150, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 200, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 250, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 300, expected: "fittingWidth"),
-            (key: "fittingWidth", fittingWidth: 350, expected: "fittingWidth"),
         ])
     }
 

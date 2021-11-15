@@ -17,7 +17,7 @@ final class L10nTests: L10nBaseTest {
 
     func testSupportedLanguages() {
         XCTAssertFalse(self.l10nInstance.supportedLanguages.contains("Base"))
-        XCTAssertEqual(Set(["en", "pl"]), Set(self.l10nInstance.supportedLanguages))
+        XCTAssertEqual(Set(["ar", "en", "pl"]), Set(self.l10nInstance.supportedLanguages))
     }
 
     func testSetDevelopmentLanguage() {
@@ -26,7 +26,7 @@ final class L10nTests: L10nBaseTest {
             XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
             XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.languageCode)
             XCTAssertEqual("US", self.l10nInstance.locale?.regionCode)
-            XCTAssertEqual(1, self.l10nInstance.bundles.count)
+            XCTAssertEqual(2, self.l10nInstance.bundles.count)
             XCTAssertNotNil(self.l10nInstance.locale)
         }
     }
@@ -38,7 +38,7 @@ final class L10nTests: L10nBaseTest {
             XCTAssertEqual(developmentLanguage, self.l10nInstance.language)
             XCTAssertEqual(developmentLanguage, self.l10nInstance.locale?.languageCode)
             XCTAssertEqual("US", self.l10nInstance.locale?.regionCode)
-            XCTAssertEqual(1, self.l10nInstance.bundles.count)
+            XCTAssertEqual(2, self.l10nInstance.bundles.count)
             XCTAssertNotNil(self.l10nInstance.locale)
         }
     }
@@ -47,7 +47,7 @@ final class L10nTests: L10nBaseTest {
         self.l10nInstance.language = "pl"
         XCTAssertEqual("pl", self.l10nInstance.language)
         XCTAssertEqual("pl-US", self.l10nInstance.locale?.identifier)
-        XCTAssertEqual(2, self.l10nInstance.bundles.count)
+        XCTAssertEqual(3, self.l10nInstance.bundles.count)
         XCTAssertNotNil(self.l10nInstance.locale)
     }
 
@@ -55,7 +55,7 @@ final class L10nTests: L10nBaseTest {
         self.l10nInstance.language = "pl_PL"
         XCTAssertEqual("pl-PL", self.l10nInstance.language)
         XCTAssertEqual("pl-PL", self.l10nInstance.locale?.identifier)
-        XCTAssertEqual(2, self.l10nInstance.bundles.count)
+        XCTAssertEqual(3, self.l10nInstance.bundles.count)
         XCTAssertNotNil(self.l10nInstance.locale)
     }
 
@@ -63,15 +63,15 @@ final class L10nTests: L10nBaseTest {
         self.l10nInstance.language = "es"
         XCTAssertEqual("es", self.l10nInstance.language)
         XCTAssertEqual("es-US", self.l10nInstance.locale?.identifier)
-        XCTAssertEqual(1, self.l10nInstance.bundles.count)
+        XCTAssertEqual(2, self.l10nInstance.bundles.count)
         XCTAssertNotNil(self.l10nInstance.locale)
     }
 
     func testSetUndefinedLanguage() {
         self.l10nInstance.language = "🐒"
         XCTAssertEqual("🐒", self.l10nInstance.language)
-        XCTAssertTrue(self.l10nInstance.bundles.isEmpty)
-        XCTAssertNil(self.l10nInstance.locale)
+        XCTAssertEqual(2, self.l10nInstance.bundles.count)
+        XCTAssertNotNil(self.l10nInstance.locale)
     }
 
     func testInject() {

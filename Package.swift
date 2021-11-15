@@ -19,8 +19,16 @@ let package = Package(
     targets: [
         .target(
             name: "L10n-swift",
-            path: "Source"
+            path: "Source",
+            exclude: ["L10n_swift.h", "Info.plist"],
+            resources: [.process("Core/Plural/Plural.stringsdict")]
         ),
+//        .testTarget(
+//            name: "L10n-swiftTest",
+//            dependencies: ["L10n-swift"],
+//            path: "Tests",
+//            exclude: ["Info.plist"]
+//        ),
     ],
     swiftLanguageVersions: [.v4, .v4_2, .v5]
 )
