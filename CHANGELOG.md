@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.10.0](https://github.com/Decybel07/L10n-swift/tree/5.10.0) (2021-11-15)
+ * Support for fallback language
+ 
 ## [5.9.0](https://github.com/Decybel07/L10n-swift/tree/5.9.0) (2021-05-26)
  * Bugfix - calling wrong function when using `String.l10n()` without parameters
  
