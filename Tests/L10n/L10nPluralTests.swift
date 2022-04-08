@@ -40,7 +40,7 @@ final class L10nPluralTests: L10nBaseTest {
 
     func testPluralUndefinedLanguage() {
         self.l10nInstance.language = "🐒"
-        self.checkUndefinedLanguagePlurals()
+        self.checkBaseEnglishPlurals()
     }
 
     private func checkBaseEnglishPlurals() {
@@ -75,27 +75,10 @@ final class L10nPluralTests: L10nBaseTest {
         ])
     }
 
-    private func checkUndefinedLanguagePlurals() {
-        self.checkPlurals([
-            (key: "numberOfApples", value: 0, expected: "numberOfApples"),
-            (key: "numberOfApples", value: 1, expected: "numberOfApples"),
-            (key: "numberOfApples", value: 2, expected: "numberOfApples"),
-            (key: "numberOfApples", value: 5, expected: "numberOfApples"),
-            (key: "numberOfApples", value: 8, expected: "numberOfApples"),
-            (key: "numberOfPears", value: 0, expected: "numberOfPears"),
-            (key: "numberOfPears", value: 1, expected: "numberOfPears"),
-            (key: "numberOfPears", value: 2, expected: "numberOfPears"),
-            (key: "numberOfPears", value: 5, expected: "numberOfPears"),
-            (key: "numberOfPears", value: 8, expected: "numberOfPears"),
-            (key: "numberOfBananas", value: 123, expected: "numberOfBananas"),
-        ])
-    }
-
     private func checkPlurals(_ array: [(key: String, value: Int, expected: String)]) {
         array.forEach { key, value, expected in
-            print(expected, key.l10nPlural(self.l10nInstance, [value]))
-            //            XCTAssertEqual(expected, key.l10nPlural(self.l10nInstance, value))
-            //            XCTAssertEqual(expected, self.l10nInstance.plural(for: key, value))
+            XCTAssertEqual(expected, key.l10nPlural(instance: self.l10nInstance, value))
+            XCTAssertEqual(expected, key.l10nPlural(self.l10nInstance, args: [value]))
         }
     }
 }

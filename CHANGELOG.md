@@ -2,14 +2,17 @@
 # Change Log
 ---
 
+## [5.10.1](https://github.com/Decybel07/L10n-swift/tree/5.10.1) (2022-04-08)
+* Bugfix - Plurals does not work [#32](https://github.com/Decybel07/L10n-swift/issues/32)
+ 
 ## [5.10.0](https://github.com/Decybel07/L10n-swift/tree/5.10.0) (2021-11-15)
- * Support for fallback language
+* Support for fallback language
  
 ## [5.9.0](https://github.com/Decybel07/L10n-swift/tree/5.9.0) (2021-05-26)
- * Bugfix - calling wrong function when using `String.l10n()` without parameters
+* Bugfix - calling wrong function when using `String.l10n()` without parameters
  
 ## [5.8.1](https://github.com/Decybel07/L10n-swift/tree/5.8.1) (2021-05-03)
- * Configure basic logger
+* Configure basic logger
 
 ## [5.8.0](https://github.com/Decybel07/L10n-swift/tree/5.8.0) (2021-04-17)
 * Add localizable `Date` with template

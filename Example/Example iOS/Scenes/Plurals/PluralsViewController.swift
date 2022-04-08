@@ -67,7 +67,7 @@ extension PluralsViewController: UITableViewDataSource {
         let item = self.items[indexPath.row]
 
         cell.textLabel?.text = L10n.shared.locale?.localizedString(forLanguageCode: item.language)
-        cell.detailTextLabel?.text = "plurals.numberOfApples".l10nPlural(item, self.value)
+        cell.detailTextLabel?.text = "plurals.numberOfApples".l10nPlural(instance: item, self.value)
 
         return cell
     }

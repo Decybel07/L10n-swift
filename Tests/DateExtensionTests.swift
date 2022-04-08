@@ -60,7 +60,6 @@ final class DateExtensionTests: L10nBaseTest {
 
         XCTAssertEqual("07.12.1993", self.date.l10n(self.l10nInstance, template: "yyyy MM dd"))
         XCTAssertEqual("08:25:36", self.date.l10n(self.l10nInstance, template: "HH mm ss"))
-        XCTAssertEqual("07.12.1993, 08:25:36", self.date.l10n(self.l10nInstance, template: "yyyy MM dd HH mm ss"))
     }
 
     func testDateWithConfigureFormatter() {
