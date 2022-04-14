@@ -44,7 +44,11 @@ extension Plural {
     private static func createFormat() -> String {
         let table = "Plural"
         let `extension` = "stringsdict"
+        #if SWIFT_PACKAGE
+        var bundle = Bundle.module
+        #else
         var bundle = Bundle(for: L10n.self)
+        #endif
 
         if bundle.url(forResource: table, withExtension: `extension`) == nil {
             self.createFileIfNeeded(table: table, extension: `extension`, bundle: &bundle)

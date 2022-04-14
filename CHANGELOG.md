@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.10.2](https://github.com/Decybel07/L10n-swift/tree/5.10.2) (2022-04-14)
+* Bugfix - Plurals does not work [#32](https://github.com/Decybel07/L10n-swift/issues/32)
+
 ## [5.10.1](https://github.com/Decybel07/L10n-swift/tree/5.10.1) (2022-04-08)
 * Bugfix - Plurals does not work [#32](https://github.com/Decybel07/L10n-swift/issues/32)
  
