@@ -2,7 +2,7 @@
 Pod::Spec.new do |spec|
   spec.name             = 'L10n-swift'
   spec.module_name      = 'L10n_swift'
-  spec.version          = '5.10.2'
+  spec.version          = '5.10.3'
   spec.summary          = 'Localization of an application with ability to change language "on the fly" and support for plural forms in any language.'
 
   spec.description      = <<-DESC
@@ -24,7 +24,7 @@ Pod::Spec.new do |spec|
   spec.source           = { :git => "https://github.com/Decybel07/L10n-swift.git", :tag => spec.version }
 
   spec.frameworks = 'Foundation'
-  spec.swift_versions = ['4.0', '4.1', '4.2', '5.0', '5.1', '5.2', '5.3']
+  spec.swift_versions = ['4.0', '4.2', '5']
 
   spec.ios.deployment_target = '9.0'
   spec.watchos.deployment_target = '2.0'

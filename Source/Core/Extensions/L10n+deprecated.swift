@@ -18,7 +18,7 @@ extension L10n {
      - returns: A localized plural version of the string designated by `key`. This method returns `key` when `key` not found or `arg` is not a number .
      */
     @available(*, deprecated, renamed: "plural(for:resource:fittingWidth:_:)")
-    open func plural<Number: Numeric & CVarArg>(for key: String, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: @escaping (_ number: Number) -> CVarArg = { $0 }) -> String {
+    public func plural<Number: Numeric & CVarArg>(for key: String, resource: String? = nil, fittingWidth: Int? = nil, arg: Number, converting: @escaping (_ number: Number) -> CVarArg = { $0 }) -> String {
         guard let arg = NumericPluralArg(arg: arg, converting: converting) else {
             self.logger?.info("L10n - Argument \(key.debugDescription) is not a number.")
             return key

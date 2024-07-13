@@ -26,7 +26,7 @@ final class DateExtensionTests: L10nBaseTest {
         self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, dateStyle: .none))
-        XCTAssertEqual("07.12.1993", self.date.l10n(self.l10nInstance, dateStyle: .short))
+        XCTAssertEqual("7.12.1993", self.date.l10n(self.l10nInstance, dateStyle: .short))
         XCTAssertEqual("07.12.1993", self.date.l10n(self.l10nInstance, dateStyle: .medium))
         XCTAssertEqual("7 grudnia 1993", self.date.l10n(self.l10nInstance, dateStyle: .long))
         XCTAssertEqual("wtorek, 7 grudnia 1993", self.date.l10n(self.l10nInstance, dateStyle: .full))
@@ -44,7 +44,7 @@ final class DateExtensionTests: L10nBaseTest {
         self.l10nInstance.language = "pl_PL"
 
         XCTAssertEqual("", self.date.l10n(self.l10nInstance, dateStyle: .none, timeStyle: .none))
-        XCTAssertEqual("07.12.1993, 08:25", self.date.l10n(self.l10nInstance, dateStyle: .short, timeStyle: .short))
+        XCTAssertEqual("7.12.1993, 08:25", self.date.l10n(self.l10nInstance, dateStyle: .short, timeStyle: .short))
     }
 
     func testDateWithFormat() {

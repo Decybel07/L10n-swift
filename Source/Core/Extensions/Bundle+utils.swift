@@ -17,7 +17,7 @@ internal extension Bundle {
             ?? "Base"
         }
         set {
-            var preferredLanguages = Bundle.main.preferredLanguages
+            var preferredLanguages = self.preferredLanguages
             #if swift(>=4.2)
                 let firstIndex = preferredLanguages.firstIndex(of: newValue)
             #else
@@ -25,13 +25,15 @@ internal extension Bundle {
             #endif
             
             if let index = firstIndex {
-                guard index > 0 else {
-                    return
-                }
                 preferredLanguages.remove(at: index)
             }
-            UserDefaults.standard.set([newValue] + preferredLanguages, forKey: "AppleLanguages")
-            UserDefaults.standard.synchronize()
+            preferredLanguages.insert(newValue, at: 0)
+            
+            let userDefaults = UserDefaults.standard
+            if preferredLanguages != (userDefaults.array(forKey: "AppleLanguages") as? [String]) {
+                UserDefaults.standard.set(preferredLanguages, forKey: "AppleLanguages")
+                UserDefaults.standard.synchronize()
+            }
         }
     }
 

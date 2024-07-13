@@ -2,6 +2,9 @@
 # Change Log
 ---
 
+## [5.10.2](https://github.com/Decybel07/L10n-swift/tree/5.10.3) (2024-07-13)
+* Bugfix - AppleLanguages isn't updated in some conditions, leading to Apple UI Stock elements to show in the wrong language [#38](https://github.com/Decybel07/L10n-swift/issues/38)
+
 ## [5.10.2](https://github.com/Decybel07/L10n-swift/tree/5.10.2) (2022-04-14)
 * Bugfix - Plurals does not work [#32](https://github.com/Decybel07/L10n-swift/issues/32)
 
